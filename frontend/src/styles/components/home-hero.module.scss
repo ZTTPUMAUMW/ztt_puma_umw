@@ -1,0 +1,145 @@
+.home-hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, #4a7a9d 100%);
+  overflow: hidden;
+
+  &__pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 1px, transparent 0);
+    background-size: 50px 50px;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    max-width: var(--container-content-width);
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-inverse);
+    margin: 0 0 var(--spacing-lg) 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-h3);
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 var(--spacing-2xl) 0;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+  }
+
+  &__button--primary {
+    background: var(--color-secondary);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(232, 117, 26, 0.3);
+  }
+
+  &__button--primary:hover {
+    background: var(--color-secondary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(232, 117, 26, 0.4);
+  }
+
+  &__button--primary:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+  }
+
+  &__button--secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-text-inverse);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__button--secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  &__button--outline {
+    background: transparent;
+    color: var(--color-text-inverse);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &__button--outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-text-inverse);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 450px;
+
+    &__title {
+      font-size: var(--font-size-h1);
+    }
+
+    &__subtitle {
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 400px;
+
+    &__title {
+      font-size: var(--font-size-2xl);
+    }
+
+    &__subtitle {
+      font-size: var(--font-size-md);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__cta {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    &__button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

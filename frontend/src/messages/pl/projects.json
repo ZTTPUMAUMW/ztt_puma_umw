@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Aktualne projekty badawcze",
+    "subtitle": "Granty i współprace realizowane przez zespół P.U.M.A."
+  },
+  "stats": {
+    "totalValue": "Łączna wartość grantów",
+    "activeProjects": "Aktywne projekty",
+    "partners": "Partnerzy instytucjonalni"
+  },
+  "labels": {
+    "fundingBody": "Źródło finansowania",
+    "projectNumber": "Numer projektu",
+    "fundingAmount": "Wartość finansowania",
+    "team": "Zespół projektowy",
+    "learnMore": "Zobacz szczegóły projektu"
+  }
+}

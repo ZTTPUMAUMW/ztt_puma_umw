@@ -1,0 +1,48 @@
+{
+  "type": "module",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "translate": "tsx scripts/translate.ts",
+    "translate:text": "tsx scripts/translate.ts text"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.13.1",
+    "@sanity/image-url": "^2.0.1",
+    "deepl-node": "^1.24.0",
+    "next": "^16.0.7",
+    "next-intl": "^4.7.0",
+    "nodemailer": "^7.0.11",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sass": "^1.78.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/grecaptcha": "^3.0.9",
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "autoprefixer": "^10.4.22",
+    "babel-plugin-react-compiler": "1.0.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.7.4",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}

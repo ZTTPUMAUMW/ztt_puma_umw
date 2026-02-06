@@ -1,0 +1,149 @@
+
+:root {
+  --color-primary: #1C3D5A;
+  --color-primary-light: #2a5a7d;
+  --color-secondary: #E8751A;
+  --color-secondary-hover: #d66815;
+  --color-accent: #E8751A;
+  --color-accent-light: #fce9db;
+  --color-accent-1: #E8751A;
+  --color-accent-1-2: #C83F12;
+  --color-accent-2: #898121;
+  --color-accent-2-2: #808836;
+  --color-accent-2-3: #62760C;
+  --color-accent-3: #3572EF;
+  --color-muted: #6b7280;
+
+  --color-background: #ffffff;
+  --color-background-light: #f5f5f5;
+  --color-background-lighter: #fafafa;
+  --color-background-dark: #1a1a1a;
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+
+  --color-text: #333333;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #666666;
+  --color-text-muted: #999999;
+  --color-text-inverse: #ffffff;
+  --color-text-muted-light: #cccccc;
+  --black: #000000;
+  --black-50: #666666;
+  --white: #ffffff;
+
+  --color-border: #000000;
+  --color-border-light: #dddddd;
+  --color-error: #dc2626;
+  --color-error-alt: #dc3545;
+  --color-success: #16a34a;
+  --color-warning: #ea580c;
+  --color-info: #3572EF;
+
+  --color-success-bg: #d4edda;
+  --color-success-text: #155724;
+  --color-success-border: #c3e6cb;
+  --color-error-bg: #f8d7da;
+  --color-error-text: #721c24;
+  --color-error-border: #f5c6cb;
+  --color-warning-bg: #fff3cd;
+  --color-warning-text: #856404;
+  --color-warning-border: #ffeaa7;
+
+  --primary-color: var(--color-secondary);
+  --primary-hover: var(--color-secondary-hover);
+  --text-dark: var(--color-text);
+  --bg-light: var(--color-background-light);
+  --bg-dark: var(--color-background-dark);
+
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Be Vietnam Pro', sans-serif;
+
+  --font-size-base: 1.6rem;
+  --font-size-lead: 1.8rem;
+  --font-size-small: 1.4rem;
+  --font-size-xs: 1.2rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.5rem;
+  --font-size-2xl: 3rem;
+  --font-size-3xl: 3.5rem;
+  --font-size-4xl: 4.5rem;
+  --font-size-5xl: 5rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 3.2rem;
+  --font-size-h3: 2.4rem;
+  --font-size-h4: 2rem;
+  --font-size-h5: 1.8rem;
+  --font-size-h6: 1.6rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+  --line-height-small: 1.4;
+  --line-height-medium: 1.5;
+  --line-height-tall: 1.8;
+  --line-height-tight: 1.3;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-semi-lg: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-semi-xl: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-2xl: 6rem;
+  --spacing-3xl: 8rem;
+  --spacing-4xl: 10rem;
+  --spacing-5xl: 12rem;
+
+  --radius-small: 0.8rem;
+  --radius-xs: 0.2rem;
+  --radius-medium: 1.6rem;
+  --radius-large: 2.4rem;
+  --radius-xl: 3.2rem;
+  --radius-round: 50%;
+  --radius-circle: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 450ms;
+
+  --bp-xs: 320px;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1224px;
+  --bp-xxl: 1824px;
+
+  --container-max-width: 1200px;
+  --container-max-width-laptop: 1400px; /* Wider cap for larger laptops */
+
+  --container-content-width: 1000px;
+  --container-content-width-laptop: 1200px; /* Wider content width for two-column layouts on laptops */
+
+  --container-form-width: 800px;
+  --container-narrow-width: 700px;
+  --container-text-width: 900px;
+
+  --icon-size-sm: 20px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 48px;
+  --icon-size-xl: 56px;
+
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}

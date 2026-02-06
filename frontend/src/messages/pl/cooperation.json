@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Współpraca",
+    "subtitle": "Nawiąż współpracę naukową i badawczą z P.U.M.A."
+  },
+  "offers": {
+    "heading": "Co oferujemy?",
+    "expertise": {
+      "title": "Ekspertyza naukowa",
+      "description": "Doświadczony zespół naukowców z różnych dziedzin"
+    },
+    "equipment": {
+      "title": "Nowoczesne wyposażenie",
+      "description": "Dostęp do specjalistycznych laboratoriów i sprzętu"
+    },
+    "dataAnalysis": {
+      "title": "Analiza danych",
+      "description": "Zaawansowana analiza statystyczna i AI"
+    },
+    "microbiology": {
+      "title": "Analiza mikrobiologiczna",
+      "description": "Badania mikrobiologiczne z wykorzystaniem modeli in vivo i in vitro"
+    },
+    "flexibility": {
+      "title": "Elastyczność",
+      "description": "Dopasowanie do potrzeb i budżetu projektu"
+    },
+    "comprehensive": {
+      "title": "Kompleksowość",
+      "description": "Od pomysłu przez badania po wdrożenie"
+    }
+  },
+  "scopeItems": [
+    "Wspólne projekty badawcze",
+    "Konsultacje naukowe i merytoryczne",
+    "Realizacja części eksperymentalnej projektów",
+    "Testy i analizy mikrobiologiczne",
+    "Ocena cytotoksyczności i biozgodności",
+    "Publikacje naukowe"
+  ],
+  "form": {
+    "title": "Skontaktuj się z nami",
+    "intro": "Masz pytania lub chcesz omówić możliwości współpracy? Wypełnij formularz, a skontaktujemy się z Tobą.",
+    "attachmentLabel": "Załącz pliki PDF"
+  },
+  "intro": {
+    "heading": "Współpraca naukowa i badawcza",
+    "paragraph1": "Naszym celem jest łączenie nauki z praktyką. Wspieramy zarówno indywidualnych badaczy, jak i instytucje, które chcą wprowadzać innowacje w obszarze medycyny, biotechnologii i nauk przyrodniczych. Jeżeli masz pomysł na projekt badawczy lub potrzebujesz wsparcia w realizacji części eksperymentalnej – zapraszamy do kontaktu.",
+    "paragraph2": "Prowadzimy współpracę z uczelniami, startupami, ośrodkami badawczymi oraz przedsiębiorstwami z sektora farmaceutycznego i biotechnologicznego. Niezależnie od etapu Twojego pomysłu – od koncepcji po analizę wyników – możemy pomóc w jego wdrożeniu i publikacji."
+  },
+  "scope": {
+    "heading": "Możliwości współpracy:",
+    "items": [
+      "Realizacja eksperymentów laboratoryjnych i badań klinicznych",
+      "Analiza danych, statystyka, opracowanie wyników",
+      "Konsultacje naukowe i opracowanie koncepcji badawczej",
+      "Wsparcie w przygotowaniu wniosków grantowych i publikacji",
+      "Zlecenia badawcze na potrzeby instytucji lub firm prywatnych"
+    ]
+  },
+  "note": "Nie wymagamy formalnego afiliowania – liczy się pomysł, cel i gotowość do współpracy."
+}

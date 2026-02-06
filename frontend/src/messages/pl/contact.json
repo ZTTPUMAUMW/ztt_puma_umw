@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Kontakt",
+    "subtitle": "Skontaktuj się z zespołem P.U.M.A."
+  },
+  "address": {
+    "title": "Adres",
+    "department": "Zakład Technologii Translacyjnych",
+    "lab": "Pracownia Unikalnych Modeli Aplikacyjnych",
+    "faculty": "Wydział Farmaceutyczny Uniwersytetu Medycznego",
+    "university": "im. Piastów Śląskich we Wrocławiu",
+    "street": "ul. Borowska 211, 50-556 Wrocław",
+    "floor": "Piętro I"
+  },
+  "phone": {
+    "title": "Telefon"
+  },
+  "email": {
+    "title": "Email"
+  },
+  "mapTitle": "Mapa lokalizacji P.U.M.A.",
+  "form": {
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "companyName": "Nazwa firmy/instytucji",
+    "email": "Email",
+    "subject": "Temat",
+    "subjectPlaceholder": "-- Wybierz temat --",
+    "message": "Wiadomość",
+    "attachment": "Załącz pliki PDF",
+    "attachmentHint": "Można załączyć wiele plików PDF (max {size}MB łącznie)",
+    "totalSize": "Łączny rozmiar: {current}MB / {max}MB",
+    "charactersCount": "{current}/{max} znaków",
+    "attachedFiles": "Załączone pliki:",
+    "removeFile": "Usuń plik",
+    "submit": "Wyślij formularz",
+    "submitting": "Wysyłanie...",
+    "allFieldsRequired": "Wszystkie pola są wymagane",
+    "fieldRequired": "To pole jest wymagane",
+    "minLength": "Minimum {min} znaków",
+    "maxLength": "Maksimum {max} znaków",
+    "onlyPdf": "Można załączyć tylko pliki PDF.",
+    "fileSizeExceeded": "Łączny rozmiar plików przekracza {max}MB.",
+    "recaptchaNotLoaded": "reCAPTCHA nie została załadowana. Odśwież stronę i spróbuj ponownie.",
+    "recaptchaConfigError": "Konfiguracja reCAPTCHA jest nieprawidłowa.",
+    "successMessage": "Dziękujemy! Twoje zgłoszenie zostało wysłane.",
+    "errorMessage": "Wystąpił błąd przy wysyłaniu formularza.",
+    "errorMessageRetry": "Wystąpił błąd przy wysyłaniu formularza. Spróbuj ponownie."
+  }
+}

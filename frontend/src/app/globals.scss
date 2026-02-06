@@ -1,0 +1,77 @@
+/* Sass @use rules must be first */
+@use "../styles/variables.module.scss" as *;
+@use "../styles/layout.module.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  // Optimize font rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background: var(--color-background);
+  margin: 0;
+  padding: 0;
+}
+
+/* Global accessibility improvements */
+*:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Improve keyboard navigation visibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-to-main {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --color-background: #121212;
+  --color-text: #f1f1f1;
+  --color-text-light: #cccccc;
+  --color-background-light: #1e1e1e;
+  --color-background-dark: #0a0a0a;
+}

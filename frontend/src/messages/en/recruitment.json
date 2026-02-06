@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "title": "Recruitment",
+    "subtitle": "Join the P.U.M.A. team. - FTEs, internships and PhDs"
+  },
+  "benefits": {
+    "heading": "Why join?",
+    "career": {
+      "title": "Career development",
+      "description": "Work on innovative research projects"
+    },
+    "publications": {
+      "title": "Publications",
+      "description": "Ability to co-author scientific publications"
+    },
+    "team": {
+      "title": "Team",
+      "description": "Work with experienced scientists and enthusiasts"
+    },
+    "equipment": {
+      "title": "Equipment",
+      "description": "Access to modern laboratories and technology"
+    },
+    "stability": {
+      "title": "Stability",
+      "description": "Working at the Medical University of Wroclaw"
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Conferences and international cooperation"
+    }
+  },
+  "tabs": {
+    "heading": "Choose a recruitment path",
+    "description": "We offer various forms of cooperation - from full-time positions, to internships, to PhDs. Choose the option you are interested in for details.",
+    "payroll": "FTE (UMW payroll)",
+    "internship": "Internships and ideas (scientists, entrepreneurs, students)",
+    "phd": "PhD (PhD track)",
+    "payrollContent": "Want to work in a place where science meets technology and results really matter? There's no room for stagnation at P.U.M.A. We need people who think outside the box, act quickly, and aren't afraid of responsibility. If research is your passion - we'll find a place for you on board.",
+    "internshipContent": "Do you have an idea that others would consider too difficult or too bold? Welcome. At P.U.M.A., we don't run from challenges - we turn them into projects, data, patents and publications you can participate in. If you want to do more than just collect points for your CV, you'll find partners here who will not only listen to you and help you get started, but will also support you in both daily scientific inquiries and struggles with bureaucracy.",
+    "phdContent": "If your motivation is an easy doctoral degree, three other jobs, and a symbolic visit to the lab every other Thursday between 1:07 PM and 1:15 PM - look elsewhere. A PhD at P.U.M.A. is an adventure that requires determination and consistency. In return, you'll get the opportunity to work on projects of real significance, support from specialists from around the world, and a chance to publish in recognized journals. Ideally, you're genuinely passionate about what you do and want to do - then we'll do everything to help you."
+  },
+  "preapply": {
+    "heading": "Prepare before applying",
+    "payroll": "current CV, cover letter, list of publications or project experience.",
+    "internship": "brief description of research interests, supervisor's consent, CV.",
+    "phd": "research plan summary (up to 1 page), CV, academic recommendations (min. 1 person).",
+    "confirmLabel": "I confirm that I have read the requirements and want to proceed to the recruitment form."
+  },
+
+  "form": {
+    "title": "Recruitment form",
+    "attachmentLabel": "Attach PDF files (e.g. CV)"
+  }
+}

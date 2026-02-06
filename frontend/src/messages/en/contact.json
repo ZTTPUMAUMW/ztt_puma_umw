@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Contact",
+    "subtitle": "Contact the P.U.M.A. team."
+  },
+  "address": {
+    "title": "Address",
+    "department": "Department of Translational Technologies",
+    "lab": "Laboratory of Unique Application Models",
+    "faculty": "Faculty of Pharmacy",
+    "university": "Medical University of Silesian Piasts in Wroclaw",
+    "street": "211 Borowska St., 50-556 Wroclaw",
+    "floor": "Floor I"
+  },
+  "phone": {
+    "title": "Phone"
+  },
+  "email": {
+    "title": "Email"
+  },
+  "mapTitle": "P.U.M.A. location map",
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "companyName": "Company/Institution Name",
+    "email": "Email",
+    "subject": "Subject",
+    "subjectPlaceholder": "-- Select subject --",
+    "message": "Message",
+    "attachment": "Attach PDF files",
+    "attachmentHint": "You can attach multiple PDF files (max {size}MB total)",
+    "totalSize": "Total size: {current}MB / {max}MB",
+    "charactersCount": "{current}/{max} characters",
+    "attachedFiles": "Attached files:",
+    "removeFile": "Remove file",
+    "submit": "Submit form",
+    "submitting": "Sending...",
+    "allFieldsRequired": "All fields are required",
+    "fieldRequired": "This field is required",
+    "minLength": "Minimum {min} characters",
+    "maxLength": "Maximum {max} characters",
+    "onlyPdf": "Only PDF files can be attached.",
+    "fileSizeExceeded": "Total file size exceeds {max}MB.",
+    "recaptchaNotLoaded": "reCAPTCHA not loaded. Refresh the page and try again.",
+    "recaptchaConfigError": "reCAPTCHA configuration is invalid.",
+    "successMessage": "Thank you! Your submission has been sent.",
+    "errorMessage": "An error occurred while sending the form.",
+    "errorMessageRetry": "An error occurred while sending the form. Please try again."
+  }
+}

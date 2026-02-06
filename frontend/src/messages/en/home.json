@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "Laboratory of Unique Application Models",
+    "subtitle": "Innovative solutions at the intersection of science, medicine and biotechnology",
+    "ctaProjects": "Our projects",
+    "ctaTeam": "Meet the team",
+    "ctaCooperation": "Collaboration",
+    "ariaProjects": "See our research projects",
+    "ariaTeam": "Meet our team members",
+    "ariaCooperation": "Find out about cooperation opportunities"
+  },
+  "infoCards": {
+    "heading": "What do we do?",
+    "intro": "The Laboratory of Unique Application Models (P.U.M.A.) operates at the intersection of medicine, biology, computer science and technology. We create computational and experimental models that help better understand diseases and find more effective treatment methods.",
+    "cards": {
+      "basicScience": {
+        "title": "Basic science",
+        "description": "Fundamental research in microbiology, bioengineering and molecular medicine."
+      },
+      "translational": {
+        "title": "Translational research",
+        "description": "Translating scientific discoveries into practical clinical and therapeutic solutions."
+      },
+      "innovation": {
+        "title": "Implementation innovations",
+        "description": "Commercialization of research results and implementation of new technologies in industry."
+      }
+    }
+  },
+  "researchAreas": {
+    "heading": "Our activities include",
+    "areas": {
+      "biofilm": {
+        "title": "Biofilm models",
+        "description": "In vitro, ex vivo and in vivo, including using Galleria mellonella larvae"
+      },
+      "biomaterials": {
+        "title": "Testing biomaterials",
+        "description": "Testing of biomaterials - dressings, drug carriers"
+      },
+      "translational": {
+        "title": "Translational research",
+        "description": "Translational research on the efficacy of antiseptics, antibiotics, dressings, and naturally derived compounds evaluated using the above models"
+      },
+      "efficacy": {
+        "title": "Efficacy and safety analysis",
+        "description": "Preclinical efficacy and safety analysis using alternative models to mammalian studies"
+      },
+      "ai": {
+        "title": "Artificial intelligence in biology",
+        "description": "We use AI algorithms to analyze the movement patterns of Galleria mellonella larvae as a response to toxic substances, including psychoactive substances, and to evaluate the efficacy of anti-infective drugs and drug safety in general"
+      }
+    }
+  },
+  "features": {
+    "heading": "Why P.U.M.A.?",
+    "subtitle": "P.U.M.A. is a team of scientists who work efficiently, quickly and flexibly – like the cat-like creature from which we took our name.",
+    "items": {
+      "fast": {
+        "title": "Quick and efficient",
+        "description": "We operate efficiently without unnecessary bureaucracy"
+      },
+      "flexible": {
+        "title": "Barrier-free",
+        "description": "We have no rigid framework or limitations"
+      },
+      "complete": {
+        "title": "From idea to implementation",
+        "description": "We support projects at every stage"
+      },
+      "interdisciplinary": {
+        "title": "Interdisciplinarity",
+        "description": "We combine different fields of science and practice"
+      }
+    },
+    "closing": "If you encounter a scientific-technological problem in your clinic, company, start-up or during the implementation of a grant, you want to verify an idea, solve troubling questions or modernize an existing solution – we are here to do it."
+  },
+  "quickLinks": {
+    "heading": "Meet P.U.M.A.",
+    "links": {
+      "publications": {
+        "title": "Publications",
+        "description": "Learn about the team's scientific achievements"
+      },
+      "projects": {
+        "title": "Research projects",
+        "description": "Current grants and collaborations"
+      },
+      "models": {
+        "title": "Models",
+        "description": "Innovative research systems"
+      },
+      "recruitment": {
+        "title": "Recruitment",
+        "description": "Join the P.U.M.A. team."
+      }
+    }
+  },
+  "cta": {
+    "heading": "Do you have a research idea?",
+    "description": "Regardless of the stage of the project - from conception to analysis of the results - we can help with its execution, implementation and publication.",
+    "ctaCooperation": "Start a partnership",
+    "ctaContact": "Get in touch",
+    "ariaCooperation": "Start working with our team",
+    "ariaContact": "Contact us"
+  },
+  "grantLogos": {
+    "title": "Projects funded by"
+  }
+}

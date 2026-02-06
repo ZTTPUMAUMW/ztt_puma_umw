@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "title": "Rekrutacja",
+    "subtitle": "Dołącz do zespołu P.U.M.A. - etaty, staże i doktoraty"
+  },
+  "benefits": {
+    "heading": "Dlaczego warto dołączyć?",
+    "career": {
+      "title": "Rozwój kariery",
+      "description": "Praca przy innowacyjnych projektach badawczych"
+    },
+    "publications": {
+      "title": "Publikacje",
+      "description": "Możliwość współautorstwa publikacji naukowych"
+    },
+    "team": {
+      "title": "Zespół",
+      "description": "Praca z doświadczonymi naukowcami i pasjonatami"
+    },
+    "equipment": {
+      "title": "Sprzęt",
+      "description": "Dostęp do nowoczesnych laboratoriów i technologii"
+    },
+    "stability": {
+      "title": "Stabilność",
+      "description": "Praca na Uniwersytecie Medycznym we Wrocławiu"
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Konferencje i współpraca międzynarodowa"
+    }
+  },
+  "tabs": {
+    "heading": "Wybierz ścieżkę rekrutacji",
+    "description": "Oferujemy różne formy współpracy – od etatów, przez staże, po doktoraty. Wybierz interesującą Cię opcję, aby poznać szczegóły.",
+    "payroll": "Etat (payroll UMW)",
+    "internship": "Staże i pomysły (naukowcy, przedsiębiorcy, studenci)",
+    "phd": "Doktorat (PhD track)",
+    "payrollContent": "Chcesz pracować w miejscu, gdzie nauka spotyka się z technologią, a wyniki naprawdę coś znaczą? W P.U.M.A. nie ma miejsca na stagnację. Potrzebujemy ludzi, którzy myślą nieszablonowo, działają szybko i nie boją się odpowiedzialności. Jeśli badania są Twoją pasją - znajdziemy Ci miejsce na pokładzie.",
+    "internshipContent": "Masz pomysł, który inni uznaliby za zbyt trudny albo zbyt odważny? Zapraszamy. W P.U.M.A. nie uciekamy od wyzwań - zamieniamy je w projekty, dane, patenty i publikacje, w których możesz brać udział. Jeśli chcesz zrobić coś więcej niż tylko kolekcjonować punkty do CV, znajdziesz tu partnerów, którzy nie tylko Cię wysłuchają i pomogą ruszyć z miejsca, ale też będą wspierać zarówno w codziennych dociekaniach naukowych, jak i w zmaganiach z biurokracją.",
+    "phdContent": "Jeśli Twoja motywacja to łatwy tytuł doktora, trzy inne etaty i symboliczna wizyta w labie co drugi czwartek między 13:07 a 13:15 - szukaj gdzie indziej. Doktorat w P.U.M.A. to przygoda, w której potrzeba determinacji i systematyczności. W zamian dostaniesz możliwość pracy nad projektami o realnym znaczeniu, wsparcie specjalistów z całego świata i szansę na publikacje w uznanych czasopismach. Najlepiej, jeśli naprawdę pasjonuje Cię to, co robisz i co chcesz robić - wtedy my zrobimy wszystko, by Ci pomóc."
+  },
+  "preapply": {
+    "heading": "Przygotuj zanim zaaplikujesz",
+    "payroll": "aktualne CV, list motywacyjny, wykaz publikacji lub doświadczenia projektowego.",
+    "internship": "krótki opis zainteresowań badawczych, zgoda promotora/opiekuna, CV.",
+    "phd": "streszczenie planu badawczego (do 1 strony), CV, rekomendacje naukowe (min. 1 osoba).",
+    "confirmLabel": "Potwierdzam, że zapoznałem/am się z wymaganiami i chcę przejść do formularza rekrutacyjnego."
+  },
+
+  "form": {
+    "title": "Formularz rekrutacyjny",
+    "attachmentLabel": "Załącz pliki PDF (np. CV)"
+  }
+}

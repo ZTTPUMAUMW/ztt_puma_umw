@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Current research projects",
+    "subtitle": "Grants and collaborations implemented by the P.U.M.A. team."
+  },
+  "stats": {
+    "totalValue": "Total value of grants",
+    "activeProjects": "Active projects",
+    "partners": "Institutional partners"
+  },
+  "labels": {
+    "fundingBody": "Funding source",
+    "projectNumber": "Project number",
+    "fundingAmount": "Funding amount",
+    "team": "Project team",
+    "learnMore": "View project details"
+  }
+}

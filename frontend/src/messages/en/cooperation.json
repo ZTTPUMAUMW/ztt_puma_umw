@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Collaboration",
+    "subtitle": "Establish scientific and research cooperation with P.U.M.A."
+  },
+  "offers": {
+    "heading": "What do we offer?",
+    "expertise": {
+      "title": "Scientific expertise",
+      "description": "Experienced team of scientists from various fields"
+    },
+    "equipment": {
+      "title": "Modern equipment",
+      "description": "Access to specialized laboratories and equipment"
+    },
+    "dataAnalysis": {
+      "title": "Data analysis",
+      "description": "Advanced statistical analysis and AI"
+    },
+    "microbiology": {
+      "title": "Microbiological analysis",
+      "description": "Microbiological studies using in vivo and in vitro models"
+    },
+    "flexibility": {
+      "title": "Flexibility",
+      "description": "Tailor to project needs and budget"
+    },
+    "comprehensive": {
+      "title": "Complexity",
+      "description": "From idea to research to implementation"
+    }
+  },
+  "scopeItems": [
+    "Joint research projects",
+    "Scientific and factual consultation",
+    "Implementation of the experimental part of the projects",
+    "Microbiological testing and analysis",
+    "Evaluation of cytotoxicity and biocompatibility",
+    "Scientific publications"
+  ],
+  "form": {
+    "title": "Contact us",
+    "intro": "Do you have questions or want to discuss cooperation opportunities? Fill out the form and we will get in touch with you.",
+    "attachmentLabel": "Attach PDF files"
+  },
+  "intro": {
+    "heading": "Scientific and Research Collaboration",
+    "paragraph1": "Our goal is to bridge science with practice. We support both individual researchers and institutions seeking to innovate in medicine, biotechnology, and life sciences. If you have a research project idea or need support with the experimental part – feel free to contact us.",
+    "paragraph2": "We collaborate with universities, startups, research centers, and pharmaceutical and biotechnology companies. Regardless of your idea's stage – from concept to results analysis – we can help with implementation and publication."
+  },
+  "scope": {
+    "heading": "Collaboration opportunities:",
+    "items": [
+      "Conducting laboratory experiments and clinical trials",
+      "Data analysis, statistics, results processing",
+      "Scientific consultations and research concept development",
+      "Support in preparing grant applications and publications",
+      "Research commissions for institutions or private companies"
+    ]
+  },
+  "note": "We do not require formal affiliation – what matters is the idea, goal, and willingness to collaborate."
+}

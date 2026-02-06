@@ -1,0 +1,332 @@
+{
+  "navigation": {
+    "home": "Strona główna",
+    "projects": "Projekty",
+    "publications": "Publikacje",
+    "models": "Modele",
+    "team": "Zespół",
+    "recruitment": "Rekrutacja",
+    "cooperation": "Współpraca",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "skipToContent": "Przejdź do treści głównej",
+    "readMore": "Czytaj więcej",
+    "loadMore": "Załaduj więcej",
+    "close": "Zamknij",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "learnMore": "Dowiedz się więcej",
+    "seeAll": "Zobacz wszystkie",
+    "backToHome": "Powrót na stronę główną"
+  },
+  "home": {
+    "hero": {
+      "title": "Pracownia Unikalnych Modeli Aplikacyjnych",
+      "subtitle": "Innowacyjne rozwiązania na styku nauki, medycyny i biotechnologii",
+      "ctaProjects": "Nasze projekty",
+      "ctaTeam": "Poznaj zespół",
+      "ctaCooperation": "Współpraca",
+      "ariaProjects": "Zobacz nasze projekty badawcze",
+      "ariaTeam": "Poznaj członków naszego zespołu",
+      "ariaCooperation": "Dowiedz się o możliwościach współpracy"
+    },
+    "infoCards": {
+      "heading": "Czym się zajmujemy?",
+      "intro": "Pracownia Unikalnych Modeli Aplikacyjnych (P.U.M.A.) działa na styku nauki podstawowej, badań translacyjnych i innowacji wdrożeniowych. Tworzymy i rozwijamy unikalne modele biologiczne i bioinżynieryjne, które pozwalają wiarygodnie odzwierciedlać procesy zachodzące w organizmach żywych oraz w środowiskach klinicznych i przemysłowych.",
+      "cards": {
+        "basicScience": {
+          "title": "Nauka podstawowa",
+          "description": "Badania fundamentalne w zakresie mikrobiologii, bioinżynierii i medycyny molekularnej."
+        },
+        "translational": {
+          "title": "Badania translacyjne",
+          "description": "Przekładanie odkryć naukowych na praktyczne rozwiązania kliniczne i terapeutyczne."
+        },
+        "innovation": {
+          "title": "Innowacje wdrożeniowe",
+          "description": "Komercjalizacja wyników badań i wdrażanie nowych technologii w przemyśle."
+        }
+      }
+    },
+    "researchAreas": {
+      "heading": "Nasza działalność obejmuje",
+      "areas": {
+        "biofilm": {
+          "title": "Modele biofilmowe",
+          "description": "In vitro, ex vivo i in vivo, w tym z wykorzystaniem larw Galleria mellonella"
+        },
+        "biomaterials": {
+          "title": "Testowanie biomateriałów",
+          "description": "Testowanie biomateriałów - opatrunków, nośników leków"
+        },
+        "translational": {
+          "title": "Badania translacyjne",
+          "description": "Badania translacyjne nad skutecznością antyseptyków, antybiotyków, opatrunków oraz związków pochodzenia naturalnego ocenianą za pomocą wyżej wymienionych modeli"
+        },
+        "efficacy": {
+          "title": "Analiza skuteczności i bezpieczeństwa",
+          "description": "Analiza skuteczności i bezpieczeństwa w ujęciu przedklinicznym, z zastosowaniem modeli alternatywnych wobec badań na ssakach"
+        },
+        "ai": {
+          "title": "Sztuczna inteligencja w biologii",
+          "description": "Wykorzystujemy algorytmy AI do analizy wzorców ruchu larw Galleria mellonella jako odpowiedzi na substancje toksyczne, w tym psychoaktywne oraz do oceny skuteczności leków przeciwinfekcyjnych i bezpieczeństwa leków w ogóle"
+        }
+      }
+    },
+    "features": {
+      "heading": "Dlaczego P.U.M.A.?",
+      "subtitle": "P.U.M.A. to zespół naukowców, którzy działają sprawnie, szybko i elastycznie – jak kotowaty, od którego wzięliśmy nazwę.",
+      "closing": "Jeśli w Twojej klinice, firmie, start-upie czy podczas realizacji grantu pojawia się problem naukowo-technologiczny, chcesz zweryfikować pomysł, rozwiązać nurtujące pytania albo zmodernizować istniejące rozwiązanie – jesteśmy po to, aby to zrobić.",
+      "items": {
+        "fast": {
+          "title": "Szybko i sprawnie",
+          "description": "Działamy efektywnie bez zbędnej biurokracji"
+        },
+        "flexible": {
+          "title": "Bez barier",
+          "description": "Nie mamy sztywnych ram ani ograniczeń"
+        },
+        "complete": {
+          "title": "Od pomysłu do wdrożenia",
+          "description": "Wspieramy projekty na każdym etapie"
+        },
+        "interdisciplinary": {
+          "title": "Interdyscyplinarność",
+          "description": "Łączymy różne dziedziny nauki i praktyki"
+        }
+      }
+    },
+    "quickLinks": {
+      "heading": "Poznaj P.U.M.A.",
+      "links": {
+        "publications": {
+          "title": "Publikacje",
+          "description": "Poznaj dorobek naukowy zespołu"
+        },
+        "projects": {
+          "title": "Projekty badawcze",
+          "description": "Aktualne granty i współprace"
+        },
+        "models": {
+          "title": "Modele",
+          "description": "Innowacyjne systemy badawcze"
+        },
+        "recruitment": {
+          "title": "Rekrutacja",
+          "description": "Dołącz do zespołu P.U.M.A."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Masz pomysł badawczy?",
+      "description": "Niezależnie od etapu projektu – od koncepcji po analizę wyników – możemy pomóc w jego realizacji, wdrożeniu i publikacji.",
+      "ctaCooperation": "Rozpocznij współpracę",
+      "ctaContact": "Skontaktuj się",
+      "ariaCooperation": "Rozpocznij współpracę z naszym zespołem",
+      "ariaContact": "Skontaktuj się z nami"
+    }
+  },
+  "team": {
+    "hero": {
+      "title": "Poznaj nasz zespół",
+      "subtitle": "Naukowcy, doktoranci i studenci tworzący P.U.M.A."
+    },
+    "stats": {
+      "intro": "Nasz zespół to grupa pasjonatów nauki, którzy łączą doświadczenie akademickie z praktycznym podejściem do badań. Wspólnie tworzymy innowacyjne rozwiązania w obszarze mikrobiologii, biotechnologii i medycyny.",
+      "researchers": "Pracownicy naukowi",
+      "phd": "Doktoranci",
+      "students": "Studenci"
+    },
+    "tabs": {
+      "researchers": "Pracownicy",
+      "phd": "Doktoranci",
+      "students": "Studenci"
+    }
+  },
+  "projects": {
+    "hero": {
+      "title": "Aktualne projekty badawcze",
+      "subtitle": "Granty i współprace realizowane przez zespół P.U.M.A."
+    },
+    "stats": {
+      "totalValue": "Łączna wartość grantów",
+      "activeProjects": "Aktywne projekty",
+      "partners": "Partnerzy instytucjonalni"
+    },
+    "labels": {
+      "fundingBody": "Źródło finansowania",
+      "projectNumber": "Numer projektu",
+      "fundingAmount": "Wartość finansowania",
+      "team": "Zespół",
+      "learnMore": "Więcej informacji"
+    }
+  },
+  "publications": {
+    "hero": {
+      "title": "Publikacje naukowe",
+      "subtitle": "Dorobek naukowy zespołu P.U.M.A."
+    },
+    "filters": {
+      "allYears": "Wszystkie lata",
+      "year": "Rok"
+    },
+    "labels": {
+      "journal": "Czasopismo",
+      "readArticle": "Czytaj artykuł"
+    }
+  },
+  "models": {
+    "hero": {
+      "title": "Modele badawcze",
+      "subtitle": "Innowacyjne systemy i organizmy modelowe stosowane w P.U.M.A."
+    }
+  },
+  "recruitment": {
+    "hero": {
+      "title": "Rekrutacja",
+      "subtitle": "Dołącz do zespołu P.U.M.A. - etaty, staże i doktoraty"
+    },
+    "benefits": {
+      "heading": "Dlaczego warto dołączyć?",
+      "career": {
+        "title": "Rozwój kariery",
+        "description": "Praca przy innowacyjnych projektach badawczych"
+      },
+      "publications": {
+        "title": "Publikacje",
+        "description": "Możliwość współautorstwa publikacji naukowych"
+      },
+      "team": {
+        "title": "Zespół",
+        "description": "Praca z doświadczonymi naukowcami i pasjonatami"
+      },
+      "equipment": {
+        "title": "Sprzęt",
+        "description": "Dostęp do nowoczesnych laboratoriów i technologii"
+      },
+      "stability": {
+        "title": "Stabilność",
+        "description": "Praca na Uniwersytecie Medycznym we Wrocławiu"
+      },
+      "networking": {
+        "title": "Networking",
+        "description": "Konferencje i współpraca międzynarodowa"
+      }
+    },
+    "tabs": {
+      "heading": "Wybierz ścieżkę rekrutacji",
+      "description": "Oferujemy różne formy współpracy – od etatów, przez staże, po doktoraty. Wybierz interesującą Cię opcję, aby poznać szczegóły.",
+      "payroll": "Etat (payroll UMW)",
+      "internship": "Staże i pomysły (naukowcy, przedsiębiorcy, studenci)",
+      "phd": "Doktorat (PhD track)"
+    },
+    "content": {
+      "payroll": "Chcesz pracować w miejscu, gdzie nauka spotyka się z technologią, a wyniki naprawdę coś znaczą? W P.U.M.A. nie ma miejsca na stagnację. Potrzebujemy ludzi, którzy myślą nieszablonowo, działają szybko i nie boją się odpowiedzialności. Jeśli badania są Twoją pasją - znajdziemy Ci miejsce na pokładzie.",
+      "internship": "Masz pomysł, który inni uznaliby za zbyt trudny albo zbyt odważny? Zapraszamy. W P.U.M.A. nie uciekamy od wyzwań - zamieniamy je w projekty, dane, patenty i publikacje, w których możesz brać udział. Jeśli chcesz zrobić coś więcej niż tylko kolekcjonować punkty do CV, znajdziesz tu partnerów, którzy nie tylko Cię wysłuchają i pomogą ruszyć z miejsca, ale też będą wspierać zarówno w codziennych dociekaniach naukowych, jak i w zmaganiach z biurokracją.",
+      "phd": "Doktorat to coś więcej niż tytuł - to szansa, by zejść z utartego szlaku i zbadać coś, co naprawdę Cię fascynuje, a świat jeszcze nie wie, że tego potrzebuje. W P.U.M.A. rozumiemy, że każdy projekt naukowy to podróż - czasem nie wiesz, gdzie wyjdziesz, ale właśnie dlatego warto zacząć. Jesteśmy po to, by pomóc Ci przekuć ciekawość w rozdziały doktoratu, wyniki w publikacje, a eksperymenty w coś, o czym później będziesz mówić z dumą."
+    },
+    "form": {
+      "title": "Aplikuj teraz",
+      "intro": "Wypełnij formularz aplikacyjny i dołącz do zespołu P.U.M.A."
+    }
+  },
+  "cooperation": {
+    "hero": {
+      "title": "Współpraca",
+      "subtitle": "Nawiąż współpracę naukową i badawczą z P.U.M.A."
+    },
+    "offers": {
+      "heading": "Co oferujemy?",
+      "expertise": {
+        "title": "Ekspertyza naukowa",
+        "description": "Doświadczony zespół naukowców z różnych dziedzin"
+      },
+      "equipment": {
+        "title": "Nowoczesne wyposażenie",
+        "description": "Dostęp do specjalistycznych laboratoriów i sprzętu"
+      },
+      "dataAnalysis": {
+        "title": "Analiza danych",
+        "description": "Zaawansowana analiza statystyczna i AI"
+      },
+      "microbiology": {
+        "title": "Analiza mikrobiologiczna",
+        "description": "Badania mikrobiologiczne z wykorzystaniem modeli in vivo i in vitro"
+      },
+      "flexibility": {
+        "title": "Elastyczność",
+        "description": "Dopasowanie do potrzeb i budżetu projektu"
+      },
+      "comprehensive": {
+        "title": "Kompleksowość",
+        "description": "Od pomysłu przez badania po wdrożenie"
+      }
+    },
+    "content": {
+      "heading": "Współpraca naukowa i badawcza",
+      "intro1": "Naszym celem jest łączenie nauki z praktyką. Wspieramy zarówno indywidualnych badaczy, jak i instytucje, które chcą wprowadzać innowacje w obszarze medycyny, biotechnologii i nauk przyrodniczych. Jeżeli masz pomysł na projekt badawczy lub potrzebujesz wsparcia w realizacji części eksperymentalnej – zapraszamy do kontaktu.",
+      "intro2": "Prowadzimy współpracę z uczelniami, startupami, ośrodkami badawczymi oraz przedsiębiorstwami z sektora farmaceutycznego i biotechnologicznego. Niezależnie od etapu Twojego pomysłu – od koncepcji po analizę wyników – możemy pomóc w jego wdrożeniu i publikacji.",
+      "scopeHeading": "Możliwości współpracy:",
+      "scopeItems": [
+        "Wspólne projekty badawcze",
+        "Konsultacje naukowe i merytoryczne",
+        "Realizacja części eksperymentalnej projektów",
+        "Testy i analizy mikrobiologiczne",
+        "Ocena cytotoksyczności i biozgodności",
+        "Publikacje naukowe"
+      ]
+    },
+    "form": {
+      "title": "Skontaktuj się z nami",
+      "intro": "Masz pytania lub chcesz omówić możliwości współpracy? Wypełnij formularz, a skontaktujemy się z Tobą."
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontakt",
+      "subtitle": "Skontaktuj się z zespołem P.U.M.A."
+    },
+    "address": {
+      "title": "Adres",
+      "department": "Zakład Technologii Translacyjnych",
+      "lab": "Pracownia Unikalnych Modeli Aplikacyjnych",
+      "faculty": "Wydział Farmaceutyczny Uniwersytetu Medycznego",
+      "university": "im. Piastów Śląskich we Wrocławiu",
+      "street": "ul. Borowska 211, 50-556 Wrocław",
+      "floor": "Piętro I"
+    },
+    "phone": {
+      "title": "Telefon"
+    },
+    "email": {
+      "title": "Email"
+    }
+  },
+  "footer": {
+    "address": "Adres",
+    "contact": "Kontakt",
+    "quickLinks": "Szybkie linki",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone",
+    "tagline": "Innowacyjne modele biologiczne i bioinżynieryjne",
+    "about": {
+      "title": "O nas",
+      "home": "Strona główna",
+      "team": "Zespół",
+      "publications": "Publikacje"
+    },
+    "services": {
+      "title": "Usługi",
+      "projects": "Projekty",
+      "models": "Modele",
+      "cooperation": "Współpraca"
+    },
+    "contactSection": {
+      "title": "Kontakt",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "recruitment": "Rekrutacja"
+    },
+    "copyright": "Pracownia Unikalnych Modeli Aplikacyjnych. Wszelkie prawa zastrzeżone."
+  }
+}

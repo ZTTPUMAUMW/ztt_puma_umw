@@ -1,0 +1,37 @@
+{
+  "department": "Zakład Technologii Translacyjnych",
+  "lab": "Pracownia Unikalnych Modeli Aplikacyjnych",
+  "description": "Innowacyjne rozwiązania na styku nauki, medycyny i biotechnologii",
+  "site": "Strona",
+  "links": "Linki",
+  "externalLinks": {
+    "university": "Uniwersytet Medyczny we Wrocławiu",
+    "department": "ZTT UMW",
+    "platform": "Polska Platforma Medyczna",
+    "plum": "PLUM EDU"
+  },
+  "address": "Adres",
+  "contact": "Kontakt",
+  "quickLinks": "Szybkie linki",
+  "allRightsReserved": "Wszelkie prawa zastrzeżone",
+  "tagline": "Innowacyjne modele biologiczne i bioinżynieryjne",
+  "about": {
+    "title": "O nas",
+    "home": "Strona główna",
+    "team": "Zespół",
+    "publications": "Publikacje"
+  },
+  "services": {
+    "title": "Usługi",
+    "projects": "Projekty",
+    "models": "Modele",
+    "cooperation": "Współpraca"
+  },
+  "contactSection": {
+    "title": "Kontakt",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "recruitment": "Rekrutacja"
+  },
+  "copyright": "Pracownia Unikalnych Modeli Aplikacyjnych. Wszelkie prawa zastrzeżone."
+}

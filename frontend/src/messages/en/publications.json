@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Scientific publications",
+    "subtitle": "Scientific achievements of the P.U.M.A. team."
+  },
+  "filters": {
+    "allYears": "All years",
+    "year": "Year",
+    "all": "All"
+  },
+  "labels": {
+    "journal": "Journal",
+    "readArticle": "Read article"
+  },
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  }
+}

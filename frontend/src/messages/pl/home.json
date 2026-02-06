@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "Pracownia Unikalnych Modeli Aplikacyjnych",
+    "subtitle": "Innowacyjne rozwiązania na styku nauki, medycyny i biotechnologii",
+    "ctaProjects": "Nasze projekty",
+    "ctaTeam": "Poznaj zespół",
+    "ctaCooperation": "Współpraca",
+    "ariaProjects": "Zobacz nasze projekty badawcze",
+    "ariaTeam": "Poznaj członków naszego zespołu",
+    "ariaCooperation": "Dowiedz się o możliwościach współpracy"
+  },
+  "infoCards": {
+    "heading": "Czym się zajmujemy?",
+    "intro": "Pracownia Unikalnych Modeli Aplikacyjnych (P.U.M.A.) działa na styku medycyny, biologii, informatyki i technologii. Tworzymy modele obliczeniowe i doświadczalne, które pomagają lepiej zrozumieć choroby i znaleźć skuteczniejsze metody leczenia.",
+    "cards": {
+      "basicScience": {
+        "title": "Nauka podstawowa",
+        "description": "Badania fundamentalne w zakresie mikrobiologii, bioinżynierii i medycyny molekularnej."
+      },
+      "translational": {
+        "title": "Badania translacyjne",
+        "description": "Przekładanie odkryć naukowych na praktyczne rozwiązania kliniczne i terapeutyczne."
+      },
+      "innovation": {
+        "title": "Innowacje wdrożeniowe",
+        "description": "Komercjalizacja wyników badań i wdrażanie nowych technologii w przemyśle."
+      }
+    }
+  },
+  "researchAreas": {
+    "heading": "Nasza działalność obejmuje",
+    "areas": {
+      "biofilm": {
+        "title": "Modele biofilmowe",
+        "description": "In vitro, ex vivo i in vivo, w tym z wykorzystaniem larw Galleria mellonella"
+      },
+      "biomaterials": {
+        "title": "Testowanie biomateriałów",
+        "description": "Testowanie biomateriałów - opatrunków, nośników leków"
+      },
+      "translational": {
+        "title": "Badania translacyjne",
+        "description": "Badania translacyjne nad skutecznością antyseptyków, antybiotyków, opatrunków oraz związków pochodzenia naturalnego ocenianą za pomocą wyżej wymienionych modeli"
+      },
+      "efficacy": {
+        "title": "Analiza skuteczności i bezpieczeństwa",
+        "description": "Analiza skuteczności i bezpieczeństwa w ujęciu przedklinicznym, z zastosowaniem modeli alternatywnych wobec badań na ssakach"
+      },
+      "ai": {
+        "title": "Sztuczna inteligencja w biologii",
+        "description": "Wykorzystujemy algorytmy AI do analizy wzorców ruchu larw Galleria mellonella jako odpowiedzi na substancje toksyczne, w tym psychoaktywne oraz do oceny skuteczności leków przeciwinfekcyjnych i bezpieczeństwa leków w ogóle"
+      }
+    }
+  },
+  "features": {
+    "heading": "Dlaczego P.U.M.A.?",
+    "subtitle": "P.U.M.A. to zespół naukowców, którzy działają sprawnie, szybko i elastycznie – jak kotowaty, od którego wzięliśmy nazwę.",
+    "items": {
+      "fast": {
+        "title": "Szybko i sprawnie",
+        "description": "Działamy efektywnie bez zbędnej biurokracji"
+      },
+      "flexible": {
+        "title": "Bez barier",
+        "description": "Nie mamy sztywnych ram ani ograniczeń"
+      },
+      "complete": {
+        "title": "Od pomysłu do wdrożenia",
+        "description": "Wspieramy projekty na każdym etapie"
+      },
+      "interdisciplinary": {
+        "title": "Interdyscyplinarność",
+        "description": "Łączymy różne dziedziny nauki i praktyki"
+      }
+    },
+    "closing": "Jeśli w Twojej klinice, firmie, start-upie czy podczas realizacji grantu pojawia się problem naukowo-technologiczny, chcesz zweryfikować pomysł, rozwiązać nurtujące pytania albo zmodernizować istniejące rozwiązanie – jesteśmy po to, aby to zrobić."
+  },
+  "quickLinks": {
+    "heading": "Poznaj P.U.M.A.",
+    "links": {
+      "publications": {
+        "title": "Publikacje",
+        "description": "Poznaj dorobek naukowy zespołu"
+      },
+      "projects": {
+        "title": "Projekty badawcze",
+        "description": "Aktualne granty i współprace"
+      },
+      "models": {
+        "title": "Modele",
+        "description": "Innowacyjne systemy badawcze"
+      },
+      "recruitment": {
+        "title": "Rekrutacja",
+        "description": "Dołącz do zespołu P.U.M.A."
+      }
+    }
+  },
+  "cta": {
+    "heading": "Masz pomysł badawczy?",
+    "description": "Niezależnie od etapu projektu – od koncepcji po analizę wyników – możemy pomóc w jego realizacji, wdrożeniu i publikacji.",
+    "ctaCooperation": "Rozpocznij współpracę",
+    "ctaContact": "Skontaktuj się",
+    "ariaCooperation": "Rozpocznij współpracę z naszym zespołem",
+    "ariaContact": "Skontaktuj się z nami"
+  },
+  "grantLogos": {
+    "title": "Projekty finansowane przez"
+  }
+}

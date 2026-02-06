@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Poznaj nasz zespół",
+    "subtitle": "Naukowcy, doktoranci i studenci tworzący P.U.M.A."
+  },
+  "stats": {
+    "intro": "Nasz zespół to grupa pasjonatów nauki, którzy łączą doświadczenie akademickie z praktycznym podejściem do badań. Wspólnie tworzymy innowacyjne rozwiązania w obszarze mikrobiologii, biotechnologii i medycyny.",
+    "researchers": "Pracownicy naukowi",
+    "phd": "Doktoranci",
+    "students": "Studenci"
+  },
+  "tabs": {
+    "researchers": "Pracownicy",
+    "phd": "Doktoranci",
+    "students": "Studenci"
+  },
+  "modal": {
+    "back": "Powrót"
+  }
+}

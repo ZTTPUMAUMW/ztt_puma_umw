@@ -1,0 +1,223 @@
+
+.project-component__funding-body-number {
+  font-size: 0.95em;
+  color: var(--color-text-muted);
+  margin-top: 0.1em;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.project-component-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-component-link:hover .project-component {
+  box-shadow: var(--shadow-xl);
+}
+
+.project-component {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 3rem;
+  border-radius:3rem;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.project-component__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-component__wrapper-head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-semi-lg);
+}
+
+.project-component__logo {
+  flex: 0 0 auto;
+  width: 280px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.project-component__title {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.3;
+  color: var(--color-primary);
+  text-align: justify;
+}
+
+.project-component__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-component__wrapper-separator {
+  height: var(--border-width-thin);
+  background-color:  var(--color-secondary);
+  margin: var(--spacing-xs) 0;
+  margin: 2rem 10rem;
+  height: 1.5px;
+}
+
+.project-component__description {
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+}
+
+.project-component__copy {
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-body);
+  font-size: var(--font-size-base);
+}
+
+.project-component__roles {
+  margin-bottom: var(--spacing-md);
+}
+
+.project-component__roles strong {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-base);
+}
+
+.project-component__roles-list {
+  margin: 0;
+  padding-left: 2rem;
+  list-style: disc;
+}
+
+.project-component__roles-list li {
+  margin-bottom: var(--spacing-2xs);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.project-component__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.project-component__funding-body {
+  color: var(--color-secondary);
+  font-size: var(--font-size-base);
+}
+
+.project-component__funding-amount {
+  font-size: var(--font-size-lg);
+  color: var(--color-info);
+}
+
+@media (max-width: 768px) {
+  .project-component {
+    padding: var(--spacing-semi-lg);
+  }
+
+  .project-component__wrapper-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+
+  .project-component__logo {
+    width: 180px;
+    max-width: 90vw;
+    margin-bottom: var(--spacing-xs);
+    padding-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Make UMW project logo larger on mobile only */
+  .project-component__logo--umw {
+    width: 32rem;
+    max-width: 90vw;
+    height: auto !important;
+  }
+
+
+  .project-component__title {
+    font-size: var(--font-size-xl);
+    text-align: justify;
+  }
+
+  .project-component__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
+
+
+.projects-stats-section {
+  padding: var(--spacing-2xl) 0;
+  background: var(--color-background-light);
+}
+
+.projects-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+.stat-card {
+  background: var(--color-background);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-secondary);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.stat-number {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-xl);
+  }
+}
+
+.stat-label {
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--font-weight-semibold);
+}
+
+.stat-total {
+  color: var(--color-text-light);
+}
+
+
+.project-component__funding-info {
+  display: flex;
+  flex-direction: column;
+}
