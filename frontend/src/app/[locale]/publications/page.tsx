@@ -7,6 +7,8 @@ import Hero from "@/components/Hero";
 import PublicationItem, { Publication } from "@/components/PublicationItem";
 import { italicizeLatinWords } from "@/lib/utils";
 
+
+// TODO: Refactor to fetch publications from API instead of static data, and implement pagination or infinite scroll for better performance with large number of publications.
 export default function PublicationsPage() {
   const t = useTranslations('publications');
   const [selectedYear, setSelectedYear] = useState<number | null>(null);

@@ -13,6 +13,7 @@ import { teamMembers as teamMembersEn } from "@/data/teamMembers.en";
 import styles from '@/styles/components/team-stats.module.scss';
 import teamStyles from '@/styles/pages/team.module.scss';
 
+// TODO: Refactor to fetch team members from SanityCMS instead of static data, and implement search/filter functionality for better user experience with larger teams in the future.
 export default function TeamPage() {
   const t = useTranslations('team');
   const locale = useLocale();

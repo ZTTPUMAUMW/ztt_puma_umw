@@ -10,6 +10,8 @@ import styles from '@/styles/pages/projects.module.scss';
 import { projectsData as projectsDataPl } from '@/data/projects.pl';
 import { projectsData as projectsDataEn } from '@/data/projects.en';
 
+
+// TODO: Refactor to fetch projects from SanityCMS instead of static data, and move stats calculation to backend for better performance and accuracy.
 export default function ProjectsPage() {
   const t = useTranslations('projects');
   const locale = useLocale();
