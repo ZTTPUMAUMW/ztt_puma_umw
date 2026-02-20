@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import styles from '../styles/components/team-card.module.scss';
+import Image from "next/image";
+import styles from "../styles/components/team-card.module.scss";
 
 export interface TeamMember {
   id: string;
@@ -23,30 +23,32 @@ interface TeamCardProps {
 
 export default function TeamCard({ member, onOpenModal }: TeamCardProps) {
   return (
-    <div className={styles['team-card']}>
+    <div className={styles["team-card"]}>
       <button
         onClick={() => onOpenModal(member)}
-        className={styles['team-card__button']}
+        className={styles["team-card__button"]}
         aria-label={`Pokaż szczegóły członka zespołu: ${member.name}`}
       >
-        <div className={styles['team-card__thumbnail']}>
-          <div className={styles['team-card__image-wrapper']}>
+        <div className={styles["team-card__thumbnail"]}>
+          <div className={styles["team-card__image-wrapper"]}>
             <Image
-              className={styles['team-card__image']}
+              className={styles["team-card__image"]}
               src={`/${member.image}`}
               alt={member.alt}
               fill
               sizes="(min-width: 1367px) 581px, 580px"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
-        <h3 className={`${styles['team-card__name']} color-secondary`}>
+        <h3 className={`${styles["team-card__name"]} color-secondary`}>
           {member.academicTitle && `${member.academicTitle} `}
           {member.name}
           {member.universityTitle && `, ${member.universityTitle}`}
         </h3>
-        <div className={`${styles['team-card__position']} has-tertiary-color`}>{member.position}</div>
+        <div className={`${styles["team-card__position"]} has-tertiary-color`}>
+          {member.position}
+        </div>
       </button>
     </div>
   );

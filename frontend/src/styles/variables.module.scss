@@ -1,24 +1,27 @@
-
 :root {
-  --color-primary: #1C3D5A;
+  --color-primary: #1c3d5a;
   --color-primary-light: #2a5a7d;
-  --color-secondary: #E8751A;
+  --color-secondary: #e8751a;
   --color-secondary-hover: #d66815;
-  --color-accent: #E8751A;
+  --color-accent: #e8751a;
   --color-accent-light: #fce9db;
-  --color-accent-1: #E8751A;
-  --color-accent-1-2: #C83F12;
+  --color-accent-1: #e8751a;
+  --color-accent-1-2: #c83f12;
   --color-accent-2: #898121;
   --color-accent-2-2: #808836;
-  --color-accent-2-3: #62760C;
-  --color-accent-3: #3572EF;
+  --color-accent-2-3: #62760c;
+  --color-accent-3: #3572ef;
   --color-muted: #6b7280;
 
   --color-background: #ffffff;
   --color-background-light: #f5f5f5;
   --color-background-lighter: #fafafa;
   --color-background-dark: #1a1a1a;
-  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
 
   --color-text: #333333;
   --color-text-dark: #1a1a1a;
@@ -36,7 +39,7 @@
   --color-error-alt: #dc3545;
   --color-success: #16a34a;
   --color-warning: #ea580c;
-  --color-info: #3572EF;
+  --color-info: #3572ef;
 
   --color-success-bg: #d4edda;
   --color-success-text: #155724;
@@ -54,8 +57,8 @@
   --bg-light: var(--color-background-light);
   --bg-dark: var(--color-background-dark);
 
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Be Vietnam Pro', sans-serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Be Vietnam Pro", sans-serif;
 
   --font-size-base: 1.6rem;
   --font-size-lead: 1.8rem;

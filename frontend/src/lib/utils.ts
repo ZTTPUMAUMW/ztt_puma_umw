@@ -1,44 +1,42 @@
 const LATIN_WORDS = [
+  "in vitro",
+  "in vivo",
+  "in silico",
+  "ex vivo",
+  "et al.",
+  "et al",
+  "vs.",
 
-  'in vitro',
-  'in vivo',
-  'in silico',
-  'ex vivo',
-  'et al.',
-  'et al',
-  'vs.',
+  "Pseudomonas aeruginosa",
+  "Staphylococcus aureus",
+  "Salmonella Enteritidis",
+  "Helicobacter pylori",
 
-  'Pseudomonas aeruginosa',
-  'Staphylococcus aureus',
-  'Salmonella Enteritidis',
-  'Helicobacter pylori',
+  "Pleurotus pulmonarius",
+  "Pleurotus citrinopileatus",
+  "Pleurotus djamor",
 
-  'Pleurotus pulmonarius',
-  'Pleurotus citrinopileatus',
-  'Pleurotus djamor',
+  "Physarum polycephalum",
 
-  'Physarum polycephalum',
+  "Galleria mellonella",
 
-  'Galleria mellonella',
-
-  'Pseudomonas',
-  'Staphylococcus',
-  'Salmonella',
-  'Helicobacter',
-  'Galleria',
-  'Pleurotus',
+  "Pseudomonas",
+  "Staphylococcus",
+  "Salmonella",
+  "Helicobacter",
+  "Galleria",
+  "Pleurotus",
 ];
 
 export function italicizeLatinWords(text: string): string {
   let result = text;
 
   const sortedWords = [...LATIN_WORDS].sort((a, b) => b.length - a.length);
-  
-  sortedWords.forEach((phrase) => {
 
-    const regex = new RegExp(`\\b(${phrase})\\b`, 'gi');
-    result = result.replace(regex, '<i>$1</i>');
+  sortedWords.forEach((phrase) => {
+    const regex = new RegExp(`\\b(${phrase})\\b`, "gi");
+    result = result.replace(regex, "<i>$1</i>");
   });
-  
+
   return result;
 }

@@ -28,12 +28,12 @@ src/
 
 ### Content Strategy
 
-| Content Type | Storage | Example |
-|-------------|---------|---------|
-| UI texts | JSON (`messages/`) | Buttons, labels, errors |
-| Page content | JSON (`messages/`) | Headings, descriptions |
-| Dynamic content | Sanity CMS | Projects, publications |
-| Structured data | TypeScript (`data/`) | Team members |
+| Content Type    | Storage              | Example                 |
+| --------------- | -------------------- | ----------------------- |
+| UI texts        | JSON (`messages/`)   | Buttons, labels, errors |
+| Page content    | JSON (`messages/`)   | Headings, descriptions  |
+| Dynamic content | Sanity CMS           | Projects, publications  |
+| Structured data | TypeScript (`data/`) | Team members            |
 
 ## Setup
 
@@ -46,24 +46,25 @@ npm install next-intl
 ### 2. Configuration
 
 **`src/i18n/routing.ts`**
+
 ```typescript
-import { defineRouting } from 'next-intl/routing';
-import { createNavigation } from 'next-intl/navigation';
+import { defineRouting } from "next-intl/routing";
+import { createNavigation } from "next-intl/navigation";
 
 export const routing = defineRouting({
-  locales: ['pl', 'en'],
-  defaultLocale: 'pl',
-  localePrefix: 'as-needed', // PL without prefix, EN with /en
+  locales: ["pl", "en"],
+  defaultLocale: "pl",
+  localePrefix: "as-needed", // PL without prefix, EN with /en
 });
 
-export const { Link, redirect, usePathname, useRouter } = 
-  createNavigation(routing);
+export const { Link, redirect, usePathname, useRouter } = createNavigation(routing);
 ```
 
 **`src/i18n/request.ts`**
+
 ```typescript
-import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
+import { getRequestConfig } from "next-intl/server";
+import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
@@ -84,10 +85,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
 ```
 
 **`next.config.ts`**
-```typescript
-import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+```typescript
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig = {
   // Your Next.js config
@@ -97,20 +99,22 @@ export default withNextIntl(nextConfig);
 ```
 
 **`src/middleware.ts`**
+
 ```typescript
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
 
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/(pl|en)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ["/", "/(pl|en)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
 };
 ```
 
 ### 3. Layout Setup
 
 **`src/app/[locale]/layout.tsx`**
+
 ```typescript
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -154,24 +158,20 @@ export default async function LocaleLayout({
 ### Server Components
 
 ```tsx
-import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
-export default async function HomePage({ 
-  params 
-}: { 
-  params: Promise<{ locale: string }> 
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  
-  const t = useTranslations('home');
-  
+
+  const t = useTranslations("home");
+
   return (
     <div>
-      <h1>{t('hero.title')}</h1>
-      <p>{t('hero.subtitle')}</p>
-      <button>{t('cta.primary')}</button>
+      <h1>{t("hero.title")}</h1>
+      <p>{t("hero.subtitle")}</p>
+      <button>{t("cta.primary")}</button>
     </div>
   );
 }
@@ -180,18 +180,18 @@ export default async function HomePage({
 ### Client Components
 
 ```tsx
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
-  const t = useTranslations('contact.form');
-  const tCommon = useTranslations('common');
-  
+  const t = useTranslations("contact.form");
+  const tCommon = useTranslations("common");
+
   return (
     <form>
-      <input placeholder={t('fields.name.placeholder')} />
-      <button>{tCommon('buttons.submit')}</button>
+      <input placeholder={t("fields.name.placeholder")} />
+      <button>{tCommon("buttons.submit")}</button>
     </form>
   );
 }
@@ -200,7 +200,7 @@ export default function ContactForm() {
 ### Navigation Links
 
 ```tsx
-import { Link } from '@/i18n/routing';
+import { Link } from "@/i18n/routing";
 
 export default function Navigation() {
   return (
@@ -216,26 +216,26 @@ export default function Navigation() {
 ### Language Switcher
 
 ```tsx
-'use client';
+"use client";
 
-import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/routing";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  
+
   const switchLocale = (newLocale: string) => {
     router.replace(pathname, { locale: newLocale });
   };
-  
+
   return (
     <div>
-      <button onClick={() => switchLocale('pl')} disabled={locale === 'pl'}>
+      <button onClick={() => switchLocale("pl")} disabled={locale === "pl"}>
         PL
       </button>
-      <button onClick={() => switchLocale('en')} disabled={locale === 'en'}>
+      <button onClick={() => switchLocale("en")} disabled={locale === "en"}>
         EN
       </button>
     </div>
@@ -346,8 +346,8 @@ const projects = await client.fetch(query, { locale });
 
 ```typescript
 // Test locale switching
-describe('Language Switcher', () => {
-  it('switches from PL to EN', async () => {
+describe("Language Switcher", () => {
+  it("switches from PL to EN", async () => {
     // Test implementation
   });
 });
@@ -356,13 +356,16 @@ describe('Language Switcher', () => {
 ## Troubleshooting
 
 **Issue**: Translations not loading
+
 - Check message file import in `i18n/request.ts`
 - Verify file exists in `messages/[locale]/`
 
 **Issue**: Wrong locale displayed
+
 - Check middleware matcher pattern
 - Verify `localePrefix` config in routing
 
 **Issue**: Client/Server mismatch
+
 - Use `setRequestLocale` in server components
 - Wrap client components with `NextIntlClientProvider`

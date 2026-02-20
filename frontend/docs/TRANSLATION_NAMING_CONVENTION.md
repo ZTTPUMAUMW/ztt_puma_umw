@@ -3,6 +3,7 @@
 ## Zasady ogólne
 
 ### 1. **Hierarchia odpowiada strukturze UI**
+
 ```json
 {
   "sekcja": {
@@ -14,6 +15,7 @@
 ```
 
 ### 2. **Nazewnictwo w `camelCase`**
+
 ```json
 // ✅ DOBRZE
 "heroTitle": "Tytuł",
@@ -27,6 +29,7 @@
 ### 3. **Prefiks wskazuje kontekst**
 
 #### **Strony:** `home`, `about`, `team`, `research`, `contact`
+
 ```json
 // home.json
 {
@@ -42,6 +45,7 @@
 ```
 
 #### **Nawigacja:** `navigation.json`
+
 ```json
 {
   "header": {
@@ -56,6 +60,7 @@
 ```
 
 #### **Wspólne:** `common.json`
+
 ```json
 {
   "buttons": { "learnMore": "...", "readMore": "..." },
@@ -69,6 +74,7 @@
 ## Wzorce dla typowych elementów
 
 ### **Hero / Banner**
+
 ```json
 {
   "hero": {
@@ -83,6 +89,7 @@
 ```
 
 ### **Sekcje strony**
+
 ```json
 {
   "sections": {
@@ -96,6 +103,7 @@
 ```
 
 ### **Karty / Grid items**
+
 ```json
 {
   "items": {
@@ -109,6 +117,7 @@
 ```
 
 ### **Formularze**
+
 ```json
 {
   "form": {
@@ -133,6 +142,7 @@
 ```
 
 ### **Listy / wyliczenia**
+
 ```json
 {
   "features": {
@@ -147,6 +157,7 @@
 ```
 
 ### **Statystyki / liczniki**
+
 ```json
 {
   "stats": {
@@ -162,6 +173,7 @@
 ## Przykłady złożonych struktur
 
 ### **Strona główna (home.json)**
+
 ```json
 {
   "hero": {
@@ -205,6 +217,7 @@
 ```
 
 ### **Strona zespołu (team.json)**
+
 ```json
 {
   "hero": {
@@ -234,6 +247,7 @@
 ```
 
 ### **Formularz kontaktowy (contact.json)**
+
 ```json
 {
   "hero": {
@@ -302,6 +316,7 @@
 ## Dobre praktyki
 
 ### ✅ **DO:**
+
 - Trzymaj klucze krótkie i opisowe: `heroTitle`, nie `homepageMainHeroSectionTitle`
 - Grupuj logicznie: wszystkie przyciski w `buttons`, wszystkie etykiety w `labels`
 - Używaj liczby pojedynczej dla kluczy: `button`, `label`, `item`
@@ -309,6 +324,7 @@
 - Konsekwentnie nazywaj podobne elementy na różnych stronach (np. zawsze `hero.title`)
 
 ### ❌ **DON'T:**
+
 - Nie wkładaj HTML: `"title": "<h1>Tytuł</h1>"` ❌
 - Nie używaj underscorów: `hero_title` ❌
 - Nie łącz różnych języków: `titlePL`, `titleEN` ❌
@@ -320,30 +336,30 @@
 ## Przykład użycia w komponencie
 
 ```tsx
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  const t = useTranslations('home');
-  const tCommon = useTranslations('common');
-  
+  const t = useTranslations("home");
+  const tCommon = useTranslations("common");
+
   return (
     <>
       {/* Hero */}
-      <h1>{t('hero.title')}</h1>
-      <p>{t('hero.subtitle')}</p>
-      <button>{t('hero.cta.primary')}</button>
-      
+      <h1>{t("hero.title")}</h1>
+      <p>{t("hero.subtitle")}</p>
+      <button>{t("hero.cta.primary")}</button>
+
       {/* Sekcja */}
       <section>
-        <h2>{t('sections.about.heading')}</h2>
-        <p>{t('sections.about.lead')}</p>
-        <a href="/about">{tCommon('buttons.learnMore')}</a>
+        <h2>{t("sections.about.heading")}</h2>
+        <p>{t("sections.about.lead")}</p>
+        <a href="/about">{tCommon("buttons.learnMore")}</a>
       </section>
-      
+
       {/* Statystyki */}
       <div>
-        <span>{t('sections.team.stats.researchers')}</span>
-        <span>{t('sections.team.stats.phd')}</span>
+        <span>{t("sections.team.stats.researchers")}</span>
+        <span>{t("sections.team.stats.phd")}</span>
       </div>
     </>
   );
@@ -354,16 +370,16 @@ export default function HomePage() {
 
 ## Kiedy użyć MDX zamiast JSON?
 
-| Treść | Format | Uzasadnienie |
-|-------|--------|--------------|
-| Nagłówek sekcji (1-2 słowa) | **JSON** | Krótkie, UI, łatwe tłumaczenie |
-| Lead / podtytuł (1-2 zdania) | **JSON** | Krótkie, UI, łatwe tłumaczenie |
-| Opis projektu (2-3 akapity) | **MDX** | Długie, redakcyjne, formatowanie |
-| Historia wydziału (kilka sekcji) | **MDX** | Długie, redakcyjne, zdjęcia/media |
-| Tekst przycisku | **JSON** | Krótkie, UI, wielokrotnie używane |
-| Polityka prywatności | **MDX** | Długie, prawne, formatowanie |
-| Etykiety pól formularza | **JSON** | Krótkie, UI, wielokrotnie używane |
-| FAQ (pytanie + odpowiedź) | **JSON** (pytanie) + **MDX** (odpowiedź) | Hybrydowe podejście |
+| Treść                            | Format                                   | Uzasadnienie                      |
+| -------------------------------- | ---------------------------------------- | --------------------------------- |
+| Nagłówek sekcji (1-2 słowa)      | **JSON**                                 | Krótkie, UI, łatwe tłumaczenie    |
+| Lead / podtytuł (1-2 zdania)     | **JSON**                                 | Krótkie, UI, łatwe tłumaczenie    |
+| Opis projektu (2-3 akapity)      | **MDX**                                  | Długie, redakcyjne, formatowanie  |
+| Historia wydziału (kilka sekcji) | **MDX**                                  | Długie, redakcyjne, zdjęcia/media |
+| Tekst przycisku                  | **JSON**                                 | Krótkie, UI, wielokrotnie używane |
+| Polityka prywatności             | **MDX**                                  | Długie, prawne, formatowanie      |
+| Etykiety pól formularza          | **JSON**                                 | Krótkie, UI, wielokrotnie używane |
+| FAQ (pytanie + odpowiedź)        | **JSON** (pytanie) + **MDX** (odpowiedź) | Hybrydowe podejście               |
 
 ---
 

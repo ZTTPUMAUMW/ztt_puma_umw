@@ -1,61 +1,49 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { emailTransporter } from '@/lib/email';
-import { verifyRecaptcha } from '@/lib/recaptcha';
+import { NextRequest, NextResponse } from "next/server";
+import { emailTransporter } from "@/lib/email";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    
-    const csrfToken = formData.get('csrf_token') as string;
+
+    const csrfToken = formData.get("csrf_token") as string;
     if (!csrfToken || csrfToken.length < 10) {
-      return NextResponse.json(
-        { error: 'Invalid request' },
-        { status: 403 }
-      );
+      return NextResponse.json({ error: "Invalid request" }, { status: 403 });
     }
 
-    const formTimestamp = formData.get('form_timestamp') as string;
+    const formTimestamp = formData.get("form_timestamp") as string;
     if (formTimestamp) {
       const timeSpent = Date.now() - parseInt(formTimestamp);
       if (timeSpent < 3000) {
-        return NextResponse.json(
-          { error: 'Form submitted too quickly' },
-          { status: 429 }
-        );
+        return NextResponse.json({ error: "Form submitted too quickly" }, { status: 429 });
       }
       if (timeSpent > 900000) {
-        return NextResponse.json(
-          { error: 'Form session expired' },
-          { status: 400 }
-        );
+        return NextResponse.json({ error: "Form session expired" }, { status: 400 });
       }
     }
 
-    const recaptchaToken = formData.get('recaptcha_token') as string;
+    const recaptchaToken = formData.get("recaptcha_token") as string;
     if (!recaptchaToken) {
-      return NextResponse.json(
-        { error: 'reCAPTCHA token missing' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "reCAPTCHA token missing" }, { status: 400 });
     }
 
     const recaptchaResult = await verifyRecaptcha(recaptchaToken);
     if (!recaptchaResult.success) {
       return NextResponse.json(
-        { error: recaptchaResult.error || 'reCAPTCHA verification failed' },
+        { error: recaptchaResult.error || "reCAPTCHA verification failed" },
         { status: 403 }
       );
     }
-    
-    const firstName = formData.get('first_name') as string;
-    const lastName = formData.get('last_name') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const message = formData.get('message') as string;
+
+    const firstName = formData.get("first_name") as string;
+    const lastName = formData.get("last_name") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
 
     if (!firstName || !email || !subject || !message) {
       return NextResponse.json(
-        { error: 'Wszystkie wymagane pola muszą być wypełnione' },
+        { error: "Wszystkie wymagane pola muszą być wypełnione" },
         { status: 400 }
       );
     }
@@ -63,8 +51,8 @@ export async function POST(request: NextRequest) {
     const fullName = lastName ? `${firstName} ${lastName}` : firstName;
 
     const attachments: { filename: string; content: Buffer }[] = [];
-    const files = formData.getAll('attachments') as File[];
-    
+    const files = formData.getAll("attachments") as File[];
+
     for (const file of files) {
       if (file && file.size > 0) {
         const buffer = await file.arrayBuffer();
@@ -87,7 +75,7 @@ Temat: ${subject}
 Wiadomość:
 ${message}
 
-${attachments.length > 0 ? `Liczba załączników: ${attachments.length}` : 'Brak załączników'}
+${attachments.length > 0 ? `Liczba załączników: ${attachments.length}` : "Brak załączników"}
       `,
       html: `
         <h2>Nowa propozycja współpracy</h2>
@@ -95,8 +83,8 @@ ${attachments.length > 0 ? `Liczba załączników: ${attachments.length}` : 'Bra
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Temat:</strong> ${subject}</p>
         <h3>Wiadomość:</h3>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-        ${attachments.length > 0 ? `<p><strong>Liczba załączników:</strong> ${attachments.length}</p>` : '<p><em>Brak załączników</em></p>'}
+        <p>${message.replace(/\n/g, "<br>")}</p>
+        ${attachments.length > 0 ? `<p><strong>Liczba załączników:</strong> ${attachments.length}</p>` : "<p><em>Brak załączników</em></p>"}
       `,
       attachments,
     };
@@ -104,13 +92,13 @@ ${attachments.length > 0 ? `Liczba załączników: ${attachments.length}` : 'Bra
     await emailTransporter.sendMail(mailOptions);
 
     return NextResponse.json(
-      { message: 'Propozycja współpracy została wysłana pomyślnie' },
+      { message: "Propozycja współpracy została wysłana pomyślnie" },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Błąd wysyłania propozycji współpracy:', error);
+    console.error("Błąd wysyłania propozycji współpracy:", error);
     return NextResponse.json(
-      { error: 'Wystąpił błąd podczas wysyłania propozycji' },
+      { error: "Wystąpił błąd podczas wysyłania propozycji" },
       { status: 500 }
     );
   }

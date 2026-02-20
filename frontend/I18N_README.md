@@ -42,6 +42,7 @@ frontend/
 ## 🚀 Szybki start
 
 ### 1. Instalacja
+
 ```bash
 npm install next-intl next-mdx-remote gray-matter
 ```
@@ -49,46 +50,49 @@ npm install next-intl next-mdx-remote gray-matter
 ### 2. Użycie w komponencie
 
 **Komponent serwerowy:**
+
 ```tsx
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  const t = useTranslations('home');
-  
+  const t = useTranslations("home");
+
   return (
     <div>
-      <h1>{t('hero.title')}</h1>
-      <p>{t('hero.subtitle')}</p>
+      <h1>{t("hero.title")}</h1>
+      <p>{t("hero.subtitle")}</p>
     </div>
   );
 }
 ```
 
 **Komponent kliencki:**
-```tsx
-'use client';
 
-import { useTranslations } from 'next-intl';
+```tsx
+"use client";
+
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
-  const t = useTranslations('contact');
-  
+  const t = useTranslations("contact");
+
   return (
     <form>
-      <input placeholder={t('form.fields.name.placeholder')} />
+      <input placeholder={t("form.fields.name.placeholder")} />
     </form>
   );
 }
 ```
 
 **MDX (długie treści):**
+
 ```tsx
-import { compileMDXContent } from '@/lib/mdx';
+import { compileMDXContent } from "@/lib/mdx";
 
 export default async function AboutPage({ params }) {
   const { locale } = await params;
-  const { content } = await compileMDXContent(locale, 'about', 'mission');
-  
+  const { content } = await compileMDXContent(locale, "about", "mission");
+
   return <article>{content}</article>;
 }
 ```
@@ -107,6 +111,7 @@ export default async function AboutPage({ params }) {
 ## 🏷️ Konwencja nazewnictwa
 
 ### JSON (krótkie teksty UI)
+
 ```json
 {
   "hero": {
@@ -127,6 +132,7 @@ export default async function AboutPage({ params }) {
 ```
 
 ### MDX (długie treści)
+
 ```mdx
 ---
 title: "Misja Zakładu"
@@ -143,14 +149,14 @@ Długa treść z formatowaniem, nagłówkami, listami...
 
 ## 🎯 Podział odpowiedzialności
 
-| Typ treści | Format | Przykład |
-|------------|--------|----------|
-| Przyciski, CTA | **JSON** | "Dowiedz się więcej" |
-| Etykiety formularzy | **JSON** | "Imię i nazwisko" |
-| Nagłówki sekcji | **JSON** | "Nasz zespół" |
-| Leady (1-2 zdania) | **JSON** | "Poznaj naukowców..." |
-| Długie opisy | **MDX** | Historia wydziału (kilka akapitów) |
-| Formatowane treści | **MDX** | Polityka prywatności |
+| Typ treści          | Format   | Przykład                           |
+| ------------------- | -------- | ---------------------------------- |
+| Przyciski, CTA      | **JSON** | "Dowiedz się więcej"               |
+| Etykiety formularzy | **JSON** | "Imię i nazwisko"                  |
+| Nagłówki sekcji     | **JSON** | "Nasz zespół"                      |
+| Leady (1-2 zdania)  | **JSON** | "Poznaj naukowców..."              |
+| Długie opisy        | **MDX**  | Historia wydziału (kilka akapitów) |
+| Formatowane treści  | **MDX**  | Polityka prywatności               |
 
 **Reguła kciuka:** Jeśli < 3 zdania → JSON, jeśli ≥ 3 zdania → MDX
 
