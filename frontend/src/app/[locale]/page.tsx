@@ -10,6 +10,7 @@ import GrantLogos from "@/components/GrantLogos";
 import CTASection from "@/components/CTASection";
 import { getTranslations } from 'next-intl/server';
 
+// TODO: Check how SanityCMS will handle translations for content that will being fetched from it. Admins will put data in polish, I need to prepare it to either put translations by hand or by click using some internal functionality of SanityCMS or other API. This is important to ensure that all content on the site is properly localized and provides a seamless experience for users in different languages.
 export default async function Home() {
   const t = await getTranslations('featuredBanner');
   

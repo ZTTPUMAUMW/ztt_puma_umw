@@ -45,9 +45,16 @@ studio/build
 **/.env.production
 **/.env.test
 
+# Keep .env.example files
+!**/.env.example
+
 # -------------------------
 # Misc / OS files
 # -------------------------
 .DS_Store
 Thumbs.db
 backup-frontend-*.zip
+*.bak
+*.backup
+*.swp
+*~

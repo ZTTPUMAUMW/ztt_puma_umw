@@ -7,9 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "translate": "tsx scripts/translate.ts",
-    "translate:text": "tsx scripts/translate.ts text"
+    "lint": "eslint"
   },
   "dependencies": {
     "@sanity/client": "^7.13.1",

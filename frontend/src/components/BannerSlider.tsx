@@ -4,6 +4,8 @@ import { useState, useRef, useCallback, TouchEvent, MouseEvent, useEffect } from
 import FeaturedBanner from './FeaturedBanner';
 import styles from '@/styles/components/banner-slider.module.scss';
 
+// TODO: Refactor to use a SanityCMS query to fetch banner slides dynamically, and add support for different slide types (e.g. video, carousel) in the future.
+
 export interface BannerSlide {
   image: string;
   title: string;

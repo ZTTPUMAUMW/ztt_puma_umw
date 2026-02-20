@@ -10,6 +10,7 @@ import { modelsData as modelsDataPl } from "@/data/models.pl";
 import { modelsData as modelsDataEn } from "@/data/models.en";
 import styles from "@/styles/pages/models.module.scss";
 
+// TODO: Refactor to fetch models from SanityCMS instead of static data. It should also be considered to move the italicization of Latin words to the backend or CMS layer for better performance and consistency across the site in the future, especially if models data becomes more complex or includes rich text fields.
 const models = (locale: string) => {
   const modelsData = locale === 'en' ? modelsDataEn : modelsDataPl;
   

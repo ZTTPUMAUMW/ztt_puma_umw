@@ -37,6 +37,9 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Keep .env.example
+!.env.example
+
 # vercel
 .vercel
 
@@ -72,5 +75,12 @@ lerna-debug.log*
 
 # Local environment
 .local/
+
+# Translation cache
+.translation-cache.json
+
+# Documentation (optional - remove if you want to commit docs)
+# docs/
+# *.md
 temp/
 tmp/
