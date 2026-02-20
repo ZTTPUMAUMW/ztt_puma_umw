@@ -27,6 +27,12 @@ export default async function Home() {
       description: t("banner2.description"),
       link: t("banner2.link"),
     },
+    {
+      image: "/images/banner/banner_3.png",
+      title: t("banner3.title"),
+      description: t("banner3.description"),
+      link: t("banner3.link"),
+    },
   ];
 
   return (

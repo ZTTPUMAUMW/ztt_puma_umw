@@ -10,7 +10,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "translate": "node --env-file=.env.local scripts/translate.mjs",
+    "translate:all": "node --env-file=.env.local scripts/translate.mjs --all",
+    "translate:check": "node --env-file=.env.local scripts/translate.mjs --check",
+    "translate:reverse": "node --env-file=.env.local scripts/translate.mjs --reverse"
   },
   "dependencies": {
     "@sanity/client": "^7.13.1",

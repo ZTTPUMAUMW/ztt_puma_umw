@@ -36,7 +36,7 @@
     "Implementation of the experimental part of the projects",
     "Microbiological testing and analysis",
     "Evaluation of cytotoxicity and biocompatibility",
-    "Scientific publications"
+    "Selected Scientific Publications"
   ],
   "form": {
     "title": "Contact us",
@@ -44,19 +44,19 @@
     "attachmentLabel": "Attach PDF files"
   },
   "intro": {
-    "heading": "Scientific and Research Collaboration",
-    "paragraph1": "Our goal is to bridge science with practice. We support both individual researchers and institutions seeking to innovate in medicine, biotechnology, and life sciences. If you have a research project idea or need support with the experimental part – feel free to contact us.",
-    "paragraph2": "We collaborate with universities, startups, research centers, and pharmaceutical and biotechnology companies. Regardless of your idea's stage – from concept to results analysis – we can help with implementation and publication."
+    "heading": "Scientific and research cooperation",
+    "paragraph1": "Our goal is to connect science with practice. We support both individual researchers and institutions that want to innovate in the fields of pharmaceuticals, medicine and biotechnology. If you have an idea for a research project or need support in implementing the experimental part - we invite you to contact us.",
+    "paragraph2": "We work with universities, startups, research centers and companies in the pharmaceutical and biotechnology sectors. Regardless of the stage of your idea - from conception to analysis of results - we can help with its implementation and publication."
   },
   "scope": {
-    "heading": "Collaboration opportunities:",
+    "heading": "Opportunities for cooperation:",
     "items": [
-      "Conducting laboratory experiments and clinical trials",
-      "Data analysis, statistics, results processing",
-      "Scientific consultations and research concept development",
-      "Support in preparing grant applications and publications",
-      "Research commissions for institutions or private companies"
+      "Implementation of laboratory experiments and clinical trials",
+      "Data analysis, statistics, elaboration of results",
+      "Scientific consultation and research design",
+      "Support in the preparation of grant proposals and publications",
+      "Research assignments for the needs of institutions or private companies"
     ]
   },
-  "note": "We do not require formal affiliation – what matters is the idea, goal, and willingness to collaborate."
+  "note": "We do not require a formal affiliation - what matters is the idea, the goal and the willingness to cooperate."
 }

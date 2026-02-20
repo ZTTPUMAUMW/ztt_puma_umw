@@ -1,12 +1,12 @@
 {
   "department": "Department of Translational Technologies",
   "lab": "Laboratory of Unique Application Models",
-  "description": "Innovative solutions at the intersection of science, medicine and biotechnology",
-  "site": "Site",
+  "description": "Innovative solutions at the intersection of pharmaceuticals, medicine and biotechnology",
+  "site": "Website",
   "links": "Links",
   "externalLinks": {
     "university": "Medical University of Wroclaw",
-    "department": "DOTT UMW",
+    "department": "ZTT UMW",
     "platform": "Polish Medical Platform",
     "plum": "PLUM EDU"
   },

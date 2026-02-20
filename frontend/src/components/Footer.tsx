@@ -2,13 +2,14 @@
 
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import styles from "../styles/components/footer.module.scss";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const t = useTranslations("navigation");
   const tFooter = useTranslations("footer");
+  const locale = useLocale();
 
   return (
     <footer className={styles["site-footer"]}>
@@ -19,7 +20,7 @@ export default function Footer() {
             className={`${styles["site-footer__section"]} ${styles["site-footer__section--main"]}`}
           >
             <a
-              href="https://www.umw.edu.pl/pl"
+              href={`https://www.umw.edu.pl/${locale}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="UMW"
@@ -44,24 +45,16 @@ export default function Footer() {
                 <Link href="/">{t("home")}</Link>
               </li>
               <li>
-                <Link href="/projects" as="/projects">
-                  {t("projects")}
-                </Link>
+                <Link href="/projects">{t("projects")}</Link>
               </li>
               <li>
-                <Link href="/publications" as="/publications">
-                  {t("publications")}
-                </Link>
+                <Link href="/publications">{t("publications")}</Link>
               </li>
               <li>
-                <Link href="/models" as="/models">
-                  {t("models")}
-                </Link>
+                <Link href="/models">{t("models")}</Link>
               </li>
               <li>
-                <Link href="/team" as="/team">
-                  {t("team")}
-                </Link>
+                <Link href="/team">{t("team")}</Link>
               </li>
             </ul>
           </div>
@@ -70,19 +63,13 @@ export default function Footer() {
             <h3>{tFooter("contact")}</h3>
             <ul>
               <li>
-                <Link href="/recruitment" as="/recruitment">
-                  {t("recruitment")}
-                </Link>
+                <Link href="/recruitment">{t("recruitment")}</Link>
               </li>
               <li>
-                <Link href="/cooperation" as="/cooperation">
-                  {t("cooperation")}
-                </Link>
+                <Link href="/cooperation">{t("cooperation")}</Link>
               </li>
               <li>
-                <Link href="/contact" as="/contact">
-                  {t("contact")}
-                </Link>
+                <Link href="/contact">{t("contact")}</Link>
               </li>
             </ul>
           </div>
