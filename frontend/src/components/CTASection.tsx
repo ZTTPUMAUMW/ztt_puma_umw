@@ -18,7 +18,6 @@ export default function CTASection() {
           <div className={styles["cta-section__buttons"]}>
             <Link
               href="/cooperation"
-              as="/cooperation"
               className={`${styles["cta-section__button"]} ${styles["cta-section__button--primary"]}`}
               aria-label={t("ariaCooperation")}
             >
@@ -26,7 +25,6 @@ export default function CTASection() {
             </Link>
             <Link
               href="/contact"
-              as="/contact"
               className={`${styles["cta-section__button"]} ${styles["cta-section__button--secondary"]}`}
               aria-label={t("ariaContact")}
             >

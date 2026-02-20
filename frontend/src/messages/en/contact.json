@@ -7,8 +7,8 @@
     "title": "Address",
     "department": "Department of Translational Technologies",
     "lab": "Laboratory of Unique Application Models",
-    "faculty": "Faculty of Pharmacy",
-    "university": "Medical University of Silesian Piasts in Wroclaw",
+    "faculty": "Faculty of Pharmacy, University of Medical Sciences",
+    "university": "im. Piasts of Silesia in Wroclaw",
     "street": "211 Borowska St., 50-556 Wroclaw",
     "floor": "Floor I"
   },
@@ -18,21 +18,21 @@
   "email": {
     "title": "Email"
   },
-  "mapTitle": "P.U.M.A. location map",
+  "mapTitle": "P.U.M.A. Location Map.",
   "form": {
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "companyName": "Company/Institution Name",
+    "firstName": "Name",
+    "lastName": "Name",
+    "companyName": "Name of the company/institution",
     "email": "Email",
     "subject": "Subject",
-    "subjectPlaceholder": "-- Select subject --",
+    "subjectPlaceholder": "-- Select topic --.",
     "message": "Message",
     "attachment": "Attach PDF files",
-    "attachmentHint": "You can attach multiple PDF files (max {size}MB total)",
+    "attachmentHint": "Multiple PDF files can be attached (max {size}MB total)",
     "totalSize": "Total size: {current}MB / {max}MB",
     "charactersCount": "{current}/{max} characters",
     "attachedFiles": "Attached files:",
-    "removeFile": "Remove file",
+    "removeFile": "Delete file",
     "submit": "Submit form",
     "submitting": "Sending...",
     "allFieldsRequired": "All fields are required",
@@ -40,11 +40,11 @@
     "minLength": "Minimum {min} characters",
     "maxLength": "Maximum {max} characters",
     "onlyPdf": "Only PDF files can be attached.",
-    "fileSizeExceeded": "Total file size exceeds {max}MB.",
-    "recaptchaNotLoaded": "reCAPTCHA not loaded. Refresh the page and try again.",
-    "recaptchaConfigError": "reCAPTCHA configuration is invalid.",
-    "successMessage": "Thank you! Your submission has been sent.",
-    "errorMessage": "An error occurred while sending the form.",
-    "errorMessageRetry": "An error occurred while sending the form. Please try again."
+    "fileSizeExceeded": "The total file size exceeds {max}MB.",
+    "recaptchaNotLoaded": "reCAPTCHA was not loaded. Refresh the page and try again.",
+    "recaptchaConfigError": "The reCAPTCHA configuration is incorrect.",
+    "successMessage": "Thank you! Your application has been sent.",
+    "errorMessage": "An error occurred while submitting the form.",
+    "errorMessageRetry": "An error occurred while submitting the form. Please try again."
   }
 }

@@ -99,9 +99,35 @@ npm run dev
 
 ### Adding Translations
 
-1. Edit JSON files in `src/messages/[locale]/`
-2. Use `useTranslations` hook in components
-3. Run translation script (optional): `npm run translate`
+Translation files are located in `src/messages/pl/` (Polish) and `src/messages/en/` (English).
+Each file corresponds to a specific page or section (e.g. `home.json`, `team.json`).
+
+**Manual workflow:**
+
+1. Edit the Polish source file in `src/messages/pl/`
+2. Run the translation script to auto-translate changed keys to English
+3. Review the output in `src/messages/en/`
+
+**DeepL Translation Script** (`scripts/translate.mjs`):
+
+```bash
+npm run translate          # Translate only changed files (PL → EN)
+npm run translate:all      # Force re-translate all files (PL → EN)
+npm run translate:check    # Dry run — show missing/extra keys without changes
+npm run translate:reverse  # Translate EN → PL
+```
+
+**How it works:**
+
+- Detects changed `.json` files via `git diff`
+- Only translates **missing keys** in the destination file (preserves manual edits)
+- Skips URLs, technical strings, and empty values
+- Requires `DEEPL_API_KEY` in `.env.local`
+
+**Adding a new translation file:**
+
+1. Create `src/messages/pl/newpage.json` with Polish content
+2. Run `npm run translate` — the EN file will be created automatically
 
 ### CSS Variables
 
@@ -158,14 +184,17 @@ Required extensions:
 ## Scripts
 
 ```bash
-npm run dev            # Start dev server (localhost:3000)
-npm run build          # Production build
-npm run start          # Start production server
-npm run lint           # Run ESLint (check only)
-npm run lint:fix       # Run ESLint and auto-fix issues
-npm run format         # Format all files with Prettier
-npm run format:check   # Check formatting without making changes
-npm run translate      # DeepL translation helper
+npm run dev               # Start dev server (localhost:3000)
+npm run build             # Production build
+npm run start             # Start production server
+npm run lint              # Run ESLint (check only)
+npm run lint:fix          # Run ESLint and auto-fix issues
+npm run format            # Format all files with Prettier
+npm run format:check      # Check formatting without making changes
+npm run translate         # Translate changed files PL → EN (DeepL)
+npm run translate:all     # Force re-translate all files PL → EN
+npm run translate:check   # Show missing/extra translation keys (dry run)
+npm run translate:reverse # Translate EN → PL
 ```
 
 ## Routing

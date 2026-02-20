@@ -18,7 +18,6 @@ export default function HomeHero() {
         <div className={styles["home-hero__cta"]}>
           <Link
             href="/projects"
-            as="/projects"
             className={`${styles["home-hero__button"]} ${styles["home-hero__button--primary"]}`}
             aria-label={t("ariaProjects")}
           >
@@ -26,7 +25,6 @@ export default function HomeHero() {
           </Link>
           <Link
             href="/team"
-            as="/team"
             className={`${styles["home-hero__button"]} ${styles["home-hero__button--secondary"]}`}
             aria-label={t("ariaTeam")}
           >
@@ -34,7 +32,6 @@ export default function HomeHero() {
           </Link>
           <Link
             href="/cooperation"
-            as="/cooperation"
             className={`${styles["home-hero__button"]} ${styles["home-hero__button--outline"]}`}
             aria-label={t("ariaCooperation")}
           >

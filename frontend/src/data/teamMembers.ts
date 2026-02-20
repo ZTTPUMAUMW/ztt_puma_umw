@@ -31,7 +31,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "121",
       name: "dr Bartłomiej Dudek",
-      position: "Adiunkt Naukowy",
+      position: "Adiunkt Naukowy Grupy Badawczej",
       image: "images/team/BD.jpg",
       image_2x: "images/team/BD.jpg",
       alt: "Bartłomiej Dudek",
@@ -47,7 +47,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "131",
       name: "dr Malwina Brożyna",
-      position: "Adiunkt Naukowy",
+      position: "Adiunkt Naukowy Grupy Badawczej",
       image: "images/team/MB.jpg",
       image_2x: "images/team/MB.jpg",
       alt: "Malwina Brożyna",
@@ -83,7 +83,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "194",
       name: "mgr Aleksandra Woytoń",
-      position: "Doktorantka",
+      position: "Doktorantka Szkoły Doktorskiej UMW",
       image: "images/team/AW.jpg",
       image_2x: "images/team/AW.jpg",
       alt: "mgr Aleksandra Woytoń",
@@ -124,7 +124,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "201",
       name: "Kacper Pietrzak",
-      position: "Student",
+      position: "Student Farmacji",
       image: "images/team/KP.jpg",
       image_2x: "images/team/KP.jpg",
       alt: "Kacper Pietrzak",
@@ -134,7 +134,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "202",
       name: "Sara Adamczyk",
-      position: "Studentka",
+      position: "Studentka Farmacji",
       image: "images/team/SA.jpg",
       image_2x: "images/team/SA.jpg",
       alt: "Sara Adamczyk",
@@ -144,7 +144,7 @@ export const teamMembers: TeamMembersData = {
     {
       id: "203",
       name: "Gabriela Skoczek",
-      position: "Studentka",
+      position: "Studentka Farmacji",
       image: "images/team/GS.jpg",
       image_2x: "images/team/GS.jpg",
       alt: "Gabriela Skoczek",

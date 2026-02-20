@@ -68,6 +68,14 @@
     border-color: var(--color-secondary);
     color: var(--white);
     box-shadow: 0 4px 12px rgba(232, 117, 26, 0.4);
+    transform: translateX(5px);
+    cursor: default;
+
+    &:hover {
+      background: var(--color-secondary);
+      border-color: var(--color-secondary);
+      transform: translateX(5px);
+    }
   }
 
   .active {
@@ -75,6 +83,14 @@
     border-color: var(--color-secondary);
     color: var(--white);
     box-shadow: 0 4px 12px rgba(232, 117, 26, 0.4);
+    transform: translateX(5px);
+    cursor: default;
+
+    &:hover {
+      background: var(--color-secondary);
+      border-color: var(--color-secondary);
+      transform: translateX(5px);
+    }
   }
 
   &__nav-number {

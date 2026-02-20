@@ -2,12 +2,17 @@
   "readMore": "Read more",
   "banner": {
     "title": "Essential oils in the fight against bacteria",
-    "description": "Thyme and rosemary under the scrutiny of P.U.M.A. scientists. Discover how natural oils can enhance antibiotic action and become a weapon in the era of bacterial resistance.",
+    "description": "Thyme and rosemary under the magnifying glass of P.U.M.A. scientists. Discover how natural oils can enhance the effects of antibiotics and be a weapon in an era of bacterial resistance.",
     "link": "https://www.umw.edu.pl/pl/aktualnosci/olejki-eteryczne-w-walce-z-bakteriami"
   },
   "banner2": {
-    "title": "Between science and practice - how P.U.M.A. works",
-    "description": "The P.U.M.A. Laboratory combines basic research with practical applications. Learn more about our work in the UMW University Magazine - year 2025 September/October at pages 9 to 11.",
+    "title": "Between science and practice, or how P.U.M.A. works.",
+    "description": "The P.U.M.A. laboratory combines basic research with practical application. Learn more about our work in the UMW University Newspaper - Year 2025 September/October on pages 9 to 11.",
     "link": "https://gazeta.umw.edu.pl/2025-2023/"
+  },
+  "banner3": {
+    "title": "MMS - a mineral panacea in alternative medicine",
+    "description": "Does MMS actually cure? P.U.M.A. scientists have proven that concentrations that inhibit bacteria simultaneously destroy the body's cells. The results in \"Scientific Reports\".",
+    "link": "https://zdrowie.pap.pl/leczenie/naukowcy-o-mineralnym-panaceum-stosowanym-w-medycynie-alternatywnej"
   }
 }

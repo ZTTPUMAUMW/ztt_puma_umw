@@ -706,7 +706,7 @@ export default function ContactForm({
 
 // Linia 39
 <p className={styles['site-footer__main-description']}>
-  Innowacyjne rozwiązania na styku nauki, medycyny i biotechnologii
+  Innowacyjne rozwiązania na styku farmacji, medycyny i biotechnologii
 </p>
 
 // Linia 44
@@ -729,7 +729,7 @@ export default function ContactForm({
   "tagline": "Innowacyjne modele biologiczne i bioinżynieryjne",
   "department": "Zakład Technologii Translacyjnych",
   "lab": "Pracownia Unikalnych Modeli Aplikacyjnych",
-  "description": "Innowacyjne rozwiązania na styku nauki, medycyny i biotechnologii",
+  "description": "Innowacyjne rozwiązania na styku farmacji, medycyny i biotechnologii",
   "sections": {
     "site": "Strona",
     "links": "Linki"
