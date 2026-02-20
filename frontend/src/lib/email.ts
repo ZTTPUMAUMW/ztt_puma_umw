@@ -1,7 +1,7 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export const emailTransporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: "smtp.gmail.com",
   port: 587,
   secure: false,
   auth: {
@@ -12,8 +12,8 @@ export const emailTransporter = nodemailer.createTransport({
 
 emailTransporter.verify((error) => {
   if (error) {
-    console.error('Błąd konfiguracji email:', error);
+    console.error("Błąd konfiguracji email:", error);
   } else {
-    console.log('Serwer email gotowy do wysyłania wiadomości');
+    console.log("Serwer email gotowy do wysyłania wiadomości");
   }
 });

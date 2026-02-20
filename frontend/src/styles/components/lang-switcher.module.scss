@@ -14,7 +14,9 @@
     text-transform: uppercase;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
-    transition: color 0.2s ease, opacity 0.2s ease;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
     font-family: inherit;
 
     &:hover {

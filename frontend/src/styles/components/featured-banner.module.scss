@@ -13,7 +13,7 @@
   grid-template-columns: 1fr 1fr;
   background: var(--color-background);
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 1px 3px rgba(28, 61, 90, 0.08),
     0 8px 24px rgba(28, 61, 90, 0.12);
   position: relative;
@@ -22,7 +22,7 @@
 
   /* Medical accent stripe */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -50,13 +50,13 @@
   font-size: var(--font-size-lg);
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  box-shadow: 
+  box-shadow:
     2px 0 8px rgba(28, 61, 90, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   z-index: 10;
   display: flex;
   align-items: center;
-  
+
   span {
     display: block;
     writing-mode: vertical-rl;
@@ -66,17 +66,16 @@
 
   /* Newspaper texture effect */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background-image: 
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 1px,
-        rgba(0, 0, 0, 0.03) 1px,
-        rgba(0, 0, 0, 0.03) 2px
-      );
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.03) 1px,
+      rgba(0, 0, 0, 0.03) 2px
+    );
     pointer-events: none;
   }
 
@@ -111,7 +110,7 @@
 
   /* Subtle underline accent */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -159,18 +158,13 @@
 
   /* Subtle shine effect */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.15),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
     transition: left 0.7s ease;
   }
 
@@ -213,7 +207,7 @@
 
   /* Aggressive torn newspaper edge effect */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -3px;
     top: 0;
@@ -270,21 +264,17 @@
 
   /* Subtle overlay for better image integration */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(28, 61, 90, 0.03) 0%,
-      transparent 50%
-    );
+    background: linear-gradient(to right, rgba(28, 61, 90, 0.03) 0%, transparent 50%);
     pointer-events: none;
     z-index: 1;
   }
 
   @media (max-width: 968px) {
     min-height: 280px;
-    
+
     /* Remove torn edge on mobile */
     &::before {
       display: none;

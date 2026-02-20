@@ -7,6 +7,7 @@ Data: 10 stycznia 2025
 ### Co zostało zrobione:
 
 #### 1. 🔄 Migracja struktury JSON
+
 - ✅ Utworzono kopie zapasowe: `pl.json.backup`, `en.json.backup`
 - ✅ Utworzono nowe foldery: `messages/pl/`, `messages/en/`
 - ✅ Podzielono duże pliki JSON na 11 mniejszych per strona:
@@ -23,16 +24,19 @@ Data: 10 stycznia 2025
   - `footer.json` - stopka
 
 #### 2. 🔧 Aktualizacja konfiguracji
+
 - ✅ Zaktualizowano `src/i18n/request.ts`
 - ✅ Zmieniono import z pojedynczego pliku na strukturę obiektową
 - ✅ Dodano osobne importy dla każdej sekcji
 
 **Przed:**
+
 ```typescript
 messages: (await import(\`@/messages/\${locale}.json\`)).default,
 ```
 
 **Po:**
+
 ```typescript
 const messages = {
   navigation: (await import(\`@/messages/\${locale}/navigation.json\`)).default,
@@ -43,6 +47,7 @@ const messages = {
 ```
 
 #### 3. 📊 Analiza komponentów
+
 - ✅ Przeskanowano wszystkie komponenty `.tsx`
 - ✅ Zidentyfikowano komponenty z `useTranslations` (15 komponentów ✅)
 - ✅ Zidentyfikowano komponenty z hardcoded tekstami (6 komponentów ❌)
@@ -51,6 +56,7 @@ const messages = {
 ### Statystyki:
 
 **Struktura plików:**
+
 - 📁 2 foldery językowe (pl, en)
 - 📄 22 pliki JSON (11 per język)
 - 💾 2 pliki backup
@@ -58,6 +64,7 @@ const messages = {
 - 🔀 Podzielone na mniejsze, łatwe w zarządzaniu pliki
 
 **Komponenty:**
+
 - ✅ **15 komponentów** w pełni przetłumaczonych
 - ❌ **6 komponentów** wymaga tłumaczeń:
   1. ContactForm.tsx (KRYTYCZNE - ~100 hardcoded tekstów)
@@ -70,6 +77,7 @@ const messages = {
 ### Następne kroki:
 
 #### Pilne (1-2 dni):
+
 1. 🔴 Przetłumacz ContactForm.tsx
    - Stwórz `messages/{locale}/forms.json`
    - Dodaj ~100 kluczy tłumaczeń
@@ -85,6 +93,7 @@ const messages = {
    - **Szacowany czas: 30 minut**
 
 #### Ważne (3-5 dni):
+
 4. 🟡 Zaktualizuj Footer.tsx
    - Dodaj brakujące klucze do `footer.json`
    - **Szacowany czas: 30 minut**
@@ -98,6 +107,7 @@ const messages = {
    - **Szacowany czas: 15 minut**
 
 #### Testowanie:
+
 7. ✅ Uruchom projekt: `npm run dev`
 8. ✅ Przetestuj przełączanie języków
 9. ✅ Sprawdź build: `npm run build`
@@ -177,6 +187,7 @@ npm run dev
 ### Dokumentacja:
 
 Sprawdź wcześniej utworzone pliki dokumentacji:
+
 - 📖 `I18N_README.md` - Quick start guide
 - 📖 `docs/I18N_IMPLEMENTATION_GUIDE.md` - Pełny przewodnik
 - 📖 `docs/TRANSLATION_NAMING_CONVENTION.md` - Konwencje nazewnictwa

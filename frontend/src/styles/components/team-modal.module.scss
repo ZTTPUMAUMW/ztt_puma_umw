@@ -79,7 +79,8 @@
         color: var(--color-secondary);
 
         .btn-icon {
-          filter: brightness(0) saturate(100%) invert(47%) sepia(89%) saturate(1842%) hue-rotate(355deg) brightness(98%) contrast(88%);
+          filter: brightness(0) saturate(100%) invert(47%) sepia(89%) saturate(1842%)
+            hue-rotate(355deg) brightness(98%) contrast(88%);
         }
       }
     }

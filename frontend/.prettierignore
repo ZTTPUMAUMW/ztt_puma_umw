@@ -1,0 +1,12 @@
+# Foldery generowane automatycznie
+.next/
+out/
+build/
+node_modules/
+
+# Pliki generowane przez Next.js
+next-env.d.ts
+
+# Pliki konfiguracyjne, które nie wymagają formatowania
+*.min.js
+*.min.css

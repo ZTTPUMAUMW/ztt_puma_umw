@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import styles from '@/styles/pages/projects.module.scss';
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import styles from "@/styles/pages/projects.module.scss";
 
 export interface Project {
   title: string;
@@ -26,64 +26,67 @@ interface ProjectItemProps {
 }
 
 export default function ProjectItem({ project }: ProjectItemProps) {
-  const t = useTranslations('projects.labels');
-  
-  const Wrapper = project.link ? 'a' : 'div';
+  const t = useTranslations("projects.labels");
+
+  const Wrapper = project.link ? "a" : "div";
   const wrapperProps = project.link
     ? {
         href: project.link,
-        target: '_blank',
-        rel: 'noopener noreferrer',
-        className: styles['project-component-link'],
-        'aria-label': `${t('learnMore')}: ${project.title}`
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: styles["project-component-link"],
+        "aria-label": `${t("learnMore")}: ${project.title}`,
       }
     : {};
 
   return (
     <Wrapper {...wrapperProps}>
-      <div className={styles['project-component']}>
-        <div className={styles['project-component__content']}>
-          <div className={styles['project-component__wrapper-head']}>
+      <div className={styles["project-component"]}>
+        <div className={styles["project-component__content"]}>
+          <div className={styles["project-component__wrapper-head"]}>
             {project.funding_logo && (
               <Image
                 src={project.funding_logo}
                 alt={project.funding_body}
                 className={[
-                  styles['project-component__logo'],
-                  project.funding_logo.includes('umw-logo.svg') && styles['project-component__logo--umw']
-                ].filter(Boolean).join(' ')}
+                  styles["project-component__logo"],
+                  project.funding_logo.includes("umw-logo.svg") &&
+                    styles["project-component__logo--umw"],
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
                 width={60}
                 height={60}
               />
             )}
             <h3
-              className={styles['project-component__title']}
+              className={styles["project-component__title"]}
               dangerouslySetInnerHTML={{ __html: project.title }}
             />
           </div>
-          <div className={styles['project-component__wrapper']}>
-            <div className={styles['project-component__wrapper-separator']}></div>
+          <div className={styles["project-component__wrapper"]}>
+            <div className={styles["project-component__wrapper-separator"]}></div>
           </div>
 
-          <div className={styles['project-component__description']}>
+          <div className={styles["project-component__description"]}>
             {project.description && (
               <div
-                className={styles['project-component__copy']}
+                className={styles["project-component__copy"]}
                 dangerouslySetInnerHTML={{ __html: project.description }}
               />
             )}
           </div>
 
           {project.roles && project.roles.length > 0 && (
-            <div className={styles['project-component__roles']}>
-              <strong>{t('team')}:</strong>
-              <ul className={styles['project-component__roles-list']}>
+            <div className={styles["project-component__roles"]}>
+              <strong>{t("team")}:</strong>
+              <ul className={styles["project-component__roles-list"]}>
                 {project.roles.map((person, index) => (
                   <li key={index}>
                     {person.academicTitle && `${person.academicTitle} `}
                     {person.name}
                     {person.universityTitle && `, ${person.universityTitle}`}
-                    {' \u2013 '}
+                    {" \u2013 "}
                     {person.role}
                   </li>
                 ))}
@@ -91,14 +94,20 @@ export default function ProjectItem({ project }: ProjectItemProps) {
             </div>
           )}
 
-          <div className={styles['project-component__bottom']}>
-            <div className={styles['project-component__funding-info']}>
-              <span className={styles['project-component__funding-body']}>{project.funding_body}</span>
+          <div className={styles["project-component__bottom"]}>
+            <div className={styles["project-component__funding-info"]}>
+              <span className={styles["project-component__funding-body"]}>
+                {project.funding_body}
+              </span>
               {project.funding_body_number && (
-                <span className={styles['project-component__funding-body-number']}>{project.funding_body_number}</span>
+                <span className={styles["project-component__funding-body-number"]}>
+                  {project.funding_body_number}
+                </span>
               )}
             </div>
-            <span className={styles['project-component__funding-amount']}>{project.funding_amount}</span>
+            <span className={styles["project-component__funding-amount"]}>
+              {project.funding_amount}
+            </span>
           </div>
         </div>
       </div>

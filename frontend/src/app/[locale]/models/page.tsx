@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations, useLocale } from "next-intl";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import CTASection from "@/components/CTASection";
@@ -12,32 +12,30 @@ import styles from "@/styles/pages/models.module.scss";
 
 // TODO: Refactor to fetch models from SanityCMS instead of static data. It should also be considered to move the italicization of Latin words to the backend or CMS layer for better performance and consistency across the site in the future, especially if models data becomes more complex or includes rich text fields.
 const models = (locale: string) => {
-  const modelsData = locale === 'en' ? modelsDataEn : modelsDataPl;
-  
+  const modelsData = locale === "en" ? modelsDataEn : modelsDataPl;
+
   return modelsData.map((model) => ({
     ...model,
     title: italicizeLatinWords(model.title),
-    description: typeof model.description === 'string' 
-      ? italicizeLatinWords(model.description) 
-      : model.description
+    description:
+      typeof model.description === "string"
+        ? italicizeLatinWords(model.description)
+        : model.description,
   }));
 };
 
 export default function ModelsPage() {
-  const t = useTranslations('models');
+  const t = useTranslations("models");
   const locale = useLocale();
   const modelsToRender = models(locale);
-  
+
   return (
     <>
-      <Hero 
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
-      />
+      <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <Section>
         <div className="container-content">
-          <div className={styles['models--list']}>
+          <div className={styles["models--list"]}>
             {modelsToRender.map((model, index) => (
               <ModelItem
                 key={index}

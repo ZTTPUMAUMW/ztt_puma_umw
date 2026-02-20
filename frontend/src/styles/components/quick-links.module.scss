@@ -21,7 +21,7 @@
   }
 
   &__header::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -29,10 +29,11 @@
     width: 100%;
     max-width: max-content;
     height: 3px;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      var(--color-secondary) 20%, 
-      var(--color-secondary) 80%, 
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-secondary) 20%,
+      var(--color-secondary) 80%,
       transparent 100%
     );
     border-radius: var(--radius-xs);
@@ -60,7 +61,7 @@
   }
 
   &__item::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

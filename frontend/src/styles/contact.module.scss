@@ -72,19 +72,19 @@
   font-weight: var(--font-weight-semibold);
 }
 
-  .contact-map-box {
-    background: var(--color-background);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-     aspect-ratio: 1 / 1;
-     height: auto;
-     min-height: 500px;
-  }
+.contact-map-box {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  min-height: 500px;
+}
 
 .contact-map-box iframe {
   border: 0;
@@ -125,7 +125,6 @@
   }
 }
 
-
 .section-component.contact-section {
   padding: var(--spacing-3xl) 0;
   background-color: var(--color-background);
@@ -149,7 +148,6 @@
   color: var(--color-text);
   margin-bottom: var(--spacing-lg);
 }
-
 
 .alert {
   padding: var(--spacing-sm);
@@ -175,7 +173,6 @@
   color: var(--color-warning-text);
   border: var(--border-width-thin) solid var(--color-warning-border);
 }
-
 
 .contact-form {
   display: flex;
@@ -271,7 +268,6 @@
   font-size: var(--font-size-xs);
 }
 
-
 .btn {
   align-self: flex-start;
   background-color: var(--color-secondary);
@@ -297,7 +293,6 @@
   background-color: var(--color-text-muted);
   cursor: not-allowed;
 }
-
 
 .cooperation-section {
   padding: var(--spacing-3xl) 0;
@@ -367,7 +362,6 @@
   border: 1px solid var(--color-border-light);
 }
 
-
 .form-group input.error,
 .form-group textarea.error {
   border-color: var(--color-error-alt);
@@ -380,7 +374,6 @@
   margin-top: var(--spacing-2xs);
   font-weight: var(--font-weight-medium);
 }
-
 
 .files-list {
   margin: var(--spacing-md) 0;
@@ -455,7 +448,6 @@
   cursor: not-allowed;
 }
 
-
 .form-note {
   text-align: center;
   font-size: var(--font-size-sm);
@@ -463,7 +455,6 @@
   margin-top: var(--spacing-md);
   font-style: italic;
 }
-
 
 @media (max-width: 992px) {
   .cooperation-container {

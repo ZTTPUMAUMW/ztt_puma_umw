@@ -11,6 +11,8 @@ Next.js 16 application with TypeScript, Sanity CMS, and i18n support (Polish/Eng
 - **i18n**: next-intl 4.7.0
 - **Email**: Nodemailer
 - **Translation**: DeepL API
+- **Linting**: ESLint (eslint-config-next + typescript-eslint)
+- **Formatting**: Prettier 3
 
 ## Project Structure
 
@@ -116,8 +118,9 @@ All design tokens in `src/styles/variables.module.scss`:
 ### Sanity Content
 
 Content schemas in `studio/schemaTypes/`:
+
 - `project.ts` - Research projects
-- `publication.ts` - Scientific publications  
+- `publication.ts` - Scientific publications
 - `model.ts` - Research models
 
 Query examples in `src/lib/sanity.ts`
@@ -126,14 +129,43 @@ Query examples in `src/lib/sanity.ts`
 
 Contact form configuration in `src/lib/email.ts` using Nodemailer.
 
+### Code Quality
+
+The project uses **ESLint** and **Prettier** to enforce consistent code style.
+
+**Configuration files:**
+
+- `eslint.config.mjs` – ESLint rules (Next.js + TypeScript + Prettier integration)
+- `prettier.config.mjs` – Prettier formatting rules
+- `.prettierignore` – files excluded from formatting
+
+**Rules summary (Prettier):**
+
+- Double quotes (`"`)
+- Semicolons: yes
+- Tab width: 2 spaces
+- Trailing commas: ES5
+- Print width: 100 chars
+- End of line: LF
+
+**VS Code integration:**
+The `.vscode/settings.json` file configures automatic formatting on save for all developers.
+Required extensions:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier – Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ## Scripts
 
 ```bash
-npm run dev           # Start dev server (localhost:3000)
-npm run build         # Production build
-npm run start         # Start production server
-npm run lint          # Run ESLint
-npm run translate     # DeepL translation helper
+npm run dev            # Start dev server (localhost:3000)
+npm run build          # Production build
+npm run start          # Start production server
+npm run lint           # Run ESLint (check only)
+npm run lint:fix       # Run ESLint and auto-fix issues
+npm run format         # Format all files with Prettier
+npm run format:check   # Check formatting without making changes
+npm run translate      # DeepL translation helper
 ```
 
 ## Routing
@@ -159,6 +191,7 @@ Locale detection via `next-intl` middleware.
 ## Deployment
 
 Optimized for Vercel:
+
 - ISR for Sanity content
 - Edge middleware for i18n
 - Automatic builds on push
