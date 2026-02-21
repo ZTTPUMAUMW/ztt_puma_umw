@@ -10,6 +10,7 @@ interface FeaturedBannerProps {
   description: string;
   link: string;
   alt?: string;
+  isFirst?: boolean;
 }
 
 export default function FeaturedBanner({
@@ -18,6 +19,7 @@ export default function FeaturedBanner({
   description,
   link,
   alt,
+  isFirst = false,
 }: FeaturedBannerProps) {
   const locale = useLocale();
   const t = useTranslations("featuredBanner");
@@ -70,7 +72,8 @@ export default function FeaturedBanner({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
               className={styles.banner__image}
               style={{ objectFit: "cover" }}
-              priority
+              priority={isFirst}
+              loading={isFirst ? undefined : "lazy"}
             />
           </div>
         </div>

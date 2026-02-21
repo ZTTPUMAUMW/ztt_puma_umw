@@ -3,7 +3,6 @@
   --color-primary-light: #2a5a7d;
   --color-secondary: #e8751a;
   --color-secondary-hover: #d66815;
-  /* Darker shades meeting WCAG AA (4.5:1) with white text */
   --color-secondary-accessible: #b85e14;
   --color-secondary-accessible-hover: #9e5011;
   --color-accent: #e8751a;
@@ -131,10 +130,10 @@
   --bp-xxl: 1824px;
 
   --container-max-width: 1200px;
-  --container-max-width-laptop: 1400px; /* Wider cap for larger laptops */
+  --container-max-width-laptop: 1400px;
 
   --container-content-width: 1000px;
-  --container-content-width-laptop: 1200px; /* Wider content width for two-column layouts on laptops */
+  --container-content-width-laptop: 1200px;
 
   --container-form-width: 800px;
   --container-narrow-width: 700px;

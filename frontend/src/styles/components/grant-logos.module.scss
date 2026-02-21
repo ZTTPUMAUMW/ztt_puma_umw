@@ -3,6 +3,10 @@
     background: var(--color-background);
     padding: var(--spacing-2xl) var(--spacing-md);
     overflow: hidden;
+
+    @media (min-width: 768px) {
+      padding: var(--spacing-3xl) var(--spacing-md);
+    }
   }
 
   &__container {
@@ -19,6 +23,11 @@
     position: relative;
     display: inline-block;
     width: 100%;
+
+    @media (min-width: 768px) {
+      font-size: var(--font-size-h2);
+      margin-bottom: var(--spacing-lg);
+    }
 
     &::after {
       content: "";
@@ -49,20 +58,16 @@
   &__track {
     display: flex;
     gap: var(--spacing-2xl);
-    animation: scroll-left 50s linear infinite;
+    animation: grant-scroll-left 50s linear infinite;
     width: fit-content;
+
+    @media (min-width: 768px) {
+      gap: var(--spacing-3xl);
+      animation-duration: 50s;
+    }
 
     &:hover {
       animation-play-state: paused;
-    }
-  }
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
     }
   }
 
@@ -75,6 +80,11 @@
     height: 5rem;
     text-decoration: none;
     cursor: pointer;
+
+    @media (min-width: 768px) {
+      min-width: 200px;
+      height: 8rem;
+    }
 
     &:hover {
       & .grant-logos__image {
@@ -93,32 +103,20 @@
     filter: grayscale(100%) opacity(0.7);
     transition: all 0.3s ease;
     align-self: center;
-  }
 
-  @media (min-width: 768px) {
-    &__section {
-      padding: var(--spacing-3xl) var(--spacing-md);
-    }
-
-    &__title {
-      font-size: var(--font-size-h2);
-      margin-bottom: var(--spacing-lg);
-    }
-
-    &__track {
-      gap: var(--spacing-3xl);
-      animation-duration: 50s;
-    }
-
-    &__item {
-      min-width: 200px;
-      height: 8rem;
-    }
-
-    &__image {
+    @media (min-width: 768px) {
       height: auto !important;
       max-width: 200px;
       max-height: 80px;
     }
+  }
+}
+
+@keyframes grant-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

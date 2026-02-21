@@ -22,54 +22,54 @@ export default function RecruitmentPage() {
     <>
       <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
-      <section className={styles["recruitment-benefits-section"]}>
-        <div className={styles["container-content"]}>
-          <h2 className={styles["recruitment-benefits-header"]}>{t("benefits.heading")}</h2>
+      <section className={styles["recruitment__benefits-section"]}>
+        <div className={layoutStyles["container-content"]}>
+          <h2 className={styles["recruitment__benefits-header"]}>{t("benefits.heading")}</h2>
           <div
             ref={benefitsRef}
-            className={`${styles["recruitment-benefits-grid"]} animate-stagger${benefitsInView ? " in-view" : ""}`}
+            className={`${styles["recruitment__benefits-grid"]} animate-stagger${benefitsInView ? " in-view" : ""}`}
           >
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 0 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>{t("benefits.career.title")}</h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 0 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>{t("benefits.career.title")}</h3>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.career.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 1 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 1 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>
                 {t("benefits.publications.title")}
               </h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.publications.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 2 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>{t("benefits.team.title")}</h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 2 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>{t("benefits.team.title")}</h3>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.team.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 3 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 3 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>
                 {t("benefits.equipment.title")}
               </h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.equipment.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 4 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 4 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>
                 {t("benefits.stability.title")}
               </h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.stability.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 5 }}>
-              <h3 className={styles["recruitment-benefit__title"]}>
+            <div className={styles["recruitment__benefit"]} style={{ ["--i" as string]: 5 }}>
+              <h3 className={styles["recruitment__benefit-title"]}>
                 {t("benefits.networking.title")}
               </h3>
-              <p className={styles["recruitment-benefit__desc"]}>
+              <p className={styles["recruitment__benefit-desc"]}>
                 {t("benefits.networking.description")}
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function RecruitmentPage() {
 
       <section
         className={[
-          styles["container-content"],
+          layoutStyles["container-content"],
           layoutStyles["section-component"],
           styles["recruitment-section"],
         ]
@@ -88,13 +88,16 @@ export default function RecruitmentPage() {
       >
         <div
           ref={tabsRef}
-          className={`${styles["recruitment-tabs-card"]} animate-on-scroll${tabsInView ? " in-view" : ""}`}
+          className={`${styles["recruitment__tabs-card"]} animate-on-scroll${tabsInView ? " in-view" : ""}`}
         >
-          <h2 className={styles["recruitment-tabs-title"]}>{t("tabs.heading")}</h2>
-          <p className={styles["recruitment-tabs-desc"]}>{t("tabs.description")}</p>
-          <div className={styles["recruitment-tabs-list"]}>
+          <h2 className={styles["recruitment__tabs-title"]}>{t("tabs.heading")}</h2>
+          <p className={styles["recruitment__tabs-desc"]}>{t("tabs.description")}</p>
+          <div className={styles["recruitment__tabs-list"]}>
             <button
-              className={[styles["tab-button"], activeTab === "etat" ? styles["active"] : ""]
+              className={[
+                styles["recruitment__tab-button"],
+                activeTab === "etat" ? styles["active"] : "",
+              ]
                 .filter(Boolean)
                 .join(" ")}
               onClick={() => setActiveTab("etat")}
@@ -103,7 +106,10 @@ export default function RecruitmentPage() {
               {t("tabs.payroll")}
             </button>
             <button
-              className={[styles["tab-button"], activeTab === "staz" ? styles["active"] : ""]
+              className={[
+                styles["recruitment__tab-button"],
+                activeTab === "staz" ? styles["active"] : "",
+              ]
                 .filter(Boolean)
                 .join(" ")}
               onClick={() => setActiveTab("staz")}
@@ -112,7 +118,10 @@ export default function RecruitmentPage() {
               {t("tabs.internship")}
             </button>
             <button
-              className={[styles["tab-button"], activeTab === "phd" ? styles["active"] : ""]
+              className={[
+                styles["recruitment__tab-button"],
+                activeTab === "phd" ? styles["active"] : "",
+              ]
                 .filter(Boolean)
                 .join(" ")}
               onClick={() => setActiveTab("phd")}
@@ -121,7 +130,7 @@ export default function RecruitmentPage() {
               {t("tabs.phd")}
             </button>
           </div>
-          <div className={styles["recruitment-tabs-content"]}>
+          <div className={styles["recruitment__tabs-content"]}>
             {activeTab === "etat" && (
               <div
                 className={[styles["recruitment-panel"], styles["active"]]
@@ -155,10 +164,10 @@ export default function RecruitmentPage() {
 
       <section
         ref={preapplyRef}
-        className={`${styles["recruitment-preapply"]} animate-on-scroll${preapplyInView ? " in-view" : ""}`}
+        className={`${styles["recruitment__preapply"]} animate-on-scroll${preapplyInView ? " in-view" : ""}`}
       >
         <h3>{t("preapply.heading")}</h3>
-        <ul className={styles["preapply-list"]}>
+        <ul className={styles["recruitment__preapply-list"]}>
           <li>
             <strong>{t("tabs.payroll")}:</strong> {t("preapply.payroll")}
           </li>
@@ -170,7 +179,7 @@ export default function RecruitmentPage() {
           </li>
         </ul>
 
-        <label className={styles["checkbox-confirm"]}>
+        <label className={styles["recruitment__checkbox-confirm"]}>
           <input
             type="checkbox"
             id="confirmRequirements"
@@ -186,13 +195,13 @@ export default function RecruitmentPage() {
           className={[
             layoutStyles["section-component"],
             styles["contact-section"],
-            styles["recruitment-form-section"],
+            styles["recruitment__form-section"],
           ]
             .filter(Boolean)
             .join(" ")}
           id="recruitmentFormSection"
         >
-          <div className={styles["recruitment-form-container"]}>
+          <div className={styles["recruitment__form-container"]}>
             <h1>{t("form.title")}</h1>
             <ContactForm
               submitEndpoint="/api/recruitment"

@@ -15,52 +15,54 @@ export default function CooperationPage() {
     <>
       <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
-      <section className={styles["cooperation-offers-section"]}>
+      <section className={styles["cooperation__offers-section"]}>
         <div className={styles["container-content"]}>
-          <h2 className={styles["cooperation-offers-title"]}>{t("offers.heading")}</h2>
+          <h2 className={styles["cooperation__offers-title"]}>{t("offers.heading")}</h2>
           <div
             ref={offersRef}
-            className={`${styles["cooperation-offers-grid"]} animate-stagger${offersInView ? " in-view" : ""}`}
+            className={`${styles["cooperation__offers-grid"]} animate-stagger${offersInView ? " in-view" : ""}`}
           >
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 0 }}>
-              <h3 className={styles["cooperation-offer-title"]}>{t("offers.expertise.title")}</h3>
-              <p className={styles["cooperation-offer-description"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 0 }}>
+              <h3 className={styles["cooperation__offer-title"]}>{t("offers.expertise.title")}</h3>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.expertise.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 1 }}>
-              <h3 className={styles["cooperation-offer-title"]}>{t("offers.equipment.title")}</h3>
-              <p className={styles["cooperation-offer-description"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 1 }}>
+              <h3 className={styles["cooperation__offer-title"]}>{t("offers.equipment.title")}</h3>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.equipment.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 2 }}>
-              <h3 className={styles["cooperation-offer-title"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 2 }}>
+              <h3 className={styles["cooperation__offer-title"]}>
                 {t("offers.dataAnalysis.title")}
               </h3>
-              <p className={styles["cooperation-offer-description"]}>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.dataAnalysis.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 3 }}>
-              <h3 className={styles["cooperation-offer-title"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 3 }}>
+              <h3 className={styles["cooperation__offer-title"]}>
                 {t("offers.microbiology.title")}
               </h3>
-              <p className={styles["cooperation-offer-description"]}>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.microbiology.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 4 }}>
-              <h3 className={styles["cooperation-offer-title"]}>{t("offers.flexibility.title")}</h3>
-              <p className={styles["cooperation-offer-description"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 4 }}>
+              <h3 className={styles["cooperation__offer-title"]}>
+                {t("offers.flexibility.title")}
+              </h3>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.flexibility.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 5 }}>
-              <h3 className={styles["cooperation-offer-title"]}>
+            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 5 }}>
+              <h3 className={styles["cooperation__offer-title"]}>
                 {t("offers.comprehensive.title")}
               </h3>
-              <p className={styles["cooperation-offer-description"]}>
+              <p className={styles["cooperation__offer-description"]}>
                 {t("offers.comprehensive.description")}
               </p>
             </div>
@@ -68,20 +70,20 @@ export default function CooperationPage() {
         </div>
       </section>
 
-      <section className={styles["section-component"] + " " + styles["cooperation-section"]}>
-        <div className={styles["cooperation-container"]}>
+      <section className={`${styles["section-component"]} ${styles["cooperation__section"]}`}>
+        <div className={styles["cooperation__container"]}>
           <div
             ref={infoRef}
-            className={`${styles["cooperation-info"]} animate-on-scroll${infoInView ? " in-view" : ""}`}
+            className={`${styles["cooperation__info"]} animate-on-scroll${infoInView ? " in-view" : ""}`}
           >
-            <div className={styles["cooperation-intro"]}>
+            <div className={styles["cooperation__intro"]}>
               <h2>{t("intro.heading")}</h2>
               <p>{t("intro.paragraph1")}</p>
 
               <p>{t("intro.paragraph2")}</p>
             </div>
 
-            <div className={styles["cooperation-scope"]}>
+            <div className={styles["cooperation__scope"]}>
               <h3>{t("scope.heading")}</h3>
               <ul>
                 <li>{t("scope.items.0")}</li>
@@ -92,10 +94,10 @@ export default function CooperationPage() {
               </ul>
             </div>
 
-            <p className={styles["cooperation-note"]}>{t("note")}</p>
+            <p className={styles["cooperation__note"]}>{t("note")}</p>
           </div>
 
-          <div className={styles["cooperation-form"]}>
+          <div className={styles["cooperation__form"]}>
             <h2>{t("form.title")}</h2>
             <ContactForm
               submitEndpoint="/api/cooperation"
