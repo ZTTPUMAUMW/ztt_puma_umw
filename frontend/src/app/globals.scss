@@ -74,3 +74,72 @@ select:focus-visible {
   --color-background-light: #1e1e1e;
   --color-background-dark: #0a0a0a;
 }
+
+/* ─── Scroll animations ───────────────────────────────────────────────────── */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered children — each child gets delay via --i CSS variable */
+.animate-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.animate-stagger.in-view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide from left/right (used by ModelItem) */
+.animate-from-left {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-from-right {
+  opacity: 0;
+  transform: translateX(48px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+
+  &.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-from-left,
+  .animate-from-right,
+  .animate-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -3,12 +3,16 @@
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import Hero from "@/components/Hero";
+import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/contact.module.scss";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
   const params = useParams();
   const locale = params.locale as string;
+  const { ref: addressRef, inView: addressInView } = useInView();
+  const { ref: phoneRef, inView: phoneInView } = useInView();
+  const { ref: emailRef, inView: emailInView } = useInView();
 
   return (
     <>
@@ -19,7 +23,10 @@ export default function ContactPage() {
             {}
             <div className={styles["contact-info-column"]}>
               {}
-              <div className={styles["contact-box"]}>
+              <div
+                ref={addressRef}
+                className={`${styles["contact-box"]} animate-on-scroll${addressInView ? " in-view" : ""}`}
+              >
                 <div className={styles["contact-box-icon"]}>📍</div>
                 <h3 className={styles["contact-box-title"]}>{t("address.title")}</h3>
                 <p className={styles["contact-box-line"]}>
@@ -42,7 +49,11 @@ export default function ContactPage() {
               </div>
 
               {}
-              <div className={styles["contact-box"]}>
+              <div
+                ref={phoneRef}
+                className={`${styles["contact-box"]} animate-on-scroll${phoneInView ? " in-view" : ""}`}
+                style={{ transitionDelay: "80ms" }}
+              >
                 <div className={styles["contact-box-icon"]}>📞</div>
                 <h3 className={styles["contact-box-title"]}>{t("phone.title")}</h3>
                 <p className={styles["contact-box-line"]}>
@@ -53,7 +64,11 @@ export default function ContactPage() {
               </div>
 
               {}
-              <div className={styles["contact-box"]}>
+              <div
+                ref={emailRef}
+                className={`${styles["contact-box"]} animate-on-scroll${emailInView ? " in-view" : ""}`}
+                style={{ transitionDelay: "160ms" }}
+              >
                 <div className={styles["contact-box-icon"]}>📧</div>
                 <h3 className={styles["contact-box-title"]}>{t("email.title")}</h3>
                 <p className={styles["contact-box-line"]}>

@@ -1,11 +1,10 @@
-/* Container content (jak w cooperation) */
 .container-content {
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
 }
-/* --- DODANE STYLE FORMULARZA, ALERTÓW, PRZYCISKÓW, UPLOADU --- */
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -243,7 +242,7 @@
     gap: var(--spacing-md);
   }
 }
-/* --- DODANE STYLE Z recruitment.css --- */
+
 .recruitment-tabs-card {
   background: var(--color-background);
   border-radius: var(--radius-lg);

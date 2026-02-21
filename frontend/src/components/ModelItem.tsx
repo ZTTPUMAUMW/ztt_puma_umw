@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { ReactNode } from "react";
+import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/pages/models.module.scss";
 
 interface ModelItemProps {
@@ -10,11 +13,17 @@ interface ModelItemProps {
 }
 
 export default function ModelItem({ image, title, description, reverse = false }: ModelItemProps) {
-  const classNames = [styles["models__item"]];
-  if (reverse) classNames.push(styles["models__item--reverse"]);
+  const { ref, inView } = useInView<HTMLDivElement>();
+  const animClass = reverse ? "animate-from-right" : "animate-from-left";
+  const classNames = [
+    styles["models__item"],
+    animClass,
+    inView ? "in-view" : "",
+    reverse ? styles["models__item--reverse"] : "",
+  ].filter(Boolean);
 
   return (
-    <div className={classNames.join(" ")}>
+    <div ref={ref} className={classNames.join(" ")}>
       <div className={styles["models__item-image"]}>
         <Image
           src={image}

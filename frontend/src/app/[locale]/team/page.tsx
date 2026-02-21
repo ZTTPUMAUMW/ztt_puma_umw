@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Hero from "@/components/Hero";
 import TeamCard, { TeamMember } from "@/components/TeamCard";
 import TeamModal from "@/components/TeamModal";
-
+import { useInView } from "@/hooks/useInView";
 import { italicizeLatinWords } from "@/lib/utils";
 import TabbedSection from "@/components/TabbedSection";
 import { teamMembers as teamMembersPl } from "@/data/teamMembers.pl";
@@ -18,6 +18,7 @@ export default function TeamPage() {
   const t = useTranslations("team");
   const locale = useLocale();
   const teamMembers = locale === "en" ? teamMembersEn : teamMembersPl;
+  const { ref: introRef, inView: introInView } = useInView();
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"pracownicy" | "doktoranci" | "studenci">(
@@ -71,7 +72,12 @@ export default function TeamPage() {
 
       <section className={styles["team-intro__section"]}>
         <div className="container-content">
-          <p className={styles["team-intro__text"]}>{t("stats.intro")}</p>
+          <p
+            ref={introRef}
+            className={`${styles["team-intro__text"]} animate-on-scroll${introInView ? " in-view" : ""}`}
+          >
+            {t("stats.intro")}
+          </p>
         </div>
       </section>
 
@@ -83,8 +89,13 @@ export default function TeamPage() {
             content: () => (
               <section className={teamStyles["team--section"]}>
                 <div className={teamStyles["team--grid"]}>
-                  {processedTeamMembers.pracownicy.map((member) => (
-                    <TeamCard key={member.id} member={member} onOpenModal={handleOpenModal} />
+                  {processedTeamMembers.pracownicy.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                    />
                   ))}
                 </div>
               </section>
@@ -100,8 +111,13 @@ export default function TeamPage() {
                     .filter(Boolean)
                     .join(" ")}
                 >
-                  {processedTeamMembers.doktoranci.map((member) => (
-                    <TeamCard key={member.id} member={member} onOpenModal={handleOpenModal} />
+                  {processedTeamMembers.doktoranci.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                    />
                   ))}
                 </div>
               </section>
@@ -117,8 +133,13 @@ export default function TeamPage() {
                     .filter(Boolean)
                     .join(" ")}
                 >
-                  {processedTeamMembers.studenci.map((member) => (
-                    <TeamCard key={member.id} member={member} onOpenModal={handleOpenModal} />
+                  {processedTeamMembers.studenci.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                    />
                   ))}
                 </div>
               </section>

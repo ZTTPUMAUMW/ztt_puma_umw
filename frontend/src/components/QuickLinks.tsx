@@ -2,6 +2,7 @@
 
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/quick-links.module.scss";
 
 type CSSVars = React.CSSProperties & {
@@ -39,14 +40,24 @@ const links: QuickLink[] = [
 
 export default function QuickLinks() {
   const t = useTranslations("home.quickLinks");
+  const { ref: headerRef, inView: headerInView } = useInView();
+  const { ref: gridRef, inView: gridInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
 
   return (
     <section className={styles["quick-links"]}>
       <div className={styles["quick-links__container"]}>
-        <h2 className={styles["quick-links__header"]}>{t("heading")}</h2>
-        <div className={styles["quick-links__grid"]}>
+        <h2
+          ref={headerRef}
+          className={`${styles["quick-links__header"]} animate-on-scroll${headerInView ? " in-view" : ""}`}
+        >
+          {t("heading")}
+        </h2>
+        <div
+          ref={gridRef}
+          className={`${styles["quick-links__grid"]} animate-stagger${gridInView ? " in-view" : ""}`}
+        >
           {links.map((link, index) => {
-            const varStyle: CSSVars = { "--link-color": link.color };
+            const varStyle: CSSVars = { "--link-color": link.color, ["--i" as string]: index };
             return (
               <Link
                 key={index}

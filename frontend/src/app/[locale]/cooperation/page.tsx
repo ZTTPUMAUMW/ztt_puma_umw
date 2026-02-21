@@ -3,10 +3,13 @@
 import { useTranslations } from "next-intl";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/pages/cooperation.module.scss";
 
 export default function CooperationPage() {
   const t = useTranslations("cooperation");
+  const { ref: offersRef, inView: offersInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
+  const { ref: infoRef, inView: infoInView } = useInView();
 
   return (
     <>
@@ -15,20 +18,23 @@ export default function CooperationPage() {
       <section className={styles["cooperation-offers-section"]}>
         <div className={styles["container-content"]}>
           <h2 className={styles["cooperation-offers-title"]}>{t("offers.heading")}</h2>
-          <div className={styles["cooperation-offers-grid"]}>
-            <div className={styles["cooperation-offer-card"]}>
+          <div
+            ref={offersRef}
+            className={`${styles["cooperation-offers-grid"]} animate-stagger${offersInView ? " in-view" : ""}`}
+          >
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 0 }}>
               <h3 className={styles["cooperation-offer-title"]}>{t("offers.expertise.title")}</h3>
               <p className={styles["cooperation-offer-description"]}>
                 {t("offers.expertise.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]}>
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 1 }}>
               <h3 className={styles["cooperation-offer-title"]}>{t("offers.equipment.title")}</h3>
               <p className={styles["cooperation-offer-description"]}>
                 {t("offers.equipment.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]}>
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 2 }}>
               <h3 className={styles["cooperation-offer-title"]}>
                 {t("offers.dataAnalysis.title")}
               </h3>
@@ -36,7 +42,7 @@ export default function CooperationPage() {
                 {t("offers.dataAnalysis.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]}>
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 3 }}>
               <h3 className={styles["cooperation-offer-title"]}>
                 {t("offers.microbiology.title")}
               </h3>
@@ -44,13 +50,13 @@ export default function CooperationPage() {
                 {t("offers.microbiology.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]}>
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 4 }}>
               <h3 className={styles["cooperation-offer-title"]}>{t("offers.flexibility.title")}</h3>
               <p className={styles["cooperation-offer-description"]}>
                 {t("offers.flexibility.description")}
               </p>
             </div>
-            <div className={styles["cooperation-offer-card"]}>
+            <div className={styles["cooperation-offer-card"]} style={{ ["--i" as string]: 5 }}>
               <h3 className={styles["cooperation-offer-title"]}>
                 {t("offers.comprehensive.title")}
               </h3>
@@ -64,7 +70,10 @@ export default function CooperationPage() {
 
       <section className={styles["section-component"] + " " + styles["cooperation-section"]}>
         <div className={styles["cooperation-container"]}>
-          <div className={styles["cooperation-info"]}>
+          <div
+            ref={infoRef}
+            className={`${styles["cooperation-info"]} animate-on-scroll${infoInView ? " in-view" : ""}`}
+          >
             <div className={styles["cooperation-intro"]}>
               <h2>{t("intro.heading")}</h2>
               <p>{t("intro.paragraph1")}</p>

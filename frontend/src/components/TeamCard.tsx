@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/team-card.module.scss";
 
 export interface TeamMember {
@@ -19,11 +20,18 @@ export interface TeamMember {
 interface TeamCardProps {
   member: TeamMember;
   onOpenModal: (member: TeamMember) => void;
+  animationIndex?: number;
 }
 
-export default function TeamCard({ member, onOpenModal }: TeamCardProps) {
+export default function TeamCard({ member, onOpenModal, animationIndex = 0 }: TeamCardProps) {
+  const { ref, inView } = useInView<HTMLDivElement>({ rootMargin: "0px 0px -40px 0px" });
+
   return (
-    <div className={styles["team-card"]}>
+    <div
+      ref={ref}
+      className={`${styles["team-card"]} animate-on-scroll${inView ? " in-view" : ""}`}
+      style={{ transitionDelay: `${(animationIndex % 4) * 60}ms` }}
+    >
       <button
         onClick={() => onOpenModal(member)}
         className={styles["team-card__button"]}
