@@ -118,7 +118,7 @@ export default function Header() {
         ref={sidebarRef}
         className={`${styles["site-header__sidebar"]} ${isSidebarOpen ? styles["site-header__sidebar--active"] : ""}`}
         data-open={isSidebarOpen}
-        aria-hidden={!isSidebarOpen}
+        inert={!isSidebarOpen ? true : undefined}
         role="navigation"
         aria-label="Menu mobilne"
       >

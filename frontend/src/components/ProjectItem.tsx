@@ -55,8 +55,9 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                 ]
                   .filter(Boolean)
                   .join(" ")}
-                width={60}
-                height={60}
+                width={280}
+                height={80}
+                style={{ height: "auto" }}
               />
             )}
             <h3

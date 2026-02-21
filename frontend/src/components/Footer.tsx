@@ -30,6 +30,7 @@ export default function Footer() {
                 alt="Logo Uniwersytetu Medycznego we Wrocławiu"
                 width={180}
                 height={60}
+                style={{ height: "auto" }}
                 className={styles["site-footer__main-logo"]}
               />
             </a>
