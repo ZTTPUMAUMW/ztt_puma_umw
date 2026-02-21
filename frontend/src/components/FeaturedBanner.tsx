@@ -35,7 +35,13 @@ export default function FeaturedBanner({
           <div className={styles.banner__content}>
             <h2 className={styles.banner__title}>{title}</h2>
             <p className={styles.banner__description}>{description}</p>
-            <a href={link} target="_blank" rel="noopener noreferrer" className={styles.banner__cta}>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.banner__cta}
+              aria-label={`${t("readMore")}: ${title}`}
+            >
               {t("readMore")}
               <svg
                 width="20"
@@ -61,6 +67,7 @@ export default function FeaturedBanner({
               src={image}
               alt={imageAlt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
               className={styles.banner__image}
               style={{ objectFit: "cover" }}
               priority

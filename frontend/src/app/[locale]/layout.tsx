@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { BASE_URL, buildAlternates } from "@/lib/seo";
 import "../globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -28,7 +29,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  const baseUrl = "https://next-puma-website.vercel.app";
   const title =
     locale === "en"
       ? "DOTT P.U.M.A. - Medical University of Wrocław"
@@ -38,8 +38,10 @@ export async function generateMetadata({
       ? "Department of Translational Technologies. Laboratory of Unique Application Models"
       : "Zakład Technologii Translacyjnych. Pracownia Unikalnych Modeli Aplikacyjnych";
 
+  const url = locale === "pl" ? BASE_URL : `${BASE_URL}/en`;
+
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(BASE_URL),
     title,
     description,
     icons: {
@@ -50,7 +52,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: locale === "en" ? `${baseUrl}/en` : baseUrl,
+      url,
       siteName: "ZTT P.U.M.A.",
       images: [
         {
@@ -69,13 +71,7 @@ export async function generateMetadata({
       description,
       images: ["/images/meta/og_image.png"],
     },
-    alternates: {
-      canonical: locale === "pl" ? baseUrl : undefined,
-      languages: {
-        pl: baseUrl,
-        en: `${baseUrl}/en`,
-      },
-    },
+    alternates: buildAlternates(locale, "/"),
   };
 }
 

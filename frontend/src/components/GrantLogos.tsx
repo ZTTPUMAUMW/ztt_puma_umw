@@ -45,6 +45,7 @@ export default function GrantLogos() {
                   alt={logo.alt}
                   width={200}
                   height={80}
+                  style={{ height: "auto" }}
                   className={styles["grant-logos__image"]}
                 />
               </a>
@@ -64,6 +65,7 @@ export default function GrantLogos() {
                   alt={logo.alt}
                   width={200}
                   height={80}
+                  style={{ height: "auto" }}
                   className={styles["grant-logos__image"]}
                 />
               </a>

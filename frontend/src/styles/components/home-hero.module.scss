@@ -76,15 +76,15 @@
   }
 
   &__button--primary {
-    background: var(--color-secondary);
+    background: var(--color-secondary-accessible);
     color: var(--white);
-    box-shadow: 0 4px 12px rgba(232, 117, 26, 0.3);
+    box-shadow: 0 4px 12px rgba(180, 80, 0, 0.35);
   }
 
   &__button--primary:hover {
-    background: var(--color-secondary-hover);
+    background: var(--color-secondary-accessible-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(232, 117, 26, 0.4);
+    box-shadow: 0 6px 16px rgba(180, 80, 0, 0.45);
   }
 
   &__button--primary:focus-visible {
