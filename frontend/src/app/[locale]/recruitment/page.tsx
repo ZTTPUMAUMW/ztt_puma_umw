@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
+import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/pages/recruitment.module.scss";
 import layoutStyles from "@/styles/layout.module.scss";
 
@@ -11,6 +12,11 @@ export default function RecruitmentPage() {
   const t = useTranslations("recruitment");
   const [activeTab, setActiveTab] = useState<"etat" | "staz" | "phd">("etat");
   const [confirmed, setConfirmed] = useState(false);
+  const { ref: benefitsRef, inView: benefitsInView } = useInView({
+    rootMargin: "0px 0px -40px 0px",
+  });
+  const { ref: tabsRef, inView: tabsInView } = useInView();
+  const { ref: preapplyRef, inView: preapplyInView } = useInView();
 
   return (
     <>
@@ -19,14 +25,17 @@ export default function RecruitmentPage() {
       <section className={styles["recruitment-benefits-section"]}>
         <div className={styles["container-content"]}>
           <h2 className={styles["recruitment-benefits-header"]}>{t("benefits.heading")}</h2>
-          <div className={styles["recruitment-benefits-grid"]}>
-            <div className={styles["recruitment-benefit"]}>
+          <div
+            ref={benefitsRef}
+            className={`${styles["recruitment-benefits-grid"]} animate-stagger${benefitsInView ? " in-view" : ""}`}
+          >
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 0 }}>
               <h3 className={styles["recruitment-benefit__title"]}>{t("benefits.career.title")}</h3>
               <p className={styles["recruitment-benefit__desc"]}>
                 {t("benefits.career.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]}>
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 1 }}>
               <h3 className={styles["recruitment-benefit__title"]}>
                 {t("benefits.publications.title")}
               </h3>
@@ -34,13 +43,13 @@ export default function RecruitmentPage() {
                 {t("benefits.publications.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]}>
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 2 }}>
               <h3 className={styles["recruitment-benefit__title"]}>{t("benefits.team.title")}</h3>
               <p className={styles["recruitment-benefit__desc"]}>
                 {t("benefits.team.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]}>
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 3 }}>
               <h3 className={styles["recruitment-benefit__title"]}>
                 {t("benefits.equipment.title")}
               </h3>
@@ -48,7 +57,7 @@ export default function RecruitmentPage() {
                 {t("benefits.equipment.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]}>
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 4 }}>
               <h3 className={styles["recruitment-benefit__title"]}>
                 {t("benefits.stability.title")}
               </h3>
@@ -56,7 +65,7 @@ export default function RecruitmentPage() {
                 {t("benefits.stability.description")}
               </p>
             </div>
-            <div className={styles["recruitment-benefit"]}>
+            <div className={styles["recruitment-benefit"]} style={{ ["--i" as string]: 5 }}>
               <h3 className={styles["recruitment-benefit__title"]}>
                 {t("benefits.networking.title")}
               </h3>
@@ -77,7 +86,10 @@ export default function RecruitmentPage() {
           .filter(Boolean)
           .join(" ")}
       >
-        <div className={styles["recruitment-tabs-card"]}>
+        <div
+          ref={tabsRef}
+          className={`${styles["recruitment-tabs-card"]} animate-on-scroll${tabsInView ? " in-view" : ""}`}
+        >
           <h2 className={styles["recruitment-tabs-title"]}>{t("tabs.heading")}</h2>
           <p className={styles["recruitment-tabs-desc"]}>{t("tabs.description")}</p>
           <div className={styles["recruitment-tabs-list"]}>
@@ -141,7 +153,10 @@ export default function RecruitmentPage() {
         </div>
       </section>
 
-      <section className={styles["recruitment-preapply"]}>
+      <section
+        ref={preapplyRef}
+        className={`${styles["recruitment-preapply"]} animate-on-scroll${preapplyInView ? " in-view" : ""}`}
+      >
         <h3>{t("preapply.heading")}</h3>
         <ul className={styles["preapply-list"]}>
           <li>

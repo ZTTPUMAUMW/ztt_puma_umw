@@ -2,15 +2,20 @@
 
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/cta-section.module.scss";
 
 export default function CTASection() {
   const t = useTranslations("home.cta");
+  const { ref, inView } = useInView();
 
   return (
     <section className={styles["cta-section"]} aria-labelledby="cta-heading">
       <div className={styles["cta-section__container"]}>
-        <div className={styles["cta-section__content"]}>
+        <div
+          ref={ref}
+          className={`${styles["cta-section__content"]} animate-on-scroll${inView ? " in-view" : ""}`}
+        >
           <h2 id="cta-heading" className={styles["cta-section__title"]}>
             {t("heading")}
           </h2>

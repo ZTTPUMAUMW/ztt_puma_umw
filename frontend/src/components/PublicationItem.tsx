@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useInView } from "@/hooks/useInView";
 import styles from "../styles/pages/publications.module.scss";
 
 export interface Publication {
@@ -36,6 +37,7 @@ function formatAuthors(authors: string): string {
 
 export default function PublicationItem({ publication }: PublicationItemProps) {
   const t = useTranslations("publications");
+  const { ref, inView } = useInView<HTMLAnchorElement>();
   const { title, authors, year, month, journal, doi, url } = publication;
 
   const monthKeys = [
@@ -56,7 +58,13 @@ export default function PublicationItem({ publication }: PublicationItemProps) {
   const formattedAuthors = formatAuthors(authors);
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={styles["publication"]}>
+    <a
+      ref={ref}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${styles["publication"]} animate-on-scroll${inView ? " in-view" : ""}`}
+    >
       <div className={styles["publication__content"]}>
         <div className={styles["publication__wrapper"]}>
           <div className={styles["publication__meta"]}>

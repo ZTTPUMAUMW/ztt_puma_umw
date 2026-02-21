@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/components/grant-logos.module.scss";
 
 const grantLogos = [
@@ -18,9 +21,13 @@ const grantLogos = [
 
 export default function GrantLogos() {
   const t = useTranslations("home.grantLogos");
+  const { ref, inView } = useInView();
 
   return (
-    <section className={styles["grant-logos__section"]}>
+    <section
+      ref={ref}
+      className={`${styles["grant-logos__section"]} animate-on-scroll${inView ? " in-view" : ""}`}
+    >
       <div className={styles["grant-logos__container"]}>
         <h2 className={styles["grant-logos__title"]}>{t("title")}</h2>
         <div className={styles["grant-logos__track-wrapper"]}>
