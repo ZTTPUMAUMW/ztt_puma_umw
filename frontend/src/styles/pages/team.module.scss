@@ -46,77 +46,77 @@
   &__name {
     font-weight: var(--font-weight-semibold);
   }
-}
 
-.team-tabs {
-  &-section {
-    padding: var(--spacing-2xl) 0;
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-2xl);
-    box-shadow: var(--shadow-sm);
-    transition: background var(--transition-duration-normal) var(--transition-timing);
-  }
-
-  &-header {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  &-tab {
-    background: transparent;
-    border: var(--border-width-thin) solid var(--color-text-dark);
-    color: var(--color-text);
-    padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: var(--radius-xl);
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-duration-normal) var(--transition-timing);
-    cursor: pointer;
-
-    &:hover {
-      border-color: var(--color-secondary);
-      color: var(--color-secondary);
+  &__tabs {
+    &-section {
+      padding: var(--spacing-2xl) 0;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-2xl);
+      box-shadow: var(--shadow-sm);
+      transition: background var(--transition-duration-normal) var(--transition-timing);
     }
 
-    &.active {
-      background: var(--color-secondary);
-      color: var(--color-text-inverse);
-      border-color: var(--color-secondary);
-      box-shadow: 0 0 0 2px var(--color-secondary-transparent);
+    &-header {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-xs);
+      margin-bottom: var(--spacing-xl);
     }
-  }
 
-  &-content {
-    max-width: var(--container-text-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    &-tab {
+      background: transparent;
+      border: var(--border-width-thin) solid var(--color-text-dark);
+      color: var(--color-text);
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-radius: var(--radius-xl);
+      font-size: var(--font-size-h5);
+      font-weight: var(--font-weight-medium);
+      transition: all var(--transition-duration-normal) var(--transition-timing);
+      cursor: pointer;
 
-    &.team {
-      max-width: 100%;
-      padding: 0;
+      &:hover {
+        border-color: var(--color-secondary);
+        color: var(--color-secondary);
+      }
 
-      .team--section {
-        max-width: var(--container-content-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-md);
+      &.active {
+        background: var(--color-secondary);
+        color: var(--color-text-inverse);
+        border-color: var(--color-secondary);
+        box-shadow: 0 0 0 2px var(--color-secondary-transparent);
+      }
+    }
+
+    &-content {
+      max-width: var(--container-text-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+
+      &.team {
+        max-width: 100%;
+        padding: 0;
+
+        .team--section {
+          max-width: var(--container-content-width);
+          margin: 0 auto;
+          padding: 0 var(--spacing-md);
+        }
+      }
+    }
+
+    &-panel {
+      display: none;
+      animation: team-fadeIn 0.5s ease-in-out;
+      min-height: 20vh;
+
+      &.active {
+        display: block;
       }
     }
   }
-
-  &-panel {
-    display: none;
-    animation: fadeIn 0.5s ease-in-out;
-    min-height: 20vh;
-
-    &.active {
-      display: block;
-    }
-  }
 }
 
-@keyframes fadeIn {
+@keyframes team-fadeIn {
   from {
     opacity: 0;
     transform: translateY(10px);

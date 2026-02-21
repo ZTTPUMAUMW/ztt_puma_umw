@@ -34,7 +34,7 @@ export default function ProjectItem({ project }: ProjectItemProps) {
         href: project.link,
         target: "_blank",
         rel: "noopener noreferrer",
-        className: styles["project-component-link"],
+        className: styles["project-component__link"],
         "aria-label": `${t("learnMore")}: ${project.title}`,
       }
     : {};

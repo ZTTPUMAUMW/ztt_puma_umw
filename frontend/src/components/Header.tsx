@@ -154,11 +154,11 @@ export default function Header() {
             <span aria-hidden="true"></span>
           </button>
         </div>
-        <ul className={styles["site-header__sidebar__menu"]}>
+        <ul className={styles["site-header__sidebar-menu"]}>
           {menuItems.map((item) => (
             <li
               key={item.href}
-              className={`${styles["site-header__sidebar__menu-item"]} ${isActive(item.href) ? styles["site-header__sidebar__menu-item--active"] : ""}`}
+              className={`${styles["site-header__sidebar-item"]} ${isActive(item.href) ? styles["site-header__sidebar-item--active"] : ""}`}
             >
               <Link href={item.href} onClick={closeSidebar}>
                 {t(item.labelKey)}
@@ -166,7 +166,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <div className={styles["site-header__sidebar__lang-switcher"]}>
+        <div className={styles["site-header__sidebar-lang"]}>
           <LanguageSwitcher isMobile />
         </div>
       </div>

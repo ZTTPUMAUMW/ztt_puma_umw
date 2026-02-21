@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/styles/pages/recruitment.module.scss";
+import styles from "@/styles/components/form.module.scss";
 import { useState, FormEvent, useEffect } from "react";
 import { useTranslations } from "next-intl";
 

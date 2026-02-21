@@ -1,7 +1,7 @@
 .home-hero {
   position: relative;
   width: 100%;
-  min-height: 500px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,14 @@
     #4a7a9d 100%
   );
   overflow: hidden;
+
+  @media (min-width: 769px) {
+    min-height: 450px;
+  }
+
+  @media (min-width: 1025px) {
+    min-height: 500px;
+  }
 
   &__pattern {
     position: absolute;
@@ -39,29 +47,52 @@
   }
 
   &__title {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-text-inverse);
     margin: 0 0 var(--spacing-lg) 0;
     line-height: 1.1;
     letter-spacing: -1px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    @media (min-width: 769px) {
+      font-size: var(--font-size-h1);
+    }
+
+    @media (min-width: 1025px) {
+      font-size: var(--font-size-5xl);
+    }
   }
 
   &__subtitle {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-md);
     color: rgba(255, 255, 255, 0.95);
-    margin: 0 0 var(--spacing-2xl) 0;
+    margin: 0 0 var(--spacing-xl) 0;
     font-weight: var(--font-weight-normal);
     line-height: 1.6;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 769px) {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    @media (min-width: 1025px) {
+      font-size: var(--font-size-h3);
+    }
   }
 
   &__cta {
     display: flex;
-    gap: var(--spacing-md);
+    flex-direction: column;
+    gap: var(--spacing-sm);
     justify-content: center;
     flex-wrap: wrap;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+      gap: var(--spacing-md);
+    }
   }
 
   &__button {
@@ -73,82 +104,53 @@
     transition: all 0.3s ease;
     display: inline-block;
     border: 2px solid transparent;
-  }
+    width: 100%;
+    text-align: center;
 
-  &__button--primary {
-    background: var(--color-secondary-accessible);
-    color: var(--white);
-    box-shadow: 0 4px 12px rgba(180, 80, 0, 0.35);
-  }
-
-  &__button--primary:hover {
-    background: var(--color-secondary-accessible-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(180, 80, 0, 0.45);
-  }
-
-  &__button--primary:focus-visible {
-    outline: 3px solid var(--white);
-    outline-offset: 2px;
-  }
-
-  &__button--secondary {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--color-text-inverse);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-
-  &__button--secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-  }
-
-  &__button--outline {
-    background: transparent;
-    color: var(--color-text-inverse);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-  }
-
-  &__button--outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-text-inverse);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 1024px) {
-    min-height: 450px;
-
-    &__title {
-      font-size: var(--font-size-h1);
+    @media (min-width: 769px) {
+      width: auto;
     }
 
-    &__subtitle {
-      font-size: var(--font-size-lg);
-    }
-  }
+    &--primary {
+      background: var(--color-secondary-accessible);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(180, 80, 0, 0.35);
 
-  @media (max-width: 768px) {
-    min-height: 400px;
+      &:hover {
+        background: var(--color-secondary-accessible-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(180, 80, 0, 0.45);
+      }
 
-    &__title {
-      font-size: var(--font-size-2xl);
-    }
-
-    &__subtitle {
-      font-size: var(--font-size-md);
-      margin-bottom: var(--spacing-xl);
-    }
-
-    &__cta {
-      flex-direction: column;
-      gap: var(--spacing-sm);
+      &:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 2px;
+      }
     }
 
-    &__button {
-      width: 100%;
-      text-align: center;
+    &--secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--color-text-inverse);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+      }
+    }
+
+    &--outline {
+      background: transparent;
+      color: var(--color-text-inverse);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--color-text-inverse);
+        transform: translateY(-2px);
+      }
     }
   }
 }

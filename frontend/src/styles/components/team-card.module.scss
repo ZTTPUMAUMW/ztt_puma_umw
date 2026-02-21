@@ -9,7 +9,7 @@
   &:hover {
     box-shadow: var(--shadow-lg);
 
-    .team-card__image-wrapper .team-card__image img {
+    .team-card__image {
       transform: scale(1.05);
     }
 
@@ -21,58 +21,58 @@
       opacity: 1;
     }
   }
-}
 
-.team-card__button {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  padding: var(--spacing-lg);
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: center;
-  transition: all 300ms ease-in-out;
-}
+  &__button {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-lg);
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+  }
 
-.team-card__thumbnail {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-lg);
-  width: 100%;
-  aspect-ratio: 1/1;
-}
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
 
-.team-card__image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 
-.team-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: var(--radius-md);
-  transition: transform 300ms ease-in-out;
-}
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: transform 300ms ease-in-out;
+  }
 
-.team-card__name {
-  font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--spacing-2xs);
-  line-height: var(--line-height-tight);
-  transition: color 300ms ease-in-out;
-}
+  &__name {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-2xs);
+    line-height: var(--line-height-tight);
+    transition: color 300ms ease-in-out;
+  }
 
-.team-card__position {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-secondary);
-  opacity: 0.9;
-  transition: all 300ms ease-in-out;
+  &__position {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-secondary);
+    opacity: 0.9;
+    transition: all 300ms ease-in-out;
+  }
 }

@@ -261,7 +261,7 @@ export default function BannerSlider({
         >
           {slides.map((slide, index) => (
             <div key={index} className={styles.slider__slide}>
-              <FeaturedBanner {...slide} />
+              <FeaturedBanner {...slide} isFirst={index === 0} />
             </div>
           ))}
         </div>

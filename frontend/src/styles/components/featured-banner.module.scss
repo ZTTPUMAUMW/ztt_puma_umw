@@ -1,292 +1,280 @@
 .banner {
   width: 100%;
   overflow: hidden;
-}
 
-.banner__container {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.banner__card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: var(--color-background);
-  overflow: hidden;
-  box-shadow:
-    0 1px 3px rgba(28, 61, 90, 0.08),
-    0 8px 24px rgba(28, 61, 90, 0.12);
-  position: relative;
-  min-height: 380px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Medical accent stripe */
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-  }
-
-  @media (max-width: 968px) {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-}
-
-/* Newspaper tab */
-.banner__tab {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 100%;
-  transform: translateY(-50%);
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  padding: var(--spacing-xl) var(--spacing-sm);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-lg);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  box-shadow:
-    2px 0 8px rgba(28, 61, 90, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  z-index: 10;
-  display: flex;
-  align-items: center;
-
-  span {
-    display: block;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    white-space: nowrap;
-  }
-
-  /* Newspaper texture effect */
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 1px,
-      rgba(0, 0, 0, 0.03) 1px,
-      rgba(0, 0, 0, 0.03) 2px
-    );
-    pointer-events: none;
-  }
-
-  @media (max-width: 968px) {
-    display: none;
-  }
-}
-
-.banner__content {
-  padding: var(--spacing-2xl) var(--spacing-xl) var(--spacing-2xl) var(--spacing-3xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  position: relative;
-
-  @media (max-width: 968px) {
-    padding: var(--spacing-2xl) var(--spacing-xl);
-    gap: var(--spacing-md);
-  }
-}
-
-.banner__title {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  line-height: var(--line-height-tight);
-  margin: 0;
-  letter-spacing: -0.02em;
-  position: relative;
-  padding-bottom: var(--spacing-lg);
-
-  /* Subtle underline accent */
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--color-secondary);
-    border-radius: var(--radius-xs);
-  }
-
-  @media (max-width: 968px) {
-    font-size: var(--font-size-2xl);
-  }
-}
-
-.banner__description {
-  font-size: var(--font-size-lg);
-  line-height: 1.7;
-  color: var(--color-text);
-  margin: 0;
-  opacity: 0.85;
-
-  @media (max-width: 968px) {
-    font-size: var(--font-size-base);
-  }
-}
-
-.banner__cta {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 1rem;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-xl);
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  text-decoration: none;
-  border-radius: var(--radius-small);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-base);
-  letter-spacing: 0.01em;
-  transition: all 0.7s ease-in-out;
-  align-self: flex-start;
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
-
-  /* Subtle shine effect */
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
+  &__container {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-    transition: left 0.7s ease;
+    box-sizing: border-box;
   }
 
-  &:hover {
-    background: var(--color-secondary);
-    transform: translateX(0);
-    border-color: var(--color-secondary);
-    box-shadow: 0 4px 16px rgba(232, 117, 26, 0.25);
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--color-background);
+    overflow: hidden;
+    box-shadow:
+      0 1px 3px rgba(28, 61, 90, 0.08),
+      0 8px 24px rgba(28, 61, 90, 0.12);
+    position: relative;
+    min-height: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (min-width: 969px) {
+      grid-template-columns: 1fr 1fr;
+      min-height: 380px;
+    }
 
     &::before {
-      left: 100%;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+    }
+  }
+
+  &__tab {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: var(--spacing-xl) var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    box-shadow:
+      2px 0 8px rgba(28, 61, 90, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    align-items: center;
+
+    @media (min-width: 969px) {
+      display: flex;
+    }
+
+    span {
+      display: block;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      white-space: nowrap;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        rgba(0, 0, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.03) 2px
+      );
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-md);
+    position: relative;
+
+    @media (min-width: 969px) {
+      padding: var(--spacing-2xl) var(--spacing-xl) var(--spacing-2xl) var(--spacing-3xl);
+      gap: var(--spacing-lg);
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    line-height: var(--line-height-tight);
+    margin: 0;
+    letter-spacing: -0.02em;
+    position: relative;
+    padding-bottom: var(--spacing-lg);
+
+    @media (min-width: 969px) {
+      font-size: var(--font-size-3xl);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--color-secondary);
+      border-radius: var(--radius-xs);
+    }
+  }
+
+  &__description {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0;
+    opacity: 0.85;
+
+    @media (min-width: 969px) {
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+    border-radius: var(--radius-small);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    letter-spacing: 0.01em;
+    transition: all 0.7s ease-in-out;
+    align-self: stretch;
+    justify-content: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 969px) {
+      align-self: flex-start;
+      padding: var(--spacing-md) var(--spacing-xl);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      transition: left 0.7s ease;
+    }
+
+    &:hover {
+      background: var(--color-secondary);
+      transform: translateX(0);
+      border-color: var(--color-secondary);
+      box-shadow: 0 4px 16px rgba(232, 117, 26, 0.25);
+
+      &::before {
+        left: 100%;
+      }
+
+      svg {
+        transform: translateX(4px);
+      }
+    }
+
+    &:active {
+      transform: translateY(1px);
     }
 
     svg {
-      transform: translateX(4px);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
     }
   }
 
-  &:active {
-    transform: translateY(1px);
-  }
-
-  svg {
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-  }
-
-  @media (max-width: 968px) {
-    align-self: stretch;
-    justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-  }
-}
-
-.banner__image_wrapper {
-  position: relative;
-  min-height: 100%;
-  overflow: hidden;
-  background: var(--color-background-light);
-
-  /* Aggressive torn newspaper edge effect */
-  &::before {
-    content: "";
-    position: absolute;
-    left: -3px;
-    top: 0;
-    bottom: 0;
-    width: 15px;
-    background: var(--color-background);
-    z-index: 2;
-    will-change: transform;
-    clip-path: polygon(
-      0% 0%,
-      10% 0.5%,
-      55% 2%,
-      90% 4%,
-      70% 6%,
-      100% 8%,
-      45% 10%,
-      85% 13%,
-      60% 15%,
-      100% 18%,
-      50% 20%,
-      95% 23%,
-      65% 25%,
-      100% 28%,
-      40% 31%,
-      80% 34%,
-      55% 37%,
-      100% 40%,
-      60% 42%,
-      90% 45%,
-      50% 48%,
-      100% 51%,
-      55% 53%,
-      85% 56%,
-      65% 59%,
-      100% 62%,
-      45% 65%,
-      90% 68%,
-      60% 70%,
-      100% 73%,
-      50% 76%,
-      95% 79%,
-      65% 82%,
-      100% 85%,
-      55% 87%,
-      85% 90%,
-      70% 93%,
-      100% 96%,
-      60% 98%,
-      100% 100%,
-      0% 105%
-    );
-    filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
-  }
-
-  /* Subtle overlay for better image integration */
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(28, 61, 90, 0.03) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  @media (max-width: 968px) {
+  &__image_wrapper {
+    position: relative;
     min-height: 280px;
+    overflow: hidden;
+    background: var(--color-background-light);
 
-    /* Remove torn edge on mobile */
-    &::before {
-      display: none;
+    @media (min-width: 969px) {
+      min-height: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 0;
+        bottom: 0;
+        width: 15px;
+        background: var(--color-background);
+        z-index: 2;
+        will-change: transform;
+        clip-path: polygon(
+          0% 0%,
+          10% 0.5%,
+          55% 2%,
+          90% 4%,
+          70% 6%,
+          100% 8%,
+          45% 10%,
+          85% 13%,
+          60% 15%,
+          100% 18%,
+          50% 20%,
+          95% 23%,
+          65% 25%,
+          100% 28%,
+          40% 31%,
+          80% 34%,
+          55% 37%,
+          100% 40%,
+          60% 42%,
+          90% 45%,
+          50% 48%,
+          100% 51%,
+          55% 53%,
+          85% 56%,
+          65% 59%,
+          100% 62%,
+          45% 65%,
+          90% 68%,
+          60% 70%,
+          100% 73%,
+          50% 76%,
+          95% 79%,
+          65% 82%,
+          100% 85%,
+          55% 87%,
+          85% 90%,
+          70% 93%,
+          100% 96%,
+          60% 98%,
+          100% 100%,
+          0% 105%
+        );
+        filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(28, 61, 90, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 1;
     }
   }
-}
 
-.banner__image {
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
+  &__image {
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
 
-  .banner__card:hover & {
-    transform: scale(1.03);
+    .banner__card:hover & {
+      transform: scale(1.03);
+    }
   }
 }

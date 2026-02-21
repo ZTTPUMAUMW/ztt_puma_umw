@@ -21,6 +21,14 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     text-align: center;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__card {
@@ -53,18 +61,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: var(--font-weight-semibold);
-  }
-
-  @media (min-width: 640px) {
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1024px) {
-    &__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 }
 

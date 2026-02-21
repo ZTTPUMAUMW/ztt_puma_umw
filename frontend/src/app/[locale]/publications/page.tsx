@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import styles from "@/styles/pages/publications.module.scss";
+import layoutStyles from "@/styles/layout.module.scss";
 import Hero from "@/components/Hero";
 import PublicationItem, { Publication } from "@/components/PublicationItem";
 import { italicizeLatinWords } from "@/lib/utils";
@@ -451,30 +452,30 @@ export default function PublicationsPage() {
       <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
 
       <section className={styles["section-publications"]}>
-        <div className="container-content">
+        <div className={layoutStyles["container-content"]}>
           <div className={styles["section-publications__container"]}>
             <aside className={styles["section-publications__filters"]}>
-              <ul className={styles["section-publications__filter-list"]}>
+              <ul className={styles["section-publications__filters-list"]}>
                 <li
-                  className={`${styles["section-publications__filter-item"]} ${selectedYear === null ? styles["section-publications__filter-item--active"] : ""}`}
+                  className={`${styles["section-publications__filters-item"]} ${selectedYear === null ? styles["section-publications__filters-item--active"] : ""}`}
                   onClick={() => setSelectedYear(null)}
                 >
                   {t("filters.all")}
                 </li>
                 <li
-                  className={`${styles["section-publications__filter-item"]} ${selectedYear === 2025 ? styles["section-publications__filter-item--active"] : ""}`}
+                  className={`${styles["section-publications__filters-item"]} ${selectedYear === 2025 ? styles["section-publications__filters-item--active"] : ""}`}
                   onClick={() => setSelectedYear(2025)}
                 >
                   2025
                 </li>
                 <li
-                  className={`${styles["section-publications__filter-item"]} ${selectedYear === 2024 ? styles["section-publications__filter-item--active"] : ""}`}
+                  className={`${styles["section-publications__filters-item"]} ${selectedYear === 2024 ? styles["section-publications__filters-item--active"] : ""}`}
                   onClick={() => setSelectedYear(2024)}
                 >
                   2024
                 </li>
                 <li
-                  className={`${styles["section-publications__filter-item"]} ${selectedYear === 2023 ? styles["section-publications__filter-item--active"] : ""}`}
+                  className={`${styles["section-publications__filters-item"]} ${selectedYear === 2023 ? styles["section-publications__filters-item--active"] : ""}`}
                   onClick={() => setSelectedYear(2023)}
                 >
                   2023
