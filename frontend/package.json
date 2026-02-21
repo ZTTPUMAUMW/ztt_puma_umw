@@ -14,7 +14,8 @@
     "translate": "node --env-file=.env.local scripts/translate.mjs",
     "translate:all": "node --env-file=.env.local scripts/translate.mjs --all",
     "translate:check": "node --env-file=.env.local scripts/translate.mjs --check",
-    "translate:reverse": "node --env-file=.env.local scripts/translate.mjs --reverse"
+    "translate:reverse": "node --env-file=.env.local scripts/translate.mjs --reverse",
+    "translate:force": "node --env-file=.env.local scripts/translate.mjs --all --force"
   },
   "dependencies": {
     "@sanity/client": "^7.13.1",
