@@ -23,21 +23,27 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
     };
 
     if (isOpen) {
+      const scrollY = window.scrollY;
       document.addEventListener("keydown", handleEscape);
       document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
-      document.body.style.height = "100%";
       document.body.style.overflow = "hidden";
       document.body.style.touchAction = "none";
+
+      return () => {
+        document.removeEventListener("keydown", handleEscape);
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        document.body.style.overflow = "";
+        document.body.style.touchAction = "";
+        window.scrollTo({ top: scrollY, behavior: "instant" });
+      };
     }
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
-      document.body.style.position = "";
-      document.body.style.width = "";
-      document.body.style.height = "";
-      document.body.style.overflow = "";
-      document.body.style.touchAction = "";
     };
   }, [isOpen, onClose]);
 

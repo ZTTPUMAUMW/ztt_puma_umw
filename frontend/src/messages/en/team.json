@@ -4,7 +4,7 @@
     "subtitle": "Researchers, doctoral students and undergraduates who make up P.U.M.A."
   },
   "stats": {
-    "intro": "Our team is a group of science enthusiasts who combine academic experience with a practical approach to research. Together we create innovative solutions in the fields of microbiology, biotechnology and medicine.",
+    "intro": "Our team is a group of science enthusiasts who combine academic experience with a practical approach to research. Together, we create innovative solutions in the fields of microbiology, biotechnology and medicine.",
     "researchers": "Researchers",
     "phd": "PhD students",
     "students": "Students"
@@ -15,6 +15,6 @@
     "students": "Students"
   },
   "modal": {
-    "back": "Back"
+    "back": "Return"
   }
 }
