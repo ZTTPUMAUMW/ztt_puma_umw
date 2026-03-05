@@ -246,10 +246,10 @@
       flex: 1 1 auto;
       overflow-y: auto;
       overflow-x: hidden;
-      justify-content: flex-start;
+      justify-content: center;
       list-style: none;
       padding: 0;
-      margin: 2.5rem 0 0 0;
+      margin: 1rem 0 0 0;
       gap: var(--spacing-md);
       -webkit-overflow-scrolling: touch;
       overscroll-behavior: contain;
@@ -257,7 +257,6 @@
 
     &-item {
       width: 100%;
-      padding: var(--spacing-sm) 0;
       border-radius: var(--radius-md);
 
       a {

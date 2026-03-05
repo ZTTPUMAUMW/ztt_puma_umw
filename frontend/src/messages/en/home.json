@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Laboratory of Unique Application Models",
-    "subtitle": "Innovative solutions at the intersection of pharmaceuticals, medicine and biotechnology",
+    "subtitle": "Innovative solutions at the intersection of pharmacy, medicine and biotechnology",
     "ctaProjects": "Our projects",
     "ctaTeam": "Meet the team",
     "ctaCooperation": "Collaboration",
@@ -11,7 +11,7 @@
   },
   "infoCards": {
     "heading": "What do we do?",
-    "intro": "The Unique Application Models Laboratory (P.U.M.A.) works at the intersection of pharmaceuticals, medicine, biology, computer science and technology. We create computational and experimental models to help better understand diseases and find more effective treatments.",
+    "intro": "The Unique Application Models Laboratory (P.U.M.A.) works at the intersection of pharmacy, medicine, biology, computer science and technology. We create computational and experimental models to help better understand diseases and find more effective treatments.",
     "cards": {
       "basicScience": {
         "title": "Basic science",
