@@ -9,10 +9,10 @@ import styles from "../styles/components/header.module.scss";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const menuItems = [
+  { labelKey: "team", href: "/team" },
   { labelKey: "projects", href: "/projects" },
   { labelKey: "publications", href: "/publications" },
   { labelKey: "models", href: "/models" },
-  { labelKey: "team", href: "/team" },
   { labelKey: "recruitment", href: "/recruitment" },
   { labelKey: "cooperation", href: "/cooperation" },
   { labelKey: "contact", href: "/contact" },
