@@ -33,6 +33,8 @@ const FIELD_LIMITS = {
 const SUBMISSION_LIMIT = 3;
 const SUBMISSION_WINDOW = 60 * 60 * 1000;
 
+const generateCsrfToken = () => Math.random().toString(36).substring(2) + Date.now().toString(36);
+
 export default function ContactForm({
   submitEndpoint = "/api/contact",
   attachmentLabel,
@@ -55,14 +57,13 @@ export default function ContactForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
-  const [formStartTime, setFormStartTime] = useState<number>(0);
-  const [csrfToken, setCsrfToken] = useState<string>("");
-  const [recaptchaLoaded, setRecaptchaLoaded] = useState<boolean>(false);
+  const [formStartTime, setFormStartTime] = useState<number>(() => Date.now());
+  const [csrfToken, setCsrfToken] = useState<string>(() => generateCsrfToken());
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState<boolean>(
+    () => typeof window !== "undefined" && Boolean(window.grecaptcha)
+  );
 
   useEffect(() => {
-    setFormStartTime(Date.now());
-    setCsrfToken(Math.random().toString(36).substring(2) + Date.now().toString(36));
-
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     let script: HTMLScriptElement | null = null;
 
@@ -73,8 +74,6 @@ export default function ContactForm({
       script.defer = true;
       script.onload = () => setRecaptchaLoaded(true);
       document.head.appendChild(script);
-    } else if (window.grecaptcha) {
-      setRecaptchaLoaded(true);
     }
 
     return () => {
@@ -317,7 +316,7 @@ export default function ContactForm({
         setFiles([]);
         setValidationErrors({});
         setFormStartTime(Date.now());
-        setCsrfToken(Math.random().toString(36).substring(2) + Date.now().toString(36));
+        setCsrfToken(generateCsrfToken());
 
         if (onSuccess) onSuccess();
       } else {
