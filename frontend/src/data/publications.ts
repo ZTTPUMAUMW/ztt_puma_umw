@@ -2,16 +2,6 @@ import type { Publication } from "@/components/PublicationItem";
 
 export const publicationsData: Publication[] = [
   {
-    title: "(1→3)-α-d-glucan from the pink oyster mushroom (Pleurotus djamor): structural features",
-    authors:
-      "Paulina Adamczyk and Iwona Komaniecka and Marek Siwulski and Kamila Wlizło and Adam Junka and Artur Nowak and Dariusz Kowalczyk and Adam Waśko and Jolanta Lisiecka and Michał Grzymajło and Adrian Wiater",
-    year: 2025,
-    month: 4,
-    journal: "Foods",
-    doi: "10.3390/foods14071272",
-    url: "https://www.mdpi.com/2304-8158/14/7/1272",
-  },
-  {
     title:
       "Artemisia argyi Levl.et Vant extract (AALE) and parthenolide suppress respiratory syncytial virus (RSV) via the RIG-I/TLR3 pathway in vivo and in vitro",
     authors:
