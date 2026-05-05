@@ -32,7 +32,7 @@ export default function InfoCards() {
           className={`${styles["info-cards__grid"]} animate-stagger${gridInView ? " in-view" : ""}`}
         >
           {cards.map((card, index) => {
-            const isFeatured = index === cards.length - 1;
+            const isFeatured = index === 0;
             const cardClass = [
               styles["info-cards__card"],
               isFeatured ? styles["info-cards__card--featured"] : "",
@@ -42,9 +42,9 @@ export default function InfoCards() {
 
             return (
               <div key={index} className={cardClass} style={{ ["--i" as string]: index }}>
-                <div className={styles["info-card__number"]}>{card.number}</div>
-                <h3 className={styles["info-card__title"]}>{t(`cards.${card.key}.title`)}</h3>
-                <p className={styles["info-card__description"]}>
+                <div className={styles["info-cards__card-number"]}>{card.number}</div>
+                <h3 className={styles["info-cards__card-title"]}>{t(`cards.${card.key}.title`)}</h3>
+                <p className={styles["info-cards__card-description"]}>
                   {t(`cards.${card.key}.description`)}
                 </p>
               </div>
