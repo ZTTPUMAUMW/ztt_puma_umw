@@ -187,6 +187,10 @@ Required extensions:
 npm run dev               # Start dev server (localhost:3000)
 npm run build             # Production build
 npm run start             # Start production server
+npm run test              # Run unit tests (Vitest)
+npm run test:unit         # Run unit tests once
+npm run test:unit:watch   # Run unit tests in watch mode
+npm run test:unit:coverage# Run unit tests with coverage report
 npm run lint              # Run ESLint (check only)
 npm run lint:fix          # Run ESLint and auto-fix issues
 npm run format            # Format all files with Prettier
@@ -195,6 +199,20 @@ npm run translate         # Translate changed files PL → EN (DeepL)
 npm run translate:all     # Force re-translate all files PL → EN
 npm run translate:check   # Show missing/extra translation keys (dry run)
 npm run translate:reverse # Translate EN → PL
+```
+
+## Testing
+
+### Unit tests (Vitest)
+
+```bash
+npm run test:unit
+```
+
+Coverage report (terminal + HTML):
+
+```bash
+npm run test:unit:coverage
 ```
 
 ## Routing
