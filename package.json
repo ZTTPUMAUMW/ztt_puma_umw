@@ -3,7 +3,8 @@
     "sass": "^1.96.0"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1"
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
