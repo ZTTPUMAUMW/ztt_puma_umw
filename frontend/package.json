@@ -30,6 +30,7 @@
   "dependencies": {
     "@sanity/client": "^7.13.1",
     "@sanity/image-url": "^2.0.1",
+    "@vercel/analytics": "^2.0.1",
     "deepl-node": "^1.24.0",
     "next": "^16.0.7",
     "next-intl": "^4.7.0",
