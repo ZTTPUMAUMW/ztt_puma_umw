@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "sass": "^1.96.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
