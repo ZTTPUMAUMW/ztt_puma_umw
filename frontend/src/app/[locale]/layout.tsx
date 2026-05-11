@@ -9,6 +9,7 @@ import "../globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -119,6 +120,7 @@ export default async function LocaleLayout({
           <main id="main-content">{children}</main>
           <Footer />
           <Analytics />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
