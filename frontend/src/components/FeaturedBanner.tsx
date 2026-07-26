@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactNode } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import styles from "@/styles/components/featured-banner.module.scss";
@@ -7,7 +8,7 @@ import styles from "@/styles/components/featured-banner.module.scss";
 interface FeaturedBannerProps {
   image: string;
   title: string;
-  description: string;
+  description: ReactNode;
   link: string;
   alt?: string;
   isFirst?: boolean;

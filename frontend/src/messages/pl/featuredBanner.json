@@ -1,18 +1,18 @@
 {
   "readMore": "Czytaj więcej",
   "banner": {
+    "title": "Dolnośląski Festiwal Nauki 2026",
+    "description": "Dowiedź się więcej o larwach <i>Galleria mellonella</i> wykorzystywanych jako biosensory w badaniach farmaceutycznych. Dołącz na warsztaty 15 września. Zapisy na stronie!",
+    "link": "https://www.festiwal.wroc.pl/events/galleria-mellonella-pod-lupa-barciaki-jako-biosensory-w-badaniach-farmaceutycznych-i-medycznych/"
+  },
+  "banner2": {
     "title": "Olejki eteryczne w walce z bakteriami",
     "description": "Tymianek i rozmaryn pod lupą naukowców P.U.M.A. Odkryj, jak naturalne olejki mogą wzmacniać działanie antybiotyków i stanowić broń w erze oporności bakteryjnej.",
     "link": "https://www.umw.edu.pl/pl/aktualnosci/olejki-eteryczne-w-walce-z-bakteriami"
   },
-  "banner2": {
+  "banner3": {
     "title": "Między nauką a praktyką, czyli jak działa P.U.M.A.",
     "description": "Pracownia P.U.M.A. łączy badania podstawowe z praktycznym zastosowaniem. Dowiedz się więcej o naszej pracy w Gazecie Uczelnianej UMW - rok 2025 wrzesień/październik na stronach 9 do 11.",
     "link": "https://gazeta.umw.edu.pl/2025-2023/"
-  },
-  "banner3": {
-    "title": "MMS – mineralne panaceum w medycynie alternatywnej",
-    "description": "Czy MMS faktycznie leczy? Naukowcy P.U.M.A. udowodnili, że stężenia hamujące bakterie jednocześnie niszczą komórki organizmu. Wyniki w „Scientific Reports\".",
-    "link": "https://zdrowie.pap.pl/leczenie/naukowcy-o-mineralnym-panaceum-stosowanym-w-medycynie-alternatywnej"
   }
 }

@@ -1,2 +1,10 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
+packages:
+  - 'frontend'
+  - 'studio'
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
