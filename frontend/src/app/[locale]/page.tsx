@@ -18,7 +18,9 @@ export default async function Home() {
     {
       image: "/images/banner/banner_1.png",
       title: t("banner.title"),
-      description: t("banner.description"),
+      description: t.rich("banner.description", {
+        i: (chunks) => <i>{chunks}</i>,
+      }),
       link: t("banner.link"),
     },
     {

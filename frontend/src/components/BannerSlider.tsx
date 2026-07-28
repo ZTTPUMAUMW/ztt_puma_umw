@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback, TouchEvent, MouseEvent, useEffect } from "react";
+import { useState, useRef, useCallback, TouchEvent, MouseEvent, useEffect, ReactNode } from "react";
 import FeaturedBanner from "./FeaturedBanner";
 import styles from "@/styles/components/banner-slider.module.scss";
 
@@ -9,7 +9,7 @@ import styles from "@/styles/components/banner-slider.module.scss";
 export interface BannerSlide {
   image: string;
   title: string;
-  description: string;
+  description: ReactNode;
   link: string;
   alt?: string;
 }
