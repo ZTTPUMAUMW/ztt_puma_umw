@@ -95,6 +95,7 @@ export default function TeamPage() {
                       member={member}
                       onOpenModal={handleOpenModal}
                       animationIndex={i}
+                      priority={i === 0}
                     />
                   ))}
                 </div>
