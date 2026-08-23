@@ -21,9 +21,15 @@ interface TeamCardProps {
   member: TeamMember;
   onOpenModal: (member: TeamMember) => void;
   animationIndex?: number;
+  priority?: boolean;
 }
 
-export default function TeamCard({ member, onOpenModal, animationIndex = 0 }: TeamCardProps) {
+export default function TeamCard({
+  member,
+  onOpenModal,
+  animationIndex = 0,
+  priority = false,
+}: TeamCardProps) {
   const { ref, inView } = useInView<HTMLDivElement>({ rootMargin: "0px 0px -40px 0px" });
 
   return (
@@ -46,6 +52,8 @@ export default function TeamCard({ member, onOpenModal, animationIndex = 0 }: Te
               fill
               sizes="(min-width: 1367px) 581px, 580px"
               style={{ objectFit: "cover" }}
+              priority={priority}
+              loading={priority ? "eager" : "lazy"}
             />
           </div>
         </div>
