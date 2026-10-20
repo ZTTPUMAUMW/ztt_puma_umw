@@ -1,12 +1,12 @@
 # PUMA Research Group Website
 
-Next.js 16 application with TypeScript, Sanity CMS, and i18n support (Polish/English).
+Next.js 16 application with TypeScript and i18n support (Polish/English). The repository also contains a Sanity Studio; the current frontend content is primarily stored in local source files.
 
 ## Tech Stack
 
 - **Framework**: Next.js 16.0.7 (App Router, React 19)
 - **Language**: TypeScript 5
-- **CMS**: Sanity Studio
+- **CMS tooling**: Sanity Studio (project configured; frontend does not currently fetch content from Sanity)
 - **Styling**: SCSS Modules + Tailwind CSS 4
 - **i18n**: next-intl 4.7.0
 - **Email**: Nodemailer
@@ -22,8 +22,8 @@ frontend/
 │   ├── app/[locale]/          # Next.js App Router with locale prefix
 │   │   ├── page.tsx           # Homepage
 │   │   ├── team/              # Team page
-│   │   ├── projects/          # Projects page (Sanity)
-│   │   ├── publications/      # Publications page (Sanity)
+│   │   ├── projects/          # Projects page
+│   │   ├── publications/      # Publications page
 │   │   ├── models/            # Models page
 │   │   ├── recruitment/       # Recruitment page
 │   │   ├── cooperation/       # Cooperation page
@@ -49,51 +49,61 @@ frontend/
 ### Prerequisites
 
 - Node.js 20+
-- npm/pnpm
+- Corepack and pnpm (the repository pins pnpm in the root `package.json`)
 
-### Environment Variables
+### Environment variables
 
-Create `.env.local`:
+The basic frontend can be installed and started without a `.env.local` file. To configure form submissions, create `frontend/.env.local` using the tracked example:
 
 ```bash
-# Sanity
-NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
-NEXT_PUBLIC_SANITY_DATASET=production
-SANITY_API_TOKEN=your_token
-
-# Email (SMTP)
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_email
-SMTP_PASS=your_password
-EMAIL_FROM=noreply@example.com
-EMAIL_TO=contact@example.com
-
-# Google reCAPTCHA
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
-RECAPTCHA_SECRET_KEY=your_secret_key
-
-# DeepL (optional - for translations)
-DEEPL_API_KEY=your_deepl_key
+cp frontend/.env.example frontend/.env.local
 ```
+
+Set the following values in `frontend/.env.local` for the cooperation and recruitment forms:
+
+- `EMAIL_USER` and `EMAIL_PASSWORD` — Gmail account and app password used for SMTP.
+- `EMAIL_FROM` and `EMAIL_TO` — sender and recipient email addresses.
+- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY` — Google reCAPTCHA v3 keys configured for the deployed/local domains.
+
+These credentials are not included in the repository. Without valid SMTP and reCAPTCHA values, the site can still start, but form submissions will not work.
+
+The translation scripts require `DEEPL_API_KEY` in `frontend/.env.local`; add it only if you need to run those scripts. Sanity's project ID (`6gulcr1j`) and dataset (`production`) are configured in source. The current frontend does not use a Sanity API token to fetch page content. Access to edit content in the Studio requires a Sanity account with permissions for the project.
 
 ### Installation
 
+From the repository root:
+
 ```bash
-# Install dependencies
-npm install
-
-# Development server
-npm run dev
-
-# Production build
-npm run build
-npm start
-
-# Run Sanity Studio (in separate terminal)
-cd studio
-npm run dev
+corepack enable
+pnpm install
 ```
+
+### Run the frontend
+
+From the repository root:
+
+```bash
+pnpm --dir frontend dev
+```
+
+The development server runs at `http://localhost:3000`. Other useful commands, run from the repository root:
+
+```bash
+pnpm --dir frontend build
+pnpm --dir frontend start
+pnpm --dir frontend lint
+pnpm --dir frontend test:unit
+```
+
+### Run Sanity Studio (optional)
+
+In a separate terminal, from the repository root:
+
+```bash
+pnpm --dir studio dev
+```
+
+The Studio is configured for project `6gulcr1j` and dataset `production`; sign in with an authorized Sanity account to edit content.
 
 ## Development
 
@@ -111,10 +121,10 @@ Each file corresponds to a specific page or section (e.g. `home.json`, `team.jso
 **DeepL Translation Script** (`scripts/translate.mjs`):
 
 ```bash
-npm run translate          # Translate only changed files (PL → EN)
-npm run translate:all      # Force re-translate all files (PL → EN)
-npm run translate:check    # Dry run — show missing/extra keys without changes
-npm run translate:reverse  # Translate EN → PL
+pnpm --dir frontend translate          # Translate only changed files (PL → EN)
+pnpm --dir frontend translate:all      # Force re-translate all files (PL → EN)
+pnpm --dir frontend translate:check    # Dry run — show missing/extra keys without changes
+pnpm --dir frontend translate:reverse  # Translate EN → PL
 ```
 
 **How it works:**
@@ -127,7 +137,7 @@ npm run translate:reverse  # Translate EN → PL
 **Adding a new translation file:**
 
 1. Create `src/messages/pl/newpage.json` with Polish content
-2. Run `npm run translate` — the EN file will be created automatically
+2. Run `pnpm --dir frontend translate` — the EN file will be created automatically
 
 ### CSS Variables
 
@@ -141,15 +151,9 @@ All design tokens in `src/styles/variables.module.scss`:
 --radius-circle: 999px;
 ```
 
-### Sanity Content
+### Sanity Studio
 
-Content schemas in `studio/schemaTypes/`:
-
-- `project.ts` - Research projects
-- `publication.ts` - Scientific publications
-- `model.ts` - Research models
-
-Query examples in `src/lib/sanity.ts`
+The Studio is configured for project `6gulcr1j` and dataset `production`. No custom content schemas are currently defined, and the frontend does not currently query Sanity.
 
 ### Email Forms
 
@@ -184,21 +188,20 @@ Required extensions:
 ## Scripts
 
 ```bash
-npm run dev               # Start dev server (localhost:3000)
-npm run build             # Production build
-npm run start             # Start production server
-npm run test              # Run unit tests (Vitest)
-npm run test:unit         # Run unit tests once
-npm run test:unit:watch   # Run unit tests in watch mode
-npm run test:unit:coverage# Run unit tests with coverage report
-npm run lint              # Run ESLint (check only)
-npm run lint:fix          # Run ESLint and auto-fix issues
-npm run format            # Format all files with Prettier
-npm run format:check      # Check formatting without making changes
-npm run translate         # Translate changed files PL → EN (DeepL)
-npm run translate:all     # Force re-translate all files PL → EN
-npm run translate:check   # Show missing/extra translation keys (dry run)
-npm run translate:reverse # Translate EN → PL
+pnpm --dir frontend dev
+pnpm --dir frontend build
+pnpm --dir frontend start
+pnpm --dir frontend test:unit
+pnpm --dir frontend test:unit:watch
+pnpm --dir frontend test:unit:coverage
+pnpm --dir frontend lint
+pnpm --dir frontend lint:fix
+pnpm --dir frontend format
+pnpm --dir frontend format:check
+pnpm --dir frontend translate
+pnpm --dir frontend translate:all
+pnpm --dir frontend translate:check
+pnpm --dir frontend translate:reverse
 ```
 
 ## Testing
@@ -206,13 +209,13 @@ npm run translate:reverse # Translate EN → PL
 ### Unit tests (Vitest)
 
 ```bash
-npm run test:unit
+pnpm --dir frontend test:unit
 ```
 
 Coverage report (terminal + HTML):
 
 ```bash
-npm run test:unit:coverage
+pnpm --dir frontend test:unit:coverage
 ```
 
 ## Routing
@@ -228,7 +231,7 @@ Locale detection via `next-intl` middleware.
 ## Key Features
 
 - **Bilingual**: Polish (default) + English
-- **CMS Integration**: Sanity for dynamic content
+- **Content**: Primarily maintained in local frontend source files; Sanity Studio is included separately
 - **Responsive**: Mobile-first design
 - **SEO Optimized**: Metadata, OpenGraph, sitemap
 - **Type-safe**: Full TypeScript coverage
@@ -237,11 +240,8 @@ Locale detection via `next-intl` middleware.
 
 ## Deployment
 
-Optimized for Vercel:
+The app can be deployed to a compatible Next.js host such as Vercel. Configure the SMTP and reCAPTCHA environment variables in the deployment environment if form submissions should work. DeepL is only needed for translation scripts. Deployment settings and access to external service accounts are not stored in this repository.
 
-- ISR for Sanity content
-- Edge middleware for i18n
-- Automatic builds on push
 
 ## Documentation
 
