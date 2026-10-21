@@ -87,3 +87,19 @@ studio/
 - Monorepo, ale niezależny lifecycle dla `frontend/` i `studio/`.
 - Dokumentacja powinna być aktualizowana przy zmianach architektury.
 - Preferowany podział: logika biznesowa w `lib/`, prezentacja w `components/` i `app/`.
+
+## Contact CMS pilot structure — 2026-10-20
+
+Studio schemaTypes now includes localizedText, contactPage and siteSettings. structure.ts exposes fixed singleton editors; initialValues.ts preserves current copy for new documents. Frontend src/lib/cms.ts is the server-only published-content loader; cms-content.ts validates/localizes the boundary; cms-defaults.json is a temporary migration fallback. ContactContent.tsx retains the interactive presentation, while the Contact route and metadata load content on the server. Locale layout supplies shared footer text. See cms-contact-guide.md.
+
+## CMS collection pages — 2026-10-20
+
+studio/schemaTypes/collectionPages.ts defines four singleton pages with embedded ordered entries and bilingual copy; collectionInitialValues.json stores starter content. Frontend cms-collection-loader.ts fetches exact published page IDs; cms-collections.ts normalizes content and derived filters/totals; cms-collection-defaults.json is a temporary fallback. TeamContent, ProjectsContent, PublicationsContent and ModelsContent retain page interactions. ScientificText/RichText provide safe formatting. Existing data modules/assets are preserved. See cms-collections-guide.md.
+
+## Marketing CMS migration — 2026-10-20
+
+Added studio/schemaTypes/marketingPages.ts and marketingInitialValues.json; frontend/src/lib/cms-marketing{,-loader,-defaults,-test} (matching file extensions) plus RecruitmentContent/CooperationContent and CMS-backed home components. See cms-marketing-guide.md for publishing steps.
+
+## Navigation and Research — 2026-10-21
+
+Added sharedPages.ts/sharedInitialValues.json in Studio and cms-shared normalization/defaults/loader/tests in frontend. Locale layout supplies shared CMS content to Header/Footer. Added the research route, localized routing and SEO mapping, and research.module.scss. See cms-research-guide.md.

@@ -53,29 +53,16 @@ frontend/
 
 ### Environment Variables
 
-Create `.env.local`:
+Copy frontend/.env.example to frontend/.env.local. Public CMS configuration:
 
 ```bash
-# Sanity
-NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
-NEXT_PUBLIC_SANITY_DATASET=production
-SANITY_API_TOKEN=your_token
-
-# Email (SMTP)
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_email
-SMTP_PASS=your_password
-EMAIL_FROM=noreply@example.com
-EMAIL_TO=contact@example.com
-
-# Google reCAPTCHA
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_site_key
-RECAPTCHA_SECRET_KEY=your_secret_key
-
-# DeepL (optional - for translations)
-DEEPL_API_KEY=your_deepl_key
+NEXT_PUBLIC_SANITY_PROJECT_ID=s2jrzn3b
+NEXT_PUBLIC_SANITY_DATASET=development
 ```
+
+For final production deployments, explicitly select production. The public CMS client reads published documents only; it is not yet wired into the pages. Studio configuration is separate: see ../studio/README.md.
+
+Email uses EMAIL_USER, EMAIL_PASSWORD, EMAIL_FROM and EMAIL_TO (Gmail SMTP), not SMTP_* variables. reCAPTCHA uses NEXT_PUBLIC_RECAPTCHA_SITE_KEY and RECAPTCHA_SECRET_KEY. Leave secret values blank for page-only local development. Configure a test recipient before testing forms. Never commit .env.local or expose write tokens in public-prefixed variables. DeepL is optional and not needed for manually supplied translations.
 
 ### Installation
 

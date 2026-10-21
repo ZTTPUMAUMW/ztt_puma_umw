@@ -14,6 +14,7 @@ export const BASE_URL = "https://pumadott.com";
 /** Internal route key → localised path segment */
 const ROUTE_PATHS: Record<string, { pl: string; en: string }> = {
   "/": { pl: "/", en: "/" },
+  "/research": { pl: "/badania", en: "/research" },
   "/projects": { pl: "/projekty", en: "/projects" },
   "/publications": { pl: "/publikacje", en: "/publications" },
   "/models": { pl: "/modele", en: "/models" },

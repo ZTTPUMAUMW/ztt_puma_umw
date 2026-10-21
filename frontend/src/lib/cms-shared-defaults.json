@@ -1,0 +1,410 @@
+{
+  "shell": {
+    "_type": "siteChrome",
+    "header": [
+      {
+        "_key": "team",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Zespół",
+          "en": "Team"
+        },
+        "route": "/team"
+      },
+      {
+        "_key": "projects",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Projekty",
+          "en": "Projects"
+        },
+        "route": "/projects"
+      },
+      {
+        "_key": "publications",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "route": "/publications"
+      },
+      {
+        "_key": "models",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Modele",
+          "en": "Models"
+        },
+        "route": "/models"
+      },
+      {
+        "_key": "research",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Badania",
+          "en": "Research"
+        },
+        "route": "/research"
+      },
+      {
+        "_key": "recruitment",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Rekrutacja",
+          "en": "Recruitment"
+        },
+        "route": "/recruitment"
+      },
+      {
+        "_key": "cooperation",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Współpraca",
+          "en": "Collaboration"
+        },
+        "route": "/cooperation"
+      },
+      {
+        "_key": "contact",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Kontakt",
+          "en": "Contact"
+        },
+        "route": "/contact"
+      }
+    ],
+    "footerSite": [
+      {
+        "_key": "home",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Strona główna",
+          "en": "Homepage"
+        },
+        "route": "/"
+      },
+      {
+        "_key": "projects",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Projekty",
+          "en": "Projects"
+        },
+        "route": "/projects"
+      },
+      {
+        "_key": "publications",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "route": "/publications"
+      },
+      {
+        "_key": "models",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Modele",
+          "en": "Models"
+        },
+        "route": "/models"
+      },
+      {
+        "_key": "research",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Badania",
+          "en": "Research"
+        },
+        "route": "/research"
+      },
+      {
+        "_key": "team",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Zespół",
+          "en": "Team"
+        },
+        "route": "/team"
+      }
+    ],
+    "footerContact": [
+      {
+        "_key": "recruitment",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Rekrutacja",
+          "en": "Recruitment"
+        },
+        "route": "/recruitment"
+      },
+      {
+        "_key": "cooperation",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Współpraca",
+          "en": "Collaboration"
+        },
+        "route": "/cooperation"
+      },
+      {
+        "_key": "contact",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Kontakt",
+          "en": "Contact"
+        },
+        "route": "/contact"
+      }
+    ],
+    "externalLinks": [
+      {
+        "_key": "university",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Uniwersytet Medyczny we Wrocławiu",
+          "en": "Medical University of Wroclaw"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.umw.edu.pl",
+          "en": "https://www.umw.edu.pl"
+        }
+      },
+      {
+        "_key": "department",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "ZTT UMW",
+          "en": "ZTT UMW"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.umw.edu.pl/pl/jednostki/zaklad-technologii-translacyjnych",
+          "en": "https://www.umw.edu.pl/pl/jednostki/zaklad-technologii-translacyjnych"
+        }
+      },
+      {
+        "_key": "platform",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Polska Platforma Medyczna",
+          "en": "Polish Medical Platform"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://ppm.umw.edu.pl/info/affiliation/UMW49ae3cc953a04e37bf652c1f8ab5791a?r=publication&tab=publications&title=Profil%2Bjednostki%2B%25E2%2580%2593%2BZak%25C5%2582ad%2BTechnologii%2BTranslacyjnych%2B%25E2%2580%2593%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1",
+          "en": "https://ppm.umw.edu.pl/info/affiliation/UMW49ae3cc953a04e37bf652c1f8ab5791a?r=publication&tab=publications&title=Profil%2Bjednostki%2B%25E2%2580%2593%2BZak%25C5%2582ad%2BTechnologii%2BTranslacyjnych%2B%25E2%2580%2593%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1"
+        }
+      },
+      {
+        "_key": "plum",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "PLUM EDU",
+          "en": "PLUM EDU"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://plum.umw.edu.pl",
+          "en": "https://plum.umw.edu.pl"
+        }
+      }
+    ],
+    "copy": {
+      "site": {
+        "_type": "localizedText",
+        "pl": "Strona",
+        "en": "Website"
+      },
+      "contact": {
+        "_type": "localizedText",
+        "pl": "Kontakt",
+        "en": "Contact"
+      },
+      "links": {
+        "_type": "localizedText",
+        "pl": "Linki",
+        "en": "Links"
+      },
+      "rights": {
+        "_type": "localizedText",
+        "pl": "Wszelkie prawa zastrzeżone",
+        "en": "All rights reserved"
+      },
+      "logoAlt": {
+        "_type": "localizedText",
+        "pl": "Logo P.U.M.A.",
+        "en": "P.U.M.A. logo"
+      },
+      "universityAlt": {
+        "_type": "localizedText",
+        "pl": "Logo Uniwersytetu Medycznego we Wrocławiu",
+        "en": "Wrocław Medical University logo"
+      },
+      "openMenu": {
+        "_type": "localizedText",
+        "pl": "Otwórz menu",
+        "en": "Open menu"
+      },
+      "closeMenu": {
+        "_type": "localizedText",
+        "pl": "Zamknij menu",
+        "en": "Close menu"
+      },
+      "mobileMenu": {
+        "_type": "localizedText",
+        "pl": "Menu mobilne",
+        "en": "Mobile menu"
+      },
+      "skip": {
+        "_type": "localizedText",
+        "pl": "Przejdź do treści głównej",
+        "en": "Skip to main content"
+      }
+    },
+    "universityUrl": {
+      "_type": "localizedText",
+      "pl": "https://www.umw.edu.pl/pl",
+      "en": "https://www.umw.edu.pl/en"
+    }
+  },
+  "research": {
+    "_type": "researchPage",
+    "copy": {
+      "title": {
+        "_type": "localizedText",
+        "pl": "Badania",
+        "en": "Research"
+      },
+      "subtitle": {
+        "_type": "localizedText",
+        "pl": "Materiały badawcze i skala żywotności larw",
+        "en": "Research materials and larva vitality scale"
+      },
+      "descriptionHeading": {
+        "_type": "localizedText",
+        "pl": "Opis",
+        "en": "Description"
+      },
+      "description": {
+        "_type": "localizedText",
+        "pl": "Tutaj pojawi się opis materiałów i metod badawczych zespołu P.U.M.A.",
+        "en": "A description of P.U.M.A. research materials and methods will appear here."
+      },
+      "attachmentsHeading": {
+        "_type": "localizedText",
+        "pl": "Załączniki",
+        "en": "Attachments"
+      },
+      "spreadsheet": {
+        "_type": "localizedText",
+        "pl": "Arkusz badawczy (Excel)",
+        "en": "Research spreadsheet (Excel)"
+      },
+      "pending": {
+        "_type": "localizedText",
+        "pl": "Materiał w przygotowaniu",
+        "en": "Material coming soon"
+      },
+      "vitalityHeading": {
+        "_type": "localizedText",
+        "pl": "Skala żywotności larw",
+        "en": "Larva vitality scale"
+      },
+      "vitalityDescription": {
+        "_type": "localizedText",
+        "pl": "Ta sekcja będzie zawierać opis skali, tabelę oraz krótkie filmy ilustrujące ocenę żywotności larw.",
+        "en": "This section will contain a scale description, a table and short clips illustrating larva vitality assessment."
+      },
+      "tableCaption": {
+        "_type": "localizedText",
+        "pl": "Tabela skali żywotności — miejsce na obraz",
+        "en": "Vitality-scale table — image placeholder"
+      },
+      "videosHeading": {
+        "_type": "localizedText",
+        "pl": "Krótkie filmy",
+        "en": "Short video clips"
+      }
+    },
+    "clips": [
+      {
+        "_key": "clip1",
+        "_type": "clipPlaceholder",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Film 1",
+          "en": "Clip 1"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Miejsce na film o długości 3–5 sekund.",
+          "en": "Placeholder for a 3–5 second clip."
+        }
+      },
+      {
+        "_key": "clip2",
+        "_type": "clipPlaceholder",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Film 2",
+          "en": "Clip 2"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Miejsce na film o długości 3–5 sekund.",
+          "en": "Placeholder for a 3–5 second clip."
+        }
+      },
+      {
+        "_key": "clip3",
+        "_type": "clipPlaceholder",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Film 3",
+          "en": "Clip 3"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Miejsce na film o długości 3–5 sekund.",
+          "en": "Placeholder for a 3–5 second clip."
+        }
+      }
+    ],
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Badania — P.U.M.A.",
+      "en": "Research — P.U.M.A."
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Materiały badawcze i skala żywotności larw zespołu P.U.M.A.",
+      "en": "P.U.M.A. research materials and larva vitality scale."
+    }
+  }
+}

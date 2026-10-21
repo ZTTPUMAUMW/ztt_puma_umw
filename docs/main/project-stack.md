@@ -88,3 +88,25 @@
 
 - Ujednolicenie źródeł prawdy dla treści (statyczne `src/data` vs CMS).
 - Uzupełnienie i podpięcie schematów w `studio/schemaTypes/index.ts`.
+
+## CMS environment setup — 2026-10-20
+
+Project s2jrzn3b (organization op2a7psgf) replaces the unused starter configuration. Studio and CLI read SANITY_STUDIO_PROJECT_ID / SANITY_STUDIO_DATASET; frontend client reads NEXT_PUBLIC_SANITY_PROJECT_ID / NEXT_PUBLIC_SANITY_DATASET. Both require explicit values. Local examples select development. Production deployments must explicitly select production. Studio schemas and frontend content migration remain pending; public pages still use their current local content.
+
+Secrets remain only in ignored local files or deployment settings. Email and reCAPTCHA secret values are blank locally; no forms should be submitted until safe test credentials/recipients are configured. See studio/README.md.
+
+## Contact CMS runtime — 2026-10-20
+
+No new dependencies. Server-side @sanity/client uses exact published document IDs, no token, no CDN and no-store reads; React cache deduplicates each render. CMS-enabled pages render dynamically because shared footer content is fetched at request time. This favors freshness in the pilot; revisit caching/performance before production. Missing/unavailable content temporarily falls back to checked-in copy.
+
+## Collection CMS runtime — 2026-10-20
+
+No new dependencies. Collection loaders perform server-side published/no-store reads and project-restricted image projection. Components receive normalized serializable data. Scientific text and model rich text render as escaped React content; unsafe legacy HTML injection was removed from these item components. Funding totals use numeric values grouped by currency.
+
+## Marketing CMS migration — 2026-10-20
+
+Marketing pages use server-only published GROQ reads with request-time freshness and temporary migration defaults. Pure normalization validates links, routes and interpolation placeholders; no new dependencies or browser secrets are introduced.
+
+## Navigation and Research — 2026-10-21
+
+Shared layout and Research use the existing Sanity client for server-only published reads; no new dependencies. Internal destinations use a fixed route allowlist; external destinations require credential-free HTTPS; original logos remain fallback assets.

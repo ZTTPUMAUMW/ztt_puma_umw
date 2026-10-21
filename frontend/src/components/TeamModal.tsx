@@ -1,5 +1,7 @@
 "use client";
 
+import ScientificText from "./ScientificText";
+
 import { TeamMember } from "./TeamCard";
 import { useEffect } from "react";
 import { useTranslations } from "next-intl";
@@ -66,7 +68,7 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
             />
             {t("modal.back")}
           </button>
-          <button className={styles["btn-close"]} onClick={onClose}>
+          <button className={styles["btn-close"]} onClick={onClose} aria-label={t("modal.close")}>
             <Image
               src="/images/icons/x-mark.svg"
               alt="Close"
@@ -80,7 +82,7 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
         <div className={styles["team-modal__body"]}>
           <div className={styles["team-modal__left"]}>
             <Image
-              src={`/${member.image}`}
+              src={member.image}
               alt={member.alt}
               width={800}
               height={800}
@@ -90,7 +92,7 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
               <button
                 className={`${styles["btn-nav"]} ${styles["btn-prev"]}`}
                 onClick={() => onNavigate("prev")}
-                aria-label="Poprzedni"
+                aria-label={t("modal.previous")}
               >
                 <Image
                   src="/images/icons/arrow-left.svg"
@@ -103,7 +105,7 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
               <button
                 className={`${styles["btn-nav"]} ${styles["btn-next"]}`}
                 onClick={() => onNavigate("next")}
-                aria-label="Następny"
+                aria-label={t("modal.next")}
               >
                 <Image
                   src="/images/icons/arrow-right.svg"
@@ -123,10 +125,9 @@ export default function TeamModal({ isOpen, member, onClose, onNavigate }: TeamM
               {member.universityTitle && `, ${member.universityTitle}`}
             </h2>
             <p className={styles["team-modal__position"]}>{member.position}</p>
-            <p
-              className={styles["team-modal__bio"]}
-              dangerouslySetInnerHTML={{ __html: member.copy }}
-            />
+            <p className={styles["team-modal__bio"]}>
+              <ScientificText text={member.copy} />
+            </p>
 
             {member.links && member.links.length > 0 && (
               <div className={styles["team-modal__links"]}>

@@ -127,3 +127,19 @@ Sukces produktu mierzymy jakością prezentacji treści, czytelnością na urzą
 - Formularze API działają poprawnie i bezpiecznie.
 - Dokumentacja techniczna i organizacyjna projektu jest aktualna.
 - Zmiany przechodzą `lint` i standardowy review.
+
+## Contact CMS pilot — 2026-10-20
+
+Contact page and shared contact/footer organization text are now implemented as bilingual singleton schemas. Existing content prepopulates newly created documents; a member publishes them in development. Public rendering uses only published content with temporary local-copy fallbacks. Draft preview, other pages, media management, backups and production migration remain pending. Translations are manually supplied.
+
+## CMS collections — 2026-10-20
+
+Team, Projects, Publications and Models now have bilingual page editors with embedded ordered lists, page labels and SEO fields. Initial values retain existing public content. Images support replacement uploads. Publication titles remain original bibliographic text; model descriptions use controlled rich text. Manual development publishing tests precede production migration.
+
+## Marketing CMS migration — 2026-10-20
+
+Home, Recruitment and Cooperation now have bilingual singleton editors with ordered arrays, safe links, editable form labels and SEO. Existing copy and media are preserved as initial values. Models shares the editable Home closing section. Shared navigation/branding and Research remain pending.
+
+## Navigation and Research — 2026-10-21
+
+Added bilingual Research (/badania, /en/research) with explicit description, spreadsheet, vitality table and short-video placeholders. No real download or upload is exposed pending the lab file-access decision. Navigation/branding now has a dedicated singleton editor controlling links, order, logos and accessibility labels.

@@ -37,3 +37,39 @@ Każdy wpis powinien zawierać:
 - **Wpływ na kod:** bez zmian runtime; zmiany wyłącznie w `docs/main/*` i instrukcjach dla agenta.
 - **Wpływ na dokumentację:** dodano `documentation-governance.md`, `ai-agent-workflow.md`, `README.md` w `docs/main/`.
 - **Powiązanie:** branch `LS-29`.
+
+### 2026-10-20 — Explicit CMS environment configuration
+
+- Area: Studio/CLI and frontend CMS client configuration.
+- Decision: replace hardcoded starter identifiers with explicit environment variables for the lab-owned project. Local setup selects development; production requires explicit configuration.
+- Impact: add env templates, keep local secrets ignored, restrict the public client to published documents. No schema migration, remote mutations or deployment.
+- Documentation: project-stack.md, frontend/README.md and studio/README.md.
+- Branch: feature/cms-foundation.
+
+### 2026-10-20 — Bilingual Contact and shared settings pilot
+
+- Area: CMS schemas, content loading, Contact metadata/UI, shared footer wording.
+- Decision: fixed singleton editors with existing copy prefilled; required PL/EN fields; server-only published reads; temporary local fallback during migration.
+- Impact: CMS-enabled routes render dynamically for request-time freshness; no new dependencies, draft exposure or production writes. Public contact email remains separate from SMTP recipients.
+- Validation: see cms-contact-guide.md; content-boundary tests cover language selection, malformed values and safe generated links.
+- Branch: feature/cms-foundation.
+
+### 2026-10-20 — Team, Projects, Publications and Models CMS editors
+
+- Decision: four singleton pages with embedded ordered lists, bilingual copy and SEO, initialized from existing content without automatic remote overwrites. Page-level publishing fits the current small collections.
+- Rendering: server-published reads, validated serializable content, project-scoped image URLs, escaped scientific text and structured model lists. Dynamic years and per-currency numeric funding totals remove code changes for routine updates.
+- Preserved: 10 people, 3 projects, 44 publications, 7 models, original data modules/assets and existing Contact work.
+- Validation: collection migration/safe-rendering tests, type/lint/schema/build checks and browser interactions. See cms-collections-guide.md.
+- Branch: feature/cms-foundation; no production deployment.
+
+## Marketing CMS migration — 2026-10-20
+
+Area: Home, Recruitment, Cooperation and shared Models closing section. Decision: fixed bilingual page documents with editable ordered content arrays, inherited design and published-only server reads. Runtime validates external HTTPS/internal routes and message placeholders; removed raw HTML injection from ResearchAreas. Validation: 23 unit tests, frontend/Studio TypeScript and production builds, bilingual route and browser checks. See cms-marketing-guide.md. Branch: feature/cms-foundation; no deployment.
+
+## Navigation and Research — 2026-10-21
+
+Decision: separate siteChrome singleton for shared menus, branding and UI labels, keeping contact data in siteSettings. Research is a bilingual singleton with explicit placeholders and no real file exposure pending access policy. Added /badania and /en/research to routing/SEO and route allowlists. Header switches to the mobile menu below 1201px to accommodate Research. Verification: shared-content boundary tests, bilingual routes, browser checks and frontend/Studio builds. Branch: feature/cms-foundation; no production deployment.
+
+## Review deployment isolation — 2026-10-21
+
+Vercel Preview deployments reject both email POST endpoints before parsing requests; an explicit review flag also supports a standalone review site. The UI marks the development site and disables submit buttons. Preview metadata prevents indexing, and the Sanity client rejects non-development datasets on Preview. Production behavior is unchanged. Branch: feature/cms-foundation.

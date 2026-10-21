@@ -6,7 +6,8 @@
   "stats": {
     "totalValue": "Łączna wartość grantów",
     "activeProjects": "Aktywne projekty",
-    "partners": "Partnerzy instytucjonalni"
+    "partners": "Partnerzy instytucjonalni",
+    "million": "mln"
   },
   "labels": {
     "fundingBody": "Źródło finansowania",

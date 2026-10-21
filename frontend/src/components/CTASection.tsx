@@ -1,12 +1,22 @@
 "use client";
 
+import type { MarketingAction } from "@/lib/cms-marketing";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/cta-section.module.scss";
 
-export default function CTASection() {
+export default function CTASection({ buttons }: { buttons?: MarketingAction[] }) {
   const t = useTranslations("home.cta");
+  const actions: MarketingAction[] = buttons ?? [
+    {
+      id: "cooperation",
+      route: "/cooperation",
+      label: t("ctaCooperation"),
+      aria: t("ariaCooperation"),
+    },
+    { id: "contact", route: "/contact", label: t("ctaContact"), aria: t("ariaContact") },
+  ];
   const { ref, inView } = useInView();
 
   return (
@@ -21,20 +31,16 @@ export default function CTASection() {
           </h2>
           <p className={styles["cta-section__description"]}>{t("description")}</p>
           <div className={styles["cta-section__buttons"]}>
-            <Link
-              href="/cooperation"
-              className={`${styles["cta-section__button"]} ${styles["cta-section__button--primary"]}`}
-              aria-label={t("ariaCooperation")}
-            >
-              {t("ctaCooperation")}
-            </Link>
-            <Link
-              href="/contact"
-              className={`${styles["cta-section__button"]} ${styles["cta-section__button--secondary"]}`}
-              aria-label={t("ariaContact")}
-            >
-              {t("ctaContact")}
-            </Link>
+            {actions.map((button, index) => (
+              <Link
+                key={button.id}
+                href={button.route}
+                aria-label={button.aria}
+                className={`${styles["cta-section__button"]} ${styles["cta-section__button--" + ["primary", "secondary", "outline"][index % 2]]}`}
+              >
+                {button.label}
+              </Link>
+            ))}
           </div>
         </div>
         <div className={styles["cta-section__visual"]} aria-hidden="true">

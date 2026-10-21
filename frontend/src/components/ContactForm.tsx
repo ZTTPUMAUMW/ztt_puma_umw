@@ -44,6 +44,7 @@ export default function ContactForm({
   showCompanyField = false,
 }: ContactFormProps) {
   const t = useTranslations("contact.form");
+  const reviewMode = process.env.NEXT_PUBLIC_REVIEW_MODE === "true";
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -551,7 +552,7 @@ export default function ContactForm({
         <button
           type="submit"
           className={styles["btn"] + " " + styles["btn-submit"]}
-          disabled={isSubmitting}
+          disabled={isSubmitting || reviewMode}
         >
           {isSubmitting ? t("submitting") : t("submit")}
         </button>
