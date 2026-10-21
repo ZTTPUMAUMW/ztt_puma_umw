@@ -14,5 +14,12 @@ if (!projectId || !dataset) {
 
 export default defineCliConfig({
   api: {projectId, dataset},
-  deployment: {autoUpdates: true},
+  studioHost:
+    env.SANITY_STUDIO_HOST || (dataset === 'development' ? 'puma-development-s2jrzn3b' : undefined),
+  deployment: {
+    appId:
+      env.SANITY_STUDIO_APP_ID ||
+      (dataset === 'development' ? 'z56voez80lfmqjks56f2j6wh' : undefined),
+    autoUpdates: true,
+  },
 })

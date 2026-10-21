@@ -73,3 +73,7 @@ Decision: separate siteChrome singleton for shared menus, branding and UI labels
 ## Review deployment isolation — 2026-10-21
 
 Vercel Preview deployments reject both email POST endpoints before parsing requests; an explicit review flag also supports a standalone review site. The UI marks the development site and disables submit buttons. Preview metadata prevents indexing, and the Sanity client rejects non-development datasets on Preview. Production behavior is unchanged. Branch: feature/cms-foundation.
+
+## Hosted development Studio — 2026-10-21
+
+Published the development Studio at https://puma-development-s2jrzn3b.sanity.studio, using a dedicated development hostname and the existing lab project/development dataset. Deployment credentials stay local and are absent from built browser files. No reviewer roles, production content or main branch changes. The frontend remains a protected Vercel Preview with its 30-day reviewer share link.

@@ -21,3 +21,7 @@ Before production, complete the security/dependency review, approved content mig
 ## Contact pilot
 
 Contact / Kontakt and Site settings / Ustawienia strony now appear as singleton editors. Open each to initialize current public copy and publish only in development. Both languages must be complete. See ../docs/main/cms-contact-guide.md. See the related collection, marketing and Research guides for the other editors. Authenticated draft preview and production migration remain pending.
+
+## Hosted development review
+
+Studio: https://puma-development-s2jrzn3b.sanity.studio . Select PUMA Website (development), sign in with your invited account, edit both languages, publish and refresh the reviewer website. SANITY_STUDIO_HOST can override the deployment hostname; set an explicit separate hostname for any future production Studio. A scoped Deploy Studio token may be supplied to the CLI through SANITY_AUTH_TOKEN. It must remain local and must never use a SANITY_STUDIO_ or NEXT_PUBLIC_ prefix. See ../docs/main/review-deployment.md.
