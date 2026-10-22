@@ -107,3 +107,8 @@ Added sharedPages.ts/sharedInitialValues.json in Studio and cms-shared normaliza
 ## Research review feedback — 2026-10-22
 
 Added cms-research.ts for media normalization and researchMedia.ts for CMS table/parameter/grade/video objects. Supplied optimized copies and posters live in frontend/public/research/vitality. Research reuses Team introduction and Publications navigation styles. See research-media-review.md.
+
+
+## 2026-10-22 — Mock Excel download
+
+Research download assets: frontend/public/research/downloads/research-mock-data.xlsx supplies the fictional review workbook. The Research singleton exposes an optional replacement file and show/hide control.

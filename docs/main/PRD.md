@@ -147,3 +147,8 @@ Added bilingual Research (/badania, /en/research) with explicit description, spr
 ## Research review feedback — 2026-10-22
 
 Research now follows the manager’s annotated layout: shared grey intro, Publications-style single vitality tab, supplied lossless table and nine scored clips grouped under four parameters. No attachments section is shown. Melanization has table descriptions but no supplied clip. Polish terminology/text is included for lab review.
+
+
+## 2026-10-22 — Mock Excel download
+
+Research now includes an Excel download with explicitly fictional bilingual mock observations for review. The real file and its sharing policy remain pending. The editor can replace the workbook, update both language labels and hide the download.

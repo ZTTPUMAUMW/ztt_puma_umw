@@ -17,3 +17,8 @@ Research / Badania now includes Table image and Vitality parameters. Each parame
 The supplied media are stored in the private Git review branch and served through the protected Vercel preview. No source file was uploaded to Sanity's public CDN. Optional CMS replacement uploads are public Sanity assets; upload only files approved for that sharing scope. Production release remains a separate approval.
 
 Checks: 35 unit tests, frontend lint and TypeScript, Studio TypeScript, both production builds, complete video decoding and absent audio tracks, native browser playback, accessible 13-row table, PL/EN page rendering and mobile layout without horizontal overflow. See the PR for hosted review details.
+
+
+## 2026-10-22 — Mock Excel download
+
+Downloads now includes a bilingual fictional Excel workbook (six demonstration records). Replace it in Research → Replacement Excel workbook and update downloadLabel/downloadDescription in both languages. Switch off Show spreadsheet download to hide it. The supplied mock is served through the protected review deployment; CMS replacement uploads are public, so the real file-sharing decision remains pending.

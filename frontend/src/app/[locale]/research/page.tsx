@@ -110,6 +110,15 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                   </table>
                 </div>
               </details>
+              {media.attachment && (
+                <section className={styles.downloads} aria-labelledby="research-downloads">
+                  <h2 id="research-downloads">{t.downloadsHeading}</h2>
+                  <p>{t.downloadDescription}</p>
+                  <a href={media.attachment} download>
+                    {t.downloadLabel}
+                  </a>
+                </section>
+              )}
               <section aria-labelledby="vitality-parameters">
                 <h2 id="vitality-parameters">{t.videosHeading}</h2>
                 <div className={styles.parameters}>

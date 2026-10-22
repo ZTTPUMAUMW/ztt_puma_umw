@@ -106,3 +106,15 @@
     margin: 0;
   }
 }
+
+.downloads {
+  margin-bottom: var(--spacing-2xl);
+  p {
+    margin-bottom: var(--spacing-md);
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: var(--font-weight-semibold);
+  }
+}

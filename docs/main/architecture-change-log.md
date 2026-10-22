@@ -86,3 +86,8 @@ Decision: retain provided research media in the private review branch, served th
 ## 2026-10-22 — Research video framing and silence
 
 Cropped all nine supplied clips to their bright recording surface, removed every audio stream, regenerated posters and removed the player height cap to preserve natural proportions. High-quality H.264 CRF 18 replaces the previous stream-copy optimization. Originals remain untouched; no new runtime dependency or CMS schema change.
+
+
+## 2026-10-22 — Mock Excel download
+
+Added a mock Excel workbook download to Research, bilingual download text, optional CMS replacement and visibility control. Only .xlsx assets from the approved local directory or project Sanity CDN resolve. No real research data or new runtime dependency added.

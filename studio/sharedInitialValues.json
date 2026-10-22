@@ -350,6 +350,18 @@
         "_type": "localizedText",
         "pl": "Opis",
         "en": "Description"
+      },
+      "downloadsHeading": {
+        "en": "Downloads",
+        "pl": "Do pobrania"
+      },
+      "downloadLabel": {
+        "en": "Download mock data (Excel .xlsx)",
+        "pl": "Pobierz dane testowe (Excel .xlsx)"
+      },
+      "downloadDescription": {
+        "en": "Placeholder with fictional data for testing only. The final research file will replace it.",
+        "pl": "Plik zastępczy z fikcyjnymi danymi, wyłącznie do testów. Zostanie zastąpiony docelowym plikiem badawczym."
       }
     },
     "seoTitle": {
@@ -658,6 +670,8 @@
           }
         ]
       }
-    ]
+    ],
+    "legacyAttachment": "/research/downloads/research-mock-data.xlsx",
+    "showAttachment": true
   }
 }

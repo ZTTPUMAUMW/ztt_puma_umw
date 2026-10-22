@@ -6,7 +6,7 @@ const rows = (v: unknown, max: number) => (Array.isArray(v) ? v.slice(0, max).ma
 export function researchAsset(
   upload: unknown,
   legacy: unknown,
-  kind: "video" | "image",
+  kind: "video" | "image" | "spreadsheet",
   projectId: string
 ): string {
   const url = safeHttpsUrl(record(record(upload).asset).url);
@@ -15,14 +15,18 @@ export function researchAsset(
     if (
       parsed.hostname === "cdn.sanity.io" &&
       parsed.pathname.startsWith(
-        "/" + (kind === "video" ? "files" : "images") + "/" + projectId + "/"
+        "/" + (kind === "image" ? "images" : "files") + "/" + projectId + "/"
       ) &&
-      (kind !== "video" || parsed.pathname.endsWith(".mp4"))
+      (kind !== "video" || parsed.pathname.endsWith(".mp4")) &&
+      (kind !== "spreadsheet" || parsed.pathname.endsWith(".xlsx"))
     )
       return url;
   }
   const path = text(legacy),
-    extension = kind === "video" ? "mp4" : "(?:png|jpe?g|webp|avif)";
+    extension =
+      kind === "video" ? "mp4" : kind === "spreadsheet" ? "xlsx" : "(?:png|jpe?g|webp|avif)";
+  if (kind === "spreadsheet")
+    return /^\/research\/downloads\/[a-z0-9-]+\.xlsx$/.test(path) ? path : "";
   return new RegExp("^/research/vitality/[a-z0-9-]+\\." + extension + "$").test(path) ? path : "";
 }
 export function resolveResearchMedia(raw: unknown, locale: string, projectId: string) {
@@ -78,6 +82,17 @@ export function resolveResearchMedia(raw: unknown, locale: string, projectId: st
     })
     .filter((p) => p.title.trim());
   return {
+    attachment:
+      doc.showAttachment === false
+        ? ""
+        : researchAsset(
+            doc.attachmentFile,
+            doc.legacyAttachment === undefined
+              ? seeds.research.legacyAttachment
+              : doc.legacyAttachment,
+            "spreadsheet",
+            projectId
+          ),
     table: researchAsset(
       doc.tableImage,
       doc.legacyTable === undefined ? seeds.research.legacyTable : doc.legacyTable,

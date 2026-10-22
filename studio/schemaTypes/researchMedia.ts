@@ -94,6 +94,28 @@ const parameter = defineType({
 export const researchTypes = [video, grade, parameter]
 export const researchMediaFields = [
   defineField({
+    name: 'showAttachment',
+    title: 'Show spreadsheet download',
+    type: 'boolean',
+    initialValue: true,
+    description: 'Turn off to hide the download, including the supplied mock file.',
+  }),
+  defineField({
+    name: 'attachmentFile',
+    title: 'Replacement Excel workbook (.xlsx)',
+    type: 'file',
+    options: {accept: '.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'},
+    description:
+      'Optional replacement for the mock workbook. Update the bilingual download label and description when replacing it. Sanity uploads are public CDN files; upload only material approved for public sharing.',
+  }),
+  defineField({
+    name: 'legacyAttachment',
+    title: 'Supplied mock workbook',
+    type: 'string',
+    hidden: true,
+    readOnly: true,
+  }),
+  defineField({
     name: 'tableImage',
     title: 'Vitality-scale table image',
     type: 'image',
