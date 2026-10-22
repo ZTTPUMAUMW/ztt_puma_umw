@@ -351,17 +351,10 @@
         "pl": "Opis",
         "en": "Description"
       },
-      "downloadsHeading": {
-        "en": "Downloads",
-        "pl": "Do pobrania"
-      },
-      "downloadLabel": {
-        "en": "Download mock data (Excel .xlsx)",
-        "pl": "Pobierz dane testowe (Excel .xlsx)"
-      },
-      "downloadDescription": {
-        "en": "Placeholder with fictional data for testing only. The final research file will replace it.",
-        "pl": "Plik zastępczy z fikcyjnymi danymi, wyłącznie do testów. Zostanie zastąpiony docelowym plikiem badawczym."
+      "openImage": {
+        "_type": "localizedText",
+        "en": "Open full-size image",
+        "pl": "Otwórz obraz w pełnym rozmiarze"
       }
     },
     "seoTitle": {
@@ -487,8 +480,8 @@
         },
         "note": {
           "_type": "localizedText",
-          "pl": "Zdjęcia melanizacji zostaną dodane, gdy będą dostępne.",
-          "en": "Melanization images will be added when available."
+          "en": "",
+          "pl": ""
         },
         "grades": [
           {
@@ -532,7 +525,61 @@
             }
           }
         ],
-        "clips": []
+        "clips": [],
+        "images": [
+          {
+            "_key": "melanization0",
+            "_type": "researchImage",
+            "score": 0,
+            "legacyImage": "/research/vitality/melanization-score-0.png",
+            "width": 495,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Całkowita melanizacja",
+              "en": "Complete melanization"
+            }
+          },
+          {
+            "_key": "melanization1",
+            "_type": "researchImage",
+            "score": 1,
+            "legacyImage": "/research/vitality/melanization-score-1.png",
+            "width": 499,
+            "height": 152,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Rozlana melanizacja (rozprzestrzeniające się ciemne plamy na ciele)",
+              "en": "Diffuse melanization (spreading dark patches on the body)"
+            }
+          },
+          {
+            "_key": "melanization2",
+            "_type": "researchImage",
+            "score": 2,
+            "legacyImage": "/research/vitality/melanization-score-2.png",
+            "width": 499,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Punktowa melanizacja (małe, ciemne plamki na ciele)",
+              "en": "Punctate melanization (small, dark spots on the body)"
+            }
+          },
+          {
+            "_key": "melanization3",
+            "_type": "researchImage",
+            "score": 3,
+            "legacyImage": "/research/vitality/melanization-score-3.png",
+            "width": 499,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak melanizacji",
+              "en": "No melanization"
+            }
+          }
+        ]
       },
       {
         "_key": "turgor",
@@ -671,7 +718,6 @@
         ]
       }
     ],
-    "legacyAttachment": "/research/downloads/research-mock-data.xlsx",
-    "showAttachment": true
+    "showAttachment": false
   }
 }

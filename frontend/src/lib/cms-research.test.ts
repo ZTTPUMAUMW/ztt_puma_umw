@@ -27,7 +27,6 @@ describe("Research media and scoring", () => {
     expect(resolveResearchMedia({}, "en", "s2jrzn3b").parameters).toHaveLength(4);
     expect(resolveResearchMedia({ parameters: [], legacyTable: "" }, "en", "s2jrzn3b")).toEqual({
       parameters: [],
-      attachment: seeds.research.legacyAttachment,
       table: "",
     });
   });
@@ -54,27 +53,44 @@ describe("Research media and scoring", () => {
       )
     ).toBe("https://cdn.sanity.io/files/s2jrzn3b/development/test.mp4");
   });
-  it("allows only workbook downloads from approved paths and respects hiding", () => {
-    expect(resolveResearchMedia({ showAttachment: false }, "en", "s2jrzn3b").attachment).toBe("");
-    expect(
-      researchAsset(null, "/research/downloads/../secret.xlsx", "spreadsheet", "s2jrzn3b")
-    ).toBe("");
+  it("loads four bilingual melanization images and respects explicit removal", () => {
+    for (const locale of ["pl", "en"]) {
+      const media = resolveResearchMedia(seeds.research, locale, "s2jrzn3b");
+      const p = media.parameters.find((p) => p.id === "melanization")!;
+      expect(p.images.map((v) => v.score)).toEqual([0, 1, 2, 3]);
+      expect(p.images.every((v) => v.caption && v.width > 0 && v.height > 0)).toBe(true);
+      const existing = seeds.research.parameters.find((p) => p._key === "melanization")!;
+      expect(
+        resolveResearchMedia({ parameters: [{ ...existing, images: [] }] }, locale, "s2jrzn3b")
+          .parameters[0].images
+      ).toEqual([]);
+    }
+  });
+  it("rejects unsafe image paths and duplicate or malformed image scores", () => {
+    const existing = seeds.research.parameters.find((p) => p._key === "melanization")!;
+    const image = existing.images![0];
+    const bad = { ...image, legacyImage: "/research/vitality/../private.png" };
+    const result = resolveResearchMedia(
+      {
+        parameters: [
+          {
+            ...existing,
+            images: [{ ...image, score: 2 }, image, image, { ...image, score: -1 }, bad],
+          },
+        ],
+      },
+      "en",
+      "s2jrzn3b"
+    );
+    expect(result.parameters[0].images.map((v) => v.score)).toEqual([0, 2]);
     expect(
       researchAsset(
-        { asset: { url: "https://cdn.sanity.io/files/s2jrzn3b/development/mock.exe" } },
+        { asset: { url: "https://cdn.sanity.io/images/other/production/test.png" } },
         null,
-        "spreadsheet",
+        "image",
         "s2jrzn3b"
       )
     ).toBe("");
-    expect(
-      researchAsset(
-        { asset: { url: "https://cdn.sanity.io/files/s2jrzn3b/development/mock.xlsx" } },
-        null,
-        "spreadsheet",
-        "s2jrzn3b"
-      )
-    ).toBe("https://cdn.sanity.io/files/s2jrzn3b/development/mock.xlsx");
   });
   it("sorts CMS clips and drops duplicate or malformed scores", () => {
     const base = seeds.research.parameters[0];

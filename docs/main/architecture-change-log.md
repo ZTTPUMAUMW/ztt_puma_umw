@@ -101,3 +101,8 @@ Visible navigation, page title and Studio editor now use Files / Pliki (working 
 ## 2026-10-22 — Production CMS preparation
 
 Added a separate production Studio and production-only Vercel CMS configuration. Initialized eleven production singleton documents from reviewed repository defaults, with no development drafts or experiment assets copied. Main remains pending review. See production-cms-setup.md for environment separation, editor workflow, initial snapshots and post-merge checks.
+
+
+## 2026-10-22 — Melanization images and download removal
+
+Removed the Downloads section and mock XLSX from public website assets. Added the four lab-supplied melanization images in score order 0–3, converting TIFF to PNG with identical decoded pixels. Images have bilingual grade descriptions, natural aspect ratios and links to full size. CMS parameter editors support scored images, optional replacements and bilingual captions; obsolete download fields are hidden for compatibility. No source image was uploaded to the public Sanity CDN.

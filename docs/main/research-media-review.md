@@ -27,3 +27,8 @@ Downloads now includes a bilingual fictional Excel workbook (six demonstration r
 ## 2026-10-22 — Files draft review
 
 Visible navigation, page title and Studio editor now use Files / Pliki (working title). The subtitle is Supplementary materials and additional files, with a Polish translation. Existing /en/research and /badania URLs and CMS IDs are retained. The editable HTML scale table is always visible; the image table is no longer rendered, and its legacy upload field is hidden. The four parameter headings and their section heading are centered. Melanization images are pending from the lab; no substitute scientific images were invented.
+
+
+## 2026-10-22 — Melanization images and download removal
+
+Removed the Downloads section and mock XLSX from public website assets. Added the four lab-supplied melanization images in score order 0–3, converting TIFF to PNG with identical decoded pixels. Images have bilingual grade descriptions, natural aspect ratios and links to full size. CMS parameter editors support scored images, optional replacements and bilingual captions; obsolete download fields are hidden for compatibility. No source image was uploaded to the public Sanity CDN.

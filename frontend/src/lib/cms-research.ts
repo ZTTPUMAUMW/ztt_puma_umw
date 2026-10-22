@@ -6,7 +6,7 @@ const rows = (v: unknown, max: number) => (Array.isArray(v) ? v.slice(0, max).ma
 export function researchAsset(
   upload: unknown,
   legacy: unknown,
-  kind: "video" | "image" | "spreadsheet",
+  kind: "video" | "image",
   projectId: string
 ): string {
   const url = safeHttpsUrl(record(record(upload).asset).url);
@@ -17,16 +17,12 @@ export function researchAsset(
       parsed.pathname.startsWith(
         "/" + (kind === "image" ? "images" : "files") + "/" + projectId + "/"
       ) &&
-      (kind !== "video" || parsed.pathname.endsWith(".mp4")) &&
-      (kind !== "spreadsheet" || parsed.pathname.endsWith(".xlsx"))
+      (kind !== "video" || parsed.pathname.endsWith(".mp4"))
     )
       return url;
   }
   const path = text(legacy),
-    extension =
-      kind === "video" ? "mp4" : kind === "spreadsheet" ? "xlsx" : "(?:png|jpe?g|webp|avif)";
-  if (kind === "spreadsheet")
-    return /^\/research\/downloads\/[a-z0-9-]+\.xlsx$/.test(path) ? path : "";
+    extension = kind === "video" ? "mp4" : "(?:png|jpe?g|webp|avif)";
   return new RegExp("^/research/vitality/[a-z0-9-]+\\." + extension + "$").test(path) ? path : "";
 }
 export function resolveResearchMedia(raw: unknown, locale: string, projectId: string) {
@@ -72,27 +68,54 @@ export function resolveResearchMedia(raw: unknown, locale: string, projectId: st
           ];
         })
         .sort((a, b) => a.score - b.score);
+      const defaultParameter = seeds.research.parameters.find((v) => v._key === p._key);
+      const defaultImages = record(defaultParameter).images;
+      const seenImages = new Set<number>();
+      const dimension = (v: unknown, fallback: number) =>
+        typeof v === "number" && Number.isFinite(v) && v > 0 && v <= 20000
+          ? Math.round(v)
+          : fallback;
+      const images = rows(p.images === undefined ? defaultImages : p.images, 20)
+        .flatMap((v) => {
+          const src = researchAsset(v.image, v.legacyImage, "image", projectId),
+            score = v.score;
+          if (
+            !src ||
+            typeof score !== "number" ||
+            !Number.isInteger(score) ||
+            score < 0 ||
+            score > 100 ||
+            seenImages.has(score)
+          )
+            return [];
+          seenImages.add(score);
+          const dimensions = record(record(record(record(v.image).asset).metadata).dimensions);
+          return [
+            {
+              id: text(v._key) || "image" + score,
+              score,
+              src,
+              caption:
+                local(v.caption, locale) ||
+                grades.find((g) => g.score === score)?.description ||
+                "",
+              width: dimension(dimensions.width, dimension(v.width, 800)),
+              height: dimension(dimensions.height, dimension(v.height, 600)),
+            },
+          ];
+        })
+        .sort((a, b) => a.score - b.score);
       return {
         id: text(p._key) || "parameter" + i,
         title: local(p.title, locale),
         note: local(p.note, locale),
         grades,
         clips,
+        images,
       };
     })
     .filter((p) => p.title.trim());
   return {
-    attachment:
-      doc.showAttachment === false
-        ? ""
-        : researchAsset(
-            doc.attachmentFile,
-            doc.legacyAttachment === undefined
-              ? seeds.research.legacyAttachment
-              : doc.legacyAttachment,
-            "spreadsheet",
-            projectId
-          ),
     table: researchAsset(
       doc.tableImage,
       doc.legacyTable === undefined ? seeds.research.legacyTable : doc.legacyTable,

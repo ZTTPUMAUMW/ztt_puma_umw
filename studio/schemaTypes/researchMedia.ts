@@ -59,6 +59,48 @@ const grade = defineType({
     prepare: ({score, subtitle}) => ({title: 'Score ' + score, subtitle}),
   },
 })
+const scoredImage = defineType({
+  name: 'researchImage',
+  title: 'Scored image',
+  type: 'object',
+  fields: [
+    score,
+    localized('caption', 'Description in each language'),
+    defineField({
+      name: 'image',
+      title: 'Replacement image',
+      type: 'image',
+      options: {accept: 'image/png,image/jpeg,image/webp,image/avif'},
+      description:
+        'Optional replacement for the supplied image. Sanity uploads are public CDN files; upload only approved material.',
+    }),
+    defineField({
+      name: 'legacyImage',
+      title: 'Supplied image',
+      type: 'string',
+      hidden: true,
+      readOnly: true,
+    }),
+    defineField({
+      name: 'width',
+      title: 'Supplied width',
+      type: 'number',
+      hidden: true,
+      readOnly: true,
+    }),
+    defineField({
+      name: 'height',
+      title: 'Supplied height',
+      type: 'number',
+      hidden: true,
+      readOnly: true,
+    }),
+  ],
+  preview: {
+    select: {score: 'score', subtitle: 'caption.pl', media: 'image'},
+    prepare: ({score, subtitle, media}) => ({title: 'Score ' + score, subtitle, media}),
+  },
+})
 const parameter = defineType({
   name: 'researchParameter',
   title: 'Vitality parameter',
@@ -72,6 +114,21 @@ const parameter = defineType({
       type: 'array',
       of: [defineArrayMember({type: 'researchGrade'})],
       validation: (rule) => rule.max(10),
+    }),
+    defineField({
+      name: 'images',
+      title: 'Images — shown from lowest to highest score',
+      type: 'array',
+      of: [defineArrayMember({type: 'researchImage'})],
+      validation: (rule) =>
+        rule.max(20).custom((value) => {
+          const scores = (value || [])
+            .map((v) => (v as {score?: number}).score)
+            .filter((v) => v !== undefined)
+          return new Set(scores).size === scores.length
+            ? true
+            : 'Each image must have a unique score within this parameter.'
+        }),
     }),
     defineField({
       name: 'clips',
@@ -91,18 +148,22 @@ const parameter = defineType({
   ],
   preview: {select: {title: 'title.pl'}},
 })
-export const researchTypes = [video, grade, parameter]
+export const researchTypes = [video, grade, scoredImage, parameter]
 export const researchMediaFields = [
   defineField({
     name: 'showAttachment',
     title: 'Show spreadsheet download',
     type: 'boolean',
-    initialValue: true,
-    description: 'Turn off to hide the download, including the supplied mock file.',
+    initialValue: false,
+    hidden: true,
+    readOnly: true,
+    description: 'Retired: the Files page no longer displays downloads.',
   }),
   defineField({
     name: 'attachmentFile',
-    title: 'Replacement Excel workbook (.xlsx)',
+    title: 'Legacy Excel workbook (not displayed)',
+    hidden: true,
+    readOnly: true,
     type: 'file',
     options: {accept: '.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'},
     description:

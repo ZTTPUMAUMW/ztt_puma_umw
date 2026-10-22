@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
 import { getSharedContent } from "@/lib/cms-shared-loader";
@@ -89,15 +90,6 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                   </table>
                 </div>
               </div>
-              {media.attachment && (
-                <section className={styles.downloads} aria-labelledby="research-downloads">
-                  <h2 id="research-downloads">{t.downloadsHeading}</h2>
-                  <p>{t.downloadDescription}</p>
-                  <a href={media.attachment} download>
-                    {t.downloadLabel}
-                  </a>
-                </section>
-              )}
               <section aria-labelledby="vitality-parameters">
                 <h2 id="vitality-parameters" className={styles.parametersHeading}>
                   {t.videosHeading}
@@ -111,6 +103,47 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                     >
                       <h3 id={"parameter-" + p.id}>{p.title}</h3>
                       {p.note && <p>{p.note}</p>}
+                      {p.images.map((image) => (
+                        <figure key={image.id} className={styles.clip}>
+                          <a
+                            href={image.src}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={
+                              t.openImage +
+                              ": " +
+                              p.title +
+                              " — " +
+                              t.scoreLabel +
+                              " " +
+                              image.score
+                            }
+                          >
+                            <Image
+                              src={image.src}
+                              alt={
+                                p.title +
+                                " — " +
+                                t.scoreLabel +
+                                " " +
+                                image.score +
+                                ": " +
+                                image.caption
+                              }
+                              width={image.width}
+                              height={image.height}
+                              unoptimized
+                              sizes="(max-width:639px) 100vw, (max-width:1099px) 50vw, 25vw"
+                            />
+                          </a>
+                          <figcaption>
+                            <h4>
+                              {t.scoreLabel} {image.score}
+                            </h4>
+                            <p>{image.caption}</p>
+                          </figcaption>
+                        </figure>
+                      ))}
                       {p.clips.map((clip) => (
                         <figure key={clip.id} className={styles.clip}>
                           <video
