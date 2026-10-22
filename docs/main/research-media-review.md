@@ -8,7 +8,7 @@ The original 1920×1080 TIFF is preserved as a lossless PNG (6,224,590 → 167,9
 
 Nine videos are grouped Mobility 0–3, Turgor 0–2 and Reaction to stimuli 0–1, sorted numerically. No melanization video was supplied; that column refers to the table. Original durations of approximately 2.6–10.35 seconds are retained rather than cutting observations to fit an earlier 3–5 second estimate.
 
-Original H.264 video packets are copied without re-encoding. Audio remains present, re-encoded as AAC at 96 kbit/s, and MP4 metadata is moved to the front for streaming. Total video size is 6,117,516 → 2,806,887 bytes (54% smaller). All nine decoded-frame hashes match the originals. Poster previews and preload=none avoid downloading all videos on page load; playback is user initiated, with native fullscreen controls.
+All nine clips are cropped to the bright recording surface using bounds checked across their frames. Audio tracks are removed entirely. Video is re-encoded as H.264 at CRF 18, without changing the frame rate or trimming video frames; container durations can be slightly shorter because the original audio tail is absent. MP4 metadata is moved to the front for streaming. Total video size is 6,117,516 → 1,105,543 bytes (82% smaller). Posters are regenerated from the cropped clips, and players retain their natural proportions. Poster previews and preload=none avoid downloading all videos on page load; playback is user initiated, with native fullscreen controls.
 
 ## CMS editing
 
@@ -16,4 +16,4 @@ Research / Badania now includes Table image and Vitality parameters. Each parame
 
 The supplied media are stored in the private Git review branch and served through the protected Vercel preview. No source file was uploaded to Sanity's public CDN. Optional CMS replacement uploads are public Sanity assets; upload only files approved for that sharing scope. Production release remains a separate approval.
 
-Checks: 35 unit tests, frontend lint and TypeScript, Studio TypeScript, both production builds, decoded-frame integrity, native browser playback, accessible 13-row table, PL/EN page rendering and mobile layout without horizontal overflow. See the PR for hosted review details.
+Checks: 35 unit tests, frontend lint and TypeScript, Studio TypeScript, both production builds, complete video decoding and absent audio tracks, native browser playback, accessible 13-row table, PL/EN page rendering and mobile layout without horizontal overflow. See the PR for hosted review details.

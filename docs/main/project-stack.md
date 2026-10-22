@@ -113,4 +113,4 @@ Shared layout and Research use the existing Sanity client for server-only publis
 
 ## Research review feedback — 2026-10-22
 
-Research uses native HTML video with preload=none, posters and fast-start MP4. Visual streams, frame rates and durations are preserved; audio is AAC 96 kbit/s. No frontend dependency was added. The scientific table uses lossless PNG plus an accessible bilingual HTML equivalent.
+Research uses native HTML video with preload=none, posters and fast-start MP4. Supplied clips are cropped to their bright recording surface and encoded as H.264 CRF 18, retaining the video frames and frame rates; audio tracks are removed. No frontend dependency was added. The scientific table uses lossless PNG plus an accessible bilingual HTML equivalent.

@@ -81,3 +81,8 @@ Published the development Studio at https://puma-development-s2jrzn3b.sanity.stu
 ## Research review feedback — 2026-10-22
 
 Decision: retain provided research media in the private review branch, served through protected deployment URLs rather than uploading to Sanity public storage. Add editable Research parameter/grade/video schemas and validated project-scoped media URLs; preserve intentionally empty lists. Convert TIFF losslessly and optimize audio/container without changing decoded video frames. Reuse existing Team/Publication design patterns per review. Validation and metrics: research-media-review.md. Branch: feature/cms-foundation; main unchanged.
+
+
+## 2026-10-22 — Research video framing and silence
+
+Cropped all nine supplied clips to their bright recording surface, removed every audio stream, regenerated posters and removed the player height cap to preserve natural proportions. High-quality H.264 CRF 18 replaces the previous stream-copy optimization. Originals remain untouched; no new runtime dependency or CMS schema change.
