@@ -152,3 +152,8 @@ Research now follows the manager’s annotated layout: shared grey intro, Public
 ## 2026-10-22 — Mock Excel download
 
 Research now includes an Excel download with explicitly fictional bilingual mock observations for review. The real file and its sharing policy remain pending. The editor can replace the workbook, update both language labels and hide the download.
+
+
+## 2026-10-22 — Files draft review
+
+Visible navigation, page title and Studio editor now use Files / Pliki (working title). The subtitle is Supplementary materials and additional files, with a Polish translation. Existing /en/research and /badania URLs and CMS IDs are retained. The editable HTML scale table is always visible; the image table is no longer rendered, and its legacy upload field is hidden. The four parameter headings and their section heading are centered. Melanization images are pending from the lab; no substitute scientific images were invented.

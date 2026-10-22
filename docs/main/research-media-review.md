@@ -22,3 +22,8 @@ Checks: 35 unit tests, frontend lint and TypeScript, Studio TypeScript, both pro
 ## 2026-10-22 — Mock Excel download
 
 Downloads now includes a bilingual fictional Excel workbook (six demonstration records). Replace it in Research → Replacement Excel workbook and update downloadLabel/downloadDescription in both languages. Switch off Show spreadsheet download to hide it. The supplied mock is served through the protected review deployment; CMS replacement uploads are public, so the real file-sharing decision remains pending.
+
+
+## 2026-10-22 — Files draft review
+
+Visible navigation, page title and Studio editor now use Files / Pliki (working title). The subtitle is Supplementary materials and additional files, with a Polish translation. Existing /en/research and /badania URLs and CMS IDs are retained. The editable HTML scale table is always visible; the image table is no longer rendered, and its legacy upload field is hidden. The four parameter headings and their section heading are centered. Melanization images are pending from the lab; no substitute scientific images were invented.

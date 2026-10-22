@@ -100,7 +100,7 @@ const clip = defineType({
 })
 const research = defineType({
   name: 'researchPage',
-  title: 'Research / Badania',
+  title: 'Files / Pliki',
   type: 'document',
   initialValue: seeds.research,
   fields: [
@@ -124,6 +124,6 @@ const research = defineType({
     localized('seoTitle', 'SEO title'),
     localized('seoDescription', 'SEO description'),
   ],
-  preview: {prepare: () => ({title: 'Research / Badania'})},
+  preview: {prepare: () => ({title: 'Files / Pliki'})},
 })
 export const sharedTypes = [link, clip, shell, research, ...researchTypes]

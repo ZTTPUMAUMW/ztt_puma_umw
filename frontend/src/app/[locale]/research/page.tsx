@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
 import { getSharedContent } from "@/lib/cms-shared-loader";
@@ -66,29 +65,9 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
               aria-labelledby="vitality-tab"
             >
               <h2>{t.vitalityHeading}</h2>
-              {media.table && (
-                <figure className={styles.table}>
-                  <a
-                    href={media.table}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t.openTable}
-                  >
-                    <Image
-                      src={media.table}
-                      alt={t.tableAlt}
-                      width={1920}
-                      height={1080}
-                      unoptimized
-                      sizes="(max-width:1023px) 100vw, 1000px"
-                    />
-                  </a>
-                </figure>
-              )}
-              <details className={styles.tableText}>
-                <summary>{t.tableText}</summary>
+              <div className={styles.tableText}>
                 <div className={styles.tableScroll}>
-                  <table>
+                  <table aria-label={t.vitalityHeading}>
                     <thead>
                       <tr>
                         <th scope="col">{t.parameterLabel}</th>
@@ -109,7 +88,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                     </tbody>
                   </table>
                 </div>
-              </details>
+              </div>
               {media.attachment && (
                 <section className={styles.downloads} aria-labelledby="research-downloads">
                   <h2 id="research-downloads">{t.downloadsHeading}</h2>
@@ -120,7 +99,9 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                 </section>
               )}
               <section aria-labelledby="vitality-parameters">
-                <h2 id="vitality-parameters">{t.videosHeading}</h2>
+                <h2 id="vitality-parameters" className={styles.parametersHeading}>
+                  {t.videosHeading}
+                </h2>
                 <div className={styles.parameters}>
                   {media.parameters.map((p) => (
                     <section

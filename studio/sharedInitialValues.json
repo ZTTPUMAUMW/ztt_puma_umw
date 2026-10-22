@@ -47,8 +47,8 @@
         "_type": "websiteLink",
         "label": {
           "_type": "localizedText",
-          "pl": "Badania",
-          "en": "Research"
+          "pl": "Pliki",
+          "en": "Files"
         },
         "route": "/research"
       },
@@ -129,8 +129,8 @@
         "_type": "websiteLink",
         "label": {
           "_type": "localizedText",
-          "pl": "Badania",
-          "en": "Research"
+          "pl": "Pliki",
+          "en": "Files"
         },
         "route": "/research"
       },
@@ -298,13 +298,13 @@
     "copy": {
       "title": {
         "_type": "localizedText",
-        "pl": "Badania",
-        "en": "Research"
+        "pl": "Pliki",
+        "en": "Files"
       },
       "subtitle": {
         "_type": "localizedText",
-        "pl": "Materiały badawcze",
-        "en": "Research materials"
+        "pl": "Materiały uzupełniające i dodatkowe pliki",
+        "en": "Supplementary materials and additional files"
       },
       "description": {
         "_type": "localizedText",
@@ -366,13 +366,13 @@
     },
     "seoTitle": {
       "_type": "localizedText",
-      "pl": "Badania — P.U.M.A.",
-      "en": "Research — P.U.M.A."
+      "pl": "Pliki — P.U.M.A.",
+      "en": "Files — P.U.M.A."
     },
     "seoDescription": {
       "_type": "localizedText",
-      "pl": "Materiały badawcze i skala witalności larw zespołu P.U.M.A.",
-      "en": "P.U.M.A. research materials and larva vitality scale."
+      "pl": "Materiały uzupełniające, dodatkowe pliki i skala witalności larw zespołu P.U.M.A.",
+      "en": "Supplementary materials, additional files and larva vitality scale from P.U.M.A."
     },
     "legacyTable": "/research/vitality/vitality-scale.png",
     "parameters": [
@@ -487,8 +487,8 @@
         },
         "note": {
           "_type": "localizedText",
-          "pl": "Stopnie melanizacji przedstawiono w tabeli powyżej.",
-          "en": "Melanization grades are described in the table above."
+          "pl": "Zdjęcia melanizacji zostaną dodane, gdy będą dostępne.",
+          "en": "Melanization images will be added when available."
         },
         "grades": [
           {

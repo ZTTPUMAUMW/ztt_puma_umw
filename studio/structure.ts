@@ -6,7 +6,7 @@ export const structure: StructureResolver = (S) =>
     .items([
       S.listItem()
         .id('research')
-        .title('Research / Badania')
+        .title('Files / Pliki')
         .child(S.document().schemaType('researchPage').documentId('researchPage')),
       S.listItem()
         .id('chrome')

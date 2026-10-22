@@ -91,3 +91,8 @@ Cropped all nine supplied clips to their bright recording surface, removed every
 ## 2026-10-22 — Mock Excel download
 
 Added a mock Excel workbook download to Research, bilingual download text, optional CMS replacement and visibility control. Only .xlsx assets from the approved local directory or project Sanity CDN resolve. No real research data or new runtime dependency added.
+
+
+## 2026-10-22 — Files draft review
+
+Visible navigation, page title and Studio editor now use Files / Pliki (working title). The subtitle is Supplementary materials and additional files, with a Polish translation. Existing /en/research and /badania URLs and CMS IDs are retained. The editable HTML scale table is always visible; the image table is no longer rendered, and its legacy upload field is hidden. The four parameter headings and their section heading are centered. Melanization images are pending from the lab; no substitute scientific images were invented.

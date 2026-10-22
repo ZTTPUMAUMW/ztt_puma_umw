@@ -117,11 +117,13 @@ export const researchMediaFields = [
   }),
   defineField({
     name: 'tableImage',
-    title: 'Vitality-scale table image',
+    title: 'Legacy vitality-scale table image',
+    hidden: true,
+    readOnly: true,
     type: 'image',
     options: {accept: 'image/png,image/jpeg,image/webp,image/avif'},
     description:
-      'Optional replacement for the supplied lossless PNG. Uploads to Sanity are public CDN files.',
+      'Retained for compatibility. The website now displays the editable text table only.',
   }),
   defineField({
     name: 'legacyTable',
