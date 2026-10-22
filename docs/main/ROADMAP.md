@@ -87,3 +87,23 @@ Roadmapa jest oparta na aktualnym stanie kodu (maj 2026) i skupia się na:
 - Rozważenie rozszerzenia języków po stabilizacji PL/EN.
 - Rozbudowa analityki produktowej i ścieżek konwersji.
 - Możliwa standaryzacja ikonografii, jeśli wzrośnie liczba nowych ikon.
+
+## Contact CMS pilot status — 2026-10-20
+
+Implemented bilingual Contact/site-settings schemas and frontend published reads on feature/cms-foundation. Next: authenticated development publishing verification, draft preview, remaining page/collection migration and secure media/backups. No production release yet.
+
+## CMS collection migration status — 2026-10-20
+
+Implemented the four collection-page editors and frontend routes on feature/cms-foundation. Contact publishing was verified by the user. First publication/edit/upload tests for the new pages remain to be performed in development. Next scope: Home, Recruitment, Cooperation, shared navigation/media, Research placeholders, authenticated draft preview and backups.
+
+## Marketing CMS migration — 2026-10-20
+
+User confirmed collection-page editing works. Implemented Home, Recruitment and Cooperation locally; development publishing checks are next. Remaining: shared navigation/footer links and branding, Research placeholders, authenticated draft preview/staging, backups, security/dependency review and reviewed production migration.
+
+## Navigation and Research — 2026-10-21
+
+Navigation/footer editing and Research placeholders are implemented locally on feature/cms-foundation. Development publishing verification, real media/access policy, authenticated draft staging, backups, security/dependency review and production migration remain pending.
+
+## Research review feedback — 2026-10-22
+
+Implemented the annotated Research review and integrated provided table/videos. The protected preview and PR are updated for the manager to review before any main merge. Outstanding: approval, any missing melanization media if desired, final asset access/production decision, security/dependency review and backups.

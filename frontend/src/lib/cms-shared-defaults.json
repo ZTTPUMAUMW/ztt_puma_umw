@@ -1,0 +1,723 @@
+{
+  "shell": {
+    "_type": "siteChrome",
+    "header": [
+      {
+        "_key": "team",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Zespół",
+          "en": "Team"
+        },
+        "route": "/team"
+      },
+      {
+        "_key": "projects",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Projekty",
+          "en": "Projects"
+        },
+        "route": "/projects"
+      },
+      {
+        "_key": "publications",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "route": "/publications"
+      },
+      {
+        "_key": "models",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Modele",
+          "en": "Models"
+        },
+        "route": "/models"
+      },
+      {
+        "_key": "research",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Pliki",
+          "en": "Files"
+        },
+        "route": "/research"
+      },
+      {
+        "_key": "recruitment",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Rekrutacja",
+          "en": "Recruitment"
+        },
+        "route": "/recruitment"
+      },
+      {
+        "_key": "cooperation",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Współpraca",
+          "en": "Collaboration"
+        },
+        "route": "/cooperation"
+      },
+      {
+        "_key": "contact",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Kontakt",
+          "en": "Contact"
+        },
+        "route": "/contact"
+      }
+    ],
+    "footerSite": [
+      {
+        "_key": "home",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Strona główna",
+          "en": "Homepage"
+        },
+        "route": "/"
+      },
+      {
+        "_key": "projects",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Projekty",
+          "en": "Projects"
+        },
+        "route": "/projects"
+      },
+      {
+        "_key": "publications",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "route": "/publications"
+      },
+      {
+        "_key": "models",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Modele",
+          "en": "Models"
+        },
+        "route": "/models"
+      },
+      {
+        "_key": "research",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Pliki",
+          "en": "Files"
+        },
+        "route": "/research"
+      },
+      {
+        "_key": "team",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Zespół",
+          "en": "Team"
+        },
+        "route": "/team"
+      }
+    ],
+    "footerContact": [
+      {
+        "_key": "recruitment",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Rekrutacja",
+          "en": "Recruitment"
+        },
+        "route": "/recruitment"
+      },
+      {
+        "_key": "cooperation",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Współpraca",
+          "en": "Collaboration"
+        },
+        "route": "/cooperation"
+      },
+      {
+        "_key": "contact",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Kontakt",
+          "en": "Contact"
+        },
+        "route": "/contact"
+      }
+    ],
+    "externalLinks": [
+      {
+        "_key": "university",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Uniwersytet Medyczny we Wrocławiu",
+          "en": "Medical University of Wroclaw"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.umw.edu.pl",
+          "en": "https://www.umw.edu.pl"
+        }
+      },
+      {
+        "_key": "department",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "ZTT UMW",
+          "en": "ZTT UMW"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.umw.edu.pl/pl/jednostki/zaklad-technologii-translacyjnych",
+          "en": "https://www.umw.edu.pl/pl/jednostki/zaklad-technologii-translacyjnych"
+        }
+      },
+      {
+        "_key": "platform",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Polska Platforma Medyczna",
+          "en": "Polish Medical Platform"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://ppm.umw.edu.pl/info/affiliation/UMW49ae3cc953a04e37bf652c1f8ab5791a?r=publication&tab=publications&title=Profil%2Bjednostki%2B%25E2%2580%2593%2BZak%25C5%2582ad%2BTechnologii%2BTranslacyjnych%2B%25E2%2580%2593%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1",
+          "en": "https://ppm.umw.edu.pl/info/affiliation/UMW49ae3cc953a04e37bf652c1f8ab5791a?r=publication&tab=publications&title=Profil%2Bjednostki%2B%25E2%2580%2593%2BZak%25C5%2582ad%2BTechnologii%2BTranslacyjnych%2B%25E2%2580%2593%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1"
+        }
+      },
+      {
+        "_key": "plum",
+        "_type": "websiteLink",
+        "label": {
+          "_type": "localizedText",
+          "pl": "PLUM EDU",
+          "en": "PLUM EDU"
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://plum.umw.edu.pl",
+          "en": "https://plum.umw.edu.pl"
+        }
+      }
+    ],
+    "copy": {
+      "site": {
+        "_type": "localizedText",
+        "pl": "Strona",
+        "en": "Website"
+      },
+      "contact": {
+        "_type": "localizedText",
+        "pl": "Kontakt",
+        "en": "Contact"
+      },
+      "links": {
+        "_type": "localizedText",
+        "pl": "Linki",
+        "en": "Links"
+      },
+      "rights": {
+        "_type": "localizedText",
+        "pl": "Wszelkie prawa zastrzeżone",
+        "en": "All rights reserved"
+      },
+      "logoAlt": {
+        "_type": "localizedText",
+        "pl": "Logo P.U.M.A.",
+        "en": "P.U.M.A. logo"
+      },
+      "universityAlt": {
+        "_type": "localizedText",
+        "pl": "Logo Uniwersytetu Medycznego we Wrocławiu",
+        "en": "Wrocław Medical University logo"
+      },
+      "openMenu": {
+        "_type": "localizedText",
+        "pl": "Otwórz menu",
+        "en": "Open menu"
+      },
+      "closeMenu": {
+        "_type": "localizedText",
+        "pl": "Zamknij menu",
+        "en": "Close menu"
+      },
+      "mobileMenu": {
+        "_type": "localizedText",
+        "pl": "Menu mobilne",
+        "en": "Mobile menu"
+      },
+      "skip": {
+        "_type": "localizedText",
+        "pl": "Przejdź do treści głównej",
+        "en": "Skip to main content"
+      }
+    },
+    "universityUrl": {
+      "_type": "localizedText",
+      "pl": "https://www.umw.edu.pl/pl",
+      "en": "https://www.umw.edu.pl/en"
+    }
+  },
+  "research": {
+    "_type": "researchPage",
+    "copy": {
+      "title": {
+        "_type": "localizedText",
+        "pl": "Pliki",
+        "en": "Files"
+      },
+      "subtitle": {
+        "_type": "localizedText",
+        "pl": "Materiały uzupełniające i dodatkowe pliki",
+        "en": "Supplementary materials and additional files"
+      },
+      "description": {
+        "_type": "localizedText",
+        "pl": "Materiały do oceny witalności larw na podstawie ruchliwości, melanizacji, turgoru oraz reakcji na bodźce.",
+        "en": "Materials for assessing larval vitality using mobility, melanization, turgor and reaction to stimuli."
+      },
+      "vitalityHeading": {
+        "_type": "localizedText",
+        "pl": "Skala witalności larw",
+        "en": "Larva vitality scale"
+      },
+      "videosHeading": {
+        "_type": "localizedText",
+        "pl": "Parametry witalności",
+        "en": "Vitality parameters"
+      },
+      "tableAlt": {
+        "_type": "localizedText",
+        "pl": "Tabela skali witalności larw: ruchliwość, melanizacja, turgor i reakcja na bodźce. Pełny opis dostępny w tekstowej wersji tabeli poniżej.",
+        "en": "Larva vitality scale table: mobility, melanization, turgor and reaction to stimuli. The full description is available in the text version below."
+      },
+      "openTable": {
+        "_type": "localizedText",
+        "pl": "Powiększ tabelę",
+        "en": "Open full-size table"
+      },
+      "tableText": {
+        "_type": "localizedText",
+        "pl": "Tekstowa wersja tabeli",
+        "en": "Text version of the table"
+      },
+      "parameterLabel": {
+        "_type": "localizedText",
+        "pl": "Parametr",
+        "en": "Parameter"
+      },
+      "scoreLabel": {
+        "_type": "localizedText",
+        "pl": "Wynik",
+        "en": "Score"
+      },
+      "descriptionLabel": {
+        "_type": "localizedText",
+        "pl": "Opis",
+        "en": "Description"
+      },
+      "openImage": {
+        "_type": "localizedText",
+        "en": "Open full-size image",
+        "pl": "Otwórz obraz w pełnym rozmiarze"
+      }
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Pliki — P.U.M.A.",
+      "en": "Files — P.U.M.A."
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Materiały uzupełniające, dodatkowe pliki i skala witalności larw zespołu P.U.M.A.",
+      "en": "Supplementary materials, additional files and larva vitality scale from P.U.M.A."
+    },
+    "legacyTable": "/research/vitality/vitality-scale.png",
+    "parameters": [
+      {
+        "_key": "mobility",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Ruchliwość",
+          "en": "Mobility"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak ruchu",
+              "en": "No movement"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Ruch części ciała bez przemieszczania się",
+              "en": "Movement of body parts without displacement"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Ruch wolniejszy niż normalnie",
+              "en": "Slower than normal movement"
+            }
+          },
+          {
+            "_key": "grade3",
+            "_type": "researchGrade",
+            "score": 3,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Aktywny ruch",
+              "en": "Active movement"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak ruchu",
+              "en": "No movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-0.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Ruch części ciała bez przemieszczania się",
+              "en": "Movement of body parts without displacement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-1.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-1.jpg"
+          },
+          {
+            "_key": "score2",
+            "_type": "researchVideo",
+            "score": 2,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Ruch wolniejszy niż normalnie",
+              "en": "Slower than normal movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-2.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-2.jpg"
+          },
+          {
+            "_key": "score3",
+            "_type": "researchVideo",
+            "score": 3,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Aktywny ruch",
+              "en": "Active movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-3.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-3.jpg"
+          }
+        ]
+      },
+      {
+        "_key": "melanization",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Melanizacja",
+          "en": "Melanization"
+        },
+        "note": {
+          "_type": "localizedText",
+          "en": "",
+          "pl": ""
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Całkowita melanizacja",
+              "en": "Complete melanization"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Rozlana melanizacja (rozprzestrzeniające się ciemne plamy na ciele)",
+              "en": "Diffuse melanization (spreading dark patches on the body)"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Punktowa melanizacja (małe, ciemne plamki na ciele)",
+              "en": "Punctate melanization (small, dark spots on the body)"
+            }
+          },
+          {
+            "_key": "grade3",
+            "_type": "researchGrade",
+            "score": 3,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak melanizacji",
+              "en": "No melanization"
+            }
+          }
+        ],
+        "clips": [],
+        "images": [
+          {
+            "_key": "melanization0",
+            "_type": "researchImage",
+            "score": 0,
+            "legacyImage": "/research/vitality/melanization-score-0.png",
+            "width": 495,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Całkowita melanizacja",
+              "en": "Complete melanization"
+            }
+          },
+          {
+            "_key": "melanization1",
+            "_type": "researchImage",
+            "score": 1,
+            "legacyImage": "/research/vitality/melanization-score-1.png",
+            "width": 499,
+            "height": 152,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Rozlana melanizacja (rozprzestrzeniające się ciemne plamy na ciele)",
+              "en": "Diffuse melanization (spreading dark patches on the body)"
+            }
+          },
+          {
+            "_key": "melanization2",
+            "_type": "researchImage",
+            "score": 2,
+            "legacyImage": "/research/vitality/melanization-score-2.png",
+            "width": 499,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Punktowa melanizacja (małe, ciemne plamki na ciele)",
+              "en": "Punctate melanization (small, dark spots on the body)"
+            }
+          },
+          {
+            "_key": "melanization3",
+            "_type": "researchImage",
+            "score": 3,
+            "legacyImage": "/research/vitality/melanization-score-3.png",
+            "width": 499,
+            "height": 151,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak melanizacji",
+              "en": "No melanization"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "turgor",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Turgor",
+          "en": "Turgor"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Utrata turgoru: powłoka ciała nie powraca do normalnego stanu po ucisku",
+              "en": "Loss of turgor: integument does not return to its normal state after pressure"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Obniżony turgor: powłoka ciała powoli powraca do normalnego stanu po ucisku",
+              "en": "Reduced turgor: integument returns slowly to its normal state after pressure"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Prawidłowy turgor",
+              "en": "Normal turgor"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Utrata turgoru: powłoka ciała nie powraca do normalnego stanu po ucisku",
+              "en": "Loss of turgor: integument does not return to its normal state after pressure"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-0.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Obniżony turgor: powłoka ciała powoli powraca do normalnego stanu po ucisku",
+              "en": "Reduced turgor: integument returns slowly to its normal state after pressure"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-1.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-1.jpg"
+          },
+          {
+            "_key": "score2",
+            "_type": "researchVideo",
+            "score": 2,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Prawidłowy turgor",
+              "en": "Normal turgor"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-2.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-2.jpg"
+          }
+        ]
+      },
+      {
+        "_key": "reaction",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Reakcja na bodźce",
+          "en": "Reaction to stimuli"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak odruchu po dotknięciu",
+              "en": "No reflex upon touch"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Odruch ciała po dotknięciu",
+              "en": "Body reflex upon touch"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak odruchu po dotknięciu",
+              "en": "No reflex upon touch"
+            },
+            "legacyVideo": "/research/vitality/reaction-to-stimuli-score-0.mp4",
+            "legacyPoster": "/research/vitality/reaction-to-stimuli-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Odruch ciała po dotknięciu",
+              "en": "Body reflex upon touch"
+            },
+            "legacyVideo": "/research/vitality/reaction-to-stimuli-score-1.mp4",
+            "legacyPoster": "/research/vitality/reaction-to-stimuli-score-1.jpg"
+          }
+        ]
+      }
+    ],
+    "showAttachment": false
+  }
+}

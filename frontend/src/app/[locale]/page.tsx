@@ -8,58 +8,45 @@ import FeatureBoxes from "@/components/FeatureBoxes";
 import QuickLinks from "@/components/QuickLinks";
 import GrantLogos from "@/components/GrantLogos";
 import CTASection from "@/components/CTASection";
-import { getTranslations } from "next-intl/server";
-
-// TODO: Check how SanityCMS will handle translations for content that will being fetched from it. Admins will put data in polish, I need to prepare it to either put translations by hand or by click using some internal functionality of SanityCMS or other API. This is important to ensure that all content on the site is properly localized and provides a seamless experience for users in different languages.
-export default async function Home() {
-  const t = await getTranslations("featuredBanner");
-
-  const bannerSlides = [
-    {
-      image: "/images/banner/banner_1.png",
-      title: t("banner.title"),
-      description: t.rich("banner.description", {
-        i: (chunks) => <i>{chunks}</i>,
-      }),
-      link: t("banner.link"),
-    },
-    {
-      image: "/images/banner/banner_2.png",
-      title: t("banner2.title"),
-      description: t("banner2.description"),
-      link: t("banner2.link"),
-    },
-    {
-      image: "/images/banner/banner_3.png",
-      title: t("banner3.title"),
-      description: t("banner3.description"),
-      link: t("banner3.link"),
-    },
-  ];
-
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { getMarketingPage } from "@/lib/cms-marketing-loader";
+import { buildPageMetadata } from "@/lib/seo";
+import ScientificText from "@/components/ScientificText";
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const page = await getMarketingPage("home", locale);
+  return buildPageMetadata({
+    locale,
+    route: "/",
+    title: page.seoTitle,
+    description: page.seoDescription,
+  });
+}
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const page = await getMarketingPage("home", locale);
   return (
-    <>
-      <HomeHero />
-
-      <BannerSlider slides={bannerSlides} />
-
-      <InfoCards />
-
+    <NextIntlClientProvider messages={{ ...(await getMessages()), ...page.copy }}>
+      <HomeHero buttons={page.heroButtons} />
+      <BannerSlider
+        slides={page.banners.map((b) => ({
+          ...b,
+          description: <ScientificText text={b.description} />,
+        }))}
+      />
+      <InfoCards items={page.infoCards} />
       <Section>
         <Container width="content">
           <div className="wrapper">
-            <ResearchAreas />
+            <ResearchAreas items={page.researchAreas} />
           </div>
         </Container>
       </Section>
-
-      <FeatureBoxes />
-
-      <QuickLinks />
-
-      <GrantLogos />
-
-      <CTASection />
-    </>
+      <FeatureBoxes items={page.features} />
+      <QuickLinks items={page.quickLinks} />
+      <GrantLogos items={page.grantLogos} />
+      <CTASection buttons={page.ctaButtons} />
+    </NextIntlClientProvider>
   );
 }

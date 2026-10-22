@@ -1,0 +1,116 @@
+import {defineField, defineType} from 'sanity'
+import {settingsInitialValue} from '../initialValues'
+
+export default defineType({
+  name: 'siteSettings',
+  title: 'Site settings / Ustawienia strony',
+  type: 'document',
+  groups: [
+    {name: 'contact', title: 'Contact details', default: true},
+    {name: 'footer', title: 'Footer'},
+  ],
+  initialValue: settingsInitialValue,
+  fields: [
+    defineField({
+      name: 'department',
+      title: 'department',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'lab',
+      title: 'lab',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'faculty',
+      title: 'faculty',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'university',
+      title: 'university',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'street',
+      title: 'street',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'floor',
+      title: 'floor',
+      group: 'contact',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'footerDepartment',
+      title: 'footer Department',
+      group: 'footer',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'footerLab',
+      title: 'footer Lab',
+      group: 'footer',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'footerDescription',
+      title: 'footer Description',
+      group: 'footer',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'copyrightName',
+      title: 'copyright Name',
+      group: 'footer',
+      type: 'localizedText',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'phoneNumber',
+      title: 'Phone number (international format)',
+      type: 'string',
+      group: 'contact',
+      validation: (rule) => rule.required().regex(/^\+[0-9]{6,15}$/),
+    }),
+    defineField({
+      name: 'phoneDisplay',
+      title: 'Displayed phone number',
+      type: 'string',
+      group: 'contact',
+      validation: (rule) => rule.required().max(80),
+    }),
+    defineField({
+      name: 'email',
+      title: 'Public contact email (not the form delivery address)',
+      type: 'string',
+      group: 'contact',
+      validation: (rule) => rule.required().email(),
+    }),
+    defineField({
+      name: 'mapAddress',
+      title: 'Map search address',
+      type: 'string',
+      group: 'contact',
+      description:
+        'Plain address only. The website builds a Google Maps URL; HTML and embed code are not accepted.',
+      validation: (rule) => rule.required().max(300),
+    }),
+  ],
+  preview: {prepare: () => ({title: 'Site settings / Ustawienia strony'})},
+})

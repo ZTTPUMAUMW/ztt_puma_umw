@@ -15,6 +15,10 @@
     "students": "Students"
   },
   "modal": {
-    "back": "Return"
-  }
+    "back": "Return",
+    "previous": "Previous member",
+    "next": "Next member",
+    "close": "Close profile"
+  },
+  "cardDetails": "View team member: {name}"
 }

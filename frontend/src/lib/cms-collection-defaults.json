@@ -1,0 +1,1899 @@
+{
+  "team": {
+    "_type": "teamPage",
+    "copy": {
+      "hero": {
+        "title": {
+          "_type": "localizedText",
+          "pl": "Poznaj nasz zespół",
+          "en": "Meet our team"
+        },
+        "subtitle": {
+          "_type": "localizedText",
+          "pl": "Naukowcy, doktoranci i studenci tworzący P.U.M.A.",
+          "en": "Researchers, doctoral students and undergraduates who make up P.U.M.A."
+        }
+      },
+      "stats": {
+        "intro": {
+          "_type": "localizedText",
+          "pl": "Nasz zespół to grupa pasjonatów nauki, którzy łączą doświadczenie akademickie z praktycznym podejściem do badań. Wspólnie tworzymy innowacyjne rozwiązania w obszarze farmacji, mikrobiologii, biotechnologii i medycyny.",
+          "en": "Our team is a group of science enthusiasts who combine academic experience with a practical approach to research. Together, we create innovative solutions in the fields of pharmacy, microbiology, biotechnology and medicine."
+        },
+        "researchers": {
+          "_type": "localizedText",
+          "pl": "Pracownicy naukowi",
+          "en": "Researchers"
+        },
+        "phd": {
+          "_type": "localizedText",
+          "pl": "Doktoranci",
+          "en": "PhD students"
+        },
+        "students": {
+          "_type": "localizedText",
+          "pl": "Studenci",
+          "en": "Students"
+        }
+      },
+      "tabs": {
+        "researchers": {
+          "_type": "localizedText",
+          "pl": "Pracownicy",
+          "en": "Employees"
+        },
+        "phd": {
+          "_type": "localizedText",
+          "pl": "Doktoranci",
+          "en": "PhD students"
+        },
+        "students": {
+          "_type": "localizedText",
+          "pl": "Studenci",
+          "en": "Students"
+        }
+      },
+      "modal": {
+        "back": {
+          "_type": "localizedText",
+          "pl": "Powrót",
+          "en": "Return"
+        },
+        "previous": {
+          "_type": "localizedText",
+          "pl": "Poprzednia osoba",
+          "en": "Previous member"
+        },
+        "next": {
+          "_type": "localizedText",
+          "pl": "Następna osoba",
+          "en": "Next member"
+        },
+        "close": {
+          "_type": "localizedText",
+          "pl": "Zamknij profil",
+          "en": "Close profile"
+        }
+      },
+      "cardDetails": {
+        "_type": "localizedText",
+        "pl": "Pokaż szczegóły członka zespołu: {name}",
+        "en": "View team member: {name}"
+      }
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Zespół P.U.M.A. – Uniwersytet Medyczny we Wrocławiu",
+      "en": "P.U.M.A. Team – Medical University of Wrocław"
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Poznaj interdyscyplinarny zespół naukowców, doktorantów i studentów tworzących P.U.M.A. w Zakładzie Technologii Translacyjnych UMW.",
+      "en": "Meet the interdisciplinary team of researchers, doctoral students and undergraduates forming P.U.M.A. at the Department of Translational Technologies, MUW."
+    },
+    "items": [
+      {
+        "_key": "member111",
+        "_type": "teamEntry",
+        "name": "Adam Junka",
+        "category": "pracownicy",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Kierownik ZTT P.U.M.A.",
+          "en": "Head of Z.T.T. P.U.M.A."
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem absolwentem międzywydziałowych studiów biotechnologicznych UMG–PG–UG w Gdańsku. Od 1 października jestem p.o. kierownika Z.T.T. P.U.M.A. Od ponad 18 lat jestem związany z Uniwersytetem Medycznym we Wrocławiu. Równolegle zdobywałem doświadczenie w przemyśle i środowisku start-upowym, budując pomost między nauką akademicką a jej praktycznymi zastosowaniami. W Z.T.T. P.U.M.A. kieruję zespołem, który łączy eksperyment z technologią: od modeli in vitro, ex vivo i in vivo, poprzez systemy oceny biomateriałów, symulacje środowisk klinicznych i larwalne modele infekcji, po analizę wzorców zachowań i struktur biologicznych przy użyciu sztucznej inteligencji. Po godzinach jestem pasjonatem sztuk walki, leśnych wypraw i urbexu.",
+          "en": "I am a graduate of interdisciplinary biotechnology studies at UMG–PG–UG in Gdańsk. Since October 1st, I have been acting head of Z.T.T. P.U.M.A. I have been associated with Wroclaw Medical University for over 18 years. Simultaneously, I gained experience in industry and the start-up environment, building a bridge between academic science and its practical applications. At Z.T.T. P.U.M.A., I lead a team that combines experimentation with technology: from in vitro, ex vivo and in vivo models, through biomaterial evaluation systems, clinical environment simulations and larval infection models, to analyzing patterns of behavior and biological structures using artificial intelligence. After hours, I am a fan of martial arts, forest expeditions and urbex."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Adam Junka",
+          "en": "Adam Junka"
+        },
+        "legacyImage": "/images/team/AJ.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "dr hab.",
+          "en": "Dr. habil."
+        },
+        "universityTitle": {
+          "_type": "localizedText",
+          "pl": "prof. UMW",
+          "en": "Professor at UMW"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "LinkedIn",
+              "en": "LinkedIn"
+            },
+            "url": "https://www.linkedin.com/in/adam-junka-26b432ba/"
+          },
+          {
+            "_key": "link1",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Adam-Junka?ev=hdr_xprf"
+          },
+          {
+            "_key": "link2",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "PPM UMW",
+              "en": "PPM UMW"
+            },
+            "url": "https://ppm.umw.edu.pl/info/author/UMWd00d547e55ea4465a7442e3708dc3212/Profil%2Bosoby%2B%E2%80%93%2BAdam%2BFeliks%2BJunka%2B%E2%80%93%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%C3%B3w%2B%C5%9Al%C4%85skich%2Bwe%2BWroc%C5%82awiu?r=publication&tab=publications&conversationPropagation=begin&sort=&lang=pl&pn=1"
+          }
+        ]
+      },
+      {
+        "_key": "member121",
+        "_type": "teamEntry",
+        "name": "Bartłomiej Dudek",
+        "category": "pracownicy",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Adiunkt Naukowy Grupy Badawczej",
+          "en": "Assistant Professor of the Research Group"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Ukończyłem studia na kierunku Biologia spec. Mikrobiologia na Uniwersytecie Wrocławskim, po czym kontynuowałem naukę na Studiach Doktoranckich Biologii uzyskując stopień doktora nauk biologicznych. Moją pracę naukową rozpocząłem w Zakładzie Mikrobiologii na Uniwersytecie Wrocławskim, a następnie pracowałem w Laboratorium Mikrobiologii w Łukasiewicz PORT - Polskim Ośrodku Rozwoju Technologii. Obecnie pracuję na stanowisku adiunkta w Zakładzie Technologii Translacyjnej P.U.M.A. na Uniwersytecie Medycznym we Wrocławiu. W ramach moich zainteresowań naukowych badam patogenezę bakterii, ich czynniki wirulencji, interakcje patogen-gospodarz oraz ze szczególnym uwzględnieniem nowoczesne metody zwalczania bakterii patogennych. W czasie wolnym aktywnie spędzam czas biegając, jeżdżąc na rowerze i chodząc po górskich ścieżkach.",
+          "en": "I graduated with a degree in Biology specializing in Microbiology from the University of Wrocław, then continued my education in the Doctoral Studies in Biology, obtaining a PhD in biological sciences. I began my scientific work at the Department of Microbiology at the University of Wrocław, and then worked in the Microbiology Laboratory at Łukasiewicz PORT - Polish Center for Technology Development. Currently, I work as an assistant professor at the Department of Translational Technology P.U.M.A. at Wroclaw Medical University. My scientific interests include studying bacterial pathogenesis, their virulence factors, pathogen-host interactions, with particular emphasis on modern methods of combating pathogenic bacteria. In my free time, I actively spend time running, cycling and hiking mountain trails."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Bartłomiej Dudek",
+          "en": "Bartłomiej Dudek"
+        },
+        "legacyImage": "/images/team/BD.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "dr",
+          "en": "PhD"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Bartlomiej-Dudek"
+          },
+          {
+            "_key": "link1",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "PPM UMW",
+              "en": "PPM UMW"
+            },
+            "url": "https://ppm.umw.edu.pl/info/author/UMW35f6f3f00c8a42cf984b69db0d72dd5c?aq=mesh:MeSH-D006090&r=publication&ps=20&title=Profil%2Bosoby%2B%E2%80%93%2BBart%C5%82omiej%2BDudek%2B%E2%80%93%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%C3%B3w%2B%C5%9Al%C4%85skich%2Bwe%2BWroc%C5%82awiu&lang=pl&pn=1"
+          }
+        ]
+      },
+      {
+        "_key": "member131",
+        "_type": "teamEntry",
+        "name": "Malwina Brożyna",
+        "category": "pracownicy",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Adiunkt Naukowy Grupy Badawczej",
+          "en": "Assistant Professor of the Research Group"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem adiunktem naukowym w ZTT P.U.M.A. Ukończyłam studia farmaceutyczne na Uniwersytecie Medycznym we Wrocławiu. Od 2024 roku jestem również doktorem nauk farmaceutycznych. W mojej pracy naukowej zajmuję się głównie badaniem aktywności przeciwdrobnoustrojowych olejków eterycznych w celu wykorzystania ich w terapii leczenia ran przewlekłych. W wolnych chwilach gram w tenisa, pickleball, pływam i jeżdżę na rowerze.",
+          "en": "I am a research assistant professor at Z.T.T. P.U.M.A. I graduated in pharmacy from Wroclaw Medical University. Since 2024, I have also been a PhD in pharmaceutical sciences. In my scientific work, I mainly focus on researching the antimicrobial activity of essential oils for use in the therapy of chronic wound treatment. In my free time, I play tennis, pickleball, swim and cycle."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Malwina Brożyna",
+          "en": "Malwina Brożyna"
+        },
+        "legacyImage": "/images/team/MB.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "dr",
+          "en": "PhD"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "LinkedIn",
+              "en": "LinkedIn"
+            },
+            "url": "https://pl.linkedin.com/in/malwina-bro%C5%BCyna-202426229"
+          },
+          {
+            "_key": "link1",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Malwina-Brozyna-2"
+          },
+          {
+            "_key": "link2",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "PPM UMW",
+              "en": "PPM UMW"
+            },
+            "url": "https://ppm.umw.edu.pl/info/author/UMWe9af25d6382540c48095a2bbd077d3de?ps=20&lang=pl&title=Person%2Bprofile%2B%E2%80%93%2BMalwina%2BBro%25C5%25BCyna%2B%E2%80%93%2BWroclaw%2BMedical%2BUniversity+title&pn=1&cid=54849"
+          }
+        ]
+      },
+      {
+        "_key": "member141",
+        "_type": "teamEntry",
+        "name": "Zuzanna Stępnicka",
+        "category": "pracownicy",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Młodszy Specjalista Naukowo-Techniczny",
+          "en": "Junior Scientific-Technical Specialist"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem absolwentką biochemii na Uniwersytecie w Glasgow oraz chemii medycznej na Uniwersytecie Wrocławskim. Przez dwa lata pracowałam w start-upie farmaceutycznym Kynos Therapeutics przyczyniając się do sprzedaży firmy w 2024 roku. Od 2025 współpracuje z ZTT, gdzie skupiam się na opracowaniu statystycznym oraz rozwijaniu metod diagnostyki z wykorzystaniem sztucznej inteligencji. W wolnym czasie uprawiam wspinaczkę, kickboxing oraz gram w golfa.",
+          "en": "I am a graduate of biochemistry at the University of Glasgow and medicinal chemistry at the University of Wrocław. For two years, I worked at the pharmaceutical start-up Kynos Therapeutics, contributing to the company's sale in 2024. Since 2025, I have been collaborating with Z.T.T., where I focus on statistical development and advancing diagnostic methods using artificial intelligence. In my free time, I practice climbing, kickboxing and play golf."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "mgr inż. Zuzanna Stępnicka",
+          "en": "mgr inż. Zuzanna Stępnicka"
+        },
+        "legacyImage": "/images/team/ZS.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "mgr inż.",
+          "en": "MEng"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "LinkedIn",
+              "en": "LinkedIn"
+            },
+            "url": "https://www.linkedin.com/in/zuzanna-stepnicka-6a07ab240/"
+          },
+          {
+            "_key": "link1",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Zuzanna-Stepnicka-2"
+          },
+          {
+            "_key": "link2",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "PPM UMW",
+              "en": "PPM UMW"
+            },
+            "url": "https://ppm.umw.edu.pl/info/author/UMWec211d57dfdc49ebbba2db02cbc6b702?r=author&tab=publications&title=Profil%2Bosoby%2B%E2%80%93%2BZuzanna%2BKatarzyna%2BSt%25C4%2599pnicka%2B%E2%80%93%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1"
+          }
+        ]
+      },
+      {
+        "_key": "member194",
+        "_type": "teamEntry",
+        "name": "Aleksandra Woytoń",
+        "category": "doktoranci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Doktorantka Szkoły Doktorskiej UMW",
+          "en": "PhD Candidate, UMW Doctoral School"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem absolwentka mikrobiologii Uniwersytetu Wrocławskiego oraz ukończyłam studia podyplomowe \"Analityka i Diagnostyka Chemiczna\" Uniwersytetu Wrocławskiego. Od końca 2023 rozwijam swoje umiejętności zawodowe w laboratorium diagnostycznym zajmując się m.in. analizą próbek, identyfikacją drobnoustrojów oraz przygotowaniem testów antybiotykowrażliwości. W roku 2024 rozpoczęłam naukę w ramach Szkoły Doktorskiej w ZTT P.U.M.A. W swoich badaniach skupiam się na opracowaniu alternatywnych metod leczenia ran przewlekłych i eradykacji biofilmów bakteryjnych. Jestem pasjonatką teatru muzycznego, tańca klasycznego, w wolnym czasie piekę i uprawiam yogę.",
+          "en": "I am a graduate of microbiology from the University of Wrocław and completed postgraduate studies in \"Analytical and Diagnostic Chemistry\" at the University of Wrocław. Since the end of 2023, I have been developing my professional skills in a diagnostic laboratory, dealing with sample analysis, identification of microorganisms and preparation of antibiotic susceptibility tests. In 2024, I began my studies at the Doctoral School at Z.T.T. P.U.M.A. In my research, I focus on developing alternative methods for treating chronic wounds and eradicating bacterial biofilms. I am passionate about musical theater, classical dance, and in my free time I bake and practice yoga."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "mgr Aleksandra Woytoń",
+          "en": "mgr Aleksandra Woytoń"
+        },
+        "legacyImage": "/images/team/AW.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "mgr",
+          "en": "MSc"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "LinkedIn",
+              "en": "LinkedIn"
+            },
+            "url": "https://pl.linkedin.com/in/aleksandra-woyto%C5%84-98266a214"
+          },
+          {
+            "_key": "link1",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Aleksandra-Woyton"
+          },
+          {
+            "_key": "link2",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "PPM UMW",
+              "en": "PPM UMW"
+            },
+            "url": "https://ppm.umw.edu.pl/info/author/UMW599c1f659c054e1aa1ad6cbd0b4bf68b?r=author&tab=&title=Profil%2Bosoby%2B%E2%80%93%2BAleksandra%2BAgnieszka%2BWoyto%25C5%2584%2B%E2%80%93%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1"
+          }
+        ]
+      },
+      {
+        "_key": "member195",
+        "_type": "teamEntry",
+        "name": "Weronika Łojewska",
+        "category": "doktoranci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Doktorantka PWR-UMW",
+          "en": "PhD Candidate PWR-UMW"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Ukończyłam studia inżynierskie na Uniwersytecie Przyrodniczym we Wrocławiu na kierunku Biotechnologia oraz magisterskie na Politechnice Wrocławskiej na kierunku Biotechnologia Molekularna i Biokataliza. Kontynuuję swoją naukową przygodę w Szkole Doktorskiej Politechniki Wrocławskiej współpracując z ZTT P.U.M.A. Specjalizuję się w metabolomice, skupiając się na analizie próbek biomedycznych metodami NMR oraz LC-MS. W swoich badaniach wykorzystuję nanocząstki srebra i złota oceniając ich profil toksykologiczny na poziomie metabolicznym. W czasie wolnym od pracy naukowej interesuję się jazdą na rowerze szosowym, wędrówkami górskimi oraz sportami walki. W sezonie zimowym, kiedy nie uprawiam sportu na dworze tworzę na drutach i wyszywam u boku moich dwóch kocich towarzyszy.",
+          "en": "I completed my engineering studies at Wrocław University of Environmental and Life Sciences in Biotechnology and my master's studies at Wrocław University of Technology in Molecular Biotechnology and Biocatalysis. I continue my scientific adventure at the Doctoral School of Wrocław University of Technology in collaboration with Z.T.T. P.U.M.A. I specialize in metabolomics, focusing on the analysis of biomedical samples using NMR and LC-MS methods. In my research, I use silver and gold nanoparticles to assess their toxicological profile at the metabolic level. In my free time away from scientific work, I am interested in road cycling, mountain hiking and martial arts. In the winter season, when I don't practice outdoor sports, I create by knitting and embroidering alongside my two cat companions."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "mgr inż. Weronika Łojewska",
+          "en": "mgr inż. Weronika Łojewska"
+        },
+        "legacyImage": "/images/team/WL.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "mgr inż.",
+          "en": "MEng"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "DONA PWR",
+              "en": "DONA PWR"
+            },
+            "url": "https://dona.pwr.edu.pl/szukaj/default.aspx?nrewid=803834"
+          }
+        ]
+      },
+      {
+        "_key": "member196",
+        "_type": "teamEntry",
+        "name": "Adrianna Pyra",
+        "category": "doktoranci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Doktorantka PWR-UMW",
+          "en": "PhD Candidate PWR-UMW"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Ukończyłam studia biotechnologiczne na Politechnice Wrocławskiej. Od 2024 roku kontynuuję swoją naukową przygodę w Szkole Doktorskiej Politechniki Wrocławskiej pod opieką Profesora Młynarza, Profesora Łukaszewicza oraz Profesora Junki w ZTT P.U.M.A. Mój projekt badawczy koncentruje się na opracowywaniu biotechnologicznych metod recyklingu materiałów bawełnianych. W wolnym czasie lubię malować i pływać.",
+          "en": "I graduated in biotechnology from Wrocław University of Technology. Since 2024, I have been continuing my scientific adventure at the Doctoral School of Wrocław University of Technology under the supervision of Professor Młynarz, Professor Łukaszewicz and Professor Junka at Z.T.T. P.U.M.A. My research project focuses on developing biotechnological methods for recycling cotton materials. In my free time, I like to paint and swim."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "mgr inż. Adrianna Pyra",
+          "en": "mgr inż. Adrianna Pyra"
+        },
+        "legacyImage": "/images/team/AP.jpg",
+        "academicTitle": {
+          "_type": "localizedText",
+          "pl": "mgr inż.",
+          "en": "MEng"
+        },
+        "links": [
+          {
+            "_key": "link0",
+            "_type": "profileLink",
+            "title": {
+              "_type": "localizedText",
+              "pl": "ResearchGate",
+              "en": "ResearchGate"
+            },
+            "url": "https://www.researchgate.net/profile/Adrianna-Pyra"
+          }
+        ]
+      },
+      {
+        "_key": "member201",
+        "_type": "teamEntry",
+        "name": "Kacper Pietrzak",
+        "category": "studenci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Student Farmacji",
+          "en": "Pharmacy Student"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem Studentem V roku farmacji na Uniwersytecie Medycznym im. Piastów Śląskich we Wrocławiu. Zajmuję się badaniami związanymi z użyciem modelu in vivo Galleria mellonella, na podstawie których powstaje moja praca magisterska. Poza nauką, poświęcam czas na tworzenie muzyki, pływanie, jazdę na rowerze i jestem miłośnikiem kina grozy.",
+          "en": "I am a 5th-year pharmacy student at Wroclaw Medical University. I am conducting research related to the use of the in vivo Galleria mellonella model, on which my master's thesis is based. Apart from studying, I devote time to making music, swimming, cycling and I am a fan of horror cinema."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Kacper Pietrzak",
+          "en": "Kacper Pietrzak"
+        },
+        "legacyImage": "/images/team/KP.jpg",
+        "links": []
+      },
+      {
+        "_key": "member202",
+        "_type": "teamEntry",
+        "name": "Sara Adamczyk",
+        "category": "studenci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Studentka Farmacji",
+          "en": "Pharmacy Student"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem studentką V roku Farmacji na Uniwersytecie Medycznym im. Piastów Śląskich we Wrocławiu. W roku akademickim 2025/2026 realizuję pisanie pracy magisterskiej w ZTT P.U.M.A. Interesuję się mikrobiologią – od 2023 roku jestem członkinią SKN Mikrobiologii Farmaceutycznej, gdzie jestem w trakcie realizacji projektu dotyczącego badania nabywania oporności bakterii na antyseptyki. W wolnym czasie jeżdżę na nartach biegowych i uczę się języka hiszpańskiego.",
+          "en": "I am a 5th-year Pharmacy student at Wroclaw Medical University. In the academic year 2025/2026, I am writing my master's thesis at Z.T.T. P.U.M.A. I am interested in microbiology - since 2023, I have been a member of the Scientific Circle of Pharmaceutical Microbiology, where I am in the process of implementing a project on studying the acquisition of bacterial resistance to antiseptics. In my free time, I go cross-country skiing and learn Spanish."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Sara Adamczyk",
+          "en": "Sara Adamczyk"
+        },
+        "legacyImage": "/images/team/SA.jpg",
+        "links": []
+      },
+      {
+        "_key": "member203",
+        "_type": "teamEntry",
+        "name": "Gabriela Skoczek",
+        "category": "studenci",
+        "position": {
+          "_type": "localizedText",
+          "pl": "Studentka Farmacji",
+          "en": "Pharmacy Student"
+        },
+        "copy": {
+          "_type": "localizedText",
+          "pl": "Jestem studentką V roku farmacji na Uniwersytecie Medycznym im. Piastów Śląskich we Wrocławiu. Od 2023 roku aktywnie działam w Studenckim Kole Naukowym Mikrobiologii Farmaceutycznej MicroPharm, gdzie angażuję się m.in. w badania nad mikroorganizmami rozwijającymi się na produktach kosmetycznych do ust oraz w projekt dotyczący interakcji pomiędzy antyseptykami. W roku akademickim 2025/2026 realizuję pracę magisterską w ZTT P.U.M.A. W wolnym czasie lubię gotować, piec, śpiewać oraz praktykować jogę.",
+          "en": "I am a 5th-year pharmacy student at Wroclaw Medical University. Since 2023, I have been actively involved in the MicroPharm Student Scientific Circle of Pharmaceutical Microbiology, where I engage in research on microorganisms developing on lip cosmetic products and in a project on interactions between antiseptics. In the academic year 2025/2026, I am writing my master's thesis at Z.T.T. P.U.M.A. In my free time, I like to cook, bake, sing and practice yoga."
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Gabriela Skoczek",
+          "en": "Gabriela Skoczek"
+        },
+        "legacyImage": "/images/team/GS.jpg",
+        "links": []
+      }
+    ]
+  },
+  "projects": {
+    "_type": "projectsPage",
+    "copy": {
+      "hero": {
+        "title": {
+          "_type": "localizedText",
+          "pl": "Aktualne projekty badawcze",
+          "en": "Current research projects"
+        },
+        "subtitle": {
+          "_type": "localizedText",
+          "pl": "Granty i współprace realizowane przez zespół P.U.M.A.",
+          "en": "Grants and collaborations implemented by the P.U.M.A. team."
+        }
+      },
+      "stats": {
+        "totalValue": {
+          "_type": "localizedText",
+          "pl": "Łączna wartość grantów",
+          "en": "Total value of grants"
+        },
+        "activeProjects": {
+          "_type": "localizedText",
+          "pl": "Aktywne projekty",
+          "en": "Active projects"
+        },
+        "partners": {
+          "_type": "localizedText",
+          "pl": "Partnerzy instytucjonalni",
+          "en": "Institutional partners"
+        },
+        "million": {
+          "_type": "localizedText",
+          "pl": "mln",
+          "en": "million"
+        }
+      },
+      "labels": {
+        "fundingBody": {
+          "_type": "localizedText",
+          "pl": "Źródło finansowania",
+          "en": "Funding source"
+        },
+        "projectNumber": {
+          "_type": "localizedText",
+          "pl": "Numer projektu",
+          "en": "Project number"
+        },
+        "fundingAmount": {
+          "_type": "localizedText",
+          "pl": "Wartość finansowania",
+          "en": "Funding amount"
+        },
+        "team": {
+          "_type": "localizedText",
+          "pl": "Zespół projektowy",
+          "en": "Project team"
+        },
+        "learnMore": {
+          "_type": "localizedText",
+          "pl": "Zobacz szczegóły projektu",
+          "en": "View project details"
+        }
+      }
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Aktualne projekty badawcze P.U.M.A.",
+      "en": "Current Research Projects – P.U.M.A."
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Granty i współprace realizowane przez zespół P.U.M.A. w Zakładzie Technologii Translacyjnych UMW.",
+      "en": "Grants and collaborations implemented by the P.U.M.A. team at the Department of Translational Technologies, MUW."
+    },
+    "items": [
+      {
+        "_key": "project0",
+        "_type": "projectEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Grant Agencji Badań Medycznych: Non-commercial, randomized clinical trial evaluating the efficacy of 1-8-cyneol (18C) in the treatment of MRSA nasal carriage (NOSE).",
+          "en": "Medical Research Agency Grant: Non-commercial, randomized clinical trial evaluating the efficacy of 1-8-cineol (18C) in the treatment of MRSA nasal carriage (NOSE)."
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Projekt NOSE to pierwsze w Polsce i na świecie, niekomercyjne, randomizowane badanie kliniczne oceniające miejscową skuteczność naturalnego związku - 1,8-cyneolu (eukaliptolu) podanego ustrojowo w eliminacji nosicielstwa metycylinoopornego Staphylococcus aureus (MRSA) z jamy nosowej. MRSA jest jednym z najgroźniejszych drobnoustrojów alarmowych, odpowiadającym za ciężkie infekcje szpitalne, powikłania pooperacyjne i wysoką śmiertelność.",
+          "en": "The NOSE project is the first non-commercial, randomized clinical trial in Poland and worldwide evaluating the local efficacy of a natural compound - 1,8-cineole (eucalyptol) administered systemically in eliminating methicillin-resistant Staphylococcus aureus (MRSA) carriage from the nasal cavity. MRSA is one of the most dangerous alarm microorganisms, responsible for severe hospital infections, postoperative complications and high mortality."
+        },
+        "fundingBody": {
+          "_type": "localizedText",
+          "pl": "Grant Agencji Badań Medycznych",
+          "en": "Medical Research Agency Grant"
+        },
+        "fundingNumber": "Nr ABM/2024/1",
+        "funderCode": "ABM",
+        "fundingAmount": 13215433.04,
+        "currency": "PLN",
+        "legacyImage": "/images/grant_logo/abm.svg",
+        "url": "https://abm.gov.pl/pl/",
+        "roles": [
+          {
+            "_key": "role0",
+            "_type": "projectRole",
+            "name": "Adam Junka",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Kierownik zadań laboratoryjnych mikrobiologicznych",
+              "en": "Head of microbiological laboratory tasks"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr hab.",
+              "en": "Dr. habil."
+            },
+            "universityTitle": {
+              "_type": "localizedText",
+              "pl": "prof. UMW",
+              "en": "Professor at UMW"
+            }
+          },
+          {
+            "_key": "role1",
+            "_type": "projectRole",
+            "name": "Malwina Brożyna",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Wykonawca zadań laboratoryjnych mikrobiologicznych",
+              "en": "Performer of microbiological laboratory tasks"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr",
+              "en": "PhD"
+            }
+          },
+          {
+            "_key": "role2",
+            "_type": "projectRole",
+            "name": "Bartłomiej Dudek",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Wykonawca zadań laboratoryjnych mikrobiologicznych",
+              "en": "Performer of microbiological laboratory tasks"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr",
+              "en": "PhD"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "project1",
+        "_type": "projectEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Grant Narodowego Centrum Badań i Rozwoju Lider XIII: Staphix – innowacyjne rozwiązania na bazie bakteriocyn do kontroli mikrobiomu skóry i błon śluzowych w weterynarii.",
+          "en": "National Centre for Research and Development Lider XIII Grant: Staphix – innovative bacteriocin-based solutions for controlling skin and mucous membrane microbiome in veterinary medicine."
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Pracownicy P.U.M.A. są wykonawcami zadań badawczych w projekcie NCBiR LIDER: StaphiX - innowacyjne rozwiązanie na bazie bakteriocyn do kontroli mikrobiomu skóry i błon śluzowych w weterynarii realizowanym przez Uniwersytet Przyrodniczy we Wrocławiu oraz Uniwersytet Wrocławski.",
+          "en": "P.U.M.A. employees are performers of research tasks in the NCBiR LIDER project: StaphiX - an innovative bacteriocin-based solution for controlling skin and mucous membrane microbiome in veterinary medicine, implemented by Wrocław University of Environmental and Life Sciences and University of Wrocław."
+        },
+        "fundingBody": {
+          "_type": "localizedText",
+          "pl": "Grant Narodowego Centrum Badań i Rozwoju Lider XIII",
+          "en": "National Centre for Research and Development Lider XIII Grant"
+        },
+        "fundingNumber": "Nr LIDER13/0100/2022",
+        "funderCode": "NCBiR",
+        "fundingAmount": 1499552.5,
+        "currency": "PLN",
+        "legacyImage": "/images/grant_logo/ncbr.svg",
+        "url": "https://www.gov.pl/web/ncbr",
+        "roles": [
+          {
+            "_key": "role0",
+            "_type": "projectRole",
+            "name": "Adam Junka",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Ekspert",
+              "en": "Expert"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr hab.",
+              "en": "Dr. habil."
+            },
+            "universityTitle": {
+              "_type": "localizedText",
+              "pl": "prof. UMW",
+              "en": "Professor at UMW"
+            }
+          },
+          {
+            "_key": "role1",
+            "_type": "projectRole",
+            "name": "Malwina Brożyna",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Wykonawca zadań badawczych",
+              "en": "Research task performer"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr",
+              "en": "PhD"
+            }
+          },
+          {
+            "_key": "role2",
+            "_type": "projectRole",
+            "name": "Bartłomiej Dudek",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Wykonawca zadań badawczych",
+              "en": "Research task performer"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr",
+              "en": "PhD"
+            }
+          }
+        ]
+      },
+      {
+        "_key": "project2",
+        "_type": "projectEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Grant Narodowego Centrum Nauki Preludium: Ocena aktywności przeciwbiofilmowej olejków eterycznych wobec drobnoustrojów izolowanych z zakażeń ran przewlekłych przeprowadzona w środowisku odzwierciedlającym środowisko rany przewlekłej.",
+          "en": "National Science Centre Preludium Grant: Evaluation of antibiofilm activity of essential oils against microorganisms isolated from chronic wound infections, conducted in an environment reflecting the chronic wound environment."
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Projekt ma na celu stworzenie modelu in vitro naśladującego środowisko zakażonej rany i pozwalającego na analizę wpływu olejków eterycznych – tymiankowego i rozmarynowego – na biofilm powstający w wyżej wymienionych warunkach.",
+          "en": "The project aims to create an in vitro model mimicking the environment of an infected wound and allowing analysis of the effect of essential oils - thyme and rosemary - on biofilm formed under the above-mentioned conditions."
+        },
+        "fundingBody": {
+          "_type": "localizedText",
+          "pl": "Grant Narodowego Centrum Nauki Preludium",
+          "en": "National Science Centre Preludium Grant"
+        },
+        "fundingNumber": "Nr 2021/41/N/NZ6/03305",
+        "funderCode": "NCN",
+        "fundingAmount": 139934,
+        "currency": "PLN",
+        "legacyImage": "/images/grant_logo/ncn.svg",
+        "url": "https://ncn.gov.pl",
+        "roles": [
+          {
+            "_key": "role0",
+            "_type": "projectRole",
+            "name": "Malwina Brożyna",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Kierownik projektu",
+              "en": "Project leader"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr",
+              "en": "PhD"
+            }
+          },
+          {
+            "_key": "role1",
+            "_type": "projectRole",
+            "name": "Adam Junka",
+            "role": {
+              "_type": "localizedText",
+              "pl": "Opiekun projektu",
+              "en": "Project supervisor"
+            },
+            "academicTitle": {
+              "_type": "localizedText",
+              "pl": "dr hab.",
+              "en": "Dr. habil."
+            },
+            "universityTitle": {
+              "_type": "localizedText",
+              "pl": "prof. UMW",
+              "en": "Professor at UMW"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publications": {
+    "_type": "publicationsPage",
+    "copy": {
+      "hero": {
+        "title": {
+          "_type": "localizedText",
+          "pl": "Wybrane Publikacje Naukowe",
+          "en": "Selected Scientific Publications"
+        },
+        "subtitle": {
+          "_type": "localizedText",
+          "pl": "Dorobek naukowy zespołu P.U.M.A.",
+          "en": "Scientific achievements of the P.U.M.A. team."
+        }
+      },
+      "filters": {
+        "allYears": {
+          "_type": "localizedText",
+          "pl": "Wszystkie lata",
+          "en": "All years"
+        },
+        "year": {
+          "_type": "localizedText",
+          "pl": "Rok",
+          "en": "Year"
+        },
+        "all": {
+          "_type": "localizedText",
+          "pl": "Wszystkie",
+          "en": "All"
+        }
+      },
+      "labels": {
+        "journal": {
+          "_type": "localizedText",
+          "pl": "Czasopismo",
+          "en": "Journal"
+        },
+        "readArticle": {
+          "_type": "localizedText",
+          "pl": "Czytaj artykuł",
+          "en": "Read article"
+        }
+      },
+      "months": {
+        "january": {
+          "_type": "localizedText",
+          "pl": "Styczeń",
+          "en": "January"
+        },
+        "february": {
+          "_type": "localizedText",
+          "pl": "Luty",
+          "en": "February"
+        },
+        "march": {
+          "_type": "localizedText",
+          "pl": "Marzec",
+          "en": "March"
+        },
+        "april": {
+          "_type": "localizedText",
+          "pl": "Kwiecień",
+          "en": "April"
+        },
+        "may": {
+          "_type": "localizedText",
+          "pl": "Maj",
+          "en": "May"
+        },
+        "june": {
+          "_type": "localizedText",
+          "pl": "Czerwiec",
+          "en": "June"
+        },
+        "july": {
+          "_type": "localizedText",
+          "pl": "Lipiec",
+          "en": "July"
+        },
+        "august": {
+          "_type": "localizedText",
+          "pl": "Sierpień",
+          "en": "August"
+        },
+        "september": {
+          "_type": "localizedText",
+          "pl": "Wrzesień",
+          "en": "September"
+        },
+        "october": {
+          "_type": "localizedText",
+          "pl": "Październik",
+          "en": "October"
+        },
+        "november": {
+          "_type": "localizedText",
+          "pl": "Listopad",
+          "en": "November"
+        },
+        "december": {
+          "_type": "localizedText",
+          "pl": "Grudzień",
+          "en": "December"
+        }
+      }
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Wybrane Publikacje Naukowe – P.U.M.A.",
+      "en": "Selected Scientific Publications – P.U.M.A."
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Dorobek naukowy zespołu P.U.M.A. w Zakładzie Technologii Translacyjnych Uniwersytetu Medycznego we Wrocławiu.",
+      "en": "Scientific achievements of the P.U.M.A. team at the Department of Translational Technologies, Medical University of Wrocław."
+    },
+    "items": [
+      {
+        "_key": "publication0",
+        "_type": "publicationEntry",
+        "title": "Artemisia argyi Levl.et Vant extract (AALE) and parthenolide suppress respiratory syncytial virus (RSV) via the RIG-I/TLR3 pathway in vivo and in vitro",
+        "authors": "Zeting Tan and Rongshun Liang and Adam Junka and Haoxuan Sun and Jie Jiang and Haojia Ma and Shisong Fang and Yanfang Sun",
+        "year": 2026,
+        "month": 4,
+        "journal": "Pharmaceuticals",
+        "doi": "10.3390/ph19040640",
+        "url": "https://www.mdpi.com/1424-8247/19/4/640"
+      },
+      {
+        "_key": "publication1",
+        "_type": "publicationEntry",
+        "title": "Artemisia extracts suppress H1N1 influenza A virus infection by targeting viral HA/NA proteins and modulating the TLR4/MyD88/NF-κB signaling axis",
+        "authors": "Zhongnan Hu and Hui Liu and Weihua Wu and Tayyab Ali and Adam Junka and Farukh S Sharopov and Xuan Zou and Shisong Fang and Yanfang Sun",
+        "year": 2026,
+        "month": 2,
+        "journal": "Pharmaceuticals",
+        "doi": "10.3390/ph19020275",
+        "url": "https://www.mdpi.com/1424-8247/19/2/275"
+      },
+      {
+        "_key": "publication2",
+        "_type": "publicationEntry",
+        "title": "Light-responsive phase-change nanoparticles for on-demand oxygen release to alleviate hypoxia for wound healing applications",
+        "authors": "Pejman Ghaffari-Bohlouli and Ruo-Lan Shi and Qiong Xiang and Adam Junka and Malwina Brożyna and Markus Rottmar and Lei Nie and Armin Shavandi",
+        "year": 2026,
+        "month": 3,
+        "journal": "Biomaterials Advances",
+        "doi": "10.1016/j.bioadv.2025.214607",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S2772950825004340"
+      },
+      {
+        "_key": "publication3",
+        "_type": "publicationEntry",
+        "title": "Design and optimization of the surfactant mixture ratio for oleic acid-based ophthalmic nanoemulsions prepared by the HPH technology − feasibility study for clotrimazole as a model drug",
+        "authors": "Agnieszka Gawin-Mikołajewicz and Katarzyna H Malec and Dominik M Marciniak and Arleta Dołowacka-Jóźwiak and Elżbieta C Piątkowska and Malwina Brożyna and Adam F Junka and Agata D Górniak and Izabela Polowczyk and Dominika Benkowska-Biernacka and Bożena L Karolewicz",
+        "year": 2026,
+        "month": 6,
+        "journal": "European Journal of Pharmaceutics and Biopharmaceutics",
+        "doi": "10.1016/j.ejpb.2026.115063",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0939641126000846?via%3Dihub"
+      },
+      {
+        "_key": "publication4",
+        "_type": "publicationEntry",
+        "title": "Assessment of biological activity of water-soluble polysaccharides isolated from cultivated Pleurotus pulmonarius and Pleurotus citrinopileatus",
+        "authors": "Paulina Pieniądz and Adrian Wiater and Mateusz Pięt and Elżbieta Samorek and Iwona Komaniecka and Marek Siwulski and Kamila Wlizło and Adam Junka and Aleksandra Woytoń and Adam Choma and Roman Paduch",
+        "year": 2024,
+        "month": 9,
+        "journal": "Acta Poloniae Pharmaceutica",
+        "doi": "10.32383/appdr/190506",
+        "url": "https://www.ptfarm.pl/wydawnictwa/czasopisma/acta-poloniae-pharmaceutica/110/-/30580"
+      },
+      {
+        "_key": "publication5",
+        "_type": "publicationEntry",
+        "title": "Effect of the addition of graphene flakes on the physical and biological properties of composite paints",
+        "authors": "Natalia Bartczak and Jerzy Kowalczyk and Robert Tomala and Mariusz Stefanski and Damian Szymański and Maciej Ptak and Wiesław Stręk and Konrad Szustakiewicz and Tomasz Kurzynowski and Łukasz Szczepański and Adam Junka and Damian Gorczyca and Paweł Głuchowski",
+        "year": 2023,
+        "month": 8,
+        "journal": "Molecules",
+        "doi": "10.3390/molecules28166173",
+        "url": "https://www.mdpi.com/1420-3049/28/16/6173"
+      },
+      {
+        "_key": "publication6",
+        "_type": "publicationEntry",
+        "title": "An epidemic behind the bars: AIDS in American prisons",
+        "authors": "Jędrzej Dzięgielewski and Iga Barczak and Barbara Dalkowska and Adam Feliks Junka and Marzenna Bartoszewicz and Artur Furga",
+        "year": 2023,
+        "month": 12,
+        "journal": "PROBACJA",
+        "doi": "10.5604/01.3001.0054.0192",
+        "url": "https://probacja.com/article/01.3001.0054.0192/pl?language=en"
+      },
+      {
+        "_key": "publication7",
+        "_type": "publicationEntry",
+        "title": "Ocena skuteczności maści SutriHeal® Forte 10% względem tworzonego przez Pseudomonas aeruginosa i Staphylococcus aureus biofimu mieszanego o wysokiej tolerancji na bacytracynę, neomycynę i polimyksynę A",
+        "authors": "Adam Junka and Monika Dzięgielewska and Michał Worek and Marzenna Bartoszewicz",
+        "year": 2023,
+        "month": 3,
+        "journal": "Forum Zakażeń",
+        "doi": "10.15374/fz2023005",
+        "url": "https://evereth.pl/project/ocena-skutecznosci-masci-sutriheal-forte-10/#"
+      },
+      {
+        "_key": "publication8",
+        "_type": "publicationEntry",
+        "title": "Comparison of antibiofilm activity of low-concentrated hypochlorites vs polyhexanide-containing antiseptic",
+        "authors": "Justyna Paleczny and Adam Felix Junka and Paweł Krzyżek and Joanna Czajkowska and Axel Kramer and Hicham Benkhai and Ewa Żyfka-Zagrodzińska and Marzenna Bartoszewicz",
+        "year": 2023,
+        "month": 3,
+        "journal": "Frontiers in cellular and infection microbiology",
+        "doi": "10.3389/fcimb.2023.1119188",
+        "url": "https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2023.1119188/full"
+      },
+      {
+        "_key": "publication9",
+        "_type": "publicationEntry",
+        "title": "Real-time impedance-based monitoring of the growth and inhibition of osteomyelitis biofilm pathogen Staphylococcus aureus treated with novel bisphosphonate-fluoroquinolone antimicrobial conjugates",
+        "authors": "Parish P Sedghizadeh and Philip Cherian and Sahar Roshandel and Natalia Tjokro and Casey Chen and Adam F Junka and Eric Hu and Jeffrey Neighbors and Jacek Pawlak and R Graham G Russell and Charles E McKenna and Frank H Ebetino and Shuting Sun and Esmat Sodagar",
+        "year": 2023,
+        "month": 1,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms24031985",
+        "url": "https://www.mdpi.com/1422-0067/24/3/1985"
+      },
+      {
+        "_key": "publication10",
+        "_type": "publicationEntry",
+        "title": "Argon plasma-modified bacterial cellulose filters for protection against respiratory pathogens",
+        "authors": "Anna Żywicka and Daria Ciecholewska-Juśko and Magdalena Charęza and Radosław Drozd and Peter Sobolewski and Adam Junka and Selestina Gorgieva and Miroslawa El Fray and Karol Fijałkowski",
+        "year": 2023,
+        "month": 2,
+        "journal": "Carbohydrate Polymers",
+        "doi": "10.1016/j.carbpol.2022.120322",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0144861722012279?via%3Dihub"
+      },
+      {
+        "_key": "publication11",
+        "_type": "publicationEntry",
+        "title": "(1→3)-α-d-glucan from the pink oyster mushroom (Pleurotus djamor): structural features",
+        "authors": "Paulina Adamczyk and Iwona Komaniecka and Marek Siwulski and Kamila Wlizło and Adam Junka and Artur Nowak and Dariusz Kowalczyk and Adam Waśko and Jolanta Lisiecka and Michał Grzymajło and Adrian Wiater",
+        "year": 2025,
+        "month": 4,
+        "journal": "Foods",
+        "doi": "10.3390/foods14071272",
+        "url": "https://www.mdpi.com/2304-8158/14/7/1272"
+      },
+      {
+        "_key": "publication12",
+        "_type": "publicationEntry",
+        "title": "Impact of amber powdered waste on the processability and properties of PCL-based materials",
+        "authors": "Cláudia A B dos Santos and Bartłomiej Kryszak and Michał Grzymajło and Łukasz J Wilk and Patrycja Szymczyk-Ziółkowska and Adam Junka and Aleksandra Ujćič and Konrad Szustakiewicz",
+        "year": 2025,
+        "month": 3,
+        "journal": "Journal of Materials Research and Technology",
+        "doi": "10.1016/j.jmrt.2025.02.227",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2238785425004740"
+      },
+      {
+        "_key": "publication13",
+        "_type": "publicationEntry",
+        "title": "Targeting ocular biofilms with plant-derived antimicrobials in the era of antibiotic resistance",
+        "authors": "Monika Dzięgielewska and Michał Tomczyk and Adrian Wiater and Aleksandra Woytoń and Adam Junka",
+        "year": 2025,
+        "month": 5,
+        "journal": "Molecules",
+        "doi": "10.3390/molecules30132863",
+        "url": "https://www.mdpi.com/1420-3049/30/13/2863"
+      },
+      {
+        "_key": "publication14",
+        "_type": "publicationEntry",
+        "title": "Synergy of tetracyclines and potassium azeloyl diglycinate (azeloglycine) in hydrogels: evaluation of stability, antimicrobial activity, and physicochemical properties",
+        "authors": "Agnieszka Kostrzębska and Adam Junka and Witold Musiał",
+        "year": 2025,
+        "month": 5,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms26115239",
+        "url": "https://www.mdpi.com/1422-0067/26/11/5239"
+      },
+      {
+        "_key": "publication15",
+        "_type": "publicationEntry",
+        "title": "Cytocompatible and antibacterial Fe-, Cu- and Zn-substituted calcium hydroxyapatite materials for skin applications",
+        "authors": "L Lukaviciute and A Lukowiak and Z Stankeviciute and Adam Junka and M Mortimer and A Zarkov and J.-C. Yang and R Ganceviciene and A Kareiva",
+        "year": 2025,
+        "month": 4,
+        "journal": "Ceramics International",
+        "doi": "10.1016/j.ceramint.2024.12.545",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272884224062205"
+      },
+      {
+        "_key": "publication16",
+        "_type": "publicationEntry",
+        "title": "Wielopłaszczyznowa terapia 1,8-cyneolem o działaniu przeciwdrobnoustrojowym i przeciwzapalnym w leczeniu chorób dróg oddechowych",
+        "authors": "Jarosław Markowski and Milena Szymańska and Adam Junka",
+        "year": 2025,
+        "month": 2,
+        "journal": "Otolaryngologia Polska",
+        "doi": "10.5604/01.3001.0054.9607",
+        "url": "https://otolaryngologypl.com/article/549607/en"
+      },
+      {
+        "_key": "publication17",
+        "_type": "publicationEntry",
+        "title": "Zastosowanie dichlorowodorku oktenidyny w otorynolaryngologii – przegląd badań in vitro oraz klinicznych",
+        "authors": "Aleksandra Olkiewicz and Adam Junka and Tomasz Zatoński",
+        "year": 2025,
+        "month": 4,
+        "journal": "Nowa Audiofonologia",
+        "doi": "10.17431/na/201134",
+        "url": "https://www.nowaaudiofonologia.pl/Zastosowanie-dichlorowodorku-oktenidyny-w-otorynolaryngologii-przeglad-badan-in-vitro,201134,0,1.html"
+      },
+      {
+        "_key": "publication18",
+        "_type": "publicationEntry",
+        "title": "Borax - and tannic acid-based post-3D-printing treatment to tune the mechanical properties of scaffolds",
+        "authors": "Julia Simińska-Stanny and Parinaz Hobbi and Pejman Ghaffari-Bohlouli and Man Li and Adam Junka and Hafez Jafari and Christine Delporte and Lei Nie and Armin Shavandi",
+        "year": 2025,
+        "month": 7,
+        "journal": "Biomaterials Science",
+        "doi": "10.1039/d5bm00151j",
+        "url": "https://pubs.rsc.org/en/content/articlelanding/2025/bm/d5bm00151j"
+      },
+      {
+        "_key": "publication19",
+        "_type": "publicationEntry",
+        "title": "Antibacterial metallacarborane-peptide hybrids target the membrane potential in a nonlytic mode and are resistant to proteolysis",
+        "authors": "Krzysztof Fink and Bożena Szermer-Olearnik and Anna Kędziora and Bartłomiej Dudek and Gabriela Bugla-Płoskońska and Waldemar Goldeman and Michalina Gos and Monika Cuprych-Belter and Mateusz Psurski and Paweł Migdał and Mariusz Uchman and Tomasz M Goszczyński",
+        "year": 2025,
+        "month": 7,
+        "journal": "Journal of Medicinal Chemistry",
+        "doi": "10.1021/acs.jmedchem.5c01025",
+        "url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5c01025"
+      },
+      {
+        "_key": "publication20",
+        "_type": "publicationEntry",
+        "title": "Synthesis and characterization of curcumin-polycaprolactone block copolymers for biomedical applications",
+        "authors": "Qianqian Wei and Adam Junka and Bartłomiej Dudek and Houman Alimoradi and Julia Simińska-Stanny and Lei Nie and Oseweuba Valentine Okoro and Armin Shavandi",
+        "year": 2025,
+        "month": 7,
+        "journal": "Materials",
+        "doi": "10.3390/ma18184348",
+        "url": "https://www.mdpi.com/1996-1944/18/18/4348"
+      },
+      {
+        "_key": "publication21",
+        "_type": "publicationEntry",
+        "title": "Mechanical and antimicrobial properties of the graphene-polyamide 6 composite",
+        "authors": "Paweł Głuchowski and Marta Macieja and Robert Tomala and Mariusz Stefanski and Wiesław Stręk and Maciej Ptak and Damian Szymański and Konrad Szustakiewicz and Adam Junka and Bartłomiej Dudek",
+        "year": 2024,
+        "month": 6,
+        "journal": "Materials",
+        "doi": "10.3390/ma17143465",
+        "url": "https://www.mdpi.com/1996-1944/17/14/3465"
+      },
+      {
+        "_key": "publication22",
+        "_type": "publicationEntry",
+        "title": "Lipopolysaccharide with long O-antigen is crucial for Salmonella Enteritidis to evade complement activity and to facilitate bacterial survival in vivo in the Galleria mellonella infection model",
+        "authors": "Eva Krzyżewska-Dudek and Vinaya Dulipati and Katarzyna Kapczyńska and Mateusz Noszka and Carmen Chen and Juha Kotimaa and Marta Książczyk and Bartłomiej Dudek and Gabriela Bugla-Płoskońska and Krzysztof Pawlik and Seppo Meri and Jacek Rybka",
+        "year": 2024,
+        "month": 5,
+        "journal": "Medical Microbiology and Immunology",
+        "doi": "10.1007/s00430-024-00790-3",
+        "url": "https://link.springer.com/article/10.1007/s00430-024-00790-3"
+      },
+      {
+        "_key": "publication23",
+        "_type": "publicationEntry",
+        "title": "Culturable fungi in Arctic cryoconite holes: A case study from Hansbreen, Spitsbergen",
+        "authors": "Rafał Ogórek and Jakub Suchodolski and Agata Piecuch and Magdalena Cal and Klaudyna Spychała and Bartłomiej Dudek",
+        "year": 2024,
+        "month": 7,
+        "journal": "Polish Polar Research",
+        "doi": "10.24425/ppr.2024.150878",
+        "url": "https://journals.pan.pl/dlibra/publication/150878/edition/132272/content"
+      },
+      {
+        "_key": "publication24",
+        "_type": "publicationEntry",
+        "title": "Structural patterns enhancing the antibacterial activity of metallacarborane-based antibiotics",
+        "authors": "Jakub Cebula and Krzysztof Fink and Waldemar Goldeman and Bożena Szermer-Olearnik and Anna Nasulewicz-Goldeman and Mateusz Psurski and Monika Cuprych and Anna Kędziora and Bartłomiej Dudek and Gabriela Bugla-Płoskońska and Monika Chaszczewska-Markowska and Michalina Gos and Paweł Migdał and Tomasz M Goszczyński",
+        "year": 2023,
+        "month": 10,
+        "journal": "Journal of Medicinal Chemistry",
+        "doi": "10.1021/acs.jmedchem.3c01516",
+        "url": "https://pubs.acs.org/doi/abs/10.1021/acs.jmedchem.3c01516"
+      },
+      {
+        "_key": "publication25",
+        "_type": "publicationEntry",
+        "title": "In vitro activity of octenidine dihydrochloride-containing lozenges against biofilm-forming pathogens of oral cavity and throat",
+        "authors": "Bartłomiej Dudek and Justyna Tymińska and Patrycja Szymczyk-Ziółkowska and Grzegorz Chodaczek and Paweł Migdał and Joanna Czajkowska and Adam Junka",
+        "year": 2023,
+        "month": 2,
+        "journal": "Applied Sciences",
+        "doi": "10.3390/app13052974",
+        "url": "https://www.mdpi.com/2076-3417/13/5/2974"
+      },
+      {
+        "_key": "publication26",
+        "_type": "publicationEntry",
+        "title": "Toward essential oil stewardship: strain-resolved evaluation of thyme oil activity against Pseudomonas aeruginosa",
+        "authors": "Malwina Brożyna and Zuzanna Stępnicka and Natalia Tymińska and Bartłomiej Dudek and Katarzyna Kapczyńska and Adam Matkowski and Yanfang Sun and Michał Tomczyk and Adam Junka",
+        "year": 2025,
+        "month": 9,
+        "journal": "Frontiers in Pharmacology",
+        "doi": "10.3389/fphar.2025.1659096",
+        "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2025.1659096/full"
+      },
+      {
+        "_key": "publication27",
+        "_type": "publicationEntry",
+        "title": "Establishing essential oil stewardship through the case of rosemary and thyme oils against Staphylococcus aureus",
+        "authors": "Malwina Brożyna and Zuzanna Stępnicka and Katarzyna Kapczyńska and Bartłomiej Dudek and Adam Matkowski and Adam Junka",
+        "year": 2025,
+        "month": 9,
+        "journal": "Frontiers in Microbiology",
+        "doi": "10.3389/fmicb.2025.1668594",
+        "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2025.1668594/full"
+      },
+      {
+        "_key": "publication28",
+        "_type": "publicationEntry",
+        "title": "Antimicrobial properties and toxicity challenges of chlorine dioxide used in alternative medicine",
+        "authors": "Ruth Dudek-Wicher and Malwina Brożyna and Justyna Paleczny and Beata Mączyńska and Bartłomiej Dudek and Paweł Migdał and Arleta Dołowacka-Jóźwiak and Jędrzej Fischer and Adam Junka",
+        "year": 2025,
+        "month": 5,
+        "journal": "Scientific Reports",
+        "doi": "10.1038/s41598-025-01852-z",
+        "url": "https://www.nature.com/articles/s41598-025-01852-z"
+      },
+      {
+        "_key": "publication29",
+        "_type": "publicationEntry",
+        "title": "Galleria mellonella larvae as a model for Helicobacter pylori biofilm formation under antibiotic stress",
+        "authors": "Paweł Krzyżek and Bartłomiej Dudek and Malwina Brożyna and Barbara Krzyżanowska and Adam Junka",
+        "year": 2025,
+        "month": 1,
+        "journal": "Microbial Pathogenesis",
+        "doi": "10.1016/j.micpath.2024.107121",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0882401024005886?via%3Dihub"
+      },
+      {
+        "_key": "publication30",
+        "_type": "publicationEntry",
+        "title": "Oxidation of myrtenol to myrtenal epoxide in a porphyrin-based photocatalytic system – A novel terpene alcohol derivative with antimicrobial and anticancer properties",
+        "authors": "Mateusz Kutyła and Mateusz Pięt and Marek Stankevič and Adam Junka and Malwina Brożyna and Bartłomiej Dudek and Roman Paduch and Mariusz Trytek",
+        "year": 2025,
+        "month": 1,
+        "journal": "Bioorganic Chemistry",
+        "doi": "10.1016/j.bioorg.2024.108047",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0045206824009520?via%3Dihub"
+      },
+      {
+        "_key": "publication31",
+        "_type": "publicationEntry",
+        "title": "The potential impact of edible fruit extracts on bacterial nucleases in preliminary research - in silico and in vitro insight",
+        "authors": "Łukasz Szeleszczuk and Malwina Brożyna and Bartłomiej Dudek and Marcin Czarnecki and Adam Junka and Monika E Czerwińska",
+        "year": 2025,
+        "month": 1,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms26041757",
+        "url": "https://www.mdpi.com/1422-0067/26/4/1757"
+      },
+      {
+        "_key": "publication32",
+        "_type": "publicationEntry",
+        "title": "Novel isoxazole-based antifungal drug candidates",
+        "authors": "Urszula Bąchor and Malwina Brożyna and Adam Junka and Mateusz Ramires Chmielarz and Damian Gorczyca and Marcin Mączyński",
+        "year": 2024,
+        "month": 12,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms252413618",
+        "url": "https://www.mdpi.com/1422-0067/25/24/13618"
+      },
+      {
+        "_key": "publication33",
+        "_type": "publicationEntry",
+        "title": "New biocompatible Ti-MOF@hydroxyapatite composite boosted with gentamicin for postoperative infection control",
+        "authors": "Weronika Bodylska and Adam Junka and Malwina Brożyna and Michał Bartmański and Renata Gadzała-Kopciuch and Anna Jaromin and Jorge A R Navarro and Anna Lukowiak and Marzena Fandzloch",
+        "year": 2024,
+        "month": 11,
+        "journal": "ACS Biomaterials Science & Engineering",
+        "doi": "10.1021/acsbiomaterials.4c01230",
+        "url": "https://pubs.acs.org/doi/10.1021/acsbiomaterials.4c01230"
+      },
+      {
+        "_key": "publication34",
+        "_type": "publicationEntry",
+        "title": "The chronic wound milieu changes essential oils' antibiofilm activity–an in vitro and larval model study",
+        "authors": "Malwina Brożyna and Bartłomiej Dudek and Weronika Kozłowska and Katarzyna Malec and Justyna Paleczny and Jerzy Detyna and Krystyna Fabianowska-Majewska and Adam Junka",
+        "year": 2024,
+        "month": 1,
+        "journal": "Scientific Reports",
+        "doi": "10.1038/s41598-024-52424-6",
+        "url": "https://www.nature.com/articles/s41598-024-52424-6"
+      },
+      {
+        "_key": "publication35",
+        "_type": "publicationEntry",
+        "title": "In vitro and in vivo translational insights into the intraoperative use of antiseptics and lavage solutions against microorganisms causing orthopedic infections",
+        "authors": "Bartłomiej Dudek and Malwina Brożyna and Michał Karoluk and Mariusz Frankiewicz and Paweł Migdał and Konrad Szustakiewicz and Tomasz Matys and Adrian Wiater and Adam Junka",
+        "year": 2024,
+        "month": 11,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms252312720",
+        "url": "https://www.mdpi.com/1422-0067/25/23/12720"
+      },
+      {
+        "_key": "publication36",
+        "_type": "publicationEntry",
+        "title": "Abietic acid as a novel agent against ocular biofilms: an in vitro and preliminary in vivo investigation",
+        "authors": "Monika Dzięgielewska and Marzenna Bartoszewicz and Marta Książczyk and Bartłomiej Dudek and Malwina Brożyna and Patrycja Szymczyk-Ziółkowska and Piotr Gruber and Jacek Pawlak and Weronika Kozłowska and Sylwia Zielińska and Jędrzej Fischer and Aleksandra Woytoń and Adam Junka",
+        "year": 2024,
+        "month": 12,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms25031528",
+        "url": "https://www.mdpi.com/1422-0067/25/3/1528"
+      },
+      {
+        "_key": "publication37",
+        "_type": "publicationEntry",
+        "title": "The influence of the pectin structure on the properties of hydrogel dressings doped with octenidine-containing antiseptic",
+        "authors": "Marta Fiedot and Adam Junka and Malwina Brożyna and Justyna Cybulska and Artur Zdunek and Olga Kockova and Krzysztof Lis and Katarzyna Chomiak and Maciej Czajkowski and Roman Jędrzejewski and Konrad Szustakiewicz and Joanna Cybińska and John F Kennedy",
+        "year": 2024,
+        "month": 11,
+        "journal": "Carbohydrate Polymers",
+        "doi": "10.1016/j.carbpol.2024.122463",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0144861724006891?via%3Dihub"
+      },
+      {
+        "_key": "publication38",
+        "_type": "publicationEntry",
+        "title": "The assessment of physicochemical and antimicrobial properties of hydrophilic gels containing tetracycline hydrochloride and various concentrations of ethanol",
+        "authors": "Agnieszka Kostrzębska and Adam Junka and Malwina Brożyna and Witold Musiał",
+        "year": 2024,
+        "month": 5,
+        "journal": "Pharmaceutics",
+        "doi": "10.3390/pharmaceutics16060830",
+        "url": "https://www.mdpi.com/1999-4923/16/6/830"
+      },
+      {
+        "_key": "publication39",
+        "_type": "publicationEntry",
+        "title": "The in vitro impact of isoxazole derivatives on pathogenic biofilm and cytotoxicity of fibroblast cell line",
+        "authors": "Urszula Bąchor and Adam Junka and Malwina Brożyna and Marcin Mączyński",
+        "year": 2023,
+        "month": 12,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms24032997",
+        "url": "https://www.mdpi.com/1422-0067/24/3/2997"
+      },
+      {
+        "_key": "publication40",
+        "_type": "publicationEntry",
+        "title": "Antimicrobial and cytotoxic activities of water-soluble isoxazole-linked 1,3,4-oxadiazole with delocalized charge: in vitro and in vivo results",
+        "authors": "Bartłomiej Dudek and Urszula Bąchor and Ewa Drozd-Szczygieł and Malwina Brożyna and Piotr Dąbrowski and Adam Junka and Marcin Mączyński",
+        "year": 2023,
+        "month": 10,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms242216033",
+        "url": "https://www.mdpi.com/1422-0067/24/22/16033"
+      },
+      {
+        "_key": "publication41",
+        "_type": "publicationEntry",
+        "title": "The effect of extrusion and injection molding on physical, chemical, and biological properties of PLLA/HAp whiskers composites",
+        "authors": "Bartłomiej Kryszak and Monika Biernat and Paulina Tymowicz-Grzyb and Adam Junka and Malwina Brożyna and Michał Worek and Paulina Dzienny and Arkadiusz Antończak and Konrad Szustakiewicz",
+        "year": 2023,
+        "month": 11,
+        "journal": "Polymer",
+        "doi": "10.1016/j.polymer.2023.126428",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0032386123007589?via%3Dihub"
+      },
+      {
+        "_key": "publication42",
+        "_type": "publicationEntry",
+        "title": "Influence of bioactive metal fillers on antimicrobial properties of PA12 composites produced by laser-based powder bed fusion of polymers",
+        "authors": "Piotr Gruber and Patrycja Szymczyk-Ziółkowska and Michał Olejarczyk and Adam Junka and Krystyna Fabianowska-Majewska and Malwina Brożyna and Tomasz Kurzynowski",
+        "year": 2023,
+        "month": 12,
+        "journal": "Acta of Bioengineering and Biomechanics",
+        "doi": "10.37190/abb-02303-2023-04",
+        "url": "https://reference-global.com/article/10.37190/abb-02303-2023-04"
+      },
+      {
+        "_key": "publication43",
+        "_type": "publicationEntry",
+        "title": "Culture shock: an investigation into the tolerance of pathogenic biofilms to antiseptics in environments resembling the chronic wound milieu",
+        "authors": "Justyna Paleczny and Malwina Brożyna and Bartłomiej Dudek and Aleksandra Woytoń and Grzegorz Chodaczek and Marta Szajnik and Adam Junka",
+        "year": 2023,
+        "month": 12,
+        "journal": "International Journal of Molecular Sciences",
+        "doi": "10.3390/ijms242417242",
+        "url": "https://www.mdpi.com/1422-0067/24/24/17242"
+      }
+    ]
+  },
+  "models": {
+    "_type": "modelsPage",
+    "copy": {
+      "hero": {
+        "title": {
+          "_type": "localizedText",
+          "pl": "Modele badawcze",
+          "en": "Research models"
+        },
+        "subtitle": {
+          "_type": "localizedText",
+          "pl": "Innowacyjne systemy i organizmy modelowe stosowane w P.U.M.A.",
+          "en": "Innovative systems and model organisms used at P.U.M.A."
+        }
+      }
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Modele Badawcze – P.U.M.A.",
+      "en": "Research Models – P.U.M.A."
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Innowacyjne systemy i organizmy modelowe stosowane w badaniach P.U.M.A. w Zakładzie Technologii Translacyjnych UMW.",
+      "en": "Innovative systems and model organisms used in P.U.M.A. research at the Department of Translational Technologies, MUW."
+    },
+    "items": [
+      {
+        "_key": "model0",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Larwy Galleria mellonella",
+          "en": "Galleria mellonella larvae"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Bezkręgowy organizm modelowy wykorzystywany w badaniach ",
+                  "marks": []
+                },
+                {
+                  "_type": "span",
+                  "_key": "s2",
+                  "text": "in vivo",
+                  "marks": ["em"]
+                },
+                {
+                  "_type": "span",
+                  "_key": "s3",
+                  "text": ", między innymi w zakresie toksykologicznym, mikrobiologicznym oraz behavioralnym. W ciągu dwóch lat pracy na organizmie, doprowadziliśmy do dwóch zgłoszeń patentowych:",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s5",
+                  "text": "badanie infekcji miejscowych",
+                  "marks": []
+                }
+              ],
+              "listItem": "number",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s7",
+                  "text": "ocena cytotoksyczności kontaktowej materiałów i biomateriałów",
+                  "marks": []
+                }
+              ],
+              "listItem": "number",
+              "level": 1
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "An invertebrate model organism used in ",
+                  "marks": []
+                },
+                {
+                  "_type": "span",
+                  "_key": "s2",
+                  "text": "in vivo",
+                  "marks": ["em"]
+                },
+                {
+                  "_type": "span",
+                  "_key": "s3",
+                  "text": " research, including toxicological, microbiological, and behavioral studies. During two years of work with this organism, we have made two patent applications:",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s5",
+                  "text": "examination of local infections",
+                  "marks": []
+                }
+              ],
+              "listItem": "number",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s7",
+                  "text": "assessment of contact cytotoxicity of materials and biomaterials",
+                  "marks": []
+                }
+              ],
+              "listItem": "number",
+              "level": 1
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Larwy Galleria mellonella",
+          "en": "Galleria mellonella larvae"
+        },
+        "legacyImage": "/images/models/larwy.png"
+      },
+      {
+        "_key": "model1",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Śluzowiec Physarum polycephalum ('blob')",
+          "en": "Slime mold Physarum polycephalum ('blob')"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Żywy system do badań nad sieciami, algorytmami i adaptacją, zjawiskami emergentnymi.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "A living system for research on networks, algorithms and adaptation, emergent phenomena.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Śluzowiec Physarum polycephalum ('blob')",
+          "en": "Slime mold Physarum polycephalum ('blob')"
+        },
+        "legacyImage": "/images/models/blob.png"
+      },
+      {
+        "_key": "model2",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Kolekcja szczepów bakteryjnych i grzybiczych",
+          "en": "Collection of bacterial and fungal strains"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Zarówno referencyjnych, jak i klinicznych.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Both reference and clinical strains.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Kolekcja szczepów bakteryjnych i grzybiczych",
+          "en": "Collection of bacterial and fungal strains"
+        },
+        "legacyImage": "/images/models/bakterie_i_grzyby.png"
+      },
+      {
+        "_key": "model3",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Linie komórkowe",
+          "en": "Cell lines"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Modele komórkowe do badań przedklinicznych i oceny cytotoksyczności.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Cell models for preclinical research and cytotoxicity assessment.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Linie komórkowe",
+          "en": "Cell lines"
+        },
+        "legacyImage": "/images/models/linie_komorkowe.png"
+      },
+      {
+        "_key": "model4",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Pola magnetyczne o modulowanym kształcie fali i częstotliwości",
+          "en": "Magnetic fields with modulated waveform and frequency"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Narzędzie do badania wpływu czynników fizycznych na mikroorganizmy i materiały, w tym efektów addytywnych i synergistycznych w zwalczaniu wielolekooporności.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "A tool for studying the impact of physical factors on microorganisms and materials, including additive and synergistic effects in combating multidrug resistance.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Pola magnetyczne o modulowanym kształcie fali i częstotliwości",
+          "en": "Magnetic fields with modulated waveform and frequency"
+        },
+        "legacyImage": "/images/models/pole_magnetyczne.png"
+      },
+      {
+        "_key": "model5",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Agenci AI",
+          "en": "AI Agents"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Sztuczna inteligencja analizująca wzorce ruchów i odpowiedzi biologicznych.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Artificial intelligence analyzing patterns of movement and biological responses.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Agenci AI",
+          "en": "AI Agents"
+        },
+        "legacyImage": "/images/models/ai-agent.png"
+      },
+      {
+        "_key": "model6",
+        "_type": "modelEntry",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Twój model",
+          "en": "Your model"
+        },
+        "description": {
+          "_type": "localizedRichText",
+          "pl": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Masz pomysł, którego nikt jeszcze nie testował? My go zbudujemy! Uwielbiamy tworzyć narzędzia, które otwierają nowe możliwości badawcze.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "en": [
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Have an idea that no one has tested yet? We'll build it! We love creating tools that open up new research possibilities.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Twój model",
+          "en": "Your model"
+        },
+        "legacyImage": "/images/models/question.png"
+      }
+    ]
+  }
+}

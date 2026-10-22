@@ -4,10 +4,13 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { isReviewMode } from "@/lib/review-mode";
 import { BASE_URL, buildAlternates } from "@/lib/seo";
 import "../globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getSharedContent } from "@/lib/cms-shared-loader";
+import { getWebsiteContent } from "@/lib/cms";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -43,6 +46,7 @@ export async function generateMetadata({
   const url = locale === "pl" ? BASE_URL : `${BASE_URL}/en`;
 
   return {
+    robots: isReviewMode() ? { index: false, follow: false } : undefined,
     metadataBase: new URL(BASE_URL),
     title,
     description,
@@ -104,6 +108,10 @@ export default async function LocaleLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const [{ settings }, chrome] = await Promise.all([
+    getWebsiteContent(locale),
+    getSharedContent("shell", locale),
+  ]);
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -114,11 +122,26 @@ export default async function LocaleLayout({
       <body className={roboto.variable}>
         <NextIntlClientProvider messages={messages}>
           <a href="#main-content" className="skip-to-main">
-            {locale === "en" ? "Skip to main content" : "Przejdź do treści głównej"}
+            {chrome.copy.skip}
           </a>
-          <Header />
+          {isReviewMode() && (
+            <aside
+              role="note"
+              style={{
+                padding: "0.75rem 1rem",
+                background: "#fff3cd",
+                color: "#493b11",
+                textAlign: "center",
+              }}
+            >
+              {locale === "en"
+                ? "Development review — CMS changes affect this preview only. Email delivery is disabled."
+                : "Wersja testowa — zmiany w CMS dotyczą tylko tego podglądu. Wysyłanie wiadomości jest wyłączone."}
+            </aside>
+          )}
+          <Header chrome={chrome} />
           <main id="main-content">{children}</main>
-          <Footer />
+          <Footer settings={settings} chrome={chrome} />
           <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>
