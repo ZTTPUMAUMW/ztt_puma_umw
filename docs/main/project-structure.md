@@ -103,3 +103,7 @@ Added studio/schemaTypes/marketingPages.ts and marketingInitialValues.json; fron
 ## Navigation and Research — 2026-10-21
 
 Added sharedPages.ts/sharedInitialValues.json in Studio and cms-shared normalization/defaults/loader/tests in frontend. Locale layout supplies shared CMS content to Header/Footer. Added the research route, localized routing and SEO mapping, and research.module.scss. See cms-research-guide.md.
+
+## Research review feedback — 2026-10-22
+
+Added cms-research.ts for media normalization and researchMedia.ts for CMS table/parameter/grade/video objects. Supplied optimized copies and posters live in frontend/public/research/vitality. Research reuses Team introduction and Publications navigation styles. See research-media-review.md.

@@ -15,3 +15,7 @@ Research contains a description, an Excel attachment placeholder, a vitality-sca
 Navigation/branding is a separate singleton from Site settings; Site settings continues to own contact details and footer organization wording. New documents are prefilled from the current website. Publishing development content has no effect on the live site. Publishing drafts to a staging preview remains the next integration phase.
 
 Remaining before production: agree public/restricted file access; implement real Research media; authenticated draft preview/staging; CMS backups; security/dependency review; reviewed production migration. Nothing has been pushed to main.
+
+## Supplied media update — 2026-10-22
+
+The screenshot review replaces the earlier placeholders: the attachments area is removed, and the vitality table/nine videos are now included. Use the new Research table and parameter editors. See research-media-review.md for ordering, optimization and access details.

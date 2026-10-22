@@ -1,4 +1,5 @@
 import {defineType, defineField, defineArrayMember, type FieldDefinition} from 'sanity'
+import {researchTypes, researchMediaFields} from './researchMedia'
 import seeds from '../sharedInitialValues.json'
 const localized = (name: string, title: string) =>
   defineField({name, title, type: 'localizedText', validation: (rule) => rule.required()})
@@ -111,16 +112,18 @@ const research = defineType({
     }),
     defineField({
       name: 'clips',
-      title: 'Video placeholders',
-      description:
-        'Real media upload and download access will be configured after the lab confirms the access policy.',
+      title: 'Legacy video placeholders',
+      hidden: true,
+      readOnly: true,
+      description: 'Replaced by the vitality parameters editor.',
       type: 'array',
       of: [defineArrayMember({type: 'clipPlaceholder'})],
       validation: (rule) => rule.max(20),
     }),
+    ...researchMediaFields,
     localized('seoTitle', 'SEO title'),
     localized('seoDescription', 'SEO description'),
   ],
   preview: {prepare: () => ({title: 'Research / Badania'})},
 })
-export const sharedTypes = [link, clip, shell, research]
+export const sharedTypes = [link, clip, shell, research, ...researchTypes]

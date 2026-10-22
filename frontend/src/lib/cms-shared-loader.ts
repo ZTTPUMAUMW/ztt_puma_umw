@@ -9,7 +9,7 @@ export const getSharedContent = cache(async (name: "shell" | "research", locale:
       doc = await client
         .withConfig({ useCdn: false, timeout: 5000, maxRetries: 0 })
         .fetch(
-          "*[_id==$id && _type==$id][0]{...,logo{...,asset->{url}},universityLogo{...,asset->{url}}}",
+          "*[_id==$id && _type==$id][0]{...,logo{...,asset->{url}},universityLogo{...,asset->{url}},tableImage{...,asset->{url}},parameters[]{...,clips[]{...,file{...,asset->{url}},poster{...,asset->{url}}}}}",
           { id: name === "shell" ? "siteChrome" : "researchPage" },
           { cache: "no-store" }
         );

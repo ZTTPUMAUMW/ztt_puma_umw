@@ -110,3 +110,7 @@ Marketing pages use server-only published GROQ reads with request-time freshness
 ## Navigation and Research — 2026-10-21
 
 Shared layout and Research use the existing Sanity client for server-only published reads; no new dependencies. Internal destinations use a fixed route allowlist; external destinations require credential-free HTTPS; original logos remain fallback assets.
+
+## Research review feedback — 2026-10-22
+
+Research uses native HTML video with preload=none, posters and fast-start MP4. Visual streams, frame rates and durations are preserved; audio is AAC 96 kbit/s. No frontend dependency was added. The scientific table uses lossless PNG plus an accessible bilingual HTML equivalent.

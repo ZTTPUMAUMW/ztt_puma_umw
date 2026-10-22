@@ -103,3 +103,7 @@ User confirmed collection-page editing works. Implemented Home, Recruitment and 
 ## Navigation and Research — 2026-10-21
 
 Navigation/footer editing and Research placeholders are implemented locally on feature/cms-foundation. Development publishing verification, real media/access policy, authenticated draft staging, backups, security/dependency review and production migration remain pending.
+
+## Research review feedback — 2026-10-22
+
+Implemented the annotated Research review and integrated provided table/videos. The protected preview and PR are updated for the manager to review before any main merge. Outstanding: approval, any missing melanization media if desired, final asset access/production decision, security/dependency review and backups.

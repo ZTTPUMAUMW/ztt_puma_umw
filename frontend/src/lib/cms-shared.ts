@@ -1,3 +1,4 @@
+import { resolveResearchMedia } from "./cms-research";
 import seeds from "./cms-shared-defaults.json";
 import { record, imageSource, safeHttpsUrl } from "./cms-collections";
 import { internalRoutes, type InternalRoute } from "./cms-marketing";
@@ -33,6 +34,7 @@ export function resolveSharedContent(
     });
   return {
     copy: copy(seed.copy, doc.copy, locale),
+    research: name === "research" ? resolveResearchMedia(doc, locale, projectId) : undefined,
     header: links("header"),
     footerSite: links("footerSite"),
     footerContact: links("footerContact"),

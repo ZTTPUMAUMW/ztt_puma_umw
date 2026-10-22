@@ -77,3 +77,7 @@ Vercel Preview deployments reject both email POST endpoints before parsing reque
 ## Hosted development Studio — 2026-10-21
 
 Published the development Studio at https://puma-development-s2jrzn3b.sanity.studio, using a dedicated development hostname and the existing lab project/development dataset. Deployment credentials stay local and are absent from built browser files. No reviewer roles, production content or main branch changes. The frontend remains a protected Vercel Preview with its 30-day reviewer share link.
+
+## Research review feedback — 2026-10-22
+
+Decision: retain provided research media in the private review branch, served through protected deployment URLs rather than uploading to Sanity public storage. Add editable Research parameter/grade/video schemas and validated project-scoped media URLs; preserve intentionally empty lists. Convert TIFF losslessly and optimize audio/container without changing decoded video frames. Reuse existing Team/Publication design patterns per review. Validation and metrics: research-media-review.md. Branch: feature/cms-foundation; main unchanged.

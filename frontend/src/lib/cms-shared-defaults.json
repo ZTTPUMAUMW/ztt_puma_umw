@@ -303,99 +303,55 @@
       },
       "subtitle": {
         "_type": "localizedText",
-        "pl": "Materiały badawcze i skala żywotności larw",
-        "en": "Research materials and larva vitality scale"
-      },
-      "descriptionHeading": {
-        "_type": "localizedText",
-        "pl": "Opis",
-        "en": "Description"
+        "pl": "Materiały badawcze",
+        "en": "Research materials"
       },
       "description": {
         "_type": "localizedText",
-        "pl": "Tutaj pojawi się opis materiałów i metod badawczych zespołu P.U.M.A.",
-        "en": "A description of P.U.M.A. research materials and methods will appear here."
-      },
-      "attachmentsHeading": {
-        "_type": "localizedText",
-        "pl": "Załączniki",
-        "en": "Attachments"
-      },
-      "spreadsheet": {
-        "_type": "localizedText",
-        "pl": "Arkusz badawczy (Excel)",
-        "en": "Research spreadsheet (Excel)"
-      },
-      "pending": {
-        "_type": "localizedText",
-        "pl": "Materiał w przygotowaniu",
-        "en": "Material coming soon"
+        "pl": "Materiały do oceny witalności larw na podstawie ruchliwości, melanizacji, turgoru oraz reakcji na bodźce.",
+        "en": "Materials for assessing larval vitality using mobility, melanization, turgor and reaction to stimuli."
       },
       "vitalityHeading": {
         "_type": "localizedText",
-        "pl": "Skala żywotności larw",
+        "pl": "Skala witalności larw",
         "en": "Larva vitality scale"
-      },
-      "vitalityDescription": {
-        "_type": "localizedText",
-        "pl": "Ta sekcja będzie zawierać opis skali, tabelę oraz krótkie filmy ilustrujące ocenę żywotności larw.",
-        "en": "This section will contain a scale description, a table and short clips illustrating larva vitality assessment."
-      },
-      "tableCaption": {
-        "_type": "localizedText",
-        "pl": "Tabela skali żywotności — miejsce na obraz",
-        "en": "Vitality-scale table — image placeholder"
       },
       "videosHeading": {
         "_type": "localizedText",
-        "pl": "Krótkie filmy",
-        "en": "Short video clips"
+        "pl": "Parametry witalności",
+        "en": "Vitality parameters"
+      },
+      "tableAlt": {
+        "_type": "localizedText",
+        "pl": "Tabela skali witalności larw: ruchliwość, melanizacja, turgor i reakcja na bodźce. Pełny opis dostępny w tekstowej wersji tabeli poniżej.",
+        "en": "Larva vitality scale table: mobility, melanization, turgor and reaction to stimuli. The full description is available in the text version below."
+      },
+      "openTable": {
+        "_type": "localizedText",
+        "pl": "Powiększ tabelę",
+        "en": "Open full-size table"
+      },
+      "tableText": {
+        "_type": "localizedText",
+        "pl": "Tekstowa wersja tabeli",
+        "en": "Text version of the table"
+      },
+      "parameterLabel": {
+        "_type": "localizedText",
+        "pl": "Parametr",
+        "en": "Parameter"
+      },
+      "scoreLabel": {
+        "_type": "localizedText",
+        "pl": "Wynik",
+        "en": "Score"
+      },
+      "descriptionLabel": {
+        "_type": "localizedText",
+        "pl": "Opis",
+        "en": "Description"
       }
     },
-    "clips": [
-      {
-        "_key": "clip1",
-        "_type": "clipPlaceholder",
-        "label": {
-          "_type": "localizedText",
-          "pl": "Film 1",
-          "en": "Clip 1"
-        },
-        "description": {
-          "_type": "localizedText",
-          "pl": "Miejsce na film o długości 3–5 sekund.",
-          "en": "Placeholder for a 3–5 second clip."
-        }
-      },
-      {
-        "_key": "clip2",
-        "_type": "clipPlaceholder",
-        "label": {
-          "_type": "localizedText",
-          "pl": "Film 2",
-          "en": "Clip 2"
-        },
-        "description": {
-          "_type": "localizedText",
-          "pl": "Miejsce na film o długości 3–5 sekund.",
-          "en": "Placeholder for a 3–5 second clip."
-        }
-      },
-      {
-        "_key": "clip3",
-        "_type": "clipPlaceholder",
-        "label": {
-          "_type": "localizedText",
-          "pl": "Film 3",
-          "en": "Clip 3"
-        },
-        "description": {
-          "_type": "localizedText",
-          "pl": "Miejsce na film o długości 3–5 sekund.",
-          "en": "Placeholder for a 3–5 second clip."
-        }
-      }
-    ],
     "seoTitle": {
       "_type": "localizedText",
       "pl": "Badania — P.U.M.A.",
@@ -403,8 +359,305 @@
     },
     "seoDescription": {
       "_type": "localizedText",
-      "pl": "Materiały badawcze i skala żywotności larw zespołu P.U.M.A.",
+      "pl": "Materiały badawcze i skala witalności larw zespołu P.U.M.A.",
       "en": "P.U.M.A. research materials and larva vitality scale."
-    }
+    },
+    "legacyTable": "/research/vitality/vitality-scale.png",
+    "parameters": [
+      {
+        "_key": "mobility",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Ruchliwość",
+          "en": "Mobility"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak ruchu",
+              "en": "No movement"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Ruch części ciała bez przemieszczania się",
+              "en": "Movement of body parts without displacement"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Ruch wolniejszy niż normalnie",
+              "en": "Slower than normal movement"
+            }
+          },
+          {
+            "_key": "grade3",
+            "_type": "researchGrade",
+            "score": 3,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Aktywny ruch",
+              "en": "Active movement"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak ruchu",
+              "en": "No movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-0.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Ruch części ciała bez przemieszczania się",
+              "en": "Movement of body parts without displacement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-1.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-1.jpg"
+          },
+          {
+            "_key": "score2",
+            "_type": "researchVideo",
+            "score": 2,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Ruch wolniejszy niż normalnie",
+              "en": "Slower than normal movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-2.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-2.jpg"
+          },
+          {
+            "_key": "score3",
+            "_type": "researchVideo",
+            "score": 3,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Aktywny ruch",
+              "en": "Active movement"
+            },
+            "legacyVideo": "/research/vitality/mobility-score-3.mp4",
+            "legacyPoster": "/research/vitality/mobility-score-3.jpg"
+          }
+        ]
+      },
+      {
+        "_key": "melanization",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Melanizacja",
+          "en": "Melanization"
+        },
+        "note": {
+          "_type": "localizedText",
+          "pl": "Stopnie melanizacji przedstawiono w tabeli powyżej.",
+          "en": "Melanization grades are described in the table above."
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Całkowita melanizacja",
+              "en": "Complete melanization"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Rozlana melanizacja (rozprzestrzeniające się ciemne plamy na ciele)",
+              "en": "Diffuse melanization (spreading dark patches on the body)"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Punktowa melanizacja (małe, ciemne plamki na ciele)",
+              "en": "Punctate melanization (small, dark spots on the body)"
+            }
+          },
+          {
+            "_key": "grade3",
+            "_type": "researchGrade",
+            "score": 3,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak melanizacji",
+              "en": "No melanization"
+            }
+          }
+        ],
+        "clips": []
+      },
+      {
+        "_key": "turgor",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Turgor",
+          "en": "Turgor"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Utrata turgoru: powłoka ciała nie powraca do normalnego stanu po ucisku",
+              "en": "Loss of turgor: integument does not return to its normal state after pressure"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Obniżony turgor: powłoka ciała powoli powraca do normalnego stanu po ucisku",
+              "en": "Reduced turgor: integument returns slowly to its normal state after pressure"
+            }
+          },
+          {
+            "_key": "grade2",
+            "_type": "researchGrade",
+            "score": 2,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Prawidłowy turgor",
+              "en": "Normal turgor"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Utrata turgoru: powłoka ciała nie powraca do normalnego stanu po ucisku",
+              "en": "Loss of turgor: integument does not return to its normal state after pressure"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-0.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Obniżony turgor: powłoka ciała powoli powraca do normalnego stanu po ucisku",
+              "en": "Reduced turgor: integument returns slowly to its normal state after pressure"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-1.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-1.jpg"
+          },
+          {
+            "_key": "score2",
+            "_type": "researchVideo",
+            "score": 2,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Prawidłowy turgor",
+              "en": "Normal turgor"
+            },
+            "legacyVideo": "/research/vitality/turgor-score-2.mp4",
+            "legacyPoster": "/research/vitality/turgor-score-2.jpg"
+          }
+        ]
+      },
+      {
+        "_key": "reaction",
+        "_type": "researchParameter",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Reakcja na bodźce",
+          "en": "Reaction to stimuli"
+        },
+        "grades": [
+          {
+            "_key": "grade0",
+            "_type": "researchGrade",
+            "score": 0,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Brak odruchu po dotknięciu",
+              "en": "No reflex upon touch"
+            }
+          },
+          {
+            "_key": "grade1",
+            "_type": "researchGrade",
+            "score": 1,
+            "description": {
+              "_type": "localizedText",
+              "pl": "Odruch ciała po dotknięciu",
+              "en": "Body reflex upon touch"
+            }
+          }
+        ],
+        "clips": [
+          {
+            "_key": "score0",
+            "_type": "researchVideo",
+            "score": 0,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Brak odruchu po dotknięciu",
+              "en": "No reflex upon touch"
+            },
+            "legacyVideo": "/research/vitality/reaction-to-stimuli-score-0.mp4",
+            "legacyPoster": "/research/vitality/reaction-to-stimuli-score-0.jpg"
+          },
+          {
+            "_key": "score1",
+            "_type": "researchVideo",
+            "score": 1,
+            "caption": {
+              "_type": "localizedText",
+              "pl": "Odruch ciała po dotknięciu",
+              "en": "Body reflex upon touch"
+            },
+            "legacyVideo": "/research/vitality/reaction-to-stimuli-score-1.mp4",
+            "legacyPoster": "/research/vitality/reaction-to-stimuli-score-1.jpg"
+          }
+        ]
+      }
+    ]
   }
 }

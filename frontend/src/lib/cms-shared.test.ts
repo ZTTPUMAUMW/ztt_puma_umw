@@ -41,11 +41,10 @@ describe("shared navigation and Research content", () => {
     );
     expect(page.header).toEqual([]);
   });
-  it("exposes no actual download or media URL in Research placeholders", () => {
+  it("keeps Research media in the protected deployment instead of uploading it publicly", () => {
     const page = resolveSharedContent("research", null, "en");
-    expect(page.clips).toHaveLength(3);
-    expect(page.copy.vitalityHeading).toBe("Larva vitality scale");
+    expect(page.research?.parameters.flatMap((p) => p.clips)).toHaveLength(9);
+    expect(page.research?.table).toBe("/research/vitality/vitality-scale.png");
     expect(JSON.stringify(seeds.research)).not.toContain("https://");
-    expect(resolveSharedContent("research", { clips: [] }, "en").clips).toEqual([]);
   });
 });
