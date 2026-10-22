@@ -25,3 +25,8 @@ Contact / Kontakt and Site settings / Ustawienia strony now appear as singleton 
 ## Hosted development review
 
 Studio: https://puma-development-s2jrzn3b.sanity.studio . Select PUMA Website (development), sign in with your invited account, edit both languages, publish and refresh the reviewer website. SANITY_STUDIO_HOST can override the deployment hostname; set an explicit separate hostname for any future production Studio. A scoped Deploy Studio token may be supplied to the CLI through SANITY_AUTH_TOKEN. It must remain local and must never use a SANITY_STUDIO_ or NEXT_PUBLIC_ prefix. See ../docs/main/review-deployment.md.
+
+
+## Production Studio
+
+https://puma-production-s2jrzn3b.sanity.studio/ targets production. Its hostname and app ID are pinned separately from development in sanity.cli.ts. Select SANITY_ACTIVE_ENV=production and explicitly set SANITY_STUDIO_DATASET=production and SANITY_STUDIO_PROJECT_ID=s2jrzn3b for production deployments. Never rely on the development .env.local defaults. See ../docs/main/production-cms-setup.md.

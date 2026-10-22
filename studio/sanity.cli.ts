@@ -15,11 +15,20 @@ if (!projectId || !dataset) {
 export default defineCliConfig({
   api: {projectId, dataset},
   studioHost:
-    env.SANITY_STUDIO_HOST || (dataset === 'development' ? 'puma-development-s2jrzn3b' : undefined),
+    env.SANITY_STUDIO_HOST ||
+    (dataset === 'development'
+      ? 'puma-development-s2jrzn3b'
+      : dataset === 'production'
+        ? 'puma-production-s2jrzn3b'
+        : undefined),
   deployment: {
     appId:
       env.SANITY_STUDIO_APP_ID ||
-      (dataset === 'development' ? 'z56voez80lfmqjks56f2j6wh' : undefined),
+      (dataset === 'development'
+        ? 'z56voez80lfmqjks56f2j6wh'
+        : dataset === 'production'
+          ? 'erg9krbhxu3m52vv2plae6w3'
+          : undefined),
     autoUpdates: true,
   },
 })

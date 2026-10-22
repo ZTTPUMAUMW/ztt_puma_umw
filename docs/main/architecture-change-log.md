@@ -96,3 +96,8 @@ Added a mock Excel workbook download to Research, bilingual download text, optio
 ## 2026-10-22 — Files draft review
 
 Visible navigation, page title and Studio editor now use Files / Pliki (working title). The subtitle is Supplementary materials and additional files, with a Polish translation. Existing /en/research and /badania URLs and CMS IDs are retained. The editable HTML scale table is always visible; the image table is no longer rendered, and its legacy upload field is hidden. The four parameter headings and their section heading are centered. Melanization images are pending from the lab; no substitute scientific images were invented.
+
+
+## 2026-10-22 — Production CMS preparation
+
+Added a separate production Studio and production-only Vercel CMS configuration. Initialized eleven production singleton documents from reviewed repository defaults, with no development drafts or experiment assets copied. Main remains pending review. See production-cms-setup.md for environment separation, editor workflow, initial snapshots and post-merge checks.
