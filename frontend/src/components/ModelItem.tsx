@@ -1,5 +1,7 @@
 "use client";
 
+import ScientificText from "./ScientificText";
+
 import Image from "next/image";
 import { ReactNode } from "react";
 import { useInView } from "@/hooks/useInView";
@@ -10,9 +12,16 @@ interface ModelItemProps {
   title: string;
   description: string | ReactNode;
   reverse?: boolean;
+  alt?: string;
 }
 
-export default function ModelItem({ image, title, description, reverse = false }: ModelItemProps) {
+export default function ModelItem({
+  image,
+  title,
+  description,
+  alt,
+  reverse = false,
+}: ModelItemProps) {
   const { ref, inView } = useInView<HTMLDivElement>();
   const animClass = reverse ? "animate-from-right" : "animate-from-left";
   const classNames = [
@@ -27,17 +36,21 @@ export default function ModelItem({ image, title, description, reverse = false }
       <div className={styles["models__item-image"]}>
         <Image
           src={image}
-          alt={title}
+          alt={alt || title}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           style={{ objectFit: "cover" }}
         />
       </div>
       <div className={styles["models__item-content"]}>
-        <h3 className={styles["models__item-title"]} dangerouslySetInnerHTML={{ __html: title }} />
+        <h3 className={styles["models__item-title"]}>
+          <ScientificText text={title} />
+        </h3>
         <div className={styles["models__item-description"]}>
           {typeof description === "string" ? (
-            <div dangerouslySetInnerHTML={{ __html: description }} />
+            <div>
+              <ScientificText text={description} />
+            </div>
           ) : (
             description
           )}

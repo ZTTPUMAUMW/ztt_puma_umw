@@ -1,4 +1,4 @@
-const LATIN_WORDS = [
+export const LATIN_WORDS = [
   "in vitro",
   "in vivo",
   "in silico",

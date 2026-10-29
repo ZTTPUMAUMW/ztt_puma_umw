@@ -1,21 +1,11 @@
 "use client";
 
+import type { MarketingCard } from "@/lib/cms-marketing";
 import { useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/info-cards.module.scss";
 
-interface InfoCard {
-  number: string;
-  key: "basicScience" | "translational" | "innovation";
-}
-
-const cards: InfoCard[] = [
-  { number: "01", key: "basicScience" },
-  { number: "02", key: "translational" },
-  { number: "03", key: "innovation" },
-];
-
-export default function InfoCards() {
+export default function InfoCards({ items: cards }: { items: MarketingCard[] }) {
   const t = useTranslations("home.infoCards");
   const { ref: headerRef, inView: headerInView } = useInView();
   const { ref: gridRef, inView: gridInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
@@ -41,12 +31,12 @@ export default function InfoCards() {
               .join(" ");
 
             return (
-              <div key={index} className={cardClass} style={{ ["--i" as string]: index }}>
-                <div className={styles["info-cards__card-number"]}>{card.number}</div>
-                <h3 className={styles["info-cards__card-title"]}>{t(`cards.${card.key}.title`)}</h3>
-                <p className={styles["info-cards__card-description"]}>
-                  {t(`cards.${card.key}.description`)}
-                </p>
+              <div key={card.id} className={cardClass} style={{ ["--i" as string]: index }}>
+                <div className={styles["info-cards__card-number"]}>
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <h3 className={styles["info-cards__card-title"]}>{card.title}</h3>
+                <p className={styles["info-cards__card-description"]}>{card.description}</p>
               </div>
             );
           })}

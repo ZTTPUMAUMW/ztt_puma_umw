@@ -18,6 +18,7 @@ export const routing = defineRouting({
   // English routes (with /en prefix)
   pathnames: {
     "/": "/",
+    "/research": { pl: "/badania", en: "/research" },
     "/projects": {
       pl: "/projekty",
       en: "/projects",

@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useRef, useCallback, TouchEvent, MouseEvent, useEffect, ReactNode } from "react";
+import { useTranslations } from "next-intl";
 import FeaturedBanner from "./FeaturedBanner";
 import styles from "@/styles/components/banner-slider.module.scss";
-
-// TODO: Refactor to use a SanityCMS query to fetch banner slides dynamically, and add support for different slide types (e.g. video, carousel) in the future.
 
 export interface BannerSlide {
   image: string;
@@ -27,6 +26,7 @@ export default function BannerSlider({
   autoplayDelay = 4000,
   loop = true,
 }: BannerSliderProps) {
+  const t = useTranslations("featuredBanner");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [translatePosition, setTranslatePosition] = useState(0);
@@ -280,7 +280,7 @@ export default function BannerSlider({
                 stopOnInteraction.current = true; // Stop autoplay on manual navigation
                 goToSlide(index);
               }}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={t("goToSlide", { number: index + 1 })}
             />
           ))}
         </div>

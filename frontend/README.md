@@ -1,12 +1,12 @@
 # PUMA Research Group Website
 
-Next.js 16 application with TypeScript and i18n support (Polish/English). The repository also contains a Sanity Studio; the current frontend content is primarily stored in local source files.
+Next.js 16 application with TypeScript and i18n support (Polish/English). The repository also contains a Sanity Studio; all main pages read published bilingual content from Sanity, with temporary local defaults during migration.
 
 ## Tech Stack
 
-- **Framework**: Next.js 16.0.7 (App Router, React 19)
+- **Framework**: Next.js 16.2.6 (App Router, React 19)
 - **Language**: TypeScript 5
-- **CMS tooling**: Sanity Studio (project configured; frontend does not currently fetch content from Sanity)
+- **CMS tooling**: Sanity Studio 4 with bilingual page, collection and shared-settings editors
 - **Styling**: SCSS Modules + Tailwind CSS 4
 - **i18n**: next-intl 4.7.0
 - **Email**: Nodemailer
@@ -53,21 +53,16 @@ frontend/
 
 ### Environment variables
 
-The basic frontend can be installed and started without a `.env.local` file. To configure form submissions, create `frontend/.env.local` using the tracked example:
+Copy frontend/.env.example to frontend/.env.local. Public CMS configuration:
 
 ```bash
-cp frontend/.env.example frontend/.env.local
+NEXT_PUBLIC_SANITY_PROJECT_ID=s2jrzn3b
+NEXT_PUBLIC_SANITY_DATASET=development
 ```
 
-Set the following values in `frontend/.env.local` for the cooperation and recruitment forms:
+For final production deployments, explicitly select production. The CMS pages read published documents only. Studio configuration is separate: see ../studio/README.md.
 
-- `EMAIL_USER` and `EMAIL_PASSWORD` — Gmail account and app password used for SMTP.
-- `EMAIL_FROM` and `EMAIL_TO` — sender and recipient email addresses.
-- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY` — Google reCAPTCHA v3 keys configured for the deployed/local domains.
-
-These credentials are not included in the repository. Without valid SMTP and reCAPTCHA values, the site can still start, but form submissions will not work.
-
-The translation scripts require `DEEPL_API_KEY` in `frontend/.env.local`; add it only if you need to run those scripts. Sanity's project ID (`6gulcr1j`) and dataset (`production`) are configured in source. The current frontend does not use a Sanity API token to fetch page content. Access to edit content in the Studio requires a Sanity account with permissions for the project.
+Email uses EMAIL_USER, EMAIL_PASSWORD, EMAIL_FROM and EMAIL_TO (Gmail SMTP), not SMTP_* variables. reCAPTCHA uses NEXT_PUBLIC_RECAPTCHA_SITE_KEY and RECAPTCHA_SECRET_KEY. Leave secret values blank for page-only local development. Configure a test recipient before testing forms. Never commit .env.local or expose write tokens in public-prefixed variables. DeepL is optional and not needed for manually supplied translations.
 
 ### Installation
 
@@ -103,7 +98,7 @@ In a separate terminal, from the repository root:
 pnpm --dir studio dev
 ```
 
-The Studio is configured for project `6gulcr1j` and dataset `production`; sign in with an authorized Sanity account to edit content.
+Configure Studio using studio/.env.example and select development for review; sign in with an authorized Sanity account.
 
 ## Development
 
@@ -114,9 +109,9 @@ Each file corresponds to a specific page or section (e.g. `home.json`, `team.jso
 
 **Manual workflow:**
 
-1. Edit the Polish source file in `src/messages/pl/`
-2. Run the translation script to auto-translate changed keys to English
-3. Review the output in `src/messages/en/`
+1. Supply Polish and English versions manually in the matching Sanity fields.
+2. For UI strings still maintained in code, keep PL/EN JSON keys in parity.
+3. DeepL scripts are optional legacy tooling.
 
 **DeepL Translation Script** (`scripts/translate.mjs`):
 
@@ -153,7 +148,7 @@ All design tokens in `src/styles/variables.module.scss`:
 
 ### Sanity Studio
 
-The Studio is configured for project `6gulcr1j` and dataset `production`. No custom content schemas are currently defined, and the frontend does not currently query Sanity.
+The Studio uses explicit environment configuration. Project s2jrzn3b contains development and production datasets. See ../docs/main/cms-research-guide.md and the related CMS guides.
 
 ### Email Forms
 
@@ -231,7 +226,7 @@ Locale detection via `next-intl` middleware.
 ## Key Features
 
 - **Bilingual**: Polish (default) + English
-- **Content**: Primarily maintained in local frontend source files; Sanity Studio is included separately
+- **Content**: Bilingual CMS page editors, ordered content lists and shared navigation/branding
 - **Responsive**: Mobile-first design
 - **SEO Optimized**: Metadata, OpenGraph, sitemap
 - **Type-safe**: Full TypeScript coverage

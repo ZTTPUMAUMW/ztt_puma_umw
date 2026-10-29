@@ -50,7 +50,9 @@
         "title": "Sztuczna inteligencja w biologii",
         "description": "Wykorzystujemy algorytmy AI do analizy wzorców ruchu larw Galleria mellonella jako odpowiedzi na substancje toksyczne, w tym psychoaktywne oraz do oceny skuteczności leków przeciwinfekcyjnych i bezpieczeństwa leków."
       }
-    }
+    },
+    "navigationLabel": "Obszary badawcze",
+    "detailsLabel": "Szczegóły obszaru badawczego"
   },
   "features": {
     "heading": "Dlaczego P.U.M.A.?",
