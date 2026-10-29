@@ -14,8 +14,8 @@ describe("shared navigation and Research content", () => {
       expect(page.logo).toBe("/logo.svg");
       expect(page.universityLogo).toBe("/umw-logo.svg");
     }
-    expect(resolveSharedContent("shell", null, "pl").header[4].label).toBe("Pliki");
-    expect(resolveSharedContent("shell", null, "en").header[4].label).toBe("Files");
+    expect(resolveSharedContent("shell", null, "pl").header[4].label).toBe("Materiały");
+    expect(resolveSharedContent("shell", null, "en").header[4].label).toBe("Resources");
   });
   it("respects deliberately empty menus and keeps reordered labels", () => {
     expect(resolveSharedContent("shell", { header: [] }, "en").header).toEqual([]);

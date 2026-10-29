@@ -167,3 +167,8 @@ Added a separate production Studio and production-only Vercel CMS configuration.
 ## 2026-10-22 — Melanization images and download removal
 
 Removed the Downloads section and mock XLSX from public website assets. Added the four lab-supplied melanization images in score order 0–3, converting TIFF to PNG with identical decoded pixels. Images have bilingual grade descriptions, natural aspect ratios and links to full size. CMS parameter editors support scored images, optional replacements and bilingual captions; obsolete download fields are hidden for compatibility. No source image was uploaded to the public Sanity CDN.
+
+
+## 2026-10-29 — Resources naming and aligned parameter cards
+
+Renamed the visible page, navigation and Studio label to Resources / Materiały, retaining existing URLs and CMS IDs. Parameter cards use matching square media frames and shared grid rows on supported desktop/tablet browsers. Images and videos retain all source content with contain sizing; no source media was cropped or altered. Narrow screens retain a single-column layout.

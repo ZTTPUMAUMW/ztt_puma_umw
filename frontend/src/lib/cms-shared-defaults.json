@@ -47,8 +47,8 @@
         "_type": "websiteLink",
         "label": {
           "_type": "localizedText",
-          "pl": "Pliki",
-          "en": "Files"
+          "pl": "Materiały",
+          "en": "Resources"
         },
         "route": "/research"
       },
@@ -129,8 +129,8 @@
         "_type": "websiteLink",
         "label": {
           "_type": "localizedText",
-          "pl": "Pliki",
-          "en": "Files"
+          "pl": "Materiały",
+          "en": "Resources"
         },
         "route": "/research"
       },
@@ -298,8 +298,8 @@
     "copy": {
       "title": {
         "_type": "localizedText",
-        "pl": "Pliki",
-        "en": "Files"
+        "pl": "Materiały",
+        "en": "Resources"
       },
       "subtitle": {
         "_type": "localizedText",
@@ -359,8 +359,8 @@
     },
     "seoTitle": {
       "_type": "localizedText",
-      "pl": "Pliki — P.U.M.A.",
-      "en": "Files — P.U.M.A."
+      "pl": "Materiały — P.U.M.A.",
+      "en": "Resources — P.U.M.A."
     },
     "seoDescription": {
       "_type": "localizedText",

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
@@ -94,18 +95,32 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                 <h2 id="vitality-parameters" className={styles.parametersHeading}>
                   {t.videosHeading}
                 </h2>
-                <div className={styles.parameters}>
+                <div
+                  className={styles.parameters}
+                  style={
+                    {
+                      "--parameter-rows":
+                        Math.max(
+                          0,
+                          ...media.parameters.map((p) => p.images.length + p.clips.length)
+                        ) + 1,
+                    } as CSSProperties
+                  }
+                >
                   {media.parameters.map((p) => (
                     <section
                       key={p.id}
                       className={styles.parameter}
                       aria-labelledby={"parameter-" + p.id}
                     >
-                      <h3 id={"parameter-" + p.id}>{p.title}</h3>
-                      {p.note && <p>{p.note}</p>}
+                      <div className={styles.parameterHeader}>
+                        <h3 id={"parameter-" + p.id}>{p.title}</h3>
+                        {p.note && <p>{p.note}</p>}
+                      </div>
                       {p.images.map((image) => (
                         <figure key={image.id} className={styles.clip}>
                           <a
+                            className={styles.imageFrame}
                             href={image.src}
                             target="_blank"
                             rel="noopener noreferrer"
