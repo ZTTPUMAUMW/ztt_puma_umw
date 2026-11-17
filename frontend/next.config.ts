@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
 
   // Optimize images
   images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.sanity.io", pathname: "/images/s2jrzn3b/**" },
+    ],
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 3600,
     qualities: [75, 85, 100],

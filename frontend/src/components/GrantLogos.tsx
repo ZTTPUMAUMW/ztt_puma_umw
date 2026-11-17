@@ -1,25 +1,12 @@
 "use client";
 
+import type { MarketingLogo } from "@/lib/cms-marketing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/components/grant-logos.module.scss";
 
-const grantLogos = [
-  {
-    src: "/images/grant_logo/abm.svg",
-    alt: "Agencja Badań Medycznych",
-    url: "https://abm.gov.pl/pl/",
-  },
-  {
-    src: "/images/grant_logo/ncbr.svg",
-    alt: "Narodowe Centrum Badań i Rozwoju",
-    url: "https://www.gov.pl/web/ncbr",
-  },
-  { src: "/images/grant_logo/ncn.svg", alt: "Narodowe Centrum Nauki", url: "https://ncn.gov.pl" },
-];
-
-export default function GrantLogos() {
+export default function GrantLogos({ items: grantLogos }: { items: MarketingLogo[] }) {
   const t = useTranslations("home.grantLogos");
   const { ref, inView } = useInView();
 
@@ -34,7 +21,7 @@ export default function GrantLogos() {
           <div className={styles["grant-logos__track"]}>
             {grantLogos.map((logo) => (
               <a
-                key={logo.src}
+                key={logo.id}
                 href={logo.url}
                 target="_blank"
                 rel="noopener noreferrer"

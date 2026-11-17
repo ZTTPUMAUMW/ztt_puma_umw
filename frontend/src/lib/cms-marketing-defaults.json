@@ -1,0 +1,1243 @@
+{
+  "home": {
+    "_type": "homePage",
+    "copy": {
+      "home": {
+        "hero": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Pracownia Unikalnych Modeli Aplikacyjnych",
+            "en": "Laboratory of Unique Application Models"
+          },
+          "subtitle": {
+            "_type": "localizedText",
+            "pl": "Innowacyjne rozwiązania na styku farmacji, medycyny i biotechnologii",
+            "en": "Innovative solutions at the intersection of pharmacy, medicine and biotechnology"
+          }
+        },
+        "infoCards": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Czym się zajmujemy?",
+            "en": "What do we do?"
+          },
+          "intro": {
+            "_type": "localizedText",
+            "pl": "Pracownia Unikalnych Modeli Aplikacyjnych (P.U.M.A.) działa na styku farmacji, medycyny, biologii, informatyki i technologii. Tworzymy modele obliczeniowe i doświadczalne, które pomagają lepiej zrozumieć choroby i znaleźć skuteczniejsze metody leczenia.",
+            "en": "The Unique Application Models Laboratory (P.U.M.A.) works at the intersection of pharmacy, medicine, biology, computer science and technology. We create computational and experimental models to help better understand diseases and find more effective treatments."
+          }
+        },
+        "researchAreas": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Nasza działalność obejmuje",
+            "en": "Our activities include"
+          },
+          "navigationLabel": {
+            "_type": "localizedText",
+            "pl": "Obszary badawcze",
+            "en": "Research areas"
+          },
+          "detailsLabel": {
+            "_type": "localizedText",
+            "pl": "Szczegóły obszaru badawczego",
+            "en": "Research area details"
+          }
+        },
+        "features": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Dlaczego P.U.M.A.?",
+            "en": "Why P.U.M.A.?"
+          },
+          "subtitle": {
+            "_type": "localizedText",
+            "pl": "P.U.M.A. to zespół naukowców, którzy działają sprawnie, szybko i elastycznie – jak kotowaty, od którego wzięliśmy nazwę.",
+            "en": "P.U.M.A. is a team of scientists who work efficiently, quickly and flexibly - like the catfish from which we took our name."
+          },
+          "closing": {
+            "_type": "localizedText",
+            "pl": "Jeśli w Twojej klinice, firmie, start-upie czy podczas realizacji grantu pojawia się problem naukowo-technologiczny, chcesz zweryfikować pomysł, rozwiązać nurtujące pytania albo zmodernizować istniejące rozwiązanie – jesteśmy po to, aby to zrobić.",
+            "en": "If a science and technology problem arises in your clinic, company, start-up or during the implementation of a grant, you want to validate an idea, solve nagging questions or modernize an existing solution - we are here to do it."
+          }
+        },
+        "quickLinks": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Poznaj P.U.M.A.",
+            "en": "Meet P.U.M.A."
+          }
+        },
+        "cta": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Masz pomysł badawczy?",
+            "en": "Do you have a research idea?"
+          },
+          "description": {
+            "_type": "localizedText",
+            "pl": "Niezależnie od etapu projektu – od koncepcji po analizę wyników – możemy pomóc w jego realizacji, wdrożeniu i publikacji.",
+            "en": "Regardless of the stage of the project - from conception to analysis of the results - we can help with its execution, implementation and publication."
+          }
+        },
+        "grantLogos": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Projekty finansowane przez",
+            "en": "Projects funded by"
+          }
+        }
+      },
+      "featuredBanner": {
+        "readMore": {
+          "_type": "localizedText",
+          "pl": "Czytaj więcej",
+          "en": "Read more"
+        },
+        "tabLabel": {
+          "_type": "localizedText",
+          "pl": "AKTUALNOŚCI",
+          "en": "NEWS & UPDATES"
+        },
+        "goToSlide": {
+          "_type": "localizedText",
+          "pl": "Przejdź do slajdu {number}",
+          "en": "Go to slide {number}"
+        }
+      }
+    },
+    "heroButtons": [
+      {
+        "_key": "projects",
+        "_type": "marketingAction",
+        "route": "/projects",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Nasze projekty",
+          "en": "Our projects"
+        },
+        "aria": {
+          "_type": "localizedText",
+          "pl": "Zobacz nasze projekty badawcze",
+          "en": "See our research projects"
+        }
+      },
+      {
+        "_key": "team",
+        "_type": "marketingAction",
+        "route": "/team",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Poznaj zespół",
+          "en": "Meet the team"
+        },
+        "aria": {
+          "_type": "localizedText",
+          "pl": "Poznaj członków naszego zespołu",
+          "en": "Meet our team members"
+        }
+      },
+      {
+        "_key": "cooperation",
+        "_type": "marketingAction",
+        "route": "/cooperation",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Współpraca",
+          "en": "Collaboration"
+        },
+        "aria": {
+          "_type": "localizedText",
+          "pl": "Dowiedz się o możliwościach współpracy",
+          "en": "Find out about cooperation opportunities"
+        }
+      }
+    ],
+    "banners": [
+      {
+        "_key": "banner",
+        "_type": "marketingBanner",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Dolnośląski Festiwal Nauki 2026",
+          "en": "Lower Silesian Science Festival 2026"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Dowiedź się więcej o larwach Galleria mellonella wykorzystywanych jako biosensory w badaniach farmaceutycznych. Dołącz na warsztaty 15 września. Zapisy na stronie!",
+          "en": "Learn more about Galleria mellonella larvae and their applications as biosensors in the pharmaceutical industry. Join us on 15 September. Sign up on the website! "
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.festiwal.wroc.pl/events/galleria-mellonella-pod-lupa-barciaki-jako-biosensory-w-badaniach-farmaceutycznych-i-medycznych/",
+          "en": "https://www.festiwal.wroc.pl/events/galleria-mellonella-pod-lupa-barciaki-jako-biosensory-w-badaniach-farmaceutycznych-i-medycznych/"
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Dolnośląski Festiwal Nauki 2026",
+          "en": "Lower Silesian Science Festival 2026"
+        },
+        "legacyImage": "/images/banner/banner_1.png"
+      },
+      {
+        "_key": "banner2",
+        "_type": "marketingBanner",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Olejki eteryczne w walce z bakteriami",
+          "en": "Essential oils in the fight against bacteria"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Tymianek i rozmaryn pod lupą naukowców P.U.M.A. Odkryj, jak naturalne olejki mogą wzmacniać działanie antybiotyków i stanowić broń w erze oporności bakteryjnej.",
+          "en": "Thyme and rosemary under the magnifying glass of P.U.M.A. scientists. Discover how natural oils can enhance the effects of antibiotics and be a weapon in an era of bacterial resistance."
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://www.umw.edu.pl/pl/aktualnosci/olejki-eteryczne-w-walce-z-bakteriami",
+          "en": "https://www.umw.edu.pl/pl/aktualnosci/olejki-eteryczne-w-walce-z-bakteriami"
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Olejki eteryczne w walce z bakteriami",
+          "en": "Essential oils in the fight against bacteria"
+        },
+        "legacyImage": "/images/banner/banner_2.png"
+      },
+      {
+        "_key": "banner3",
+        "_type": "marketingBanner",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Między nauką a praktyką, czyli jak działa P.U.M.A.",
+          "en": "Between science and practice, or how P.U.M.A. works."
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Pracownia P.U.M.A. łączy badania podstawowe z praktycznym zastosowaniem. Dowiedz się więcej o naszej pracy w Gazecie Uczelnianej UMW - rok 2025 wrzesień/październik na stronach 9 do 11.",
+          "en": "The P.U.M.A. laboratory combines basic research with practical application. Learn more about our work in the UMW University Newspaper - Year 2025 September/October on pages 9 to 11."
+        },
+        "url": {
+          "_type": "localizedText",
+          "pl": "https://gazeta.umw.edu.pl/2025-2023/",
+          "en": "https://gazeta.umw.edu.pl/2025-2023/"
+        },
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Między nauką a praktyką, czyli jak działa P.U.M.A.",
+          "en": "Between science and practice, or how P.U.M.A. works."
+        },
+        "legacyImage": "/images/banner/banner_3.png"
+      }
+    ],
+    "infoCards": [
+      {
+        "_key": "basicScience",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Nauka podstawowa",
+          "en": "Basic science"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Badania fundamentalne w zakresie mikrobiologii, bioinżynierii i medycyny molekularnej.",
+          "en": "Fundamental research in microbiology, bioengineering and molecular medicine."
+        }
+      },
+      {
+        "_key": "translational",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Badania translacyjne",
+          "en": "Translational research"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Przekładanie odkryć naukowych na praktyczne rozwiązania kliniczne i terapeutyczne.",
+          "en": "Translating scientific discoveries into practical clinical and therapeutic solutions."
+        }
+      },
+      {
+        "_key": "innovation",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Innowacje wdrożeniowe",
+          "en": "Implementation innovations"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Komercjalizacja wyników badań i wdrażanie nowych technologii w przemyśle.",
+          "en": "Commercialization of research results and implementation of new technologies in industry."
+        }
+      }
+    ],
+    "researchAreas": [
+      {
+        "_key": "biofilm",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Modele biofilmowe",
+          "en": "Biofilm models"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "In vitro, ex vivo i in vivo, w tym z wykorzystaniem larw Galleria mellonella.",
+          "en": "In vitro, ex vivo and in vivo, including using Galleria mellonella larvae."
+        }
+      },
+      {
+        "_key": "biomaterials",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Testowanie biomateriałów",
+          "en": "Testing biomaterials"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Testowanie biomateriałów - opatrunków, nośników leków.",
+          "en": "Testing of biomaterials - dressings, drug carriers."
+        }
+      },
+      {
+        "_key": "translational",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Badania translacyjne",
+          "en": "Translational research"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Badania translacyjne nad skutecznością antyseptyków, antybiotyków, opatrunków oraz związków pochodzenia naturalnego ocenianą za pomocą wyżej wymienionych modeli.",
+          "en": "Translational research on the efficacy of antiseptics, antibiotics, dressings, and naturally derived compounds evaluated using the aforementioned models."
+        }
+      },
+      {
+        "_key": "efficacy",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Analiza skuteczności i bezpieczeństwa",
+          "en": "Efficacy and safety analysis"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Analiza skuteczności i bezpieczeństwa w ujęciu przedklinicznym, z zastosowaniem modeli alternatywnych wobec badań na ssakach.",
+          "en": "Preclinical efficacy and safety analysis using alternative models to mammalian studies."
+        }
+      },
+      {
+        "_key": "ai",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Sztuczna inteligencja w biologii",
+          "en": "Artificial intelligence in biology"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Wykorzystujemy algorytmy AI do analizy wzorców ruchu larw Galleria mellonella jako odpowiedzi na substancje toksyczne, w tym psychoaktywne oraz do oceny skuteczności leków przeciwinfekcyjnych i bezpieczeństwa leków.",
+          "en": "We are using AI algorithms to analyze the movement patterns of Galleria mellonella larvae as a response to toxic substances, including psychoactive substances, and to evaluate the efficacy of anti-infective drugs and drug safety."
+        }
+      }
+    ],
+    "features": [
+      {
+        "_key": "fast",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Szybko i sprawnie",
+          "en": "Quick and efficient"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Działamy efektywnie bez zbędnej biurokracji",
+          "en": "We operate efficiently without unnecessary bureaucracy"
+        }
+      },
+      {
+        "_key": "flexible",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Bez barier",
+          "en": "Barrier-free"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Nie mamy sztywnych ram ani ograniczeń",
+          "en": "We have no rigid framework or limitations"
+        }
+      },
+      {
+        "_key": "complete",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Od pomysłu do wdrożenia",
+          "en": "From idea to implementation"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Wspieramy projekty na każdym etapie",
+          "en": "We support projects at every stage"
+        }
+      },
+      {
+        "_key": "interdisciplinary",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Interdyscyplinarność",
+          "en": "Interdisciplinarity"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Łączymy różne dziedziny nauki i praktyki",
+          "en": "We combine different fields of science and practice"
+        }
+      }
+    ],
+    "quickLinks": [
+      {
+        "_key": "publications",
+        "_type": "marketingQuickLink",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Poznaj dorobek naukowy zespołu",
+          "en": "Learn about the team's scientific achievements"
+        },
+        "route": "/publications"
+      },
+      {
+        "_key": "projects",
+        "_type": "marketingQuickLink",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Projekty badawcze",
+          "en": "Research projects"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Aktualne granty i współprace",
+          "en": "Current grants and collaborations"
+        },
+        "route": "/projects"
+      },
+      {
+        "_key": "models",
+        "_type": "marketingQuickLink",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Modele",
+          "en": "Models"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Innowacyjne systemy badawcze",
+          "en": "Innovative research systems"
+        },
+        "route": "/models"
+      },
+      {
+        "_key": "recruitment",
+        "_type": "marketingQuickLink",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Rekrutacja",
+          "en": "Recruitment"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Dołącz do zespołu P.U.M.A.",
+          "en": "Join the P.U.M.A. team."
+        },
+        "route": "/recruitment"
+      }
+    ],
+    "grantLogos": [
+      {
+        "_key": "abm",
+        "_type": "marketingLogo",
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Agencja Badań Medycznych",
+          "en": "Medical Research Agency"
+        },
+        "url": "https://abm.gov.pl/pl/",
+        "legacyImage": "/images/grant_logo/abm.svg"
+      },
+      {
+        "_key": "ncbr",
+        "_type": "marketingLogo",
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Narodowe Centrum Badań i Rozwoju",
+          "en": "National Centre for Research and Development"
+        },
+        "url": "https://www.gov.pl/web/ncbr",
+        "legacyImage": "/images/grant_logo/ncbr.svg"
+      },
+      {
+        "_key": "ncn",
+        "_type": "marketingLogo",
+        "alt": {
+          "_type": "localizedText",
+          "pl": "Narodowe Centrum Nauki",
+          "en": "National Science Centre"
+        },
+        "url": "https://ncn.gov.pl",
+        "legacyImage": "/images/grant_logo/ncn.svg"
+      }
+    ],
+    "ctaButtons": [
+      {
+        "_key": "cooperation",
+        "_type": "marketingAction",
+        "route": "/cooperation",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Rozpocznij współpracę",
+          "en": "Start a partnership"
+        },
+        "aria": {
+          "_type": "localizedText",
+          "pl": "Rozpocznij współpracę z naszym zespołem",
+          "en": "Start working with our team"
+        }
+      },
+      {
+        "_key": "contact",
+        "_type": "marketingAction",
+        "route": "/contact",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Skontaktuj się",
+          "en": "Get in touch"
+        },
+        "aria": {
+          "_type": "localizedText",
+          "pl": "Skontaktuj się z nami",
+          "en": "Contact us"
+        }
+      }
+    ],
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "ZTT P.U.M.A. - Uniwersytet Medyczny we Wrocławiu",
+      "en": "DOTT P.U.M.A. - Medical University of Wrocław"
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Zakład Technologii Translacyjnych. Pracownia Unikalnych Modeli Aplikacyjnych",
+      "en": "Department of Translational Technologies. Laboratory of Unique Application Models"
+    }
+  },
+  "recruitment": {
+    "_type": "recruitmentPage",
+    "copy": {
+      "recruitment": {
+        "hero": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Rekrutacja",
+            "en": "Recruitment"
+          },
+          "subtitle": {
+            "_type": "localizedText",
+            "pl": "Dołącz do zespołu P.U.M.A. - etaty, staże i doktoraty",
+            "en": "Join the P.U.M.A. team. - FTEs, internships and PhDs"
+          }
+        },
+        "benefits": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Dlaczego warto dołączyć?",
+            "en": "Why join?"
+          }
+        },
+        "tabs": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Wybierz ścieżkę rekrutacji",
+            "en": "Choose a recruitment path"
+          },
+          "description": {
+            "_type": "localizedText",
+            "pl": "Oferujemy różne formy współpracy – od etatów, przez staże, po doktoraty. Wybierz interesującą Cię opcję, aby poznać szczegóły.",
+            "en": "We offer various forms of cooperation - from full-time positions, to internships, to PhDs. Choose the option you are interested in for details."
+          }
+        },
+        "preapply": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Przygotuj zanim zaaplikujesz",
+            "en": "Prepare before applying"
+          },
+          "confirmLabel": {
+            "_type": "localizedText",
+            "pl": "Potwierdzam, że zapoznałem/am się z wymaganiami i chcę przejść do formularza rekrutacyjnego.",
+            "en": "I confirm that I have read the requirements and want to proceed to the recruitment form."
+          }
+        },
+        "form": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Formularz rekrutacyjny",
+            "en": "Recruitment form"
+          },
+          "attachmentLabel": {
+            "_type": "localizedText",
+            "pl": "Załącz pliki PDF (np. CV)",
+            "en": "Attach PDF files (e.g. CV)"
+          }
+        }
+      },
+      "formLabels": {
+        "firstName": {
+          "_type": "localizedText",
+          "pl": "Imię",
+          "en": "Name"
+        },
+        "lastName": {
+          "_type": "localizedText",
+          "pl": "Nazwisko",
+          "en": "Name"
+        },
+        "companyName": {
+          "_type": "localizedText",
+          "pl": "Nazwa firmy/instytucji",
+          "en": "Name of the company/institution"
+        },
+        "email": {
+          "_type": "localizedText",
+          "pl": "Email",
+          "en": "Email"
+        },
+        "subject": {
+          "_type": "localizedText",
+          "pl": "Temat",
+          "en": "Subject"
+        },
+        "subjectPlaceholder": {
+          "_type": "localizedText",
+          "pl": "-- Wybierz temat --",
+          "en": "-- Select topic --."
+        },
+        "message": {
+          "_type": "localizedText",
+          "pl": "Wiadomość",
+          "en": "Message"
+        },
+        "attachment": {
+          "_type": "localizedText",
+          "pl": "Załącz pliki PDF",
+          "en": "Attach PDF files"
+        },
+        "attachmentHint": {
+          "_type": "localizedText",
+          "pl": "Można załączyć wiele plików PDF (max {size}MB łącznie)",
+          "en": "Multiple PDF files can be attached (max {size}MB total)"
+        },
+        "totalSize": {
+          "_type": "localizedText",
+          "pl": "Łączny rozmiar: {current}MB / {max}MB",
+          "en": "Total size: {current}MB / {max}MB"
+        },
+        "charactersCount": {
+          "_type": "localizedText",
+          "pl": "{current}/{max} znaków",
+          "en": "{current}/{max} characters"
+        },
+        "attachedFiles": {
+          "_type": "localizedText",
+          "pl": "Załączone pliki:",
+          "en": "Attached files:"
+        },
+        "removeFile": {
+          "_type": "localizedText",
+          "pl": "Usuń plik",
+          "en": "Delete file"
+        },
+        "submit": {
+          "_type": "localizedText",
+          "pl": "Wyślij formularz",
+          "en": "Submit form"
+        },
+        "submitting": {
+          "_type": "localizedText",
+          "pl": "Wysyłanie...",
+          "en": "Sending..."
+        },
+        "allFieldsRequired": {
+          "_type": "localizedText",
+          "pl": "Wszystkie pola są wymagane",
+          "en": "All fields are required"
+        },
+        "fieldRequired": {
+          "_type": "localizedText",
+          "pl": "To pole jest wymagane",
+          "en": "This field is required"
+        },
+        "minLength": {
+          "_type": "localizedText",
+          "pl": "Minimum {min} znaków",
+          "en": "Minimum {min} characters"
+        },
+        "maxLength": {
+          "_type": "localizedText",
+          "pl": "Maksimum {max} znaków",
+          "en": "Maximum {max} characters"
+        },
+        "onlyPdf": {
+          "_type": "localizedText",
+          "pl": "Można załączyć tylko pliki PDF.",
+          "en": "Only PDF files can be attached."
+        },
+        "fileSizeExceeded": {
+          "_type": "localizedText",
+          "pl": "Łączny rozmiar plików przekracza {max}MB.",
+          "en": "The total file size exceeds {max}MB."
+        },
+        "recaptchaNotLoaded": {
+          "_type": "localizedText",
+          "pl": "reCAPTCHA nie została załadowana. Odśwież stronę i spróbuj ponownie.",
+          "en": "reCAPTCHA was not loaded. Refresh the page and try again."
+        },
+        "recaptchaConfigError": {
+          "_type": "localizedText",
+          "pl": "Konfiguracja reCAPTCHA jest nieprawidłowa.",
+          "en": "The reCAPTCHA configuration is incorrect."
+        },
+        "successMessage": {
+          "_type": "localizedText",
+          "pl": "Dziękujemy! Twoje zgłoszenie zostało wysłane.",
+          "en": "Thank you! Your application has been sent."
+        },
+        "errorMessage": {
+          "_type": "localizedText",
+          "pl": "Wystąpił błąd przy wysyłaniu formularza.",
+          "en": "An error occurred while submitting the form."
+        },
+        "errorMessageRetry": {
+          "_type": "localizedText",
+          "pl": "Wystąpił błąd przy wysyłaniu formularza. Spróbuj ponownie.",
+          "en": "An error occurred while submitting the form. Please try again."
+        }
+      }
+    },
+    "benefits": [
+      {
+        "_key": "career",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Rozwój kariery",
+          "en": "Career development"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Praca przy innowacyjnych projektach badawczych",
+          "en": "Work on innovative research projects"
+        }
+      },
+      {
+        "_key": "publications",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Publikacje",
+          "en": "Publications"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Możliwość współautorstwa publikacji naukowych",
+          "en": "Ability to co-author scientific publications"
+        }
+      },
+      {
+        "_key": "team",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Zespół",
+          "en": "Team"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Praca z doświadczonymi naukowcami i pasjonatami",
+          "en": "Work with experienced scientists and enthusiasts"
+        }
+      },
+      {
+        "_key": "equipment",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Sprzęt",
+          "en": "Equipment"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Dostęp do nowoczesnych laboratoriów i technologii",
+          "en": "Access to modern laboratories and technology"
+        }
+      },
+      {
+        "_key": "stability",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Stabilność",
+          "en": "Stability"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Praca na Uniwersytecie Medycznym we Wrocławiu",
+          "en": "Working at the Medical University of Wroclaw"
+        }
+      },
+      {
+        "_key": "networking",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Networking",
+          "en": "Networking"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Konferencje i współpraca międzynarodowa",
+          "en": "Conferences and international cooperation"
+        }
+      }
+    ],
+    "tracks": [
+      {
+        "_key": "etat",
+        "_type": "recruitmentTrack",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Etat (payroll UMW)",
+          "en": "FTE (UMW payroll)"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Chcesz pracować w miejscu, gdzie nauka spotyka się z technologią, a wyniki naprawdę coś znaczą? W P.U.M.A. nie ma miejsca na stagnację. Potrzebujemy ludzi, którzy myślą nieszablonowo, działają szybko i nie boją się odpowiedzialności. Jeśli badania są Twoją pasją - znajdziemy Ci miejsce na pokładzie.",
+          "en": "Want to work in a place where science meets technology and results really matter? There's no room for stagnation at P.U.M.A. We need people who think outside the box, act quickly, and aren't afraid of responsibility. If research is your passion - we'll find a place for you on board."
+        },
+        "requirements": {
+          "_type": "localizedText",
+          "pl": "aktualne CV, list motywacyjny, wykaz publikacji lub doświadczenia projektowego.",
+          "en": "current CV, cover letter, list of publications or project experience."
+        }
+      },
+      {
+        "_key": "staz",
+        "_type": "recruitmentTrack",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Staże i pomysły (naukowcy, przedsiębiorcy, studenci)",
+          "en": "Internships and ideas (scientists, entrepreneurs, students)"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Masz pomysł, który inni uznaliby za zbyt trudny albo zbyt odważny? Zapraszamy. W P.U.M.A. nie uciekamy od wyzwań - zamieniamy je w projekty, dane, patenty i publikacje, w których możesz brać udział. Jeśli chcesz zrobić coś więcej niż tylko kolekcjonować punkty do CV, znajdziesz tu partnerów, którzy nie tylko Cię wysłuchają i pomogą ruszyć z miejsca, ale też będą wspierać zarówno w codziennych dociekaniach naukowych, jak i w zmaganiach z biurokracją.",
+          "en": "Do you have an idea that others would consider too difficult or too bold? Welcome. At P.U.M.A., we don't run from challenges - we turn them into projects, data, patents and publications you can participate in. If you want to do more than just collect points for your CV, you'll find partners here who will not only listen to you and help you get started, but will also support you in both daily scientific inquiries and struggles with bureaucracy."
+        },
+        "requirements": {
+          "_type": "localizedText",
+          "pl": "krótki opis zainteresowań badawczych, zgoda promotora/opiekuna, CV.",
+          "en": "brief description of research interests, supervisor's consent, CV."
+        }
+      },
+      {
+        "_key": "phd",
+        "_type": "recruitmentTrack",
+        "label": {
+          "_type": "localizedText",
+          "pl": "Doktorat (PhD track)",
+          "en": "PhD (PhD track)"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Jeśli Twoja motywacja to łatwy tytuł doktora, trzy inne etaty i symboliczna wizyta w labie co drugi czwartek między 13:07 a 13:15 - szukaj gdzie indziej. Doktorat w P.U.M.A. to przygoda, w której potrzeba determinacji i systematyczności. W zamian dostaniesz możliwość pracy nad projektami o realnym znaczeniu, wsparcie specjalistów z całego świata i szansę na publikacje w uznanych czasopismach. Najlepiej, jeśli naprawdę pasjonuje Cię to, co robisz i co chcesz robić - wtedy my zrobimy wszystko, by Ci pomóc.",
+          "en": "If your motivation is an easy doctoral degree, three other jobs, and a symbolic visit to the lab every other Thursday between 1:07 PM and 1:15 PM - look elsewhere. A PhD at P.U.M.A. is an adventure that requires determination and consistency. In return, you'll get the opportunity to work on projects of real significance, support from specialists from around the world, and a chance to publish in recognized journals. Ideally, you're genuinely passionate about what you do and want to do - then we'll do everything to help you."
+        },
+        "requirements": {
+          "_type": "localizedText",
+          "pl": "streszczenie planu badawczego (do 1 strony), CV, rekomendacje naukowe (min. 1 osoba).",
+          "en": "research plan summary (up to 1 page), CV, academic recommendations (min. 1 person)."
+        }
+      }
+    ],
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Rekrutacja do zespołu P.U.M.A.",
+      "en": "Join the P.U.M.A. Team – Recruitment"
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Dołącz do zespołu P.U.M.A.! Sprawdź aktualne oferty pracy, staży i doktoratów w Zakładzie Technologii Translacyjnych UMW.",
+      "en": "Join P.U.M.A.! Check current job offers, internships and PhD positions at the Department of Translational Technologies, MUW."
+    }
+  },
+  "cooperation": {
+    "_type": "cooperationPage",
+    "copy": {
+      "cooperation": {
+        "hero": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Współpraca",
+            "en": "Collaboration"
+          },
+          "subtitle": {
+            "_type": "localizedText",
+            "pl": "Nawiąż współpracę naukową i badawczą z P.U.M.A.",
+            "en": "Establish scientific and research cooperation with P.U.M.A."
+          }
+        },
+        "offers": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Co oferujemy?",
+            "en": "What do we offer?"
+          }
+        },
+        "form": {
+          "title": {
+            "_type": "localizedText",
+            "pl": "Skontaktuj się z nami",
+            "en": "Contact us"
+          },
+          "intro": {
+            "_type": "localizedText",
+            "pl": "Masz pytania lub chcesz omówić możliwości współpracy? Wypełnij formularz, a skontaktujemy się z Tobą.",
+            "en": "Do you have questions or want to discuss cooperation opportunities? Fill out the form and we will get in touch with you."
+          },
+          "attachmentLabel": {
+            "_type": "localizedText",
+            "pl": "Załącz pliki PDF",
+            "en": "Attach PDF files"
+          }
+        },
+        "intro": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Współpraca naukowa i badawcza",
+            "en": "Scientific and research cooperation"
+          },
+          "paragraph1": {
+            "_type": "localizedText",
+            "pl": "Naszym celem jest łączenie nauki z praktyką. Wspieramy zarówno indywidualnych badaczy, jak i instytucje, które chcą wprowadzać innowacje w obszarze farmacji, medycyny i biotechnologii. Jeżeli masz pomysł na projekt badawczy lub potrzebujesz wsparcia w realizacji części eksperymentalnej – zapraszamy do kontaktu.",
+            "en": "Our goal is to connect science with practice. We support both individual researchers and institutions that want to innovate in the fields of pharmacy, medicine and biotechnology. If you have an idea for a research project or need support in implementing the experimental part - we invite you to contact us."
+          },
+          "paragraph2": {
+            "_type": "localizedText",
+            "pl": "Prowadzimy współpracę z uczelniami, startupami, ośrodkami badawczymi oraz przedsiębiorstwami z sektora farmaceutycznego i biotechnologicznego. Niezależnie od etapu Twojego pomysłu – od koncepcji po analizę wyników – możemy pomóc w jego wdrożeniu i publikacji.",
+            "en": "We work with universities, startups, research centers and companies in the pharmaceutical and biotechnology sectors. Regardless of the stage of your idea - from conception to analysis of results - we can help with its implementation and publication."
+          }
+        },
+        "scope": {
+          "heading": {
+            "_type": "localizedText",
+            "pl": "Możliwości współpracy:",
+            "en": "Opportunities for cooperation:"
+          }
+        },
+        "note": {
+          "_type": "localizedText",
+          "pl": "Nie wymagamy formalnego afiliowania – liczy się pomysł, cel i gotowość do współpracy.",
+          "en": "We do not require a formal affiliation - what matters is the idea, the goal and the willingness to cooperate."
+        }
+      },
+      "formLabels": {
+        "firstName": {
+          "_type": "localizedText",
+          "pl": "Imię",
+          "en": "Name"
+        },
+        "lastName": {
+          "_type": "localizedText",
+          "pl": "Nazwisko",
+          "en": "Name"
+        },
+        "companyName": {
+          "_type": "localizedText",
+          "pl": "Nazwa firmy/instytucji",
+          "en": "Name of the company/institution"
+        },
+        "email": {
+          "_type": "localizedText",
+          "pl": "Email",
+          "en": "Email"
+        },
+        "subject": {
+          "_type": "localizedText",
+          "pl": "Temat",
+          "en": "Subject"
+        },
+        "subjectPlaceholder": {
+          "_type": "localizedText",
+          "pl": "-- Wybierz temat --",
+          "en": "-- Select topic --."
+        },
+        "message": {
+          "_type": "localizedText",
+          "pl": "Wiadomość",
+          "en": "Message"
+        },
+        "attachment": {
+          "_type": "localizedText",
+          "pl": "Załącz pliki PDF",
+          "en": "Attach PDF files"
+        },
+        "attachmentHint": {
+          "_type": "localizedText",
+          "pl": "Można załączyć wiele plików PDF (max {size}MB łącznie)",
+          "en": "Multiple PDF files can be attached (max {size}MB total)"
+        },
+        "totalSize": {
+          "_type": "localizedText",
+          "pl": "Łączny rozmiar: {current}MB / {max}MB",
+          "en": "Total size: {current}MB / {max}MB"
+        },
+        "charactersCount": {
+          "_type": "localizedText",
+          "pl": "{current}/{max} znaków",
+          "en": "{current}/{max} characters"
+        },
+        "attachedFiles": {
+          "_type": "localizedText",
+          "pl": "Załączone pliki:",
+          "en": "Attached files:"
+        },
+        "removeFile": {
+          "_type": "localizedText",
+          "pl": "Usuń plik",
+          "en": "Delete file"
+        },
+        "submit": {
+          "_type": "localizedText",
+          "pl": "Wyślij formularz",
+          "en": "Submit form"
+        },
+        "submitting": {
+          "_type": "localizedText",
+          "pl": "Wysyłanie...",
+          "en": "Sending..."
+        },
+        "allFieldsRequired": {
+          "_type": "localizedText",
+          "pl": "Wszystkie pola są wymagane",
+          "en": "All fields are required"
+        },
+        "fieldRequired": {
+          "_type": "localizedText",
+          "pl": "To pole jest wymagane",
+          "en": "This field is required"
+        },
+        "minLength": {
+          "_type": "localizedText",
+          "pl": "Minimum {min} znaków",
+          "en": "Minimum {min} characters"
+        },
+        "maxLength": {
+          "_type": "localizedText",
+          "pl": "Maksimum {max} znaków",
+          "en": "Maximum {max} characters"
+        },
+        "onlyPdf": {
+          "_type": "localizedText",
+          "pl": "Można załączyć tylko pliki PDF.",
+          "en": "Only PDF files can be attached."
+        },
+        "fileSizeExceeded": {
+          "_type": "localizedText",
+          "pl": "Łączny rozmiar plików przekracza {max}MB.",
+          "en": "The total file size exceeds {max}MB."
+        },
+        "recaptchaNotLoaded": {
+          "_type": "localizedText",
+          "pl": "reCAPTCHA nie została załadowana. Odśwież stronę i spróbuj ponownie.",
+          "en": "reCAPTCHA was not loaded. Refresh the page and try again."
+        },
+        "recaptchaConfigError": {
+          "_type": "localizedText",
+          "pl": "Konfiguracja reCAPTCHA jest nieprawidłowa.",
+          "en": "The reCAPTCHA configuration is incorrect."
+        },
+        "successMessage": {
+          "_type": "localizedText",
+          "pl": "Dziękujemy! Twoje zgłoszenie zostało wysłane.",
+          "en": "Thank you! Your application has been sent."
+        },
+        "errorMessage": {
+          "_type": "localizedText",
+          "pl": "Wystąpił błąd przy wysyłaniu formularza.",
+          "en": "An error occurred while submitting the form."
+        },
+        "errorMessageRetry": {
+          "_type": "localizedText",
+          "pl": "Wystąpił błąd przy wysyłaniu formularza. Spróbuj ponownie.",
+          "en": "An error occurred while submitting the form. Please try again."
+        }
+      }
+    },
+    "offers": [
+      {
+        "_key": "expertise",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Ekspertyza naukowa",
+          "en": "Scientific expertise"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Doświadczony zespół naukowców z różnych dziedzin",
+          "en": "Experienced team of scientists from various fields"
+        }
+      },
+      {
+        "_key": "equipment",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Nowoczesne wyposażenie",
+          "en": "Modern equipment"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Dostęp do specjalistycznych laboratoriów i sprzętu",
+          "en": "Access to specialized laboratories and equipment"
+        }
+      },
+      {
+        "_key": "dataAnalysis",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Analiza danych",
+          "en": "Data analysis"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Zaawansowana analiza statystyczna i AI",
+          "en": "Advanced statistical analysis and AI"
+        }
+      },
+      {
+        "_key": "microbiology",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Analiza mikrobiologiczna",
+          "en": "Microbiological analysis"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Badania mikrobiologiczne z wykorzystaniem modeli in vivo i in vitro",
+          "en": "Microbiological studies using in vivo and in vitro models"
+        }
+      },
+      {
+        "_key": "flexibility",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Elastyczność",
+          "en": "Flexibility"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Dopasowanie do potrzeb i budżetu projektu",
+          "en": "Tailor to project needs and budget"
+        }
+      },
+      {
+        "_key": "comprehensive",
+        "_type": "marketingCard",
+        "title": {
+          "_type": "localizedText",
+          "pl": "Kompleksowość",
+          "en": "Complexity"
+        },
+        "description": {
+          "_type": "localizedText",
+          "pl": "Od pomysłu przez badania po wdrożenie",
+          "en": "From idea to research to implementation"
+        }
+      }
+    ],
+    "scope": [
+      {
+        "_key": "scope0",
+        "_type": "marketingText",
+        "text": {
+          "_type": "localizedText",
+          "pl": "Realizacja eksperymentów laboratoryjnych i badań klinicznych",
+          "en": "Implementation of laboratory experiments and clinical trials"
+        }
+      },
+      {
+        "_key": "scope1",
+        "_type": "marketingText",
+        "text": {
+          "_type": "localizedText",
+          "pl": "Analiza danych, statystyka, opracowanie wyników",
+          "en": "Data analysis, statistics, elaboration of results"
+        }
+      },
+      {
+        "_key": "scope2",
+        "_type": "marketingText",
+        "text": {
+          "_type": "localizedText",
+          "pl": "Konsultacje naukowe i opracowanie koncepcji badawczej",
+          "en": "Scientific consultation and research design"
+        }
+      },
+      {
+        "_key": "scope3",
+        "_type": "marketingText",
+        "text": {
+          "_type": "localizedText",
+          "pl": "Wsparcie w przygotowaniu wniosków grantowych i publikacji",
+          "en": "Support in the preparation of grant proposals and publications"
+        }
+      },
+      {
+        "_key": "scope4",
+        "_type": "marketingText",
+        "text": {
+          "_type": "localizedText",
+          "pl": "Zlecenia badawcze na potrzeby instytucji lub firm prywatnych",
+          "en": "Research assignments for the needs of institutions or private companies"
+        }
+      }
+    ],
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Współpraca z P.U.M.A. – ZTT UMW",
+      "en": "Collaborate with P.U.M.A. – MUW"
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Nawiąż współpracę naukową i badawczą z Pracownią Unikalnych Modeli Aplikacyjnych P.U.M.A. Uniwersytetu Medycznego we Wrocławiu.",
+      "en": "Establish scientific and research cooperation with the P.U.M.A. Laboratory at the Medical University of Wrocław."
+    }
+  }
+}

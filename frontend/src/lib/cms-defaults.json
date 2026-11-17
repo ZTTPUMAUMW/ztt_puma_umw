@@ -1,0 +1,100 @@
+{
+  "contact": {
+    "title": {
+      "_type": "localizedText",
+      "pl": "Kontakt",
+      "en": "Contact"
+    },
+    "subtitle": {
+      "_type": "localizedText",
+      "pl": "Skontaktuj się z zespołem P.U.M.A.",
+      "en": "Contact the P.U.M.A. team."
+    },
+    "addressTitle": {
+      "_type": "localizedText",
+      "pl": "Adres",
+      "en": "Address"
+    },
+    "phoneTitle": {
+      "_type": "localizedText",
+      "pl": "Telefon",
+      "en": "Phone"
+    },
+    "emailTitle": {
+      "_type": "localizedText",
+      "pl": "Email",
+      "en": "Email"
+    },
+    "mapTitle": {
+      "_type": "localizedText",
+      "pl": "Mapa lokalizacji P.U.M.A.",
+      "en": "P.U.M.A. Location Map."
+    },
+    "seoTitle": {
+      "_type": "localizedText",
+      "pl": "Kontakt – ZTT P.U.M.A. UMW",
+      "en": "Contact – P.U.M.A. MUW"
+    },
+    "seoDescription": {
+      "_type": "localizedText",
+      "pl": "Skontaktuj się z zespołem P.U.M.A. w Zakładzie Technologii Translacyjnych Uniwersytetu Medycznego we Wrocławiu.",
+      "en": "Get in touch with the P.U.M.A. team at the Department of Translational Technologies, Medical University of Wrocław."
+    }
+  },
+  "settings": {
+    "department": {
+      "_type": "localizedText",
+      "pl": "Zakład Technologii Translacyjnych",
+      "en": "Department of Translational Technologies"
+    },
+    "lab": {
+      "_type": "localizedText",
+      "pl": "Pracownia Unikalnych Modeli Aplikacyjnych",
+      "en": "Laboratory of Unique Application Models"
+    },
+    "faculty": {
+      "_type": "localizedText",
+      "pl": "Wydział Farmaceutyczny Uniwersytetu Medycznego",
+      "en": "Faculty of Pharmacy, University of Medical Sciences"
+    },
+    "university": {
+      "_type": "localizedText",
+      "pl": "im. Piastów Śląskich we Wrocławiu",
+      "en": "im. Piasts of Silesia in Wroclaw"
+    },
+    "street": {
+      "_type": "localizedText",
+      "pl": "ul. Borowska 211, 50-556 Wrocław",
+      "en": "211 Borowska St., 50-556 Wroclaw"
+    },
+    "floor": {
+      "_type": "localizedText",
+      "pl": "Piętro I",
+      "en": "Floor I"
+    },
+    "phoneNumber": "+48717840471",
+    "phoneDisplay": "(71) 78-40-471",
+    "email": "WF-30@umw.edu.pl",
+    "mapAddress": "Borowska 211, 50-556 Wrocław, Poland",
+    "footerDepartment": {
+      "_type": "localizedText",
+      "pl": "Zakład Technologii Translacyjnych",
+      "en": "Department of Translational Technologies"
+    },
+    "footerLab": {
+      "_type": "localizedText",
+      "pl": "Pracownia Unikalnych Modeli Aplikacyjnych",
+      "en": "Laboratory of Unique Application Models"
+    },
+    "footerDescription": {
+      "_type": "localizedText",
+      "pl": "Innowacyjne rozwiązania na styku farmacji, medycyny i biotechnologii",
+      "en": "Innovative solutions at the intersection of pharmacy, medicine and biotechnology"
+    },
+    "copyrightName": {
+      "_type": "localizedText",
+      "pl": "P.U.M.A. - Pracownia Unikalnych Modeli Aplikacyjnych",
+      "en": "P.U.M.A. - Laboratory of Unique Application Models"
+    }
+  }
+}

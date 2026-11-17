@@ -1,5 +1,7 @@
 "use client";
 
+import ScientificText from "./ScientificText";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import styles from "@/styles/pages/projects.module.scss";
@@ -60,10 +62,9 @@ export default function ProjectItem({ project }: ProjectItemProps) {
                 style={{ height: "auto" }}
               />
             )}
-            <h3
-              className={styles["project-component__title"]}
-              dangerouslySetInnerHTML={{ __html: project.title }}
-            />
+            <h3 className={styles["project-component__title"]}>
+              <ScientificText text={project.title} />
+            </h3>
           </div>
           <div className={styles["project-component__wrapper"]}>
             <div className={styles["project-component__wrapper-separator"]}></div>
@@ -71,10 +72,9 @@ export default function ProjectItem({ project }: ProjectItemProps) {
 
           <div className={styles["project-component__description"]}>
             {project.description && (
-              <div
-                className={styles["project-component__copy"]}
-                dangerouslySetInnerHTML={{ __html: project.description }}
-              />
+              <div className={styles["project-component__copy"]}>
+                <ScientificText text={project.description} />
+              </div>
             )}
           </div>
 

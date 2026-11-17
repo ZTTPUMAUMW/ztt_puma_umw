@@ -14,5 +14,7 @@
     "title": "Between science and practice, or how P.U.M.A. works.",
     "description": "The P.U.M.A. laboratory combines basic research with practical application. Learn more about our work in the UMW University Newspaper - Year 2025 September/October on pages 9 to 11.",
     "link": "https://gazeta.umw.edu.pl/2025-2023/"
-  }
+  },
+  "tabLabel": "NEWS & UPDATES",
+  "goToSlide": "Go to slide {number}"
 }

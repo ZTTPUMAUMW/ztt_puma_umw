@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import styles from "@/styles/components/featured-banner.module.scss";
 
 interface FeaturedBannerProps {
@@ -22,9 +22,8 @@ export default function FeaturedBanner({
   alt,
   isFirst = false,
 }: FeaturedBannerProps) {
-  const locale = useLocale();
   const t = useTranslations("featuredBanner");
-  const tabText = locale === "en" ? "NEWS & UPDATES" : "AKTUALNOŚCI";
+  const tabText = t("tabLabel");
   const imageAlt = alt || title;
 
   return (

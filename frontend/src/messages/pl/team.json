@@ -15,6 +15,10 @@
     "students": "Studenci"
   },
   "modal": {
-    "back": "Powrót"
-  }
+    "back": "Powrót",
+    "previous": "Poprzednia osoba",
+    "next": "Następna osoba",
+    "close": "Zamknij profil"
+  },
+  "cardDetails": "Pokaż szczegóły członka zespołu: {name}"
 }

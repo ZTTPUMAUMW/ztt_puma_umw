@@ -1,55 +1,18 @@
-"use client";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { getMarketingPage } from "@/lib/cms-marketing-loader";
+import ModelsContent from "@/components/ModelsContent";
+import { getCollectionPage } from "@/lib/cms-collection-loader";
 
-import { useTranslations, useLocale } from "next-intl";
-import Hero from "@/components/Hero";
-import Section from "@/components/Section";
-import CTASection from "@/components/CTASection";
-import ModelItem from "@/components/ModelItem";
-import { italicizeLatinWords } from "@/lib/utils";
-import { modelsData as modelsDataPl } from "@/data/models.pl";
-import { modelsData as modelsDataEn } from "@/data/models.en";
-import styles from "@/styles/pages/models.module.scss";
-
-// TODO: Refactor to fetch models from SanityCMS instead of static data. It should also be considered to move the italicization of Latin words to the backend or CMS layer for better performance and consistency across the site in the future, especially if models data becomes more complex or includes rich text fields.
-const models = (locale: string) => {
-  const modelsData = locale === "en" ? modelsDataEn : modelsDataPl;
-
-  return modelsData.map((model) => ({
-    ...model,
-    title: italicizeLatinWords(model.title),
-    description:
-      typeof model.description === "string"
-        ? italicizeLatinWords(model.description)
-        : model.description,
-  }));
-};
-
-export default function ModelsPage() {
-  const t = useTranslations("models");
-  const locale = useLocale();
-  const modelsToRender = models(locale);
-
+export default async function ModelsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const content = await getCollectionPage("models", locale);
+  const home = await getMarketingPage("home", locale);
   return (
-    <>
-      <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
-
-      <Section>
-        <div className="container-content">
-          <div className={styles["models--list"]}>
-            {modelsToRender.map((model, index) => (
-              <ModelItem
-                key={index}
-                image={model.image}
-                title={model.title}
-                description={model.description}
-                reverse={index % 2 !== 0}
-              />
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      <CTASection />
-    </>
+    <NextIntlClientProvider
+      messages={{ ...(await getMessages()), models: content.copy, home: home.copy.home }}
+    >
+      <ModelsContent modelsToRender={content.models} ctaButtons={home.ctaButtons} />
+    </NextIntlClientProvider>
   );
 }

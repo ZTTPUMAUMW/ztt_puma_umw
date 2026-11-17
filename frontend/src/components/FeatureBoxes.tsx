@@ -1,21 +1,11 @@
 "use client";
 
+import type { MarketingCard } from "@/lib/cms-marketing";
 import { useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/feature-boxes.module.scss";
 
-interface Feature {
-  key: "fast" | "flexible" | "complete" | "interdisciplinary";
-}
-
-const features: Feature[] = [
-  { key: "fast" },
-  { key: "flexible" },
-  { key: "complete" },
-  { key: "interdisciplinary" },
-];
-
-export default function FeatureBoxes() {
+export default function FeatureBoxes({ items: features }: { items: MarketingCard[] }) {
   const t = useTranslations("home.features");
   const { ref: headerRef, inView: headerInView } = useInView();
   const { ref: gridRef, inView: gridInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
@@ -34,16 +24,12 @@ export default function FeatureBoxes() {
         >
           {features.map((feature, index) => (
             <div
-              key={index}
+              key={feature.id}
               className={styles["feature-boxes__box"]}
               style={{ ["--i" as string]: index }}
             >
-              <h3 className={styles["feature-boxes__box-title"]}>
-                {t(`items.${feature.key}.title`)}
-              </h3>
-              <p className={styles["feature-boxes__box-description"]}>
-                {t(`items.${feature.key}.description`)}
-              </p>
+              <h3 className={styles["feature-boxes__box-title"]}>{feature.title}</h3>
+              <p className={styles["feature-boxes__box-description"]}>{feature.description}</p>
             </div>
           ))}
         </div>

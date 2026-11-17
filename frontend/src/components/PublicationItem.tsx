@@ -1,5 +1,7 @@
 "use client";
 
+import ScientificText from "./ScientificText";
+
 import { useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 import styles from "../styles/pages/publications.module.scss";
@@ -73,10 +75,9 @@ export default function PublicationItem({ publication }: PublicationItemProps) {
             </span>
           </div>
 
-          <h3
-            className={styles["publication__title"]}
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
+          <h3 className={styles["publication__title"]}>
+            <ScientificText text={title} />
+          </h3>
 
           <div className={styles["publication__info"]}>
             <p className={styles["publication__authors"]}>{formattedAuthors}</p>

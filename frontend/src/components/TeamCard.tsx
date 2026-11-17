@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useInView } from "@/hooks/useInView";
 import styles from "../styles/components/team-card.module.scss";
@@ -30,6 +31,7 @@ export default function TeamCard({
   animationIndex = 0,
   priority = false,
 }: TeamCardProps) {
+  const t = useTranslations("team");
   const { ref, inView } = useInView<HTMLDivElement>({ rootMargin: "0px 0px -40px 0px" });
 
   return (
@@ -41,13 +43,13 @@ export default function TeamCard({
       <button
         onClick={() => onOpenModal(member)}
         className={styles["team-card__button"]}
-        aria-label={`Pokaż szczegóły członka zespołu: ${member.name}`}
+        aria-label={t("cardDetails", { name: member.name })}
       >
         <div className={styles["team-card__thumbnail"]}>
           <div className={styles["team-card__image-wrapper"]}>
             <Image
               className={styles["team-card__image"]}
-              src={`/${member.image}`}
+              src={member.image}
               alt={member.alt}
               fill
               sizes="(min-width: 1367px) 581px, 580px"

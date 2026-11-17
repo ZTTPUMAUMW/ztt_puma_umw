@@ -2,14 +2,32 @@
 
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
+
 import styles from "../styles/components/footer.module.scss";
 
-export default function Footer() {
+import type { SharedContent, WebsiteLink } from "@/lib/cms-shared";
+import type { WebsiteContent } from "@/lib/cms-content";
+
+export default function Footer({
+  settings,
+  chrome,
+}: {
+  settings: WebsiteContent["settings"];
+  chrome: SharedContent;
+}) {
   const currentYear = new Date().getFullYear();
-  const t = useTranslations("navigation");
-  const tFooter = useTranslations("footer");
-  const locale = useLocale();
+  const renderLinks = (items: WebsiteLink[]) =>
+    items.map((item) => (
+      <li key={item.id}>
+        {item.route ? (
+          <Link href={item.route}>{item.label}</Link>
+        ) : (
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            {item.label}
+          </a>
+        )}
+      </li>
+    ));
 
   return (
     <footer className={styles["site-footer"]}>
@@ -20,100 +38,44 @@ export default function Footer() {
             className={`${styles["site-footer__section"]} ${styles["site-footer__section--main"]}`}
           >
             <a
-              href={`https://www.umw.edu.pl/${locale}`}
+              href={chrome.universityUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="UMW"
+              aria-label={chrome.copy.universityAlt}
             >
               <Image
-                src="/umw-logo.svg"
-                alt="Logo Uniwersytetu Medycznego we Wrocławiu"
+                src={chrome.universityLogo}
+                alt={chrome.copy.universityAlt}
                 width={180}
                 height={60}
                 style={{ height: "auto" }}
                 className={styles["site-footer__main-logo"]}
               />
             </a>
-            <p>{tFooter("department")}</p>
-            <p>{tFooter("lab")}</p>
-            <p className={styles["site-footer__main-description"]}>{tFooter("description")}</p>
+            <p>{settings.footerDepartment}</p>
+            <p>{settings.footerLab}</p>
+            <p className={styles["site-footer__main-description"]}>{settings.footerDescription}</p>
           </div>
 
           <div className={styles["site-footer__section"]}>
-            <h3>{tFooter("site")}</h3>
-            <ul>
-              <li>
-                <Link href="/">{t("home")}</Link>
-              </li>
-              <li>
-                <Link href="/projects">{t("projects")}</Link>
-              </li>
-              <li>
-                <Link href="/publications">{t("publications")}</Link>
-              </li>
-              <li>
-                <Link href="/models">{t("models")}</Link>
-              </li>
-              <li>
-                <Link href="/team">{t("team")}</Link>
-              </li>
-            </ul>
+            <h3>{chrome.copy.site}</h3>
+            <ul>{renderLinks(chrome.footerSite)}</ul>
           </div>
 
           <div className={styles["site-footer__section"]}>
-            <h3>{tFooter("contact")}</h3>
-            <ul>
-              <li>
-                <Link href="/recruitment">{t("recruitment")}</Link>
-              </li>
-              <li>
-                <Link href="/cooperation">{t("cooperation")}</Link>
-              </li>
-              <li>
-                <Link href="/contact">{t("contact")}</Link>
-              </li>
-            </ul>
+            <h3>{chrome.copy.contact}</h3>
+            <ul>{renderLinks(chrome.footerContact)}</ul>
           </div>
 
           <div className={styles["site-footer__section"]}>
-            <h3>{tFooter("links")}</h3>
-            <ul>
-              <li>
-                <a href="https://www.umw.edu.pl" target="_blank" rel="noopener noreferrer">
-                  {tFooter("externalLinks.university")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.umw.edu.pl/pl/jednostki/zaklad-technologii-translacyjnych"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {tFooter("externalLinks.department")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://ppm.umw.edu.pl/info/affiliation/UMW49ae3cc953a04e37bf652c1f8ab5791a?r=publication&tab=publications&title=Profil%2Bjednostki%2B%25E2%2580%2593%2BZak%25C5%2582ad%2BTechnologii%2BTranslacyjnych%2B%25E2%2580%2593%2BUniwersytet%2BMedyczny%2Bim.%2BPiast%25C3%25B3w%2B%25C5%259Al%25C4%2585skich%2Bwe%2BWroc%25C5%2582awiu&lang=pl&pn=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {tFooter("externalLinks.platform")}
-                </a>
-              </li>
-              <li>
-                <a href="https://plum.umw.edu.pl" target="_blank" rel="noopener noreferrer">
-                  {tFooter("externalLinks.plum")}
-                </a>
-              </li>
-            </ul>
+            <h3>{chrome.copy.links}</h3>
+            <ul>{renderLinks(chrome.externalLinks)}</ul>
           </div>
         </div>
 
         <div className={styles["site-footer__bottom"]}>
           <p>
-            &copy; {currentYear} P.U.M.A. - Pracownia Unikalnych Modeli Aplikacyjnych.{" "}
-            {tFooter("allRightsReserved")}.
+            &copy; {currentYear} {settings.copyrightName}. {chrome.copy.rights}.
           </p>
         </div>
       </div>

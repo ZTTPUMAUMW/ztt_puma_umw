@@ -1,0 +1,151 @@
+"use client";
+
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+import Hero from "@/components/Hero";
+import TeamCard, { TeamMember } from "@/components/TeamCard";
+import TeamModal from "@/components/TeamModal";
+import { useInView } from "@/hooks/useInView";
+import TabbedSection from "@/components/TabbedSection";
+import styles from "@/styles/components/team-stats.module.scss";
+import teamStyles from "@/styles/pages/team.module.scss";
+
+export default function TeamContent({
+  teamMembers,
+}: {
+  teamMembers: Record<"pracownicy" | "doktoranci" | "studenci", TeamMember[]>;
+}) {
+  const t = useTranslations("team");
+  const { ref: introRef, inView: introInView } = useInView();
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<"pracownicy" | "doktoranci" | "studenci">(
+    "pracownicy"
+  );
+
+  const processedTeamMembers = teamMembers;
+
+  const handleOpenModal = (member: TeamMember) => {
+    setSelectedMember(member);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedMember(null), 300);
+  };
+
+  const handleNavigate = (direction: "prev" | "next") => {
+    if (!selectedMember) return;
+
+    const currentCategory = processedTeamMembers[activeTab];
+    if (!currentCategory.length) return;
+    const currentIndex = currentCategory.findIndex((m) => m.id === selectedMember.id);
+
+    let newIndex;
+    if (direction === "prev") {
+      newIndex = currentIndex > 0 ? currentIndex - 1 : currentCategory.length - 1;
+    } else {
+      newIndex = currentIndex < currentCategory.length - 1 ? currentIndex + 1 : 0;
+    }
+
+    setSelectedMember(currentCategory[newIndex]);
+  };
+
+  return (
+    <>
+      <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
+
+      <section className={styles["team-intro__section"]}>
+        <div className="container-content">
+          <p
+            ref={introRef}
+            className={`${styles["team-intro__text"]} animate-on-scroll${introInView ? " in-view" : ""}`}
+          >
+            {t("stats.intro")}
+          </p>
+        </div>
+      </section>
+
+      <TabbedSection
+        tabs={[
+          {
+            key: "pracownicy",
+            label: t("tabs.researchers"),
+            content: () => (
+              <section className={teamStyles["team--section"]}>
+                <div className={teamStyles["team--grid"]}>
+                  {processedTeamMembers.pracownicy.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                      priority={i === 0}
+                    />
+                  ))}
+                </div>
+              </section>
+            ),
+          },
+          {
+            key: "doktoranci",
+            label: t("tabs.phd"),
+            content: () => (
+              <section className={teamStyles["team--section"]}>
+                <div
+                  className={[teamStyles["team--grid"], teamStyles["team--grid--three"]]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  {processedTeamMembers.doktoranci.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                    />
+                  ))}
+                </div>
+              </section>
+            ),
+          },
+          {
+            key: "studenci",
+            label: t("tabs.students"),
+            content: () => (
+              <section className={teamStyles["team--section"]}>
+                <div
+                  className={[teamStyles["team--grid"], teamStyles["team--grid--three"]]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  {processedTeamMembers.studenci.map((member, i) => (
+                    <TeamCard
+                      key={member.id}
+                      member={member}
+                      onOpenModal={handleOpenModal}
+                      animationIndex={i}
+                    />
+                  ))}
+                </div>
+              </section>
+            ),
+          },
+        ]}
+        activeKey={activeTab}
+        onTabChange={(key) => setActiveTab(key as typeof activeTab)}
+        className=""
+        tabClassName=""
+        panelClassName="team"
+      />
+
+      <TeamModal
+        isOpen={isModalOpen}
+        member={selectedMember}
+        onClose={handleCloseModal}
+        onNavigate={handleNavigate}
+      />
+    </>
+  );
+}

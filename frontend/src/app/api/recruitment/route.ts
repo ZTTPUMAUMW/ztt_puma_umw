@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { isReviewMode } from "@/lib/review-mode";
 import { emailTransporter } from "@/lib/email";
 import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export async function POST(request: NextRequest) {
+  if (isReviewMode())
+    return NextResponse.json(
+      { error: "Email delivery is disabled in the review environment." },
+      { status: 503 }
+    );
   try {
     const formData = await request.formData();
 

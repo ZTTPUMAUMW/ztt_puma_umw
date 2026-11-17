@@ -58,3 +58,4 @@ backup-frontend-*.zip
 *.backup
 *.swp
 *~
+.vercel

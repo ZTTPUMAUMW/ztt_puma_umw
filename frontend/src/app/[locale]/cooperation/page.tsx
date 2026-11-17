@@ -1,112 +1,21 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import Hero from "@/components/Hero";
-import ContactForm from "@/components/ContactForm";
-import { useInView } from "@/hooks/useInView";
-import styles from "@/styles/pages/cooperation.module.scss";
-
-export default function CooperationPage() {
-  const t = useTranslations("cooperation");
-  const { ref: offersRef, inView: offersInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
-  const { ref: infoRef, inView: infoInView } = useInView();
-
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { getMarketingPage } from "@/lib/cms-marketing-loader";
+import { record } from "@/lib/cms-collections";
+import CooperationContent from "@/components/CooperationContent";
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const page = await getMarketingPage("cooperation", locale);
+  const messages = await getMessages();
   return (
-    <>
-      <Hero title={t("hero.title")} subtitle={t("hero.subtitle")} />
-
-      <section className={styles["cooperation__offers-section"]}>
-        <div className={styles["container-content"]}>
-          <h2 className={styles["cooperation__offers-title"]}>{t("offers.heading")}</h2>
-          <div
-            ref={offersRef}
-            className={`${styles["cooperation__offers-grid"]} animate-stagger${offersInView ? " in-view" : ""}`}
-          >
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 0 }}>
-              <h3 className={styles["cooperation__offer-title"]}>{t("offers.expertise.title")}</h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.expertise.description")}
-              </p>
-            </div>
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 1 }}>
-              <h3 className={styles["cooperation__offer-title"]}>{t("offers.equipment.title")}</h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.equipment.description")}
-              </p>
-            </div>
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 2 }}>
-              <h3 className={styles["cooperation__offer-title"]}>
-                {t("offers.dataAnalysis.title")}
-              </h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.dataAnalysis.description")}
-              </p>
-            </div>
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 3 }}>
-              <h3 className={styles["cooperation__offer-title"]}>
-                {t("offers.microbiology.title")}
-              </h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.microbiology.description")}
-              </p>
-            </div>
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 4 }}>
-              <h3 className={styles["cooperation__offer-title"]}>
-                {t("offers.flexibility.title")}
-              </h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.flexibility.description")}
-              </p>
-            </div>
-            <div className={styles["cooperation__offer-card"]} style={{ ["--i" as string]: 5 }}>
-              <h3 className={styles["cooperation__offer-title"]}>
-                {t("offers.comprehensive.title")}
-              </h3>
-              <p className={styles["cooperation__offer-description"]}>
-                {t("offers.comprehensive.description")}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={`${styles["section-component"]} ${styles["cooperation__section"]}`}>
-        <div className={styles["cooperation__container"]}>
-          <div
-            ref={infoRef}
-            className={`${styles["cooperation__info"]} animate-on-scroll${infoInView ? " in-view" : ""}`}
-          >
-            <div className={styles["cooperation__intro"]}>
-              <h2>{t("intro.heading")}</h2>
-              <p>{t("intro.paragraph1")}</p>
-
-              <p>{t("intro.paragraph2")}</p>
-            </div>
-
-            <div className={styles["cooperation__scope"]}>
-              <h3>{t("scope.heading")}</h3>
-              <ul>
-                <li>{t("scope.items.0")}</li>
-                <li>{t("scope.items.1")}</li>
-                <li>{t("scope.items.2")}</li>
-                <li>{t("scope.items.3")}</li>
-                <li>{t("scope.items.4")}</li>
-              </ul>
-            </div>
-
-            <p className={styles["cooperation__note"]}>{t("note")}</p>
-          </div>
-
-          <div className={styles["cooperation__form"]}>
-            <h2>{t("form.title")}</h2>
-            <ContactForm
-              submitEndpoint="/api/cooperation"
-              attachmentLabel={t("form.attachmentLabel")}
-              showCompanyField={true}
-            />
-          </div>
-        </div>
-      </section>
-    </>
+    <NextIntlClientProvider
+      messages={{
+        ...messages,
+        cooperation: page.copy.cooperation,
+        contact: { ...record(messages.contact), form: page.copy.formLabels },
+      }}
+    >
+      <CooperationContent page={page} />
+    </NextIntlClientProvider>
   );
 }

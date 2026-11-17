@@ -4,26 +4,15 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { usePathname } from "@/i18n/routing";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import type { SharedContent } from "@/lib/cms-shared";
 import styles from "../styles/components/header.module.scss";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const menuItems = [
-  { labelKey: "team", href: "/team" },
-  { labelKey: "projects", href: "/projects" },
-  { labelKey: "publications", href: "/publications" },
-  { labelKey: "models", href: "/models" },
-  { labelKey: "recruitment", href: "/recruitment" },
-  { labelKey: "cooperation", href: "/cooperation" },
-  { labelKey: "contact", href: "/contact" },
-] as const;
-
-export default function Header() {
+export default function Header({ chrome }: { chrome: SharedContent }) {
+  const menuItems = chrome.header;
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const t = useTranslations("navigation");
-  const tCommon = useTranslations("common");
 
   useEffect(() => {
     const html = document.documentElement;
@@ -74,8 +63,8 @@ export default function Header() {
         <div className={styles["site-header__logo"]}>
           <Link href="/" onClick={closeSidebar}>
             <Image
-              src="/logo.svg"
-              alt="P.U.M.A. Logo"
+              src={chrome.logo}
+              alt={chrome.copy.logoAlt}
               width={55}
               height={75}
               priority
@@ -88,10 +77,16 @@ export default function Header() {
           <ul className={styles["site-header__menu"]}>
             {menuItems.map((item) => (
               <li
-                key={item.href}
-                className={`${styles["site-header__menu-item"]} ${isActive(item.href) ? styles["site-header__menu-item--active"] : ""}`}
+                key={item.id}
+                className={`${styles["site-header__menu-item"]} ${isActive(item.route || "") ? styles["site-header__menu-item--active"] : ""}`}
               >
-                <Link href={item.href}>{t(item.labelKey)}</Link>
+                {item.route ? (
+                  <Link href={item.route}>{item.label}</Link>
+                ) : (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -102,7 +97,7 @@ export default function Header() {
         <button
           className={styles["site-header__burger"]}
           id="burger"
-          aria-label={tCommon("openMenu")}
+          aria-label={chrome.copy.openMenu}
           aria-expanded={isSidebarOpen}
           aria-controls="mobile-sidebar"
           onClick={toggleSidebar}
@@ -120,7 +115,7 @@ export default function Header() {
         data-open={isSidebarOpen}
         inert={!isSidebarOpen ? true : undefined}
         role="navigation"
-        aria-label="Menu mobilne"
+        aria-label={chrome.copy.mobileMenu}
       >
         <div
           className={styles["site-header__container"]}
@@ -135,8 +130,8 @@ export default function Header() {
           <div className={styles["site-header__logo"]}>
             <Link href="/" onClick={closeSidebar}>
               <Image
-                src="/logo.svg"
-                alt="P.U.M.A. Logo"
+                src={chrome.logo}
+                alt={chrome.copy.logoAlt}
                 width={55}
                 height={75}
                 priority
@@ -148,7 +143,7 @@ export default function Header() {
           <button
             className={styles["site-header__x-button"]}
             id="x-sidebar"
-            aria-label={tCommon("closeMenu")}
+            aria-label={chrome.copy.closeMenu}
             onClick={closeSidebar}
           >
             <span aria-hidden="true"></span>
@@ -157,12 +152,18 @@ export default function Header() {
         <ul className={styles["site-header__sidebar-menu"]}>
           {menuItems.map((item) => (
             <li
-              key={item.href}
-              className={`${styles["site-header__sidebar-item"]} ${isActive(item.href) ? styles["site-header__sidebar-item--active"] : ""}`}
+              key={item.id}
+              className={`${styles["site-header__sidebar-item"]} ${isActive(item.route || "") ? styles["site-header__sidebar-item--active"] : ""}`}
             >
-              <Link href={item.href} onClick={closeSidebar}>
-                {t(item.labelKey)}
-              </Link>
+              {item.route ? (
+                <Link href={item.route} onClick={closeSidebar}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a href={item.url} onClick={closeSidebar} target="_blank" rel="noopener noreferrer">
+                  {item.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
