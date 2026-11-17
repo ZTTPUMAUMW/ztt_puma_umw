@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { getMarketingPage } from "@/lib/cms-marketing-loader";
+import { isReviewMode } from "@/lib/review-mode";
 import { record } from "@/lib/cms-collections";
 import CooperationContent from "@/components/CooperationContent";
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
@@ -15,7 +16,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         contact: { ...record(messages.contact), form: page.copy.formLabels },
       }}
     >
-      <CooperationContent page={page} />
+      <CooperationContent page={page} reviewMode={isReviewMode()} />
     </NextIntlClientProvider>
   );
 }

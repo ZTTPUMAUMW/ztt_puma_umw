@@ -7,7 +7,13 @@ import ContactForm from "@/components/ContactForm";
 import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/pages/cooperation.module.scss";
 
-export default function CooperationContent({ page }: { page: MarketingPage }) {
+export default function CooperationContent({
+  page,
+  reviewMode,
+}: {
+  page: MarketingPage;
+  reviewMode: boolean;
+}) {
   const t = useTranslations("cooperation");
   const { ref: offersRef, inView: offersInView } = useInView({ rootMargin: "0px 0px -40px 0px" });
   const { ref: infoRef, inView: infoInView } = useInView();
@@ -65,6 +71,7 @@ export default function CooperationContent({ page }: { page: MarketingPage }) {
           <div className={styles["cooperation__form"]}>
             <h2>{t("form.title")}</h2>
             <ContactForm
+              reviewMode={reviewMode}
               submitEndpoint="/api/cooperation"
               attachmentLabel={t("form.attachmentLabel")}
               showCompanyField={true}
