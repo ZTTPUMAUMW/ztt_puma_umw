@@ -120,7 +120,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                       {p.images.map((image) => (
                         <figure key={image.id} className={styles.clip}>
                           <a
-                            className={styles.imageFrame}
+                            className={styles.mediaFrame}
                             href={image.src}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -161,15 +161,17 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
                       ))}
                       {p.clips.map((clip) => (
                         <figure key={clip.id} className={styles.clip}>
-                          <video
-                            controls
-                            playsInline
-                            preload="none"
-                            poster={clip.poster}
-                            aria-label={p.title + " — " + t.scoreLabel + " " + clip.score}
-                          >
-                            <source src={clip.src} type="video/mp4" />
-                          </video>
+                          <div className={styles.mediaFrame}>
+                            <video
+                              controls
+                              playsInline
+                              preload="none"
+                              poster={clip.poster}
+                              aria-label={p.title + " — " + t.scoreLabel + " " + clip.score}
+                            >
+                              <source src={clip.src} type="video/mp4" />
+                            </video>
+                          </div>
                           <figcaption>
                             <h4>
                               {t.scoreLabel} {clip.score}

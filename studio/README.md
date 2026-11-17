@@ -33,4 +33,4 @@ https://puma-production-s2jrzn3b.sanity.studio/ targets production. Its hostname
 
 ## Lab-supplied square images (2026-11-17)
 
-To edit the new page, open the Studio for the intended environment, select Structure, then Resources / Materiały in the Website / Strona sidebar. In Vitality parameters, open Melanization to find the four scored image entries. Publish in development to review; publish in production for the production site after launch.
+To edit the new page, open the Studio for the intended environment, select Structure, then Repository / Repozytorium in the Website / Strona sidebar. In Vitality parameters, open Melanization to find the four scored image entries. Publish in development to review; publish in production for the production site after launch.

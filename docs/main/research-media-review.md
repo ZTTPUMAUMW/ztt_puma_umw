@@ -41,3 +41,7 @@ Renamed the visible page, navigation and Studio label to Resources / Materiały,
 ## Lab-supplied square images (2026-11-17)
 
 The four melanization assets now use the lab-supplied 495 × 495 PNGs as provided. The existing square frames display them at the same dimensions as adjacent videos. In Studio, open Structure → Resources / Materiały → Vitality parameters → Melanization.
+
+## Repository launch polish
+
+The navigation label is Repository / Repozytorium; the page title is Data Repository / Repozytorium Danych. Photos and videos fill the same square frame with object-fit: cover, so slightly rectangular source videos do not leave a light strip. The original media files are unchanged. Existing public URLs and CMS IDs are unchanged.
