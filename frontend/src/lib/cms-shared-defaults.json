@@ -533,7 +533,7 @@
             "score": 0,
             "legacyImage": "/research/vitality/melanization-score-0.png",
             "width": 495,
-            "height": 151,
+            "height": 495,
             "caption": {
               "_type": "localizedText",
               "pl": "Całkowita melanizacja",
@@ -545,8 +545,8 @@
             "_type": "researchImage",
             "score": 1,
             "legacyImage": "/research/vitality/melanization-score-1.png",
-            "width": 499,
-            "height": 152,
+            "width": 495,
+            "height": 495,
             "caption": {
               "_type": "localizedText",
               "pl": "Rozlana melanizacja (rozprzestrzeniające się ciemne plamy na ciele)",
@@ -558,8 +558,8 @@
             "_type": "researchImage",
             "score": 2,
             "legacyImage": "/research/vitality/melanization-score-2.png",
-            "width": 499,
-            "height": 151,
+            "width": 495,
+            "height": 495,
             "caption": {
               "_type": "localizedText",
               "pl": "Punktowa melanizacja (małe, ciemne plamki na ciele)",
@@ -571,8 +571,8 @@
             "_type": "researchImage",
             "score": 3,
             "legacyImage": "/research/vitality/melanization-score-3.png",
-            "width": 499,
-            "height": 151,
+            "width": 495,
+            "height": 495,
             "caption": {
               "_type": "localizedText",
               "pl": "Brak melanizacji",

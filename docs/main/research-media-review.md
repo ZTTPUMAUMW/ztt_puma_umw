@@ -37,3 +37,7 @@ Removed the Downloads section and mock XLSX from public website assets. Added th
 ## 2026-10-29 — Resources naming and aligned parameter cards
 
 Renamed the visible page, navigation and Studio label to Resources / Materiały, retaining existing URLs and CMS IDs. Parameter cards use matching square media frames and shared grid rows on supported desktop/tablet browsers. Images and videos retain all source content with contain sizing; no source media was cropped or altered. Narrow screens retain a single-column layout.
+
+## Lab-supplied square images (2026-11-17)
+
+The four melanization assets now use the lab-supplied 495 × 495 PNGs as provided. The existing square frames display them at the same dimensions as adjacent videos. In Studio, open Structure → Resources / Materiały → Vitality parameters → Melanization.

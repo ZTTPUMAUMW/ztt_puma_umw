@@ -30,3 +30,7 @@ Studio: https://puma-development-s2jrzn3b.sanity.studio . Select PUMA Website (d
 ## Production Studio
 
 https://puma-production-s2jrzn3b.sanity.studio/ targets production. Its hostname and app ID are pinned separately from development in sanity.cli.ts. Select SANITY_ACTIVE_ENV=production and explicitly set SANITY_STUDIO_DATASET=production and SANITY_STUDIO_PROJECT_ID=s2jrzn3b for production deployments. Never rely on the development .env.local defaults. See ../docs/main/production-cms-setup.md.
+
+## Lab-supplied square images (2026-11-17)
+
+To edit the new page, open the Studio for the intended environment, select Structure, then Resources / Materiały in the Website / Strona sidebar. In Vitality parameters, open Melanization to find the four scored image entries. Publish in development to review; publish in production for the production site after launch.
