@@ -13,6 +13,7 @@ declare global {
 }
 
 interface ContactFormProps {
+  reviewMode: boolean;
   submitEndpoint?: string;
   attachmentLabel?: string;
   maxTotalFileSize?: number;
@@ -36,6 +37,7 @@ const SUBMISSION_WINDOW = 60 * 60 * 1000;
 const generateCsrfToken = () => Math.random().toString(36).substring(2) + Date.now().toString(36);
 
 export default function ContactForm({
+  reviewMode,
   submitEndpoint = "/api/contact",
   attachmentLabel,
   maxTotalFileSize = 20 * 1024 * 1024,
@@ -44,7 +46,6 @@ export default function ContactForm({
   showCompanyField = false,
 }: ContactFormProps) {
   const t = useTranslations("contact.form");
-  const reviewMode = process.env.NEXT_PUBLIC_REVIEW_MODE === "true";
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -65,6 +66,8 @@ export default function ContactForm({
   );
 
   useEffect(() => {
+    if (reviewMode) return;
+
     const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
     let script: HTMLScriptElement | null = null;
 
@@ -91,7 +94,7 @@ export default function ContactForm({
         delete (window as { grecaptcha?: unknown }).grecaptcha;
       }
     };
-  }, []);
+  }, [reviewMode]);
 
   const checkSubmissionLimit = (): boolean => {
     const submissions = JSON.parse(localStorage.getItem("formSubmissions") || "[]") as number[];
@@ -224,6 +227,8 @@ export default function ContactForm({
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (reviewMode) return;
+
     setMessage(null);
 
     if (formData.honeypot) {

@@ -9,7 +9,13 @@ import { useInView } from "@/hooks/useInView";
 import styles from "@/styles/pages/recruitment.module.scss";
 import layoutStyles from "@/styles/layout.module.scss";
 
-export default function RecruitmentContent({ page }: { page: MarketingPage }) {
+export default function RecruitmentContent({
+  page,
+  reviewMode,
+}: {
+  page: MarketingPage;
+  reviewMode: boolean;
+}) {
   const t = useTranslations("recruitment");
   const [activeTab, setActiveTab] = useState(page.tracks[0]?.id ?? "");
   const selectedTrack = page.tracks.find((track) => track.id === activeTab) ?? page.tracks[0];
@@ -122,6 +128,7 @@ export default function RecruitmentContent({ page }: { page: MarketingPage }) {
           <div className={styles["recruitment__form-container"]}>
             <h2>{t("form.title")}</h2>
             <ContactForm
+              reviewMode={reviewMode}
               submitEndpoint="/api/recruitment"
               attachmentLabel={t("form.attachmentLabel")}
               subjectOptions={page.tracks.map((track) => track.label)}
