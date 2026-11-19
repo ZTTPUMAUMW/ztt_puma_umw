@@ -67,6 +67,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
               aria-labelledby="vitality-tab"
             >
               <h2>{t.vitalityHeading}</h2>
+              {t.vitalityCitation && <p className={styles.citation}>{t.vitalityCitation}</p>}
               <div className={styles.tableText}>
                 <div className={styles.tableScroll}>
                   <table aria-label={t.vitalityHeading}>

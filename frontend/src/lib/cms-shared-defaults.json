@@ -313,8 +313,8 @@
       },
       "vitalityHeading": {
         "_type": "localizedText",
-        "pl": "Skala witalności larw",
-        "en": "Larva vitality scale"
+        "pl": "GAME-ViS — Galleria mellonella Vitality Scale",
+        "en": "GAME-ViS — Galleria mellonella Vitality Scale"
       },
       "videosHeading": {
         "_type": "localizedText",
@@ -355,6 +355,11 @@
         "_type": "localizedText",
         "en": "Open full-size image",
         "pl": "Otwórz obraz w pełnym rozmiarze"
+      },
+      "vitalityCitation": {
+        "_type": "localizedText",
+        "en": "Quote: Dudek, B.; Stępnicka, Z.; Sprung, T.; Brożyna, M.; Junka, A. GAME-ViS: Galleria mellonella Vitality Scale. P.U.M.A., Wroclaw Medical University, 2026. Available online: https://pumadott.com/en/research",
+        "pl": "Quote: Dudek, B.; Stępnicka, Z.; Sprung, T.; Brożyna, M.; Junka, A. GAME-ViS: Galleria mellonella Vitality Scale. P.U.M.A., Wroclaw Medical University, 2026. Available online: https://pumadott.com/en/research"
       }
     },
     "seoTitle": {

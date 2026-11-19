@@ -45,6 +45,6 @@ describe("shared navigation and Research content", () => {
     const page = resolveSharedContent("research", null, "en");
     expect(page.research?.parameters.flatMap((p) => p.clips)).toHaveLength(9);
     expect(page.research?.table).toBe("/research/vitality/vitality-scale.png");
-    expect(JSON.stringify(seeds.research)).not.toContain("https://");
+    expect(JSON.stringify(seeds.research.parameters)).not.toContain("https://");
   });
 });
