@@ -119,3 +119,6 @@ Research uses native HTML video with preload=none, posters and fast-start MP4. S
 ## 2026-10-22 — Production CMS preparation
 
 Added a separate production Studio and production-only Vercel CMS configuration. Initialized eleven production singleton documents from reviewed repository defaults, with no development drafts or experiment assets copied. Main remains pending review. See production-cms-setup.md for environment separation, editor workflow, initial snapshots and post-merge checks.
+
+
+Browser editorial preview (feature review): [editor workflow](editor-browser-guide.md) and [architecture, environment and acceptance checks](editor-acceptance.md).

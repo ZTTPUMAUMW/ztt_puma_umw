@@ -107,3 +107,6 @@ Navigation/footer editing and Research placeholders are implemented locally on f
 ## Research review feedback — 2026-10-22
 
 Implemented the annotated Research review and integrated provided table/videos. The protected preview and PR are updated for the manager to review before any main merge. Outstanding: approval, any missing melanization media if desired, final asset access/production decision, security/dependency review and backups.
+
+
+Browser editorial preview (feature review): [editor workflow](editor-browser-guide.md) and [architecture, environment and acceptance checks](editor-acceptance.md).

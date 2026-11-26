@@ -3,14 +3,14 @@ import Image from "next/image";
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
 import { getSharedContent } from "@/lib/cms-shared-loader";
-import { buildPageMetadata } from "@/lib/seo";
+import { websiteMetadata } from "@/lib/page-metadata";
 import intro from "@/styles/components/team-stats.module.scss";
 import tabs from "@/styles/pages/publications.module.scss";
 import styles from "@/styles/pages/research.module.scss";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const page = await getSharedContent("research", locale);
-  return buildPageMetadata({
+  return websiteMetadata({
     locale,
     route: "/research",
     title: page.seoTitle,

@@ -1,3 +1,4 @@
+import {CurrentMedia} from '../CurrentMedia'
 import {defineArrayMember, defineField, defineType, type Rule, type FieldDefinition} from 'sanity'
 import initialValues from '../collectionInitialValues.json'
 
@@ -28,6 +29,7 @@ const imageFields = [
     name: 'image',
     title: 'Upload image',
     type: 'image',
+    components: {input: CurrentMedia},
     options: {hotspot: true, accept: 'image/png,image/jpeg,image/webp,image/avif'},
     description: 'The current website image is retained until you upload a replacement.',
   }),

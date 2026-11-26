@@ -112,3 +112,6 @@ Added cms-research.ts for media normalization and researchMedia.ts for CMS table
 ## 2026-10-22 — Mock Excel download
 
 Research download assets: frontend/public/research/downloads/research-mock-data.xlsx supplies the fictional review workbook. The Research singleton exposes an optional replacement file and show/hide control.
+
+
+Browser editorial preview (feature review): [editor workflow](editor-browser-guide.md) and [architecture, environment and acceptance checks](editor-acceptance.md).

@@ -1,3 +1,4 @@
+import {CurrentMedia} from '../CurrentMedia'
 import {defineType, defineField, defineArrayMember} from 'sanity'
 import seeds from '../sharedInitialValues.json'
 const localized = (name: string, title: string) =>
@@ -19,6 +20,7 @@ const video = defineType({
       name: 'file',
       title: 'Replacement MP4 video',
       type: 'file',
+      components: {input: CurrentMedia},
       options: {accept: 'video/mp4'},
       description:
         'Optional replacement. The supplied review video remains until replaced. Sanity uploads are public CDN files; upload only material approved for public sharing.',
@@ -27,6 +29,7 @@ const video = defineType({
       name: 'poster',
       title: 'Preview image',
       type: 'image',
+      components: {input: CurrentMedia},
       options: {accept: 'image/png,image/jpeg,image/webp'},
     }),
     defineField({
@@ -70,6 +73,7 @@ const scoredImage = defineType({
       name: 'image',
       title: 'Replacement image',
       type: 'image',
+      components: {input: CurrentMedia},
       options: {accept: 'image/png,image/jpeg,image/webp,image/avif'},
       description:
         'Optional replacement for the supplied image. Sanity uploads are public CDN files; upload only approved material.',
@@ -107,7 +111,25 @@ const parameter = defineType({
   type: 'object',
   fields: [
     localized('title', 'Title'),
-    defineField({name: 'note', title: 'Optional note', type: 'localizedText'}),
+    defineField({
+      name: 'note',
+      title: 'Optional note / Opcjonalna uwaga',
+      type: 'object',
+      fields: ['pl', 'en'].map((name) =>
+        defineField({
+          name,
+          type: 'text',
+          title: name === 'pl' ? 'Polski' : 'English',
+          validation: (r) => r.max(3000),
+        }),
+      ),
+      validation: (r) =>
+        r.custom(
+          (v: {pl?: string; en?: string} | undefined) =>
+            Boolean(v?.pl?.trim()) === Boolean(v?.en?.trim()) ||
+            'Enter both translations or leave both blank.',
+        ),
+    }),
     defineField({
       name: 'grades',
       title: 'Scale descriptions (accessible text version)',
@@ -182,6 +204,7 @@ export const researchMediaFields = [
     hidden: true,
     readOnly: true,
     type: 'image',
+    components: {input: CurrentMedia},
     options: {accept: 'image/png,image/jpeg,image/webp,image/avif'},
     description:
       'Retained for compatibility. The website now displays the editable text table only.',

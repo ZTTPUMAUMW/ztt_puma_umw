@@ -1,3 +1,4 @@
+import {CurrentMedia} from '../CurrentMedia'
 import {defineType, defineField, defineArrayMember, type FieldDefinition} from 'sanity'
 import seeds from '../marketingInitialValues.json'
 
@@ -33,6 +34,7 @@ const media = [
     name: 'image',
     title: 'Upload image',
     type: 'image',
+    components: {input: CurrentMedia},
     options: {hotspot: true, accept: 'image/png,image/jpeg,image/webp,image/avif'},
     description: 'The original website image remains until replaced.',
   }),

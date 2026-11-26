@@ -7,7 +7,10 @@ import {structure} from './structure'
 
 export default defineConfig({
   name: 'default',
-  title: 'PUMA Website (' + dataset + ')',
+  title:
+    dataset === 'production'
+      ? 'PUMA · Live website / Strona publiczna'
+      : 'PUMA · Development sandbox / Wersja testowa',
   projectId,
   dataset,
   plugins: [structureTool({structure}), visionTool()],

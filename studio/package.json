@@ -15,6 +15,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/preview-url-secret": "3.0.0",
     "@sanity/vision": "^4.20.0",
     "react": "^19.1",
     "react-dom": "^19.1",

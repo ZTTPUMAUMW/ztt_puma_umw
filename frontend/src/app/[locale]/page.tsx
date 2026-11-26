@@ -11,12 +11,12 @@ import CTASection from "@/components/CTASection";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { getMarketingPage } from "@/lib/cms-marketing-loader";
-import { buildPageMetadata } from "@/lib/seo";
+import { websiteMetadata } from "@/lib/page-metadata";
 import ScientificText from "@/components/ScientificText";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const page = await getMarketingPage("home", locale);
-  return buildPageMetadata({
+  return websiteMetadata({
     locale,
     route: "/",
     title: page.seoTitle,

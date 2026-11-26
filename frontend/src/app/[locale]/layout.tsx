@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { isReviewMode } from "@/lib/review-mode";
+import { isEditorialReview } from "@/lib/editorial-session";
 import { BASE_URL, buildAlternates } from "@/lib/seo";
 import "../globals.scss";
 import Header from "@/components/Header";
@@ -34,6 +35,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
+  const { socialImage } = await getSharedContent("shell", locale);
   const title =
     locale === "en"
       ? "DOTT P.U.M.A. - Medical University of Wrocław"
@@ -46,7 +48,7 @@ export async function generateMetadata({
   const url = locale === "pl" ? BASE_URL : `${BASE_URL}/en`;
 
   return {
-    robots: isReviewMode() ? { index: false, follow: false } : undefined,
+    robots: (await isEditorialReview()) ? { index: false, follow: false } : undefined,
     metadataBase: new URL(BASE_URL),
     title,
     description,
@@ -62,7 +64,7 @@ export async function generateMetadata({
       siteName: "ZTT P.U.M.A.",
       images: [
         {
-          url: "/images/meta/og_image.png",
+          url: socialImage,
           width: 1200,
           height: 630,
           alt: "ZTT P.U.M.A. logo",
@@ -75,7 +77,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/meta/og_image.png"],
+      images: [socialImage],
     },
     alternates: buildAlternates(locale, "/"),
   };
@@ -124,26 +126,37 @@ export default async function LocaleLayout({
           <a href="#main-content" className="skip-to-main">
             {chrome.copy.skip}
           </a>
-          {isReviewMode() && (
-            <aside
-              role="note"
-              style={{
-                padding: "0.75rem 1rem",
-                background: "#fff3cd",
-                color: "#493b11",
-                textAlign: "center",
-              }}
-            >
+          {(await draftMode()).isEnabled ? (
+            <aside role="status">
               {locale === "en"
-                ? "Development review — CMS changes affect this preview only. Email delivery is disabled."
-                : "Wersja testowa — zmiany w CMS dotyczą tylko tego podglądu. Wysyłanie wiadomości jest wyłączone."}
+                ? "Unpublished draft · Forms disabled"
+                : "Wersja robocza · Formularze wyłączone"}{" "}
+              <form method="post" action="/api/editorial/exit">
+                <button>{locale === "en" ? "Exit preview" : "Zakończ podgląd"}</button>
+              </form>
             </aside>
+          ) : (
+            (await isEditorialReview()) && (
+              <aside
+                role="note"
+                style={{
+                  padding: "0.75rem 1rem",
+                  background: "#fff3cd",
+                  color: "#493b11",
+                  textAlign: "center",
+                }}
+              >
+                {locale === "en"
+                  ? "Development review — CMS changes affect this preview only. Email delivery is disabled."
+                  : "Wersja testowa — zmiany w CMS dotyczą tylko tego podglądu. Wysyłanie wiadomości jest wyłączone."}
+              </aside>
+            )
           )}
           <Header chrome={chrome} />
           <main id="main-content">{children}</main>
           <Footer settings={settings} chrome={chrome} />
-          <Analytics />
-          <SpeedInsights />
+          {!(await isEditorialReview()) && <Analytics />}
+          {!(await isEditorialReview()) && <SpeedInsights />}
         </NextIntlClientProvider>
       </body>
     </html>

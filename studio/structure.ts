@@ -1,17 +1,23 @@
+import EditorialPreview from './EditorialPreview'
 import type {StructureResolver} from 'sanity/structure'
 
-export const structure: StructureResolver = (S) =>
-  S.list()
+export const structure: StructureResolver = (S) => {
+  const page = () =>
+    S.document().views([
+      S.view.form().title('Edit / Edytuj'),
+      S.view.component(EditorialPreview).title('Preview / Podgląd'),
+    ])
+  return S.list()
     .title('Website / Strona')
     .items([
       S.listItem()
         .id('research')
         .title('Repository / Repozytorium')
-        .child(S.document().schemaType('researchPage').documentId('researchPage')),
+        .child(page().schemaType('researchPage').documentId('researchPage')),
       S.listItem()
         .id('chrome')
         .title('Navigation and branding')
-        .child(S.document().schemaType('siteChrome').documentId('siteChrome')),
+        .child(page().schemaType('siteChrome').documentId('siteChrome')),
       ...['home', 'recruitment', 'cooperation'].map((name) =>
         S.listItem()
           .id(name)
@@ -25,7 +31,7 @@ export const structure: StructureResolver = (S) =>
             )[name],
           )
           .child(
-            S.document()
+            page()
               .schemaType(name + 'Page')
               .documentId(name + 'Page'),
           ),
@@ -33,7 +39,7 @@ export const structure: StructureResolver = (S) =>
       S.listItem()
         .id('contact')
         .title('Contact / Kontakt')
-        .child(S.document().schemaType('contactPage').documentId('contactPage')),
+        .child(page().schemaType('contactPage').documentId('contactPage')),
       ...['team', 'projects', 'publications', 'models'].map((name) =>
         S.listItem()
           .id(name)
@@ -48,7 +54,7 @@ export const structure: StructureResolver = (S) =>
             )[name],
           )
           .child(
-            S.document()
+            page()
               .schemaType(name + 'Page')
               .documentId(name + 'Page'),
           ),
@@ -57,5 +63,6 @@ export const structure: StructureResolver = (S) =>
       S.listItem()
         .id('settings')
         .title('Site settings / Ustawienia strony')
-        .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+        .child(page().schemaType('siteSettings').documentId('siteSettings')),
     ])
+}

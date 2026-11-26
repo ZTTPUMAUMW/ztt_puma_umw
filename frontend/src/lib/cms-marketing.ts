@@ -85,7 +85,7 @@ export function resolveMarketingPage(
             title,
             description: local(v.description, locale),
             link,
-            image: imageSource(v.image, v.legacyImage, projectId),
+            image: imageSource(v.image, v.legacyImage, projectId, [1200, 800]),
             alt: local(v.alt, locale) || title,
           },
         ]

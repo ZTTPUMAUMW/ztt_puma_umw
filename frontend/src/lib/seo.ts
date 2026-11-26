@@ -67,6 +67,7 @@ interface PageSeoOptions {
   route: RouteKey;
   title: string;
   description: string;
+  socialImage?: string;
   ogType?: "website" | "article" | "profile";
 }
 
@@ -78,6 +79,7 @@ export function buildPageMetadata({
   route,
   title,
   description,
+  socialImage = "/images/meta/og_image.png",
   ogType = "website",
 }: PageSeoOptions): Metadata {
   const url = pageUrl(locale, route);
@@ -93,7 +95,7 @@ export function buildPageMetadata({
       siteName: "ZTT P.U.M.A.",
       images: [
         {
-          url: "/images/meta/og_image.png",
+          url: socialImage,
           width: 1200,
           height: 630,
           alt: "ZTT P.U.M.A.",
@@ -106,7 +108,7 @@ export function buildPageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/meta/og_image.png"],
+      images: [socialImage],
     },
     alternates: buildAlternates(locale, route),
   };
