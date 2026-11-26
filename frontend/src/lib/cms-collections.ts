@@ -1,3 +1,4 @@
+import { createImageUrlBuilder, type SanityImageObject } from "@sanity/image-url";
 import seedData from "./cms-collection-defaults.json";
 import type { TeamMember } from "@/components/TeamCard";
 import type { Project } from "@/components/ProjectItem";
@@ -34,15 +35,34 @@ export function safeHttpsUrl(value: unknown): string {
     return "";
   }
 }
-export function imageSource(value: unknown, legacy: unknown, projectId: string): string {
+export function imageSource(
+  value: unknown,
+  legacy: unknown,
+  projectId: string,
+  frame?: [number, number]
+): string {
   const url = safeHttpsUrl(record(record(value).asset).url);
   if (url) {
     const parsed = new URL(url);
     if (
       parsed.hostname === "cdn.sanity.io" &&
       parsed.pathname.startsWith("/images/" + projectId + "/")
-    )
+    ) {
+      const media = record(value);
+      if (media.crop || media.hotspot) {
+        try {
+          const dataset = parsed.pathname.split("/")[3];
+          const builder = createImageUrlBuilder({ projectId, dataset }).image({
+            ...media,
+            asset: { url },
+          } as SanityImageObject);
+          return (frame ? builder.size(...frame) : builder).url();
+        } catch {
+          return url;
+        }
+      }
       return url;
+    }
   }
   const path = text(legacy, 500);
   return path.startsWith("/images/") && !path.includes("..") && !/[\\?#]/.test(path)
@@ -120,7 +140,7 @@ export function resolveCollectionPage(
       const memberName = text(item.name, 500),
         position = local(item.position, locale);
       if (!memberName.trim() || !position.trim()) continue;
-      const image = imageSource(item.image, item.legacyImage, projectId);
+      const image = imageSource(item.image, item.legacyImage, projectId, [800, 800]);
       team[category].push({
         id,
         name: memberName,
@@ -224,7 +244,7 @@ export function resolveCollectionPage(
       models.push({
         id,
         title,
-        image: imageSource(item.image, item.legacyImage, projectId),
+        image: imageSource(item.image, item.legacyImage, projectId, [1000, 1000]),
         alt: local(item.alt, locale) || title,
         description: normalizeRichText(record(item.description)[locale]),
       });

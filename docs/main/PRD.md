@@ -172,3 +172,6 @@ Removed the Downloads section and mock XLSX from public website assets. Added th
 ## 2026-10-29 — Resources naming and aligned parameter cards
 
 Renamed the visible page, navigation and Studio label to Resources / Materiały, retaining existing URLs and CMS IDs. Parameter cards use matching square media frames and shared grid rows on supported desktop/tablet browsers. Images and videos retain all source content with contain sizing; no source media was cropped or altered. Narrow screens retain a single-column layout.
+
+
+Browser editorial preview (feature review): [editor workflow](editor-browser-guide.md) and [architecture, environment and acceptance checks](editor-acceptance.md).

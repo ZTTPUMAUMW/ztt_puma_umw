@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildPageMetadata } from "@/lib/seo";
+import { websiteMetadata } from "@/lib/page-metadata";
 import { getCollectionPage } from "@/lib/cms-collection-loader";
 
 export async function generateMetadata({
@@ -9,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const content = await getCollectionPage("publications", locale);
-  return buildPageMetadata({
+  return websiteMetadata({
     locale,
     route: "/publications",
     title: content.seoTitle,

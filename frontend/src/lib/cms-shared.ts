@@ -39,6 +39,7 @@ export function resolveSharedContent(
     footerSite: links("footerSite"),
     footerContact: links("footerContact"),
     externalLinks: links("externalLinks"),
+    socialImage: imageSource(doc.socialImage, "/images/meta/og_image.png", projectId, [1200, 630]),
     logo: imageSource(doc.logo, "/logo.svg", projectId),
     universityLogo: doc.universityLogo
       ? imageSource(doc.universityLogo, undefined, projectId)

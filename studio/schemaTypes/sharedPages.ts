@@ -1,3 +1,4 @@
+import {CurrentMedia} from '../CurrentMedia'
 import {defineType, defineField, defineArrayMember, type FieldDefinition} from 'sanity'
 import {researchTypes, researchMediaFields} from './researchMedia'
 import seeds from '../sharedInitialValues.json'
@@ -57,6 +58,7 @@ const image = (name: string, title: string) =>
     name,
     title,
     type: 'image',
+    components: {input: CurrentMedia},
     options: {hotspot: true, accept: 'image/png,image/jpeg,image/webp,image/avif'},
     description: 'Optional replacement for the original website logo.',
   })
@@ -76,6 +78,7 @@ const shell = defineType({
   initialValue: seeds.shell,
   fields: [
     image('logo', 'P.U.M.A. logo'),
+    image('socialImage', 'Social sharing image / Obraz udostępniania'),
     image('universityLogo', 'University logo'),
     localized('universityUrl', 'University logo HTTPS link'),
     array('header', 'Main menu — drag to reorder'),

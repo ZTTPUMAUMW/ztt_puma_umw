@@ -1,9 +1,9 @@
 import { getMarketingPage } from "@/lib/cms-marketing-loader";
-import { buildPageMetadata } from "@/lib/seo";
+import { websiteMetadata } from "@/lib/page-metadata";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const page = await getMarketingPage("recruitment", locale);
-  return buildPageMetadata({
+  return websiteMetadata({
     locale,
     route: "/recruitment",
     title: page.seoTitle,

@@ -6,6 +6,9 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 if (process.env.VERCEL_ENV === "preview" && dataset !== "development")
   throw new Error("Review deployments must use the development dataset.");
 
+if (process.env.VERCEL_ENV === "production" && dataset !== "production")
+  throw new Error("Production requires the production dataset.");
+
 if (!projectId || !dataset) {
   throw new Error(
     "Set NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET before using the CMS client."
